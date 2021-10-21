@@ -54,9 +54,9 @@ function HeroSection({dropComing}) {
           e.preventDefault();
           dispatch(connect());
         }}
-      >*/}
+      >
       Hello BLOCKCHAIN Me
-      </StyledButton>
+      </StyledButton>*/}
       <TopLeftText>LAVA LAMPS</TopLeftText>
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>

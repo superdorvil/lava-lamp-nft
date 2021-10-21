@@ -10,6 +10,7 @@ import {
   Header,
   Description,
   Divider,
+  UnorderedList,
 } from './InfoSectionElements';
 
 /*
@@ -21,7 +22,6 @@ function InfoSection ({info, buttonDescription}) {
     info.info.forEach((data, i) => {
       infoList.push(
         <InfoContainer>
-          <NormalText>{"∙"}</NormalText>
           <BoldText>{data.boldText}</BoldText>
           <ItalicsText>{data.italicsText}</ItalicsText>
           <NormalText>{data.normalText}</NormalText>
@@ -30,6 +30,8 @@ function InfoSection ({info, buttonDescription}) {
     });
   }
 
+  console.log(infoList);
+
   return (
     <div>
       <Container>
@@ -37,7 +39,9 @@ function InfoSection ({info, buttonDescription}) {
         <TextContainer>
           <Header>{info.header}</Header>
           <Description>{info.description}</Description>
-          {infoList}
+          <UnorderedList>
+            {infoList}
+          </UnorderedList>
         </TextContainer>
       </Container>
       <Divider />

@@ -47,6 +47,7 @@ export const Description = styled.p`
 `;
 
 export const NormalText = styled.p`
+  display: inline;
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 14;
@@ -55,6 +56,7 @@ export const NormalText = styled.p`
 `;
 
 export const BoldText = styled.p`
+  display: inline;
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 14;
@@ -63,6 +65,7 @@ export const BoldText = styled.p`
 `;
 
 export const ItalicsText = styled.p`
+  display: inline;
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 14;
@@ -70,8 +73,9 @@ export const ItalicsText = styled.p`
   color: #FFFFFF;
 `;
 
-export const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+export const InfoContainer = styled.li`
   width: 36.5vw;
+  color: white;
 `;
+
+export const UnorderedList = styled.ul``;
