@@ -79,3 +79,8 @@ export const InfoContainer = styled.li`
 `;
 
 export const UnorderedList = styled.ul``;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  margin-top: 24px;
+`;

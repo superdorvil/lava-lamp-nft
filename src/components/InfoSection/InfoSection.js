@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../Button';
 import {
   InfoContainer,
   NormalText,
@@ -11,12 +12,13 @@ import {
   Description,
   Divider,
   UnorderedList,
+  ButtonContainer,
 } from './InfoSectionElements';
 
 /*
 FIXME:: Use the div display inline property to fix the styling of this ish
 */
-function InfoSection ({info, buttonDescription}) {
+function InfoSection ({info, lavaListButtonActive}) {
   const infoList = [];
   if (info.info) {
     info.info.forEach((data, i) => {
@@ -30,8 +32,6 @@ function InfoSection ({info, buttonDescription}) {
     });
   }
 
-  console.log(infoList);
-
   return (
     <div>
       <Container>
@@ -42,6 +42,9 @@ function InfoSection ({info, buttonDescription}) {
           <UnorderedList>
             {infoList}
           </UnorderedList>
+          <ButtonContainer>
+            <Button description="VIEW THE LAVALIST" color="#FFB800" active={true} />
+          </ButtonContainer>
         </TextContainer>
       </Container>
       <Divider />
