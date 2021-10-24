@@ -8,8 +8,6 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 contract LavaLamp is Ownable, ERC721 {
 
   using Counters for Counters.Counter;
-  using Strings for uint256;
-
   Counters.Counter private _tokenIds;
 
   struct Metadata {
@@ -25,25 +23,36 @@ contract LavaLamp is Ownable, ERC721 {
     uint8 background; // 9 - (space, more)
     uint8 sticker; // 5 - (star, lightning bolt, heart, diamond, planet)
   }
+
   mapping(uint256 => Metadata) id_to_lavalamp;
-  mapping(uint256 => string) private _tokenURIs;
 
-  constructor() ERC721("LavaLamp", "LAVALAMP") {}
+  string private _currentBaseURI;
 
-  function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual {
-    require(_exists(tokenId), "ERC721Metadata: URI set of nonexistent token");
-    _tokenURIs[tokenId] = _tokenURI;
+  constructor() ERC721("LavaLamp", "LAVALAMP") {
+    setBaseURI("http://localhost:3000/token/");
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
   }
 
-  function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
-    require(_exists(tokenId));
-    string memory _tokenURI = _tokenURIs[tokenId];
-    return _tokenURI;
+  function setBaseURI(string memory baseURI) public onlyOwner {
+    _currentBaseURI = baseURI;
   }
 
-  // I'd like to add update token uri
+  function _baseURI() internal view virtual override returns (string memory) {
+    return _currentBaseURI;
+  }
 
-  function mint (string memory _tokenURI) internal {
+  function mint () internal {
     uint256 tokenId = _tokenIds.current();
     uint256 r;
     uint256 lava_index = tokenId;
@@ -151,16 +160,16 @@ contract LavaLamp is Ownable, ERC721 {
     }
 
     id_to_lavalamp[tokenId] = Metadata(lava_count, color_1, color_2, color_3, color_4, base, background, sticker);
-    _setTokenURI(tokenId, _tokenURI);
+
     _safeMint(msg.sender, tokenId);
 
     _tokenIds.increment();
   }
 
-  function claim(string memory _tokenURI) external payable {
+  function claim() external payable {
     require(msg.value == 0.03 ether, "claiming a lava lamp costs 30 finney");
 
-    mint(_tokenURI);
+    mint();
 
     payable(owner()).transfer(0.03 ether);
   }
@@ -180,6 +189,24 @@ contract LavaLamp is Ownable, ERC721 {
     meta[5] = lavalamp.base;
     meta[6] = lavalamp.background;
     meta[7] = lavalamp.sticker;
+
+    return meta;
+  }
+
+  function getAllTokens() public view returns (Metadata[] memory) {
+    uint256 lastestId = _tokenIds.current();
+    uint256 counter = 0;
+
+    Metadata[] memory meta = new Metadata[](lastestId);
+
+    for (uint256 i = 0; i < lastestId; i++) {
+      if (_exists(counter)) {
+        Metadata memory m = id_to_lavalamp[counter];
+        meta[counter] = m;
+      }
+
+      counter++;
+    }
 
     return meta;
   }
