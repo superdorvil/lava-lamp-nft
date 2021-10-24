@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkContainer, LinkButtonWrapper } from './SocialMediaElements';
+import { LinkContainer, LinkButtonWrapper } from './HeroElements';
 import Icon from '../Icon';
 import {ICONS} from '../../constants/icons';
 

@@ -7,9 +7,13 @@ import {
   Title,
   SubTitle,
   MintDetails,
+  MintButton,
+  MintContainer,
 } from './HeroElements';
-import MintButton from '../MintButton';
-import SocialMediaLinks from '../SocialMediaLinks';
+import BuyButton from './BuyLampButton';
+import LampIncrementer from './LampIncrementer';
+import SocialMediaLinks from './SocialMediaLinks';
+import DropTimer from './DropTimer';
 import Web3 from 'web3';
 import styled from "styled-components";
 
@@ -47,6 +51,17 @@ function HeroSection({dropComing}) {
     //return function is called whenever the function is cleaned up
   }, []);
 
+  /*
+  <StyledButton
+    onClick={(e) => {
+      e.preventDefault();
+      clearCanvas();
+    }}
+  >
+    CLEAR
+  </StyledButton>
+  */
+
   return (
     <LavaBackground>
       {/*<StyledButton
@@ -61,7 +76,9 @@ function HeroSection({dropComing}) {
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>
       <MintDetails>{dropComing ? 'DROP COMING SOON!' : ''}</MintDetails>
-      <MintButton mint={mint} />
+      <MintContainer>
+        <MintButton onClick={(e) => {mint()}}>CLICK HERE TO MINT</MintButton>
+      </MintContainer>
       <MintDetails>max of 20. minted at .03 ETH</MintDetails>
       <SocialMediaLinks />
     </LavaBackground>
