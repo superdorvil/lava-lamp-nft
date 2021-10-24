@@ -11,7 +11,6 @@ contract LavaLamp is Ownable, ERC721 {
   using Strings for uint256;
 
   Counters.Counter private _tokenIds;
-  mapping(uint256 => string) private _tokenURIs;
 
   struct Metadata {
     uint8 lava_count;
@@ -27,14 +26,13 @@ contract LavaLamp is Ownable, ERC721 {
     uint8 sticker; // 5 - (star, lightning bolt, heart, diamond, planet)
   }
   mapping(uint256 => Metadata) id_to_lavalamp;
+  mapping(uint256 => string) private _tokenURIs;
 
-  constructor() ERC721("LavaLamp", "LAVALAMP") {
-
-  }
+  constructor() ERC721("LavaLamp", "LAVALAMP") {}
 
   function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual {
-      require(_exists(tokenId), "ERC721Metadata: URI set of nonexistent token");
-      _tokenURIs[tokenId] = _tokenURI;
+    require(_exists(tokenId), "ERC721Metadata: URI set of nonexistent token");
+    _tokenURIs[tokenId] = _tokenURI;
   }
 
   function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
@@ -42,6 +40,8 @@ contract LavaLamp is Ownable, ERC721 {
     string memory _tokenURI = _tokenURIs[tokenId];
     return _tokenURI;
   }
+
+  // I'd like to add update token uri
 
   function mint (string memory _tokenURI) internal {
     uint256 tokenId = _tokenIds.current();
@@ -165,23 +165,8 @@ contract LavaLamp is Ownable, ERC721 {
     payable(owner()).transfer(0.03 ether);
   }
 
-  function get(uint256 tokenId) external view returns (uint8 lava_count, uint8 color_1, uint8 color_2, uint8 color_3, uint8 color_4, uint8 base, uint8 background, uint8 sticker) {
+  function get(uint256 tokenId) external view returns(uint8[] memory) {
     require(_exists(tokenId), "token not minted");
-    Metadata memory lavalamp = id_to_lavalamp[tokenId];
-
-    lava_count = lavalamp.lava_count;
-
-    color_1 = lavalamp.color_1;
-    color_2 = lavalamp.color_2;
-    color_3 = lavalamp.color_3;
-    color_4 = lavalamp.color_4;
-
-    base = lavalamp.base;
-    background = lavalamp.background;
-    sticker = lavalamp.sticker;
-  }
-
-  function getMetadata(uint256 tokenId) external view returns(uint8[] memory) {
     Metadata memory lavalamp = id_to_lavalamp[tokenId];
     uint8[] memory meta = new uint8[](8);
 
