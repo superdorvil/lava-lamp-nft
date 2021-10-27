@@ -52,7 +52,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 });*/
 
 app.get('/token/:tokenId', async (req, res) => {
-  const tokenId = req.params.tokenId;
+  res.json('tokenID ' + req.params.tokenId);
+//  const tokenId = req.params.tokenId;
 
   // what the faq is this??? to fak or to faq, that is the question
   //res.setHeader('Content-Type', 'application/json');
@@ -63,7 +64,7 @@ app.get('/token/:tokenId', async (req, res) => {
   //    return
   //}
 
-  try {
+  /*try {
     const metadata = await contract.methods.get(tokenId).call();
 
     const lavaCount = metadata[0];
@@ -121,7 +122,7 @@ app.get('/token/:tokenId', async (req, res) => {
   catch(error) {
       console.log(error);
       res.sendStatus(404);
-  }
+  }*/
 });
 
 app.get('/token/lavalamp/:tokenId/:lavaCount/:lava1/:lava2/:lava3/:lava4/:base/:background/:sticker', async (req, res) => {
