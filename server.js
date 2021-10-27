@@ -1,12 +1,18 @@
+// This file is unused intentionally
 require('dotenv').config()
+//const react = require('react');
+//const ReactDOMServer = require('react-dom/server');
 const express = require('express');
+const fs = require('fs');
 const app = express();
 const path = require('path');
 
 const port = process.env.PORT || 3000;
 const baseUri = process.env.BASE_URI || "http://localhost:3000";
-const contractAddress = process.env.CONTRACT_ADDRESS || "0x5fBEd7fA028c7C13f5165112C0e77f8Cb4EC4a93";
+const contractAddress = process.env.CONTRACT_ADDRESS || "0xc757Ebcf8Da8dD2a6750E3a9b32734bA4B068730";
 const network = process.env.NETWORK || "rinkeby";
+
+//const App = require('./src/App');
 
 const Web3 = require('web3');
 const LavaLamp = require("./src/abis/LavaLamp.json");
@@ -16,14 +22,34 @@ const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
 
 const { generateLavaLamp } = require('./src/scripts/LavaLampGenerator');
 
-/*const NodeCache = require( "node-cache" );
-const cache = new NodeCache({
-    stdTTL: 600,
-    checkperiod: 0,
-    useClones: false,
-});*/
+//const NodeCache = require( "node-cache" );
+//const cache = new NodeCache({
+//    stdTTL: 600,
+//    checkperiod: 0,
+//    useClones: false,
+//});
 
-app.use(express.static(path.join(__dirname, 'public')));
+//app.get('/', function(req, res) {
+//  res.sendFile(path.join(__dirname, build, 'index.html'));
+//});
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+/*app.use('^/$', (req, res, next) => {
+  fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {
+    if(err) {
+      console.log(err);
+      return res.status(500).send("Some error happend");
+    }
+
+    return res.send(
+      data.replace(
+        '<div id="root"></div>',
+        `<div id="root">${ReactDOMServer.renderToString()}</div>`
+      )
+    );
+  });
+});*/
 
 app.get('/token/:tokenId', async (req, res) => {
   const tokenId = req.params.tokenId;
@@ -31,11 +57,11 @@ app.get('/token/:tokenId', async (req, res) => {
   // what the faq is this??? to fak or to faq, that is the question
   //res.setHeader('Content-Type', 'application/json');
 
-  /*const value = cache.get(tokenId);
-  if (value !== undefined){
-      res.json(value)
-      return
-  }*/
+  //const value = cache.get(tokenId);
+  //if (value !== undefined){
+  //    res.json(value)
+  //    return
+  //}
 
   try {
     const metadata = await contract.methods.get(tokenId).call();
@@ -109,34 +135,30 @@ app.get('/token/lavalamp/:tokenId/:lavaCount/:lava1/:lava2/:lava3/:lava4/:base/:
   const background = req.params.background;
   const sticker = req.params.sticker;
 
-//  const lamp = generateLavaLamp(background, base, lava1, lava2, lava3, lava4);
-//  console.log(lamp);
   let lamp;
   let img;
-  (async () => {
-    lamp = await generateLavaLamp(background, base, lava1, lava2, lava3, lava4);
-    //console.log(lamp);
-    img = Buffer.from(lamp, 'base64');
-    res.writeHead(200, {
-      'Content-Type': 'image/png',
-      'Content-Length': img.length
-    });
-    res.end(img);
-  })();
-
-
 
   try {
+    (async () => {
+      lamp = await generateLavaLamp(background, base, lava1, lava2, lava3, lava4);
+
+      img = Buffer.from(lamp, 'base64');
+      res.writeHead(200, {
+        'Content-Type': 'image/png',
+        'Content-Length': img.length
+      });
+      res.end(img);
+    })();
+
     //res.setHeader('Content-Type', 'image/svg+xml');
-    //res.end(generateLavaLamp(background, base, lava1, lava2, lava3, lava4));
-
-    //res.end(lavalamp);
-
-    //console.log(generateLavaLamp(lava1, lava2, lava3, lava4, background, base));
   }
   catch {
     res.sendStatus(404)
   }
 });
 
-app.listen(port);
+//app.use(express.static(path.join(__dirname, 'build')));
+
+app.listen(port, () => {
+  console.log(`App launched on ${port}`);
+});
