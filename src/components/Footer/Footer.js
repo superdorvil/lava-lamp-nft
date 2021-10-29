@@ -23,9 +23,6 @@ function Footer() {
         <ButtonWrapper>
           <Button description="COMMUNITY CONTEST" color={'#21F6EA'} />
         </ButtonWrapper>
-        <ButtonWrapper>
-          <Button description="LAVASIDE CHAT" color={'#71FF30'} />
-        </ButtonWrapper>
       </ButtonContainer>
     </Container>
   );

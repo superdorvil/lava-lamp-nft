@@ -10,7 +10,6 @@
     "@truffle/hdwallet-provider": "^1.5.1",
     "canvas": "^2.8.0",
     "express": "^4.17.1",
-    "ipfs-http-client": "^53.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-modal": "^3.14.3",
@@ -24,12 +23,13 @@
   },
   "scripts": {
     "devStart": "nodemon server.js",
-    "start": "node server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build"
   },
   "comments": {
     "devStart": "nodemon server.js",
     "start": "react-scripts start",
+    "start": "node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

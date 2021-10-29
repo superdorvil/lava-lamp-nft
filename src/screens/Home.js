@@ -14,6 +14,7 @@ function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleModal() {
+    console.log(isOpen);
     setIsOpen(!isOpen);
   }
 
@@ -21,8 +22,8 @@ function Home() {
     <>
       <HeroSection />
       <LavaLampImages />
-      <InfoSection info={infoSectionOne} />
-      <InfoSection info={infoSectionTwo} />
+      <InfoSection info={infoSectionOne} toggleModal={toggleModal} />
+      <InfoSection info={infoSectionTwo}  buttonDisabled />
       <LampProperties />
       <Footer />
       <LavaList isOpen={isOpen} toggleModal={toggleModal} />

@@ -3,6 +3,7 @@ import lavaBackground from '../../images/LavaBackground.png';
 
 export const LavaBackground = styled.div`
   height: 100vh;
+  width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,52 +13,35 @@ export const LavaBackground = styled.div`
 
 export const TopLeftText = styled.p`
   margin: 0px;
-  padding-left: 90px;
-  padding-top: 72px;
-  font-size: 64px;
+  padding-left: 54px;
+  padding-top: 54px;
+  font-size: 48px;
   color: #ffffff;
   font-family: Bangers;
 `;
 
 export const Title = styled.p`
   margin: 0;
-  margin-top: 50px;
+  margin-top: 80px;
   text-align: center;
-  font-size: 150px;
+  font-size: 150px;/*150 or 9*/
   color: #ffffff;
   font-family: Bangers;
 `;
 
 export const SubTitle = styled.p`
   margin: 0;
-  margin-bottom: 76px;
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 58px;
+  font-size: 42px;/*42 or 3*/
   color: #ffffff;
   font-family: Bangers;
 `;
 
 export const MintDetails = styled.p`
   text-align: center;
-  font-size: 22px;
+  font-size: 24px;
   color: #ffffff;
-  font-family: Montserrat;
-`;
-
-export const MintButton = styled.button`
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  border-width: 7px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 30px;
-  background-color: #000000;
-  border-color: #FF0000;
-  color: #FFFFFF;
-  font-size: 50px;
   font-family: Montserrat;
 `;
 
@@ -65,6 +49,8 @@ export const MintContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 `;
 
 export const BuyButton = styled.button`
@@ -72,28 +58,26 @@ export const BuyButton = styled.button`
   display: flex;
   justify-content: center;
   border-width: 5px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border-radius: 30px;
   background-color: #000000;
   border-color: #FF0000;
   color: #FFFFFF;
-  font-size: 50px;
-  font-family: Montserrat;
 `;
 
 export const BuyNow = styled.p`
   color: #FFFFFF;
-  font-size: 50px;
+  font-size: 40px;
   font-family: Montserrat;
   padding-left: 30px;
 `;
 
 export const EthPrice = styled.p`
   color: #FFFFFF;
-  font-size: 25px;
+  font-size: 20px;
   font-family: Montserrat-Bold;
 `;
 
@@ -121,8 +105,8 @@ export const LampIncrementerContainer = styled.button`
   border: 5px solid red;
   padding-left: 0px;
   padding-right: 0px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   border-radius: 30px;
   background-color: #000000;
   border-color: #2183F6;
@@ -132,14 +116,39 @@ export const LampIncrementerContainer = styled.button`
   margin-right: 32px;
 `;
 
+/*
+export const Divv2 = styled.button`
+  border-radius: 80px;
+  background: radial-gradient(#e66465, #9198e5);
+  height: 300px;
+  width: 300px;
+  border:radial-gradient(rgba(250,0,0,0.5),transparent);
+  border: 8px solid transparent;
+  border-image: linear-gradient(45deg, #ff0, #f0f);
+  border-image-slice: 1;
+`;
+
+const Divv = styled.button`
+  background: radial-gradient(#e66465, #9198e5);
+  height: 200px;
+  width: 300px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  border:radial-gradient(rgba(250,0,0,0.5),transparent);
+  border-width: 15px;
+  color: #FFFFFF;
+`;
+*/
+
 export const LampText = styled.p`
-  font-size: 20px;
+  font-size: 24px;
   font-family: Montserrat-bold;
 `;
 
 export const LampCount = styled.p`
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 48px;
 `;
 
 export const LampCountContainer = styled.div`
@@ -160,6 +169,9 @@ export const IconContainer = styled.div`
 export const DropContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin-top: 1.5vw;
+  margin-bottom: 1.5vw;
 `;
 
 export const DropItem = styled.div`
@@ -168,7 +180,8 @@ export const DropItem = styled.div`
   justify-content: center;
   align-items: center;
   border: 5px solid ${props => props.color};
-  width: 125px;
+  height: 15vh;
+  width: 15vh; /* these both vh intentially to keep is a square*/
   padding-top: 14px;
   padding-bottom: 14px;
   border-radius: 30px;
@@ -179,7 +192,7 @@ export const DropItem = styled.div`
 
 export const DropTime = styled.p`
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 5.5vh;
   color: #FFFFFF;
 `;
 

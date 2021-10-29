@@ -18,12 +18,12 @@ import {
 /*
 FIXME:: Use the div display inline property to fix the styling of this ish
 */
-function InfoSection ({info, lavaListButtonActive}) {
+function InfoSection ({info, toggleModal, buttonDisabled}) {
   const infoList = [];
   if (info.info) {
     info.info.forEach((data, i) => {
       infoList.push(
-        <InfoContainer>
+        <InfoContainer key={i}>
           <BoldText>{data.boldText}</BoldText>
           <ItalicsText>{data.italicsText}</ItalicsText>
           <NormalText>{data.normalText}</NormalText>
@@ -43,7 +43,12 @@ function InfoSection ({info, lavaListButtonActive}) {
             {infoList}
           </UnorderedList>
           <ButtonContainer>
-            <Button description="VIEW THE LAVALIST" color="#FFB800" active={true} />
+            <Button
+              description="VIEW THE LAVALIST"
+              color="#FFB800"
+              disabled={buttonDisabled}
+              buttonPressed={toggleModal}
+            />
           </ButtonContainer>
         </TextContainer>
       </Container>

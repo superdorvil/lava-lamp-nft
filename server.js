@@ -33,7 +33,7 @@ const { generateLavaLamp } = require('./src/scripts/LavaLampGenerator');
 //  res.sendFile(path.join(__dirname, build, 'index.html'));
 //});
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'public'))); // use build for development
 
 /*app.use('^/$', (req, res, next) => {
   fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
 
 export const LavaListShelf = styled.img`
-  height: 65vw;
-  width: 65vw;
-  margin: 60px;
+  height: 546px;
+  width: 875px;
+  margin: 0px;
 `;
 
 export const IconContainer = styled.div`
-  position: absolute;
+  position: fixed;
   right: 0px;
-  border: 0;
+  top: 0px;
   padding: 0;
 `;
 
@@ -24,7 +24,7 @@ export const CustomStyles = {
     margin: 0,
     padding: 0,
     border: 0,
-    backgroundColor: ''
+    backgroundColor: '',
   },
   overlay: {
     backgroundColor: '#00000070',

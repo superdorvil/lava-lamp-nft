@@ -14,16 +14,22 @@ Modal.setAppElement("#root");
 
 function LavaList({isOpen, toggleModal}) {
   return (
-    <Modal
-      isOpen={isOpen}
-      onRequestClose={toggleModal}
-      style={CustomStyles}
-    >
-      <IconContainer>
-        <Icon icon={ICONS.CLOSE} iconColor='#FFFFFF' />
-      </IconContainer>
-      <LavaListShelf src={shelf} />
-    </Modal>
+    <>
+      {
+        isOpen ?
+          <IconContainer>
+            <Icon icon={ICONS.CLOSE} iconColor='#FFFFFF' />
+          </IconContainer> :
+          <></>
+      }
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={toggleModal}
+        style={CustomStyles}
+      >
+        <LavaListShelf src={shelf} />
+      </Modal>
+    </>
   );
 }
 
