@@ -22,6 +22,7 @@ function HeroSection() {
   const dropComing = false;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
+  console.log(blockchain);
   const lampPrice = Web3.utils.toWei('30', 'finney');
 
   const mint = (uri, tokenId) => {

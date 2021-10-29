@@ -1,7 +1,5 @@
 // This file is unused intentionally
 require('dotenv').config()
-//const react = require('react');
-//const ReactDOMServer = require('react-dom/server');
 const express = require('express');
 const fs = require('fs');
 const app = express();
@@ -9,10 +7,8 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 const baseUri = process.env.BASE_URI || "http://localhost:3000";
-const contractAddress = process.env.CONTRACT_ADDRESS || "0xc757Ebcf8Da8dD2a6750E3a9b32734bA4B068730";
+const contractAddress = process.env.CONTRACT_ADDRESS || "0x6E690Ef438Ddbddbef387913539A8CF9537970d4";
 const network = process.env.NETWORK || "rinkeby";
-
-//const App = require('./src/App');
 
 const Web3 = require('web3');
 const LavaLamp = require("./src/abis/LavaLamp.json");
@@ -29,31 +25,10 @@ const { generateLavaLamp } = require('./src/scripts/LavaLampGenerator');
 //    useClones: false,
 //});
 
-//app.get('/', function(req, res) {
-//  res.sendFile(path.join(__dirname, build, 'index.html'));
-//});
-
-app.use(express.static(path.join(__dirname, 'public'))); // use build for development
-
-/*app.use('^/$', (req, res, next) => {
-  fs.readFile(path.resolve('./build/index.html'), 'utf-8', (err, data) => {
-    if(err) {
-      console.log(err);
-      return res.status(500).send("Some error happend");
-    }
-
-    return res.send(
-      data.replace(
-        '<div id="root"></div>',
-        `<div id="root">${ReactDOMServer.renderToString()}</div>`
-      )
-    );
-  });
-});*/
+app.use(express.static(path.join(__dirname, 'build'))); // use build for development
 
 app.get('/token/:tokenId', async (req, res) => {
-  res.json('tokenID ' + req.params.tokenId);
-//  const tokenId = req.params.tokenId;
+  const tokenId = req.params.tokenId;
 
   // what the faq is this??? to fak or to faq, that is the question
   //res.setHeader('Content-Type', 'application/json');
@@ -64,7 +39,7 @@ app.get('/token/:tokenId', async (req, res) => {
   //    return
   //}
 
-  /*try {
+  try {
     const metadata = await contract.methods.get(tokenId).call();
 
     const lavaCount = metadata[0];
@@ -122,7 +97,7 @@ app.get('/token/:tokenId', async (req, res) => {
   catch(error) {
       console.log(error);
       res.sendStatus(404);
-  }*/
+  }
 });
 
 app.get('/token/lavalamp/:tokenId/:lavaCount/:lava1/:lava2/:lava3/:lava4/:base/:background/:sticker', async (req, res) => {
@@ -157,8 +132,6 @@ app.get('/token/lavalamp/:tokenId/:lavaCount/:lava1/:lava2/:lava3/:lava4/:base/:
     res.sendStatus(404)
   }
 });
-
-//app.use(express.static(path.join(__dirname, 'build')));
 
 app.listen(port, () => {
   console.log(`App launched on ${port}`);
