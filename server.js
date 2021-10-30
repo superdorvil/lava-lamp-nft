@@ -16,7 +16,7 @@ const web3 = new Web3(new Web3.providers.HttpProvider(process.env.ETH_CLIENT_URL
 
 const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
 
-const { generateLavaLamp } = require('./src/scripts/LavaLampGenerator');
+const { generateLavaLamp, generateMetaData } = require('./src/scripts/LavaLampGenerator');
 
 //const NodeCache = require( "node-cache" );
 //const cache = new NodeCache({
@@ -50,46 +50,9 @@ app.get('/token/:tokenId', async (req, res) => {
     const base = metadata[5];
     const background = metadata[6];
     const sticker = metadata[7];
+    const uri = `${baseUri}/token/lavalamp/${tokenId}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${base}/${background}/${sticker}`;
 
-    let metadataJson = {
-      name: 'Lamp Name, Probably the base and SerialNumber',
-      decription: 'LavaLamps are lit!!!',
-      image: `${baseUri}/token/lavalamp/${tokenId}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${base}/${background}/${sticker}`,
-      attributes: [
-        {
-          "trait_type": "Lava Count",
-          "value": lavaCount,
-        },
-        {
-          "trait_type": "Color 1",
-          "value": lava1,
-        },
-        {
-          "trait_type": "Color 2",
-          "value": lava2,
-        },
-        {
-          "trait_type": "Color 3",
-          "value": lava3,
-        },
-        {
-          "trait_type": "Color 4",
-          "value": lava4,
-        },
-        {
-          "trait_type": "Base",
-          "value": base,
-        },
-        {
-          "trait_type": "Background",
-          "value": background,
-        },
-        {
-          "trait_type": "Sticker",
-          "value": "Should we actually do stickers? It would look weird on the alien lamp, maybe on the normal base only???, i like that",
-        },
-      ]
-    };
+    const  metadataJson = generateMetaData(tokenId, lavaCount, lava1, lava2, lava3, lava4, base, background, sticker, uri);
 
     //cache.set(tokenId, result);
     res.json(metadataJson);
