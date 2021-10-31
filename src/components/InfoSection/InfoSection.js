@@ -14,10 +14,8 @@ import {
   UnorderedList,
   ButtonContainer,
 } from './InfoSectionElements';
+import {COLORS} from '../../constants/colors';
 
-/*
-FIXME:: Use the div display inline property to fix the styling of this ish
-*/
 function InfoSection ({info, toggleModal, buttonDisabled}) {
   const infoList = [];
   if (info.info) {
@@ -45,7 +43,8 @@ function InfoSection ({info, toggleModal, buttonDisabled}) {
           <ButtonContainer>
             <Button
               description="VIEW THE LAVALIST"
-              color="#FFB800"
+              lightColor={COLORS.light_orange}
+              darkColor={COLORS.dark_orange}
               disabled={buttonDisabled}
               buttonPressed={toggleModal}
             />

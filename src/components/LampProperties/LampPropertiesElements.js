@@ -19,8 +19,8 @@ export const Image = styled.img`
   margin-top: 100px;
   margin-left: 30px;
   margin-right: 30px;
-  height: 180px;
-  width: 378px;
+  height: 162px;
+  width: 340px;
 `;
 
 export const Header = styled.p`
@@ -35,7 +35,7 @@ export const Header = styled.p`
 export const Info = styled.p`
   margin-top: 0px;
   margin-bottom: 0px;
-  width: 378px;
+  width: 340px;
   font-size: 14px;
   font-family: Montserrat;
   color: #FFFFFF;

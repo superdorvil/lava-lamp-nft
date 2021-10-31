@@ -23,7 +23,7 @@ export const Header = styled.p`
   color: #FFFFFF;
 `;
 
-export const Text = styled.p`
+export const Text = styled.li`
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 14;

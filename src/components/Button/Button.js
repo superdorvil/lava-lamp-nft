@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container, Description, StyledButton } from './ButtonElements';
+import { StyledButton } from './ButtonElements';
 
-function Button({description, color, disabled, buttonPressed}) {
+function Button({description, lightColor, darkColor, disabled, buttonPressed}) {
   if (disabled) {
     return <></>;
   }
@@ -12,16 +12,11 @@ function Button({description, color, disabled, buttonPressed}) {
         e.preventDefault();
         buttonPressed();
       }}
-      color={color}
+      lightColor={lightColor}
+      darkColor={darkColor}
     >
     {description}
     </StyledButton>
-  );
-
-  return (
-    <Container>
-      <Description type='submit' value={description} color={color} />
-    </Container>
   );
 }
 
