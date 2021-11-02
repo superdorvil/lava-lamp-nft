@@ -7,23 +7,27 @@ import {
 } from './HeroElements';
 import {COLORS} from '../../constants/colors';
 
-function DropTimer() {
+function DropTimer({days, hours, minutes, seconds}) {
+  const doubleDigits = (time) => {
+    return time < 10 ? '0' + time : time;
+  };
+
   return (
     <DropContainer>
-      <DropItem color={COLORS.dark_yellow}>
-        <DropTime>30</DropTime>
+      <DropItem lightColor={COLORS.light_yellow} darkColor={COLORS.dark_yellow}>
+        <DropTime>{doubleDigits(days)}</DropTime>
         <DropUnit>DAYS</DropUnit>
       </DropItem>
-      <DropItem color={COLORS.dark_green}>
-        <DropTime>12</DropTime>
+      <DropItem lightColor={COLORS.light_green} darkColor={COLORS.dark_green}>
+        <DropTime>{doubleDigits(hours)}</DropTime>
         <DropUnit>HRS</DropUnit>
       </DropItem>
-      <DropItem color={COLORS.dark_blue}>
-        <DropTime>52</DropTime>
+      <DropItem lightColor={COLORS.light_blue} darkColor={COLORS.dark_blue}>
+        <DropTime>{doubleDigits(minutes)}</DropTime>
         <DropUnit>MINS</DropUnit>
       </DropItem>
-      <DropItem color={COLORS.dark_orange}>
-        <DropTime>01</DropTime>
+      <DropItem lightColor={COLORS.light_orange} darkColor={COLORS.dark_orange}>
+        <DropTime>{doubleDigits(seconds)}</DropTime>
         <DropUnit>SECS</DropUnit>
       </DropItem>
     </DropContainer>

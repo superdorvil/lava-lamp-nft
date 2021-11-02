@@ -1,4 +1,4 @@
-import React/*, { useEffect, useState, useRef }*/ from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { connect } from '../../redux/blockchain/blockchainActions';
 import {
@@ -14,16 +14,56 @@ import DropTimer from './DropTimer';
 import Web3 from 'web3';
 import styled from "styled-components";
 
-//export const StyledButton = styled.button`
-//  padding: 8px;
-//`;
+const releaseDate = new Date(2021, 10, 2, 0, 0, 0, 0);
+const getTimeDiff = () => {
+  const secondsDiff = (releaseDate - new Date()) / 1000;
+
+  const days = Math.floor(secondsDiff / 86400);
+  const hours = Math.floor((secondsDiff % 86400) / 3600);
+  const minutes = Math.floor((secondsDiff % 3600) / 60);
+  const seconds = Math.floor((secondsDiff % 3600) % 60);
+
+  return {days, hours, minutes, seconds, secondsDiff};
+};
+
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
 
 function HeroSection() {
-  const dropComing = false;
+  const initialTimeDiff = (releaseDate - new Date()) / 1000;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
-  console.log(blockchain);
+  const [dropComing, setDropComing] = useState(initialTimeDiff > 0 ? true : false);
+  const [dropTime, setDropTime] = useState(getTimeDiff);
+  const [lampCount, setLampCount] = useState(1);
   const lampPrice = Web3.utils.toWei('30', 'finney');
+
+  const updateDropTimer = () => {
+    const time = getTimeDiff();
+
+    if (time.secondsDiff > 0) {
+      setDropTime(time);
+    } else {
+      setDropComing(false);
+   }
+  };
 
   const mint = (uri, tokenId) => {
     blockchain.smartContract.methods
@@ -42,42 +82,22 @@ function HeroSection() {
     });
   };
 
-  // Should remove this and add a mint button
-//  useEffect(() => {
-    //console.log('hola');
-//    dispatch(connect());
-
-    //return function is called whenever the function is cleaned up
-//  }, []);
-
-  /*
-  <StyledButton
-    onClick={(e) => {
-      e.preventDefault();
-      clearCanvas();
-    }}
-  >
-    CLEAR
-  </StyledButton>
-  */
+  useInterval(() => updateDropTimer(), 1000);
 
   return (
     <LavaBackground>
-      {/*<StyledButton
-        onClick={(e) => {
-          e.preventDefault();
-          dispatch(connect());
-        }}
-      >
-      Hello BLOCKCHAIN Me
-      </StyledButton>*/}
       <TopLeftText>LAVA LAMPS</TopLeftText>
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>
       {dropComing ?
         <>
           <MintDetails>DROP COMING SOON!</MintDetails>
-          <DropTimer />
+          <DropTimer
+            days={dropTime.days}
+            hours={dropTime.hours}
+            minutes={dropTime.minutes}
+            seconds={dropTime.seconds}
+          />
         </> :
         <MintButton />
       }

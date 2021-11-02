@@ -116,31 +116,6 @@ export const LampIncrementerContainer = styled.button`
   margin-right: 32px;
 `;
 
-/*
-export const Divv2 = styled.button`
-  border-radius: 80px;
-  background: radial-gradient(#e66465, #9198e5);
-  height: 300px;
-  width: 300px;
-  border:radial-gradient(rgba(250,0,0,0.5),transparent);
-  border: 8px solid transparent;
-  border-image: linear-gradient(45deg, #ff0, #f0f);
-  border-image-slice: 1;
-`;
-
-const Divv = styled.button`
-  background: radial-gradient(#e66465, #9198e5);
-  height: 200px;
-  width: 300px;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  border:radial-gradient(rgba(250,0,0,0.5),transparent);
-  border-width: 15px;
-  color: #FFFFFF;
-`;
-*/
-
 export const LampText = styled.p`
   font-size: 24px;
   font-family: Montserrat-bold;
@@ -179,7 +154,12 @@ export const DropItem = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 5px solid ${props => props.color};
+  border-width: 4px;
+  border-style: solid;
+  border-color: transparent;
+  background:
+    linear-gradient(90deg, #000000, #000000) padding-box,
+    linear-gradient(90deg, ${props => props.lightColor}, ${props => props.darkColor}) border-box;
   height: 15vh;
   width: 15vh; /* these both vh intentially to keep is a square*/
   padding-top: 14px;
