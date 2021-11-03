@@ -93,9 +93,9 @@ export const LinkContainer = styled.div`
   margin-top: 32px;
 `;
 
-export const LinkButtonWrapper = styled.div`
-  padding-right: 16px;
-  padding-left: 16px;
+export const LinkButtonWrapper = styled.a`
+  margin-right: 16px;
+  margin-left: 16px;
 `;
 
 export const LampIncrementerContainer = styled.button`

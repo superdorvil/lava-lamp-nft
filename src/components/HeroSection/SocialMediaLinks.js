@@ -6,13 +6,13 @@ import {ICONS} from '../../constants/icons';
 function SocialMediaLinks() {
   return (
     <LinkContainer>
-      <LinkButtonWrapper>
+      <LinkButtonWrapper href="https://twitter.com/LavaLampsNFT">
         <Icon icon={ICONS.TWITTER} iconColor='#FFFFFF' />
       </LinkButtonWrapper>
-      <LinkButtonWrapper>
+      <LinkButtonWrapper href="https://testnets.opensea.io/collection/lavalamp-qa7gxwn8ub">
         <Icon icon={ICONS.OPENSEA} iconColor='#FFFFFF' />
       </LinkButtonWrapper>
-      <LinkButtonWrapper>
+      <LinkButtonWrapper href="https://discord.gg/kHjfv5t2Ns">
         <Icon icon={ICONS.DISCORD} iconColor='#FFFFFF' />
       </LinkButtonWrapper>
     </LinkContainer>
