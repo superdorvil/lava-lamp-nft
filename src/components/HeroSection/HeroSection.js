@@ -46,6 +46,10 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
+function decimalMultiply ( val1, val2 ) {
+    return ((val1 * 10) * (val2 * 10)) / 100;
+}
+
 function HeroSection() {
   const initialTimeDiff = (releaseDate - new Date()) / 1000;
   const dispatch = useDispatch();
@@ -53,7 +57,8 @@ function HeroSection() {
   const [dropComing, setDropComing] = useState(initialTimeDiff > 0 ? true : false);
   const [dropTime, setDropTime] = useState(getTimeDiff);
   const [lampCount, setLampCount] = useState(1);
-  const lampPrice = Web3.utils.toWei('30', 'finney');
+  const [lampPrice, setLampPrice] = useState(0.03);
+  const lampETH = Web3.utils.toWei('30', 'finney');
 
   const updateDropTimer = () => {
     const time = getTimeDiff();
@@ -99,7 +104,24 @@ function HeroSection() {
             seconds={dropTime.seconds}
           />
         </> :
-        <MintButton />
+        <MintButton
+          lampCount={lampCount}
+          lampPrice={lampPrice}
+          incrementLampCount={
+            () => {
+              const lc = lampCount + 1;
+              setLampCount(lc);
+              setLampPrice(decimalMultiply(lc, .03));
+            }
+          }
+          decrementLampCount={
+            () => {
+              const lc = lampCount > 1 ? lampCount - 1 : lampCount;
+              setLampCount(lc);
+              setLampPrice(decimalMultiply(lc, .03));
+            }
+          }
+        />
       }
       <MintDetails>max of 20. minted at .03 ETH</MintDetails>
       <SocialMediaLinks />

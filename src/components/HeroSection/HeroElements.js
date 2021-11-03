@@ -131,14 +131,16 @@ export const LampCountContainer = styled.div`
   flex-direction: column;
 `;
 
-export const IconContainer = styled.div`
+export const IncrementButton = styled.button`
   display: flex;
   justify-content: center;
   align-self: center;
-  padding-left: ${props => props.left ? 16 : 32}px;
-  padding-right: ${props => props.right ? 16 : 32}px;
+  padding-left: ${props => props.left ? 32 : 16}px;
+  padding-right: ${props => props.right ? 32 : 16}px;
   padding-top: 16px;
   padding-bottom: 16px;
+  background-color: #000000;
+  border: none;
 `;
 
 export const DropContainer = styled.div`

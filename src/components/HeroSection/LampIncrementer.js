@@ -4,24 +4,38 @@ import {
   LampText,
   LampCount,
   LampCountContainer,
-  IconContainer,
+  IncrementButton,
 } from './HeroElements';
 import Icon from '../Icon';
 import {ICONS} from '../../constants/icons';
 
-function LampIncrementer() {
+function LampIncrementer({
+  lampCount,
+  incrementLampCount,
+  decrementLampCount
+}) {
   return (
     <LampIncrementerContainer>
-      <IconContainer right>
+      <IncrementButton
+        onClick={(e) => {
+          e.preventDefault();
+          decrementLampCount()}}
+        left
+      >
         <Icon icon={ICONS.MINUS} iconColor='#FABE09' size={32} />
-      </IconContainer>
+      </IncrementButton>
       <LampCountContainer>
-        <LampCount>02</LampCount>
+        <LampCount>{lampCount < 10 ? '0' + lampCount : lampCount}</LampCount>
         <LampText>LAMPS</LampText>
       </LampCountContainer>
-      <IconContainer left>
+      <IncrementButton
+        onClick={(e) => {
+          e.preventDefault();
+          incrementLampCount()}}
+        right
+      >
         <Icon icon={ICONS.PLUS} iconColor='#FABE09' size={32} />
-      </IconContainer>
+      </IncrementButton>
     </LampIncrementerContainer>
   );
 }

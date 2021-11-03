@@ -8,17 +8,27 @@ import {
 } from './HeroElements';
 import LampIncrementer from './LampIncrementer';
 
-function MintButton({mint}) {
+function MintButton({
+  mint,
+  lampCount,
+  lampPrice,
+  incrementLampCount,
+  decrementLampCount
+}) {
   return (
       <MintContainer>
-        <LampIncrementer />
+        <LampIncrementer
+          lampCount={lampCount}
+          incrementLampCount={incrementLampCount}
+          decrementLampCount={decrementLampCount}
+        />
         <BuyButton onClick={(e) => {
           e.preventDefault();
           mint()}}>
           <BuyTextContainer>
           <div>
             <EthPrice>TOTAL:</EthPrice>
-            <EthPrice>.06 ETH</EthPrice>
+            <EthPrice>{lampPrice} ETH</EthPrice>
           </div>
           <BuyNow>BUY NOW</BuyNow>
           </BuyTextContainer>
