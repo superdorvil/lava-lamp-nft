@@ -23,7 +23,7 @@
   },
   "scripts": {
     "devStart": "nodemon server.js",
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build"
   },
   "comments": {
