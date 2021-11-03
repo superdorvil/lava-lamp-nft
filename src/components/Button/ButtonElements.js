@@ -19,4 +19,13 @@ export const StyledButton = styled.button`
   background:
     linear-gradient(90deg, #000000, #000000) padding-box,
     linear-gradient(90deg, ${props => props.lightColor}, ${props => props.darkColor}) border-box;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.1s ease-in-out;
+    background:
+      linear-gradient(90deg, #3A3A3A, #3A3A3A) padding-box,
+      linear-gradient(90deg, ${props => props.lightColor}, ${props => props.darkColor}) border-box;
+      font-family: Montserrat-bold;
+      font-size: 16px;
+  }
 `;

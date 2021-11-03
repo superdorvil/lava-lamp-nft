@@ -9,4 +9,5 @@ export const COLORS = {
   light_orange: '#FFB800',
   light_yellow: '#FDF21B',
   white: '#FFFFFF',
+  button_highlight: '#3A3A3A',
 };

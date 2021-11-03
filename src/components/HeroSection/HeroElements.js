@@ -66,6 +66,20 @@ export const BuyButton = styled.button`
   background-color: #000000;
   border-color: #FF0000;
   color: #FFFFFF;
+  cursor: pointer;
+  &:hover {
+    background-color: #3A3A3A;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+`;
+
+export const EthPriceHover = styled.p`
+  transition: all 0.2s ease-in-out;
+  font-size: 52px;
+  font-family: Bangers;
 `;
 
 export const BuyNow = styled.p`
@@ -141,6 +155,7 @@ export const IncrementButton = styled.button`
   padding-bottom: 16px;
   background-color: #000000;
   border: none;
+  cursor: pointer;
 `;
 
 export const DropContainer = styled.div`
