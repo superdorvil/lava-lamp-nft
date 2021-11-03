@@ -13,7 +13,8 @@ contract LavaLamp is Ownable, ERC721 {
   struct Metadata {
     uint8 lava_count;
 
-    // 0 - 9 (None, Red, Green, Yellow, Blue, Purple, Light Blue, Orange, White, Pink)
+    // 0 - 9 (None, blue, Green, light blue, orange, pink, purple, red, White, yerllow)
+
     uint8 color_1;
     uint8 color_2;
     uint8 color_3;
@@ -29,19 +30,10 @@ contract LavaLamp is Ownable, ERC721 {
   string private _currentBaseURI;
 
   constructor() ERC721("LavaLamp", "LAVALAMP") {
-    setBaseURI("https://peaceful-plains-52194.herokuapp.com/token/");
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
+    setBaseURI("www.superdorvil.tech/token/"); //https://peaceful-plains-52194.herokuapp.com
+    for (uint256 i = 0; i < 7979; i += 1) {
+      mint();
+    }
   }
 
   function setBaseURI(string memory baseURI) public onlyOwner {
@@ -89,50 +81,38 @@ contract LavaLamp is Ownable, ERC721 {
 
     // bases
     r = pseudoRNG(color_1, color_2, color_3, color_4, 0) % 1000000;
-    if (r < 20000) {
-        base = 9;
-    } else if (r < 50000) {
-        base = 8;
-    } else if (r < 100000) {
-        base = 7;
-    } else if (r < 170000) {
-        base = 6;
-    } else if (r < 260000) {
-        base = 5;
-    } else if (r < 370000) {
-        base = 4;
-    } else if (r < 500000) {
-        base = 3;
-    } else if (r < 650000) {
-        base = 2;
-    } else if (r < 820000) {
-        base = 1;
-    } else {
+    if (r < 200000) {
         base = 0;
+    } else if (r < 400000) {
+        base = 1;
+    } else if (r < 600000) {
+        base = 2;
+    } else if (r < 800000) {
+        base = 3;
+    } else {
+        base = 4;
     }
 
     // background
     r = pseudoRNG(color_1, color_2, color_3, color_4, r) % 1000000;
-    if (r < 20000) {
-        background = 9;
-    } else if (r < 50000) {
-        background = 8;
-    } else if (r < 100000) {
-        background = 7;
-    } else if (r < 170000) {
-        background = 6;
-    } else if (r < 260000) {
-        background = 5;
-    } else if (r < 370000) {
-        background = 4;
-    } else if (r < 500000) {
-        background = 3;
-    } else if (r < 650000) {
-        background = 2;
-    } else if (r < 820000) {
-        background = 1;
-    } else {
+    if (r < 111111) {
         background = 0;
+    } else if (r < 222222) {
+        background = 1;
+    } else if (r < 333333) {
+        background = 2;
+    } else if (r < 444444) {
+        background = 3;
+    } else if (r < 555555) {
+        background = 4;
+    } else if (r < 666666) {
+        background = 5;
+    } else if (r < 777777) {
+        background = 6;
+    } else if (r < 888888) {
+        background = 7;
+    } else {
+        background = 8;
     }
 
     // sticker
