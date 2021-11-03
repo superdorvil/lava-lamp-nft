@@ -69,40 +69,43 @@ const genRand = (n) => {
 };
 
 /*const createRandFile = () => {
-  generateLavaLamp(genRand(9), genRand(5), genRand(9), genRand(9), genRand(9), genRand(9));
+  generateLavaLamp(genRand(9), genRand(5), genRand(10), genRand(10), genRand(10), genRand(10));
 
   return canvas.toBuffer("image/png");
 };*/
 
 const getColor = (lava) => {
-  let value;
+  let value = '';
 
   switch(lava) {
     case '0':
-      value = 'Blue';
+      value = 'none';
       break;
     case '1':
-      value = 'Green';
+      value = 'Blue';
       break;
     case '2':
-      value = 'Light Blue';
+      value = 'Green';
       break;
     case '3':
-      value = 'Orange';
+      value = 'Light Blue';
       break;
     case '4':
-      value = 'Pink';
+      value = 'Orange';
       break;
     case '5':
-      value = 'Purple';
+      value = 'Pink';
       break;
     case '6':
-      value = 'Red';
+      value = 'Purple';
       break;
     case '7':
-      value = 'White';
+      value = 'Red';
       break;
     case '8':
+      value = 'White';
+      break;
+    case '9':
       value = 'Yellow';
       break;
     default:
@@ -113,7 +116,7 @@ const getColor = (lava) => {
 };
 
 const getBackground = (background) => {
-  let value;
+  let value = '';
 
   switch(background) {
     case '0':
@@ -151,7 +154,7 @@ const getBackground = (background) => {
 };
 
 const getSticker = (sticker) => {
-  let value;
+  let value = '';
 
   switch(sticker) {
     case '0':
@@ -189,7 +192,7 @@ const getSticker = (sticker) => {
 };
 
 const getBase = (base) => {
-  let value;
+  let value = '';
 
   switch(base) {
     case '0':

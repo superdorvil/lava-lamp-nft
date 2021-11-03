@@ -19,6 +19,7 @@ const bases = [
 ];
 
 const lava1 = [
+  '_empty.png',
   'blue.png',
   'green.png',
   'light blue.png',
@@ -31,6 +32,7 @@ const lava1 = [
 ];
 
 const lava2 = [
+  '_empty.png',
   'blue.png',
   'green.png',
   'light blue.png',
@@ -43,6 +45,7 @@ const lava2 = [
 ];
 
 const lava3 = [
+  '_empty.png',
   'blue.png',
   'green.png',
   'light blue.png',
@@ -55,6 +58,7 @@ const lava3 = [
 ];
 
 const lava4 = [
+  '_empty.png',
   'blue.png',
   'green.png',
   'light blue.png',
