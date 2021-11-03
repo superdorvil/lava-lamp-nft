@@ -7,7 +7,7 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 const baseUri = process.env.BASE_URI || "http://localhost:3000";
-const contractAddress = process.env.CONTRACT_ADDRESS || "0x6E690Ef438Ddbddbef387913539A8CF9537970d4";
+const contractAddress = process.env.CONTRACT_ADDRESS || "0x7BAB911E83DA3d95a6e37EaF7670F0F5796b9Ee1";
 const network = process.env.NETWORK || "rinkeby";
 
 const Web3 = require('web3');
