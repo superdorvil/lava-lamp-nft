@@ -30,7 +30,8 @@ contract LavaLamp is Ownable, ERC721 {
   string private _currentBaseURI;
 
   constructor() ERC721("LavaLamp", "LAVALAMP") {
-    setBaseURI("www.superdorvil.tech/token/"); //https://peaceful-plains-52194.herokuapp.com
+    // must have the http portion in it
+    setBaseURI("http://www.superdorvil.tech/token/"); //https://peaceful-plains-52194.herokuapp.com
     for (uint256 i = 0; i < 30; i += 1) {
       mint();
     }
