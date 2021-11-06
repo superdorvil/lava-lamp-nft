@@ -2,13 +2,13 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
+// import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+// import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
 
 contract LavaLamp is Ownable, ERC721 {
-
-  using Counters for Counters.Counter;
-  Counters.Counter private _tokenIds;
+  //using Counters for Counters.Counter;
+  //Counters.Counter private _tokenIds;
 
   struct Metadata {
     uint8 lava_count;
@@ -24,17 +24,27 @@ contract LavaLamp is Ownable, ERC721 {
     uint8 background; // 9 - (space, more)
     uint8 sticker; // 5 - (star, lightning bolt, heart, diamond, planet)
   }
-
   mapping(uint256 => Metadata) id_to_lavalamp;
 
   string private _currentBaseURI;
 
+  uint256 maxLamps = 7980;
+  uint256 lampCount = 0;
+  uint256 currentLampSet = 0;
+  uint256 numOfLampBlocks = 19;
+  uint256 lampSetSize = 399;
+
   constructor() ERC721("LavaLamp", "LAVALAMP") {
     // must have the http portion in it
-    setBaseURI("http://www.superdorvil.tech/token/"); //https://peaceful-plains-52194.herokuapp.com
-    for (uint256 i = 0; i < 30; i += 1) {
-      mint();
-    }
+    //https://peaceful-plains-52194.herokuapp.com
+    setBaseURI("http://www.superdorvil.tech/token/");
+
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
+    mint();
   }
 
   function setBaseURI(string memory baseURI) public onlyOwner {
@@ -46,7 +56,7 @@ contract LavaLamp is Ownable, ERC721 {
   }
 
   function mint () internal {
-    uint256 tokenId = _tokenIds.current();
+    uint256 tokenId = getId();
     uint256 r;
     uint256 lava_index = tokenId;
     uint8 lava_count = 0;
@@ -144,7 +154,7 @@ contract LavaLamp is Ownable, ERC721 {
 
     _safeMint(msg.sender, tokenId);
 
-    _tokenIds.increment();
+    incrementId();
   }
 
   function claim() external payable {
@@ -153,6 +163,71 @@ contract LavaLamp is Ownable, ERC721 {
     mint();
 
     payable(owner()).transfer(0.03 ether);
+  }
+
+  function getId() internal view returns(uint256) {
+    uint256 j = currentLampSet;
+    uint256 randomLampBlock = randomizeLampBlock(j);
+    uint256 id = randomLampBlock * lampSetSize + lampCount;
+
+    return id;
+  }
+
+  function incrementId() internal {
+    if (currentLampSet < numOfLampBlocks) {
+      currentLampSet = currentLampSet + 1;
+    } else {
+      currentLampSet = 0;
+      lampCount = lampCount + 1;
+    }
+  }
+
+  function randomizeLampBlock(uint256 lampBlock) internal pure returns(uint256) {
+    uint256 randomLampBlock = 0;
+
+    if (lampBlock == 0) {
+      randomLampBlock = 3;
+    } else if (lampBlock == 1) {
+      randomLampBlock = 17;
+    } else if (lampBlock == 2) {
+      randomLampBlock = 10;
+    } else if (lampBlock == 3) {
+      randomLampBlock = 13;
+    } else if (lampBlock == 4) {
+      randomLampBlock = 18;
+    } else if (lampBlock == 5) {
+      randomLampBlock = 0;
+    } else if (lampBlock == 6) {
+      randomLampBlock = 4;
+    } else if (lampBlock == 7) {
+      randomLampBlock = 1;
+    } else if (lampBlock == 8) {
+      randomLampBlock = 6;
+    } else if (lampBlock == 9) {
+      randomLampBlock = 19;
+    } else if (lampBlock == 10) {
+      randomLampBlock = 8;
+    } else if (lampBlock == 11) {
+      randomLampBlock = 12;
+    } else if (lampBlock == 12) {
+      randomLampBlock = 2;
+    } else if (lampBlock == 13) {
+      randomLampBlock = 14;
+    } else if (lampBlock == 14) {
+      randomLampBlock = 11;
+    } else if (lampBlock == 15) {
+      randomLampBlock = 7;
+    } else if (lampBlock == 16) {
+      randomLampBlock = 15;
+    } else if (lampBlock == 17) {
+      randomLampBlock = 9;
+    } else if (lampBlock == 18) {
+      randomLampBlock = 5;
+    } else if (lampBlock == 19) {
+      randomLampBlock = 16;
+    }
+
+    return randomLampBlock;
   }
 
   function get(uint256 tokenId) external view returns(uint8[] memory) {
@@ -174,7 +249,7 @@ contract LavaLamp is Ownable, ERC721 {
     return meta;
   }
 
-  function getAllTokens() public view returns (Metadata[] memory) {
+  /*function getAllTokens() public view returns (Metadata[] memory) {
     uint256 lastestId = _tokenIds.current();
     uint256 counter = 0;
 
@@ -190,7 +265,7 @@ contract LavaLamp is Ownable, ERC721 {
     }
 
     return meta;
-  }
+  }*/
 
   // psuedo_rng is the previous rng value, this is just top make sure we get something different everytime and don't use the same psuedo for the, base, sticker, and background
   function pseudoRNG(uint8 color_1, uint8 color_2, uint8 color_3, uint8 color_4, uint256 prev_rng) internal view returns (uint256) {
