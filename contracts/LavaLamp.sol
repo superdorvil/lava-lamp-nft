@@ -39,12 +39,9 @@ contract LavaLamp is Ownable, ERC721 {
     //https://peaceful-plains-52194.herokuapp.com
     setBaseURI("http://www.superdorvil.tech/token/");
 
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
-    mint();
+    for (int i = 0; i < 20; i++){
+      mint();
+    }
   }
 
   function setBaseURI(string memory baseURI) public onlyOwner {
