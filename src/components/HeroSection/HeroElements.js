@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import lavaBackground from '../../images/LavaBackground.png';
 import lavaBackgroundMobile from '../../images/LavaBackgroundMobile.png';
+import {COLORS} from '../../constants/colors';
 
 export const LavaBackground = styled.div`
   height: 800px;
@@ -10,7 +11,7 @@ export const LavaBackground = styled.div`
   background-color: #000000;
   background-image: url(${lavaBackground});
   @media screen and (max-width: 480px) {
-    height: 100vh;
+    height: 300px;
     width: 100vw;
     background-image: url(${lavaBackgroundMobile});
   }
@@ -41,7 +42,7 @@ export const TopLeftText = styled.p`
   @media screen and (max-width: 480px) {
     padding-left: 24px;
     padding-top: 24px;
-    font-size: 24px;
+    font-size: 20px;
   }
 `;
 
@@ -65,8 +66,8 @@ export const Title = styled.p`
     font-size: 80px;
   }
   @media screen and (max-width: 480px) {
-    margin-top: 40px;
-    font-size: 60px;
+    margin-top: 30px;
+    font-size: 40px;
   }
 `;
 
@@ -85,7 +86,7 @@ export const SubTitle = styled.p`
     font-size: 24px;
   }
   @media screen and (max-width: 480px) {
-    font-size: 20px;
+    font-size: 14px;
   }
 `;
 
@@ -142,6 +143,7 @@ export const BuyButton = styled.button`
   border-radius: 30px;
   background-color: #000000;
   border-color: #FF0000;
+  border-style: solid;
   color: #FFFFFF;
   cursor: pointer;
   &:hover {
@@ -179,20 +181,20 @@ export const BuyButton = styled.button`
       padding-right: 50px;
     }
   }
-  /*@media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     border-width: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-radius: 30px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 16px;
     &:hover {
-      padding-top: 27px;
-      padding-bottom: 27px;
-      padding-left: 60px;
-      padding-right: 60px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
     }
-  }*/
+  }
 `;
 
 export const EthPriceHover = styled.p`
@@ -205,9 +207,9 @@ export const EthPriceHover = styled.p`
   @media screen and (max-width: 600px) {
     font-size: 28px;
   }
-/*  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     font-size: 20px;
-  }*/
+  }
 `;
 
 export const BuyNow = styled.p`
@@ -223,9 +225,10 @@ export const BuyNow = styled.p`
     font-size: 32px;
     padding-left: 24px;
   }
-/*  @media screen and (max-width: 480px) {
-
-  }*/
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+    padding-left: 12px;
+  }
 `;
 
 export const EthPrice = styled.p`
@@ -235,9 +238,9 @@ export const EthPrice = styled.p`
   @media screen and (max-width: 1024px) {
     font-size: 18px;
   }
-  /*@media screen and (max-width: 480px) {
-
-  }*/
+  @media screen and (max-width: 480px) {
+    font-size: 10px;
+  }
 `;
 
 export const BuyTextContainer = styled.div`
@@ -254,7 +257,7 @@ export const LinkContainer = styled.div`
     margin-top: 24px;
   }
   @media screen and (max-width: 480px) {
-    display: none;
+    display: none
   }
 `;
 
@@ -272,13 +275,17 @@ export const LampIncrementerContainer = styled.div`
   justify-content: center;
   align-items: center;
   align-self: center;
-  border: 5px solid red;
-  border-radius: 30px;
-  background-color: #000000;
-  border-color: #2183F6;
   color: #FFFFFF;
   font-family: Montserrat;
   margin-right: 32px;
+
+  border-radius: 30px;
+  border: 5px;
+  border-style: solid;
+  border-color: transparent;
+  background:
+    linear-gradient(90deg, #000000, #000000) padding-box,
+    linear-gradient(90deg, ${COLORS.light_blue}, ${COLORS.dark_blue}) border-box;
   @media screen and (max-width: 1024px) {
     border-radius: 20px;
     margin-right: 32px;
@@ -287,9 +294,11 @@ export const LampIncrementerContainer = styled.div`
     margin-top: 16px;
     margin-right: 0px;
   }
-  /*@media screen and (max-width: 480px) {
-
-  }*/
+  @media screen and (max-width: 480px) {
+    border-radius: 18px;
+    margin-top: 12px;
+    margin-right: 0px;
+  }
 `;
 
 export const LampText = styled.p`
@@ -302,9 +311,9 @@ export const LampText = styled.p`
   @media screen and (max-width: 800px) {
     font-size: 16px;
   }
-  /*@media screen and (max-width: 480px) {
-
-  }*/
+ @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export const LampCount = styled.p`
@@ -317,9 +326,9 @@ export const LampCount = styled.p`
   @media screen and (max-width: 800px) {
     font-size: 30px;
   }
-  /*@media screen and (max-width: 480px) {
-
-  }*/
+  @media screen and (max-width: 480px) {
+    font-size: 24px;
+  }
 `;
 
 export const LampCountContainer = styled.div`
@@ -351,10 +360,12 @@ export const IncrementButton = styled.button`
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  /
-  /*@media screen and (max-width: 480px) {
-
-  }*/
+  @media screen and (max-width: 480px) {
+    padding-left: ${props => props.left ? 14 : 8}px;
+    padding-right: ${props => props.right ? 14 : 8}px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 `;
 
 
