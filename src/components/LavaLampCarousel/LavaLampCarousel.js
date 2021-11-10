@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   CarouselProvider,
-  DotGroup,
   Slide,
   Slider,
 } from 'pure-react-carousel';

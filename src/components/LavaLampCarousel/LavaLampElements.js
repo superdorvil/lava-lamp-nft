@@ -8,13 +8,13 @@ export const ListContainer = styled.div`
 `;
 
 export const LampContainer = styled.div`
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
   padding-top: 30px;
   padding-bottom: 30px;
 `;
 
 export const LampImage = styled.img`
-  height: 200px;
-  width: 200px;
+  height: 15vw;
+  width: 15vw;
 `;

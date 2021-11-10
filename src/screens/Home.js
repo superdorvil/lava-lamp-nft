@@ -14,7 +14,6 @@ function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleModal() {
-    console.log(isOpen);
     setIsOpen(!isOpen);
   }
 

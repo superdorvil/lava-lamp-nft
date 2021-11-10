@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 import lavaBackground from '../../images/LavaBackground.png';
+import lavaBackgroundMobile from '../../images/LavaBackgroundMobile.png';
 
 export const LavaBackground = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 800px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #000000;
   background-image: url(${lavaBackground});
+  @media screen and (max-width: 480px) {
+    height: 1000px;
+    background-image: url(${lavaBackgroundMobile});
+  }
 `;
 
 export const TopLeftText = styled.p`
@@ -18,24 +22,70 @@ export const TopLeftText = styled.p`
   font-size: 48px;
   color: #ffffff;
   font-family: Bangers;
+  @media screen and (max-width: 1024px) {
+    padding-left: 54px;
+    padding-top: 54px;
+    font-size: 48px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-left: 36px;
+    padding-top: 36px;
+    font-size: 36px;
+  }
+  @media screen and (max-width: 600px) {
+    padding-left: 36px;
+    padding-top: 36px;
+    font-size: 30px;
+  }
+  @media screen and (max-width: 480px) {
+    padding-left: 24px;
+    padding-top: 24px;
+    font-size: 24px;
+  }
 `;
 
 export const Title = styled.p`
   margin: 0;
   margin-top: 80px;
   text-align: center;
-  font-size: 150px;/*150 or 9*/
+  font-size: 150px;
   color: #ffffff;
   font-family: Bangers;
+  @media screen and (max-width: 1024px) {
+    margin-top: 80px;
+    font-size: 120px;
+  }
+  @media screen and (max-width: 800px) {
+    margin-top: 80px;
+    font-size: 100px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-top: 60px;
+    font-size: 80px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: 40px;
+    font-size: 60px;
+  }
 `;
 
 export const SubTitle = styled.p`
-  margin: 0;
-  margin-bottom: 30px;
   text-align: center;
-  font-size: 42px;/*42 or 3*/
+  font-size: 42px;
   color: #ffffff;
   font-family: Bangers;
+  @media screen and (max-width: 1024px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 export const MintDetails = styled.p`
@@ -43,6 +93,15 @@ export const MintDetails = styled.p`
   font-size: 24px;
   color: #ffffff;
   font-family: Montserrat;
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 export const MintContainer = styled.div`
@@ -51,6 +110,23 @@ export const MintContainer = styled.div`
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  @media screen and (max-width: 1024px) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  @media screen and (max-width: 800px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column-reverse;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const BuyButton = styled.button`
@@ -74,12 +150,63 @@ export const BuyButton = styled.button`
     padding-left: 60px;
     padding-right: 60px;
   }
+  @media screen and (max-width: 1024px) {
+    border-width: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    &:hover {
+      padding-top: 27px;
+      padding-bottom: 27px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    border-width: 5px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 20px;
+    &:hover {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  /*@media screen and (max-width: 480px) {
+    border-width: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 30px;
+    &:hover {
+      padding-top: 27px;
+      padding-bottom: 27px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }*/
 `;
 
 export const EthPriceHover = styled.p`
   transition: all 0.2s ease-in-out;
   font-size: 52px;
   font-family: Bangers;
+  @media screen and (max-width: 1024px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 28px;
+  }
+/*  @media screen and (max-width: 480px) {
+    font-size: 20px;
+  }*/
 `;
 
 export const BuyNow = styled.p`
@@ -87,12 +214,29 @@ export const BuyNow = styled.p`
   font-size: 40px;
   font-family: Montserrat;
   padding-left: 30px;
+  @media screen and (max-width: 1024px) {
+    font-size: 32px;
+    padding-left: 24px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 32px;
+    padding-left: 24px;
+  }
+/*  @media screen and (max-width: 480px) {
+
+  }*/
 `;
 
 export const EthPrice = styled.p`
   color: #FFFFFF;
   font-size: 20px;
   font-family: Montserrat-Bold;
+  @media screen and (max-width: 1024px) {
+    font-size: 18px;
+  }
+  /*@media screen and (max-width: 480px) {
+
+  }*/
 `;
 
 export const BuyTextContainer = styled.div`
@@ -105,39 +249,76 @@ export const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 32px;
+  @media screen and (max-width: 600px) {
+    margin-top: 24px;
+  }
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const LinkButtonWrapper = styled.a`
   margin-right: 16px;
   margin-left: 16px;
+  @media screen and (max-width: 600px) {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
 `;
 
-export const LampIncrementerContainer = styled.button`
-  align-self: center;
+export const LampIncrementerContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-self: center;
   border: 5px solid red;
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 12px;
-  padding-bottom: 12px;
   border-radius: 30px;
   background-color: #000000;
   border-color: #2183F6;
   color: #FFFFFF;
-  font-size: 50px;
   font-family: Montserrat;
   margin-right: 32px;
+  @media screen and (max-width: 1024px) {
+    border-radius: 20px;
+    margin-right: 32px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-top: 16px;
+    margin-right: 0px;
+  }
+  /*@media screen and (max-width: 480px) {
+
+  }*/
 `;
 
 export const LampText = styled.p`
   font-size: 24px;
   font-family: Montserrat-bold;
+  align-self: center;
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
+  /*@media screen and (max-width: 480px) {
+
+  }*/
 `;
 
 export const LampCount = styled.p`
   font-family: Montserrat;
   font-size: 48px;
+  align-self: center;
+  @media screen and (max-width: 1024px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+  }
+  /*@media screen and (max-width: 480px) {
+
+  }*/
 `;
 
 export const LampCountContainer = styled.div`
@@ -151,12 +332,37 @@ export const IncrementButton = styled.button`
   align-self: center;
   padding-left: ${props => props.left ? 32 : 16}px;
   padding-right: ${props => props.right ? 32 : 16}px;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 38px;
+  padding-bottom: 38px;
   background-color: #000000;
   border: none;
   cursor: pointer;
+  border-radius: 30px;
+  @media screen and (max-width: 1024px) {
+    padding-left: ${props => props.left ? 28 : 12}px;
+    padding-right: ${props => props.right ? 28 : 12}px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-left: ${props => props.left ? 20 : 12}px;
+    padding-right: ${props => props.right ? 20 : 12}px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  /
+  /*@media screen and (max-width: 480px) {
+
+  }*/
 `;
+
+
+
+
+
+
+
+// Drop Container shitsss
 
 export const DropContainer = styled.div`
   display: flex;
@@ -164,6 +370,18 @@ export const DropContainer = styled.div`
   justify-content: center;
   margin-top: 1.5vw;
   margin-bottom: 1.5vw;
+  @media screen and (max-width: 1024px) {
+
+  }
+  @media screen and (max-width: 800px) {
+
+  }
+  @media screen and (max-width: 600px) {
+
+  }
+  @media screen and (max-width: 480px) {
+
+  }
 `;
 
 export const DropItem = styled.div`
@@ -185,6 +403,18 @@ export const DropItem = styled.div`
   background-color: #000000;
   margin-right: 16px;
   margin-left: 16px;
+  @media screen and (max-width: 1024px) {
+
+  }
+  @media screen and (max-width: 800px) {
+
+  }
+  @media screen and (max-width: 600px) {
+
+  }
+  @media screen and (max-width: 480px) {
+
+  }
 `;
 
 export const DropTime = styled.p`
