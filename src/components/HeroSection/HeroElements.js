@@ -10,7 +10,8 @@ export const LavaBackground = styled.div`
   background-color: #000000;
   background-image: url(${lavaBackground});
   @media screen and (max-width: 480px) {
-    height: 1000px;
+    height: 100vh;
+    width: 100vw;
     background-image: url(${lavaBackgroundMobile});
   }
 `;
