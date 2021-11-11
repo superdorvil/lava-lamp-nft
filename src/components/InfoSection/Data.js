@@ -1,4 +1,4 @@
-import shelf from '../../images/Shelf.jpg';
+import shelf from '../../images/Shelf.png';
 import colors from '../../images/Colors.jpg';
 
 export const infoSectionOne =
