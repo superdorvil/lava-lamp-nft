@@ -4,16 +4,23 @@ import lavaBackgroundMobile from '../../images/LavaBackgroundMobile.png';
 import {COLORS} from '../../constants/colors';
 
 export const LavaBackground = styled.div`
-  height: 800px;
+  height: 750px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #000000;
   background-image: url(${lavaBackground});
+  @media screen and (max-width: 1024px) {
+    height: 650px;
+  }
+  @media screen and (max-width: 800px) {
+    height: 550px;
+  }
   @media screen and (max-width: 480px) {
-    height:  ${props => props.dropComing ? 250 : 300}px;;
+    height:  ${props => props.dropComing ? 350 : 400}px;;
     width: 100vw;
     background-image: url(${lavaBackgroundMobile});
+    padding-bottom:
   }
 `;
 
@@ -257,7 +264,7 @@ export const LinkContainer = styled.div`
     margin-top: 24px;
   }
   @media screen and (max-width: 480px) {
-    display: none
+
   }
 `;
 
@@ -267,6 +274,10 @@ export const LinkButtonWrapper = styled.a`
   @media screen and (max-width: 600px) {
     margin-right: 12px;
     margin-left: 12px;
+  }
+  @media screen and (max-width: 480px) {
+    margin-right: 8px;
+    margin-left: 8px;
   }
 `;
 

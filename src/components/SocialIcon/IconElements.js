@@ -10,7 +10,8 @@ import styled from 'styled-components';
      height: 48px;
    }
    @media screen and (max-width: 480px) {
-
+     width: 40px;
+     height: 40px;
    }
  `;
 
