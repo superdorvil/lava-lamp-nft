@@ -90,7 +90,7 @@ function HeroSection() {
   useInterval(() => updateDropTimer(), 1000);
 
   return (
-    <LavaBackground>
+    <LavaBackground dropComing={dropComing}>
       <TopLeftText>LAVA LAMPS</TopLeftText>
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>

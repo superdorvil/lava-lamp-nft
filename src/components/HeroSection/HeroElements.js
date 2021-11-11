@@ -11,7 +11,7 @@ export const LavaBackground = styled.div`
   background-color: #000000;
   background-image: url(${lavaBackground});
   @media screen and (max-width: 480px) {
-    height: 300px;
+    height:  ${props => props.dropComing ? 250 : 300}px;;
     width: 100vw;
     background-image: url(${lavaBackgroundMobile});
   }
@@ -368,32 +368,12 @@ export const IncrementButton = styled.button`
   }
 `;
 
-
-
-
-
-
-
-// Drop Container shitsss
-
 export const DropContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 1.5vw;
   margin-bottom: 1.5vw;
-  @media screen and (max-width: 1024px) {
-
-  }
-  @media screen and (max-width: 800px) {
-
-  }
-  @media screen and (max-width: 600px) {
-
-  }
-  @media screen and (max-width: 480px) {
-
-  }
 `;
 
 export const DropItem = styled.div`
@@ -407,36 +387,63 @@ export const DropItem = styled.div`
   background:
     linear-gradient(90deg, #000000, #000000) padding-box,
     linear-gradient(90deg, ${props => props.lightColor}, ${props => props.darkColor}) border-box;
-  height: 15vh;
-  width: 15vh; /* these both vh intentially to keep is a square*/
+  height: 124px;
+  width: 124px;
   padding-top: 14px;
   padding-bottom: 14px;
   border-radius: 30px;
   background-color: #000000;
   margin-right: 16px;
   margin-left: 16px;
-  @media screen and (max-width: 1024px) {
-
-  }
   @media screen and (max-width: 800px) {
-
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+    margin-right: 12px;
+    margin-left: 12px;
   }
   @media screen and (max-width: 600px) {
-
+    border-radius: 16px;
+    height: 80px;
+    width: 80px;
+    margin-right: 12px;
+    margin-left: 12px;
   }
   @media screen and (max-width: 480px) {
-
+    border-radius: 12px;
+    height: 60px;
+    width: 60px;
+    margin-right: 6px;
+    margin-left: 6px;
   }
 `;
 
 export const DropTime = styled.p`
   font-family: Montserrat;
-  font-size: 5.5vh;
+  font-size: 40px;
   color: #FFFFFF;
+  @media screen and (max-width: 800px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 28px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 export const DropUnit = styled.p`
   font-size: 20px;
   font-family: Montserrat-bold;
   color: #FFFFFF;
+  @media screen and (max-width: 800px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 8px;
+  }
 `;
