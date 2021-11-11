@@ -196,10 +196,10 @@ export const BuyButton = styled.button`
     padding-bottom: 14px;
     border-radius: 16px;
     &:hover {
-      padding-top: 0px;
-      padding-bottom: 0px;
-      padding-left: 0px;
-      padding-right: 0px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
 `;
