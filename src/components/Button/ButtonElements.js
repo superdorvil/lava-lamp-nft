@@ -11,10 +11,10 @@ export const StyledButton = styled.button`
   padding-right: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
-  border-radius: 12px;
+  border-radius: 10px;
   /*border-color: {props => props.color};*/
   color: #FFFFFF;
-  font-size: 15px;
+  font-size: 12px;
   font-family: Montserrat;
   background:
     linear-gradient(90deg, #000000, #000000) padding-box,

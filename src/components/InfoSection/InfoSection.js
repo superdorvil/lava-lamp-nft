@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../Button';
 import {
   InfoContainer,
+  ButtonContainer,
   NormalText,
   BoldText,
   ItalicsText,
@@ -12,7 +13,7 @@ import {
   Description,
   Divider,
   UnorderedList,
-  ButtonContainer,
+  HeaderContainer,
 } from './InfoSectionElements';
 import {COLORS} from '../../constants/colors';
 
@@ -35,12 +36,9 @@ function InfoSection ({info, toggleModal, buttonDisabled}) {
       <Container>
         <Image src={info.img} />
         <TextContainer>
-          <Header>{info.header}</Header>
-          <Description>{info.description}</Description>
-          <UnorderedList>
-            {infoList}
-          </UnorderedList>
-          <ButtonContainer>
+          <HeaderContainer>
+            <Header>{info.header}</Header>
+            <ButtonContainer>
             <Button
               description="VIEW THE LAVALIST"
               lightColor={COLORS.light_orange}
@@ -48,7 +46,12 @@ function InfoSection ({info, toggleModal, buttonDisabled}) {
               disabled={buttonDisabled}
               buttonPressed={toggleModal}
             />
-          </ButtonContainer>
+            </ButtonContainer>
+          </HeaderContainer>
+          <Description>{info.description}</Description>
+          <UnorderedList>
+            {infoList}
+          </UnorderedList>
         </TextContainer>
       </Container>
       <Divider />
