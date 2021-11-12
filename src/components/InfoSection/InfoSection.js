@@ -38,7 +38,7 @@ function InfoSection ({info, toggleModal, buttonDisabled}) {
         <TextContainer>
           <HeaderContainer>
             <Header>{info.header}</Header>
-            <ButtonContainer>
+            {/*<ButtonContainer>
             <Button
               description="VIEW THE LAVALIST"
               lightColor={COLORS.light_orange}
@@ -46,7 +46,7 @@ function InfoSection ({info, toggleModal, buttonDisabled}) {
               disabled={buttonDisabled}
               buttonPressed={toggleModal}
             />
-            </ButtonContainer>
+            </ButtonContainer>*/}
           </HeaderContainer>
           <Description>{info.description}</Description>
           <UnorderedList>

@@ -17,10 +17,9 @@ export const LavaBackground = styled.div`
     height: 550px;
   }
   @media screen and (max-width: 480px) {
-    height:  ${props => props.dropComing ? 350 : 400}px;;
+    height:  ${props => props.dropComing ? 250 : 300}px;;
     width: 100vw;
     background-image: url(${lavaBackgroundMobile});
-    padding-bottom:
   }
 `;
 
