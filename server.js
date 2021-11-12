@@ -96,14 +96,15 @@ app.get('/token/lavalamp/:tokenId/:lavaCount/:lava1/:lava2/:lava3/:lava4/:base/:
   }
 });
 
-app.get('/data', async (req, res) => {
-  res.json([
-    port,
-    baseUri,
-    contractAddress,
-    network,
-  ]);
-})
+app.get('/opensea', async (req, res) => {
+  if (baseUri === 'http://www.superdorvil.tech') {
+    res.redirect(`https://testnets.opensea.io/assets/${contractAddress}/0`);
+  } else {
+    res.redirect('https://opensea.io');
+  }
+
+
+});
 
 app.listen(port, () => {
   console.log(`App launched on ${port}`);
