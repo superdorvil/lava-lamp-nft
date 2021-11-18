@@ -16,7 +16,11 @@ const web3 = new Web3(new Web3.providers.HttpProvider(process.env.ETH_CLIENT_URL
 
 const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
 
-const { generateLavaLamp, generateMetaData } = require('./src/scripts/LavaLampGenerator');
+const {
+  generateLavaLamp,
+  generateMetaData,
+  generateRandomLavaLamp
+} = require('./src/scripts/LavaLampGenerator');
 
 //const NodeCache = require( "node-cache" );
 //const cache = new NodeCache({
@@ -30,8 +34,7 @@ app.use(express.static(path.join(__dirname, 'build'))); // use build for develop
 app.get('/token/:tokenId', async (req, res) => {
   const tokenId = req.params.tokenId;
 
-  // what the faq is this??? to fak or to faq, that is the question
-  //res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Type', 'application/json');
 
   //const value = cache.get(tokenId);
   //if (value !== undefined){
@@ -74,22 +77,9 @@ app.get('/token/lavalamp/:tokenId/:lavaCount/:lava1/:lava2/:lava3/:lava4/:base/:
   const background = req.params.background;
   const sticker = req.params.sticker;
 
-  let lamp;
-  let img;
-
   try {
-    (async () => {
-      lamp = await generateLavaLamp(background, base, lava1, lava2, lava3, lava4);
-
-      img = Buffer.from(lamp, 'base64');
-      res.writeHead(200, {
-        'Content-Type': 'image/png',
-        'Content-Length': img.length
-      });
-      res.end(img);
-    })();
-
-    //res.setHeader('Content-Type', 'image/svg+xml');
+    res.setHeader('Content-Type', 'image/svg+xml');
+    res.send(generateLavaLampSvg(background, base, lava1, lava2, lava3, lava4));
   }
   catch {
     res.sendStatus(404)
@@ -102,8 +92,11 @@ app.get('/opensea', async (req, res) => {
   } else {
     res.redirect('https://opensea.io');
   }
+});
 
-
+app.get('/svg', async (req, res) => {
+  res.setHeader('Content-Type', 'image/svg+xml');
+  res.send(generateRandomLavaLamp());
 });
 
 app.listen(port, () => {
