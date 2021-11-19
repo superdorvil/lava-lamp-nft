@@ -58,4 +58,4 @@ function Lava1({colors}) {
 `;
 };
 
-module.exports = {Lava1};
+export default Lava1;

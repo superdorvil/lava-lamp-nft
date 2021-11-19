@@ -90,4 +90,4 @@ function Alien() {
 `;
 };
 
-module.exports = {Alien};
+export default Alien;

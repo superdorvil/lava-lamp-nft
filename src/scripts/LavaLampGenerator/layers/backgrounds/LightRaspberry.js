@@ -41,4 +41,4 @@ function LightRaspberry() {
 `;
 };
 
-module.exports = {LightRaspberry};
+export default LightRaspberry;

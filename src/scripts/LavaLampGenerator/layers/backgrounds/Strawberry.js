@@ -45,4 +45,4 @@ function Strawberry() {
 `;
 };
 
-module.exports = {Strawberry};
+export default Strawberry;

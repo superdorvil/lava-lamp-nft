@@ -1,26 +1,31 @@
-// This file is unused intentionally
-require('dotenv').config()
-const express = require('express');
-const fs = require('fs');
-const app = express();
-const path = require('path');
+import dotenv from 'dotenv';
+dotenv.config({ silent: process.env.NODE_ENV === 'production' });
 
-const port = process.env.PORT || 3000;
-const baseUri = process.env.BASE_URI || "http://localhost:3000";
-const contractAddress = process.env.CONTRACT_ADDRESS || "0x2035Ad61e93F6389CadA67B6C16B60Ec4665aDFA";
-const network = process.env.NETWORK || "rinkeby";
-
-const Web3 = require('web3');
-const LavaLamp = require("./src/abis/LavaLamp.json");
-const web3 = new Web3(new Web3.providers.HttpProvider(process.env.ETH_CLIENT_URL));
-
-const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
-
-const {
+import express from 'express';
+//import fs from 'fs';
+import {fileURLToPath} from 'url';
+import {dirname, join} from 'path';
+import Web3 from 'web3';
+import LavaLampABI from './src/abis/LavaLampABI.js';
+import {
   generateLavaLamp,
   generateMetaData,
   generateRandomLavaLamp
-} = require('./src/scripts/LavaLampGenerator');
+} from './src/scripts/LavaLampGenerator/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const app = express();
+
+const port = process.env.PORT || 3000;
+const baseUri = process.env.BASE_URI || 'http://localhost:3000';
+const contractAddress = process.env.CONTRACT_ADDRESS || '0x2035Ad61e93F6389CadA67B6C16B60Ec4665aDFA';
+const network = process.env.NETWORK || 'rinkeby';
+
+const web3 = new Web3(new Web3.providers.HttpProvider(process.env.ETH_CLIENT_URL));
+
+const contract = new web3.eth.Contract(LavaLampABI, contractAddress);
 
 //const NodeCache = require( "node-cache" );
 //const cache = new NodeCache({
@@ -29,7 +34,8 @@ const {
 //    useClones: false,
 //});
 
-app.use(express.static(path.join(__dirname, 'build'))); // use build for development
+
+app.use(express.static(join(__dirname, 'build'))); // use build for development
 
 app.get('/token/:tokenId', async (req, res) => {
   const tokenId = req.params.tokenId;

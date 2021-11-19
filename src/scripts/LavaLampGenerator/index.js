@@ -1,12 +1,14 @@
-const fs = require('fs');
-const path = require('path');
-const {
+import fs from 'fs';
+import {fileURLToPath} from 'url';
+import {dirname} from 'path';
+//import Lavalien from './layers/attributes/Lavalien';
+import {
   Lavalien,
   Crown,
   Halo,
   Wings
-} = require('./layers/attributes/');
-const {
+} from './layers/attributes/index.js';
+import {
   Black,
   Blueberry,
   LightBlueberry,
@@ -17,8 +19,8 @@ const {
   Purple,
   Stars,
   Strawberry,
-} = require('./layers/backgrounds/');
-const {
+} from './layers/backgrounds/index.js';
+import {
   Alien,
   Bong,
   GoldAlien,
@@ -29,21 +31,27 @@ const {
   Normal,
   Pumpkin,
   Rocket,
-} = require('./layers/bases/');
-const {
+} from './layers/bases/index.js';
+import {
   Lava1,
   Lava2,
   Lava3,
   Lava4
-} = require('./layers/lavas/');
-const {
+} from './layers/lavas/index.js';
+import {
   LavaCeption,
   Leaves,
   Peace,
   Smoke,
   Swirls,
   YinYang
-} = require('./layers/overlays/');
+} from './layers/overlays/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const dirBananas = __dirname + '/bananas/';
+const dir7979 = __dirname + '/lavalamps7979/';
 
 const lavaColors = [
   {color1: '#321A93', color2: '#3603FF', color: 'blue'},
@@ -507,9 +515,6 @@ function generateRandomLavaLamp() {
   });
 }
 
-const dirBananas = __dirname + '/bananas/';
-const dir7979 = __dirname + '/lavalamps7979/';
-
 function saveLavaLamp({lavaLamp, id, dir}) {
   const filePath = dir + 'lamp_' + id + '.svg';
 
@@ -589,7 +594,7 @@ function generate7979LavaLamps() {
 // generateNRandomLavaLamps({n: 10000});
 // generate7979LavaLamps();
 
-module.exports = {
+export {
   generateLavaLamp,
   generateMetaData,
   generateRandomLavaLamp,

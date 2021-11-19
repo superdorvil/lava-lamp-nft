@@ -48,4 +48,4 @@ function Leaves() {
 `;
 };
 
-module.exports = {Leaves};
+export default Leaves;

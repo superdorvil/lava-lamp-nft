@@ -1,6 +1,6 @@
-const {Lava1} = require('./Lava1');
-const {Lava2} = require('./Lava2');
-const {Lava3} = require('./Lava3');
-const {Lava4} = require('./Lava4');
+import Lava1 from './Lava1.js';
+import Lava2 from './Lava2.js';
+import Lava3 from './Lava3.js';
+import Lava4 from './Lava4.js';
 
-module.exports = {Lava1, Lava2, Lava3, Lava4};
+export {Lava1, Lava2, Lava3, Lava4};

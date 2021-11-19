@@ -26,4 +26,4 @@ function Smoke() {
 `;
 };
 
-module.exports = {Smoke};
+export default Smoke;

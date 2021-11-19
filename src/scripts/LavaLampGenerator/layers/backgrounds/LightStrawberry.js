@@ -41,4 +41,4 @@ function LightStrawberry() {
 `;
 };
 
-module.exports = {LightStrawberry};
+export default LightStrawberry;

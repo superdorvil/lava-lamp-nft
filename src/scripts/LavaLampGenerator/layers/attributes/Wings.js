@@ -57,4 +57,4 @@ function Wings() {
     `;
 };
 
-module.exports = {Wings};
+export default Wings;

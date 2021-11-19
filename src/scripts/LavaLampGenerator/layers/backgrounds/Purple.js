@@ -33,4 +33,4 @@ function Purple() {
 `;
 };
 
-module.exports = {Purple};
+export default Purple;

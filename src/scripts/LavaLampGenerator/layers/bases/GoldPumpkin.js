@@ -48,4 +48,4 @@ function GoldPumpkin() {
 `;
 };
 
-module.exports = {GoldPumpkin};
+export default GoldPumpkin;

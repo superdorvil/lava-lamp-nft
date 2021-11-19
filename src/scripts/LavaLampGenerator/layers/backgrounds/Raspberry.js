@@ -45,4 +45,4 @@ function Raspberry() {
 `;
 };
 
-module.exports = {Raspberry};
+export default Raspberry;

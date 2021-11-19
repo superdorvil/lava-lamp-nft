@@ -30,4 +30,4 @@ function YinYang() {
 `;
 };
 
-module.exports = {YinYang};
+export default YinYang;

@@ -83,4 +83,4 @@ function GoldAlien() {
 `;
 };
 
-module.exports = {GoldAlien};
+export default GoldAlien;

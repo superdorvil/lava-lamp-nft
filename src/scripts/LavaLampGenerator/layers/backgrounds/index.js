@@ -1,15 +1,15 @@
-const {Black} = require('./Black');
-const {Blueberry} = require('./Blueberry');
-const {LightBlueberry} = require('./LightBlueberry');
-const {LightRaspberry} = require('./LightRaspberry');
-const {LightStrawberry} = require('./LightStrawberry');
-const {Raspberry} = require('./Raspberry');
-const {Sky} = require('./Sky');
-const {Purple} = require('./Purple');
-const {Stars} = require('./Stars');
-const {Strawberry} = require('./Strawberry');
+import Black from './Black.js';
+import Blueberry from './Blueberry.js';
+import LightBlueberry from './LightBlueberry.js';
+import LightRaspberry from './LightRaspberry.js';
+import LightStrawberry from './LightStrawberry.js';
+import Raspberry from './Raspberry.js';
+import Sky from './Sky.js';
+import Purple from './Purple.js';
+import Stars from './Stars.js';
+import Strawberry from './Strawberry.js';
 
-module.exports = {
+export {
   Black,
   Blueberry,
   LightBlueberry,

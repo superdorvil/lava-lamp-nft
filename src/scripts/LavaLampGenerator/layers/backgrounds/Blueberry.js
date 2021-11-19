@@ -45,4 +45,4 @@ function Blueberry() {
 `;
 };
 
-module.exports = {Blueberry};
+export default Blueberry;

@@ -101,4 +101,4 @@ function Normal() {
 `;
 };
 
-module.exports = {Normal};
+export default Normal;

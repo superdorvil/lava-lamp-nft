@@ -317,4 +317,4 @@ function Bong() {
 `;
 };
 
-module.exports = {Bong};
+export default Bong;

@@ -316,4 +316,4 @@ function GoldBong() {
 `;
 };
 
-module.exports = {GoldBong};
+export default GoldBong;

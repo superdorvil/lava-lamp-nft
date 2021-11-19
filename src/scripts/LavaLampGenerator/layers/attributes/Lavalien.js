@@ -101,4 +101,4 @@ function Lavalien() {
   `;
 };
 
-module.exports = { Lavalien };
+export default Lavalien;

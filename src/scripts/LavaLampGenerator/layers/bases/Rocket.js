@@ -56,4 +56,4 @@ function Rocket() {
 `;
 };
 
-module.exports = {Rocket};
+export default Rocket;

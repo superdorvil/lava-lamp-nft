@@ -225,4 +225,4 @@ function Stars() {
 `;
 };
 
-module.exports = {Stars};
+export default Stars;

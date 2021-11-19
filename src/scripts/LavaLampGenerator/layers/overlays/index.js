@@ -1,8 +1,8 @@
-const {LavaCeption} = require('./LavaCeption');
-const {Leaves} = require('./Leaves');
-const {Peace} = require('./Peace');
-const {Smoke} = require('./Smoke');
-const {Swirls} = require('./Swirls');
-const {YinYang} = require('./YinYang');
+import LavaCeption from './LavaCeption.js';
+import Leaves from './Leaves.js';
+import Peace from './Peace.js';
+import Smoke from './Smoke.js';
+import Swirls from './Swirls.js';
+import YinYang from './YinYang.js';
 
-module.exports = {LavaCeption, Leaves, Peace, Smoke, Swirls, YinYang};
+export {LavaCeption, Leaves, Peace, Smoke, Swirls, YinYang};

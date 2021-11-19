@@ -19,4 +19,4 @@ function Peace() {
 `;
 };
 
-module.exports = {Peace};
+export default Peace;

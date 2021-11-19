@@ -45,4 +45,4 @@ function Lava4({colors}) {
 `;
 };
 
-module.exports = {Lava4};
+export default Lava4;

@@ -31,4 +31,4 @@ function Sky() {
 `;
 };
 
-module.exports = {Sky};
+export default Sky;

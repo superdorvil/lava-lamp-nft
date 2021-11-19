@@ -101,4 +101,4 @@ function GoldNormal() {
 `;
 };
 
-module.exports = {GoldNormal};
+export default GoldNormal;

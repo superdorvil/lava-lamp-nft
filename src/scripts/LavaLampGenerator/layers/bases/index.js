@@ -1,15 +1,15 @@
-const {Alien} = require('./Alien');
-const {Bong} = require('./Bong');
-const {GoldAlien} = require('./GoldAlien');
-const {GoldBong} = require('./GoldBong');
-const {GoldNormal} = require('./GoldNormal');
-const {GoldPumpkin} = require('./GoldPumpkin');
-const {GoldRocket} = require('./GoldRocket');
-const {Normal} = require('./Normal');
-const {Pumpkin} = require('./Pumpkin');
-const {Rocket} = require('./Rocket');
+import Alien from './Alien.js';
+import Bong from './Bong.js';
+import GoldAlien from './GoldAlien.js';
+import GoldBong from './GoldBong.js';
+import GoldNormal from './GoldNormal.js';
+import GoldPumpkin from './GoldPumpkin.js';
+import GoldRocket from './GoldRocket.js';
+import Normal from './Normal.js';
+import Pumpkin from './Pumpkin.js';
+import Rocket from './Rocket.js';
 
-module.exports = {
+export {
   Alien,
   Bong,
   GoldAlien,

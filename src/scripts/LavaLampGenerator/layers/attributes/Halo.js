@@ -18,4 +18,4 @@ function Halo() {
     `;
 };
 
-module.exports = {Halo};
+export default Halo;

@@ -10,4 +10,4 @@ function Lava2({colors}) {
 `;
 };
 
-module.exports = {Lava2};
+export default Lava2;

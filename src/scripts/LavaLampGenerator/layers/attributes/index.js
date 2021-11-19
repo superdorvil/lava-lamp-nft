@@ -1,6 +1,6 @@
-const {Lavalien} = require('./Lavalien');
-const {Crown} = require('./Crown');
-const {Halo} = require('./Halo');
-const {Wings} = require('./Wings');
+import Lavalien from './Lavalien.js';
+import Crown from './Crown.js';
+import Halo from './Halo.js';
+import Wings from './Wings.js';
 
-module.exports = {Lavalien, Crown, Halo, Wings};
+export {Lavalien, Crown, Halo, Wings};

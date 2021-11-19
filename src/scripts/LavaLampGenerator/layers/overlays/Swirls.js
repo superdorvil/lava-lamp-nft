@@ -19,4 +19,4 @@ function Swirls() {
 `;
 };
 
-module.exports = {Swirls};
+export default Swirls;

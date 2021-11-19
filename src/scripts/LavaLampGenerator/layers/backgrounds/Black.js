@@ -45,4 +45,4 @@ function Black() {
   `;
 };
 
-module.exports = {Black};
+export default Black;

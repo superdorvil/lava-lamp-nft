@@ -41,4 +41,4 @@ function LightBlueberry() {
 `;
 };
 
-module.exports = {LightBlueberry};
+export default LightBlueberry;

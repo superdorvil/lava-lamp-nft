@@ -18,4 +18,4 @@ function LavaCeption() {
 `;
 };
 
-module.exports = {LavaCeption};
+export default LavaCeption;

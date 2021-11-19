@@ -18,4 +18,4 @@ function Crown() {
     `;
 };
 
-module.exports = {Crown};
+export default Crown;

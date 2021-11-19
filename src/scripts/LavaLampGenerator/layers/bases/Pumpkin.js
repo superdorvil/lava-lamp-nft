@@ -55,4 +55,4 @@ function Pumpkin() {
 `;
 };
 
-module.exports = {Pumpkin};
+export default Pumpkin;

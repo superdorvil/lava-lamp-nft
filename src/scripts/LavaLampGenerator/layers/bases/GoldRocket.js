@@ -56,4 +56,4 @@ function GoldRocket() {
 `;
 };
 
-module.exports = {GoldRocket};
+export default GoldRocket;
