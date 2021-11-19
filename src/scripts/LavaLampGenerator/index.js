@@ -1,7 +1,6 @@
-import fs from 'fs';
+import {writeFile, existsSync, mkdirSync, readdir, unlink} from 'fs';
 import {fileURLToPath} from 'url';
-import {dirname} from 'path';
-//import Lavalien from './layers/attributes/Lavalien';
+import {dirname, join} from 'path';
 import {
   Lavalien,
   Crown,
@@ -433,7 +432,7 @@ function generateNameMetaData({base, lava1, lava2, lava3, lava4}) {
 function generateDescriptionMetaData({attribute, background, base, lava1, lava2, lava3, lava4, overlay, tokenId}) {
   let b = 'LavaLamp ' + tokenId;
   if (base !== 2) {
-    b = getBase({index: base}) + ' LavaLamp ' + tokenId;
+    b = generateBaseSVG({index: base}) + ' LavaLamp ' + tokenId;
   }
   b = b + ' with ';
 
@@ -441,7 +440,7 @@ function generateDescriptionMetaData({attribute, background, base, lava1, lava2,
 };
 
 const generateMetaData = ({attribute, background, base, lavaCount, lava1, lava2, lava3, lava4, overlay, tokenId, uri}) => {
-  metadata = {
+  const metadata = {
     name: generateNameMetaData({attribute, base, lava1, lava2, lava3, lava4}),
     decription: generateDescriptionMetaData({attribute, background, base, lava1, lava2, lava3, lava4, overlay, tokenId}),
     image: uri,
@@ -519,23 +518,23 @@ function saveLavaLamp({lavaLamp, id, dir}) {
   const filePath = dir + 'lamp_' + id + '.svg';
 
   // writeFile function with filename, content and callback function
-  fs.writeFile(filePath, lavaLamp, function (err) {
+  writeFile(filePath, lavaLamp, function (err) {
     if (err) throw err;
   });
 }
 
 function saveNLavaLamps({lavaLamps, dir}) {
   // Check if files exist
-  if (!fs.existsSync(dir)){
-      fs.mkdirSync(dir);
+  if (!existsSync(dir)){
+      mkdirSync(dir);
   }
 
   // unlink all the files
-  fs.readdir(dir, (err, files) => {
+  readdir(dir, (err, files) => {
     if (err) throw err;
 
     for (const file of files) {
-      fs.unlink(path.join(dir, file), err => {
+      unlink(join(dir, file), err => {
         if (err) throw err;
       });
     }
@@ -591,7 +590,7 @@ function generate7979LavaLamps() {
   saveNLavaLamps({lavaLamps, dir: dir7979});
 }
 
-// generateNRandomLavaLamps({n: 10000});
+//generateNRandomLavaLamps({n: 10000});
 // generate7979LavaLamps();
 
 export {
