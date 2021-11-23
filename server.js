@@ -9,7 +9,8 @@ import LavaLampABI from './src/abis/LavaLampABI.js';
 import {
   generateLavaLamp,
   generateMetaData,
-  generateRandomLavaLamp
+  generateRandomLavaLamp,
+  generateNRandomLavaLamps,
 } from './src/scripts/LavaLampGenerator/index.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -102,6 +103,11 @@ app.get('/opensea', async (req, res) => {
 app.get('/svg', async (req, res) => {
   res.setHeader('Content-Type', 'image/svg+xml');
   res.send(generateRandomLavaLamp());
+});
+
+app.get('/lavalamps', async (req, res) => {
+  generateNRandomLavaLamps({n: 49});
+  res.redirect('localhost:3000');
 });
 
 app.listen(port, () => {

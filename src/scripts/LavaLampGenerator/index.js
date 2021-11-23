@@ -647,7 +647,7 @@ function saveLavaLamp({lavaLamp, id, dir}) {
 }
 
 function saveNLavaLamps({lavaLamps, dir}) {
-  // Check if files exist
+  /*// Check if files exist
   if (!existsSync(dir)){
     mkdirSync(dir);
   }
@@ -661,7 +661,7 @@ function saveNLavaLamps({lavaLamps, dir}) {
         if (err) throw err;
       });
     }
-  });
+  });*/
 
   // save all lamps
   lavaLamps.forEach((lavaLamp, id) => {
@@ -714,7 +714,7 @@ function generate7979LavaLamps() {
   saveNLavaLamps({lavaLamps, dir: dir7979});
 }
 
-// generateNRandomLavaLamps({n: 1000});
+// generateNRandomLavaLamps({n: 49});
 // generate7979LavaLamps();
 // generateAssets();
 
