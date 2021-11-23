@@ -1,13 +1,20 @@
-function Lava2({colors}) {
+function Lava2({lava2}) {
+  if (lava2.color === 'none') {
+    return '';
+  }
+
   return `
-<path d="M390 287.263C390 280.762 394.476 267.81 412.378 268.002C430.28 268.195 434.914 280.923 434.993 287.263C435.152 291.917 432.47 301.997 420.472 305.079C405.474 308.931 390 300.264 390 287.263Z" fill="url(#paint0_radial_461_73430)"/>
-<defs>
-<radialGradient id="paint0_radial_461_73430" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400.542 276.244) rotate(45.8803) scale(22.82 25.2937)">
-<stop offset="0.203125" style="stop-color: ${colors.color1};"/>
-<stop offset="0.890625" style="stop-color: ${colors.color2};"/>
-</radialGradient>
-</defs>
-`;
-};
+    <!-- Color -->
+    <path d="M177.734 130.914C177.734 127.951 179.774 122.048 187.933 122.136C196.091 122.224 198.203 128.025 198.239 130.914C198.312 133.035 197.089 137.629 191.621 139.033C184.786 140.789 177.734 136.839 177.734 130.914Z" fill="url(#paint0_radial_702_67018)"/>
+
+    <defs>
+      <!-- Color -->
+      <radialGradient id="paint0_radial_702_67018" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(182.539 125.892) rotate(45.8803) scale(10.3998 11.5271)">
+        <stop offset="0.203125" style="stop-color: ${lava2.color1};"/>
+        <stop offset="0.890625" style="stop-color: ${lava2.color2};"/>
+      </radialGradient>
+    </defs>
+  `;
+}
 
 export default Lava2;

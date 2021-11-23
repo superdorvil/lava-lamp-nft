@@ -1,9 +1,8 @@
-import {writeFile, existsSync, mkdirSync, readdir, unlink} from 'fs';
+import {writeFile, existsSync, mkdirSync, readdir, unlink, rmdir} from 'fs';
 import {fileURLToPath} from 'url';
 import {dirname, join} from 'path';
 import {
   Lavalien,
-  Crown,
   Halo,
   Wings
 } from './layers/attributes/index.js';
@@ -20,24 +19,36 @@ import {
   Strawberry,
 } from './layers/backgrounds/index.js';
 import {
-  Alien,
-  Bong,
+  DiamondAlien,
+  DiamondBong,
+  DiamondNormal,
+  DiamondPumpkin,
+  DiamondRocket,
+  EmeraldAlien,
+  EmeraldBong,
+  EmeraldNormal,
+  EmeraldPumpkin,
+  EmeraldRocket,
   GoldAlien,
   GoldBong,
   GoldNormal,
   GoldPumpkin,
   GoldRocket,
-  Normal,
-  Pumpkin,
-  Rocket,
+  OriginalAlien,
+  OriginalBong,
+  OriginalNormal,
+  OriginalPumpkin,
+  OriginalRocket,
+  RubyAlien,
+  RubyBong,
+  RubyNormal,
+  RubyPumpkin,
+  RubyRocket,
 } from './layers/bases/index.js';
+import {Lavas} from './layers/lavas/index.js';
 import {
-  Lava1,
-  Lava2,
-  Lava3,
-  Lava4
-} from './layers/lavas/index.js';
-import {
+  Bitcoin,
+  Ethereum,
   LavaCeption,
   Leaves,
   Peace,
@@ -53,15 +64,21 @@ const dirBananas = __dirname + '/bananas/';
 const dir7979 = __dirname + '/lavalamps7979/';
 
 const lavaColors = [
-  {color1: '#321A93', color2: '#3603FF', color: 'blue'},
+  {color1: '', color2: '', color: 'none'},
+  {color1: '#F85449', color2: '#C53434', color: 'red'},
   {color1: '#71FF30', color2: '#25BC46', color: 'green'},
+  {color1: '#FABE09', color2: '#FDF21B', color: 'yellow'},
+  {color1: '#321A93', color2: '#3603FF', color: 'blue'},
+  {color1: '#5000B6', color2: '#7E5EFF', color: 'purple'},
   {color1: '#21F6EA', color2: '#2183F6', color: 'light blue'},
   {color1: '#FFB800', color2: '#FF7800', color: 'orange'},
-  {color1: '#FF00D6', color2: '#D700B4', color: 'pink'},
-  {color1: '#5000B6', color2: '#7E5EFF', color: 'purple'},
-  {color1: '#F85449', color2: '#C53434', color: 'red'},
   {color1: '#FFFFFF', color2: '#D0C9C9', color: 'white'},
-  {color1: '#FABE09', color2: '#FDF21B', color: 'yellow'},
+  {color1: '#FF00D6', color2: '#D700B4', color: 'pink'},
+];
+
+const glassColors = [
+  '#FFFFFF',
+  '#000000',
 ];
 
 function generateRandomNumber({n}) {
@@ -81,12 +98,9 @@ function generateAttributeSVG({index}) {
       attribute = Lavalien();
       break;
     case 2:
-      attribute = '';//Crown();
-      break;
-    case 3:
       attribute = Halo();
       break;
-    case 4:
+    case 3:
       attribute = Wings();
       break;
     default:
@@ -137,74 +151,100 @@ function generateBackgroundSVG({index}) {
   return background;
 }
 
+function generateLavasSVG({lava1, lava2, lava3, lava4, glass}) {
+  return Lavas({
+    lava1: lavaColors[lava1],
+    lava2: lavaColors[lava2],
+    lava3: lavaColors[lava3],
+    lava4: lavaColors[lava4],
+    glassColor: glassColors[glass],
+  });
+}
+
 function generateBaseSVG({index}) {
   let base = '';
 
   switch(index) {
     case 0:
-      base = Alien();
+      base = DiamondAlien();
       break;
     case 1:
-      base = Bong();
+      base = DiamondBong();
       break;
     case 2:
-      base = GoldAlien();
+      base = DiamondNormal();
       break;
     case 3:
-      base = GoldBong();
+      base = DiamondPumpkin();
       break;
     case 4:
-      base = GoldNormal();
+      base = DiamondRocket();
       break;
     case 5:
-      base = GoldPumpkin();
+      base = EmeraldAlien();
       break;
     case 6:
-      base = GoldRocket();
+      base = EmeraldBong();
       break;
     case 7:
-      base = Normal();
+      base = EmeraldNormal();
       break;
     case 8:
-      base = Pumpkin();
+      base = EmeraldPumpkin();
       break;
     case 9:
-      base = Rocket();
+      base = EmeraldRocket();
+      break;
+    case 10:
+      base = GoldAlien();
+      break;
+    case 11:
+      base = GoldBong();
+      break;
+    case 12:
+      base = GoldNormal();
+      break;
+    case 13:
+      base = GoldPumpkin();
+      break;
+    case 14:
+      base = GoldRocket();
+      break;
+    case 15:
+      base = OriginalAlien();
+      break;
+    case 16:
+      base = OriginalBong();
+      break;
+    case 17:
+      base = OriginalNormal();
+      break;
+    case 18:
+      base = OriginalPumpkin();
+      break;
+    case 19:
+      base = OriginalRocket();
+      break;
+    case 20:
+      base = RubyAlien();
+      break;
+    case 21:
+      base = RubyBong();
+      break;
+    case 22:
+      base = RubyNormal();
+      break;
+    case 23:
+      base = RubyPumpkin();
+      break;
+    case 24:
+      base = RubyRocket();
       break;
     default:
     // add error checking
   }
 
   return base;
-}
-
-function generateLavaSVG({index, color}) {
-  let lava = '';
-
-  if (color === 0) {
-    return lava;
-  }
-
-  const colors = lavaColors[color - 1];
-
-  switch(index) {
-    case 0:
-      lava = Lava1({colors});
-      break;
-    case 1:
-      lava = Lava2({colors});
-      break;
-    case 2:
-      lava = Lava3({colors});
-      break;
-    case 3:
-      lava = Lava4({colors});
-      break;
-    default:
-    // add error checking
-  }
-
-  return lava;
 }
 
 function generateOverlaySVG({index}) {
@@ -215,21 +255,27 @@ function generateOverlaySVG({index}) {
       overlay = '';
       break;
     case 1:
-      overlay = LavaCeption();
+      overlay = Bitcoin();
       break;
     case 2:
-      overlay = Leaves();
+      overlay = Ethereum();
       break;
     case 3:
-      overlay = Peace();
+      overlay = LavaCeption();
       break;
     case 4:
-      overlay = Smoke();
+      overlay = Leaves();
       break;
     case 5:
-      overlay = Swirls();
+      overlay = Peace();
       break;
     case 6:
+      overlay = Smoke();
+      break;
+    case 7:
+      overlay = Swirls();
+      break;
+    case 8:
       overlay = YinYang();
       break;
     default:
@@ -311,34 +357,67 @@ function generateBaseMetaData({index}) {
 
   switch(index) {
     case '0':
-      base = 'Alien';
+      base = 'DiamondNormal';
       break;
     case '1':
-      base = 'Bong';
+      base = 'Ruby Alien';
       break;
     case '2':
-      base = 'Golden Alien';
+      base = 'Ruby Bong';
       break;
     case '3':
-      base = 'Golden Bong';
+      base = 'Ruby Normal';
       break;
     case '4':
-      base = 'GoldNormal';
+      base = 'Ruby Pumpkin';
       break;
     case '5':
-      base = 'Gold Pumpkin';
+      base = 'Emerald Rocket';
       break;
     case '6':
-      base = 'Gold Rocket';
+      base = 'Gold Alien';
       break;
     case '7':
-      base = 'Normal';
+      base = 'Gold Bong';
       break;
     case '8':
-      base = 'Pumpkin';
+      base = 'Gold Normal';
       break;
     case '9':
-      base = 'Rocket';
+      base = 'Gold Pumpkin';
+      break;
+    case '10':
+      base = 'Gold Rocket';
+      break;
+    case '11':
+      base = 'Original Alien';
+      break;
+    case '12':
+      base = 'Original Bong';
+      break;
+    case '13':
+      base = 'Original Normal';
+      break;
+    case '14':
+      base = 'Original Pumpkin';
+      break;
+    case '15':
+      base = 'Original Rocket';
+      break;
+    case '16':
+      base = 'Ruby Alien';
+      break;
+    case '17':
+      base = 'Ruby Bong';
+      break;
+    case '18':
+      base = 'Ruby Normal';
+      break;
+    case '19':
+      base = 'Ruby Pumpkin';
+      break;
+    case '20':
+      base = 'Ruby Rocket';
       break;
     default:
     // add error checking
@@ -483,34 +562,78 @@ const generateMetaData = ({attribute, background, base, lavaCount, lava1, lava2,
   return metadata;
 };
 
-function generateLavaLamp({attribute, base, background, lava1, lava2, lava3, lava4, overlay}) {
-  const openTag = '<svg width="768" height="768" viewBox="0 0 768 768" fill="none" xmlns="http://www.w3.org/2000/svg">';
+function generateLavaLamp({attribute, base, background, lava1, lava2, lava3, lava4, glass, overlay}) {
+  const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
   const closeTag = '</svg>';
 
   return `
     ${openTag}
     ${generateBackgroundSVG({index: background})}
     ${generateOverlaySVG({index: overlay})}
-    ${generateBaseSVG({index: base})}
-    ${generateLavaSVG({index: 0, color: lava1})}
-    ${generateLavaSVG({index: 1, color: lava2})}
-    ${generateLavaSVG({index: 2, color: lava3})}
-    ${generateLavaSVG({index: 3, color: lava4})}
     ${generateAttributeSVG({index: attribute})}
+    ${generateBaseSVG({index: base})}
+    ${generateLavasSVG({lava1, lava2, lava3, lava4, glass})}
     ${closeTag}
   `;
 }
 
+function generateAssets() {
+  const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
+  const closeTag = '</svg>';
+  const assets = [];
+
+  // attributes
+  for (let i = 0; i < 4; i++) {
+    assets.push(`
+      ${openTag}
+      ${generateAttributeSVG({index: i})}
+      ${closeTag}
+    `);
+  }
+
+  // backgrounds
+  for (let i = 0; i < 10; i++) {
+    assets.push(`
+      ${openTag}
+      ${generateBackgroundSVG({index: i})}
+      ${closeTag}
+    `);
+  }
+
+  // bases
+  for (let i = 0; i < 25; i++) {
+    assets.push(`
+      ${openTag}
+      ${generateBackgroundSVG({index: 0})}
+      ${generateBaseSVG({index: i, lava1: 0, lava2: 1, lava3: 2, lava4: 3, glass: 1})}
+      ${closeTag}
+    `);
+  }
+
+  // overlays
+  for (let i = 0; i < 9; i++) {
+    assets.push(`
+      ${openTag}
+      ${generateBackgroundSVG({index: 0})}
+      ${generateOverlaySVG({index: i})}
+      ${closeTag}
+    `);
+  }
+
+  saveNLavaLamps({lavaLamps: assets, dir: dirBananas});
+}
+
 function generateRandomLavaLamp() {
   return generateLavaLamp({
-    attribute: generateRandomNumber({n: 5}),
-    base: generateRandomNumber({n: 10}),
+    attribute: generateRandomNumber({n: 4}),
+    base: generateRandomNumber({n: 25}),
     background: generateRandomNumber({n: 10}),
     lava1: generateRandomNumber({n: 10}),
     lava2: generateRandomNumber({n: 10}),
     lava3: generateRandomNumber({n: 10}),
     lava4: generateRandomNumber({n: 10}),
-    overlay: generateRandomNumber({n: 7}),
+    glass: generateRandomNumber({n: 2}),
+    overlay: generateRandomNumber({n: 9}),
   });
 }
 
@@ -526,7 +649,7 @@ function saveLavaLamp({lavaLamp, id, dir}) {
 function saveNLavaLamps({lavaLamps, dir}) {
   // Check if files exist
   if (!existsSync(dir)){
-      mkdirSync(dir);
+    mkdirSync(dir);
   }
 
   // unlink all the files
@@ -576,13 +699,14 @@ function generate7979LavaLamps() {
     lavaIndex = (lavaIndex - lava4) / 10;
 
     lavaLamps.push(generateLavaLamp({
-      attribute: generateRandomNumber({n: 5}),
+      attribute: generateRandomNumber({n: 4}),
       base: generateRandomNumber({n: 10}),
       background: generateRandomNumber({n: 10}),
       lava1,
       lava2,
       lava3,
       lava4,
+      glass: generateRandomNumber({n: 2}),
       overlay: generateRandomNumber({n: 7}),
     }));
   }
@@ -590,8 +714,9 @@ function generate7979LavaLamps() {
   saveNLavaLamps({lavaLamps, dir: dir7979});
 }
 
-//generateNRandomLavaLamps({n: 10000});
+// generateNRandomLavaLamps({n: 1000});
 // generate7979LavaLamps();
+// generateAssets();
 
 export {
   generateLavaLamp,

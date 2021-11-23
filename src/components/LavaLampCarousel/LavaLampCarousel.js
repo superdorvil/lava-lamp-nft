@@ -6,7 +6,7 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import LavaLampImages from './LavaLampImages';
-import alienLamp from '../../images/AlienLamp.jpg';
+import alienLamp from '../../images/AlienLamp.svg';
 import angelLamp from '../../images/AngelLamp.png';
 import normalLamp1 from '../../images/NormalLamp1.jpg';
 import normalLamp2 from '../../images/NormalLamp2.png';
