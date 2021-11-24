@@ -105,11 +105,6 @@ app.get('/svg', async (req, res) => {
   res.send(generateRandomLavaLamp());
 });
 
-app.get('/lavalamps', async (req, res) => {
-  generateNRandomLavaLamps({n: 49});
-  res.redirect('localhost:3000');
-});
-
 app.listen(port, () => {
   console.log(`App launched on ${port}`);
 });
