@@ -6,17 +6,13 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import LavaLampImages from './LavaLampImages';
-import alienLamp from '../../images/AlienLamp.svg';
-import angelLamp from '../../images/AngelLamp.png';
-import normalLamp1 from '../../images/NormalLamp1.jpg';
-import normalLamp2 from '../../images/NormalLamp2.png';
-import rocketLamp from '../../images/RocketLamp.png';
+import {generateRandomLavaLamp} from '../../LavaLampGenerator';
 
 function LavaLampCarousel() {
   return (
     <CarouselProvider
       isIntrinsicHeight={true}
-      totalSlides={3}
+      totalSlides={4}
       isPlaying={true}
       interval={5000}
       orientation="horizontal"
@@ -26,31 +22,115 @@ function LavaLampCarousel() {
       <Slider>
         <Slide index={0}>
           <LavaLampImages
-            lamp1={alienLamp}
-            lamp2={angelLamp}
-            lamp3={normalLamp1}
-            lamp4={normalLamp2}
-            lamp5={rocketLamp}
+            lamp1={generateRandomLavaLamp()}
+            lamp2={generateRandomLavaLamp()}
+            lamp3={generateRandomLavaLamp()}
+            lamp4={generateRandomLavaLamp()}
+            lamp5={generateRandomLavaLamp()}
           />
         </Slide>
         <Slide index={1}>
           <LavaLampImages
-            lamp1={alienLamp}
-            lamp2={normalLamp2}
-            lamp3={rocketLamp}
-            lamp4={angelLamp}
-            lamp5={normalLamp1}
+            lamp1={generateRandomLavaLamp()}
+            lamp2={generateRandomLavaLamp()}
+            lamp3={generateRandomLavaLamp()}
+            lamp4={generateRandomLavaLamp()}
+            lamp5={generateRandomLavaLamp()}
           />
         </Slide>
         <Slide index={2}>
           <LavaLampImages
-            lamp1={rocketLamp}
-            lamp2={normalLamp1}
-            lamp3={angelLamp}
-            lamp4={normalLamp2}
-            lamp5={alienLamp}
+            lamp1={generateRandomLavaLamp()}
+            lamp2={generateRandomLavaLamp()}
+            lamp3={generateRandomLavaLamp()}
+            lamp4={generateRandomLavaLamp()}
+            lamp5={generateRandomLavaLamp()}
           />
         </Slide>
+        <Slide index={3}>
+          <LavaLampImages
+            lamp1={generateRandomLavaLamp()}
+            lamp2={generateRandomLavaLamp()}
+            lamp3={generateRandomLavaLamp()}
+            lamp4={generateRandomLavaLamp()}
+            lamp5={generateRandomLavaLamp()}
+          />
+        </Slide>
+          {/*<LavaLampImages
+            lamp1={generateLavaLamp({
+              attribute: 0, base: , background: 0, lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp2={generateLavaLamp({
+              attribute: 0, base: , background: 5, lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp3={generateLavaLamp({
+              attribute: 2, base: , background: 1, lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp4={generateLavaLamp({
+              attribute: 1, base: , background: 6, lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp5={generateLavaLamp({
+              attribute: 3, base: , background: 7, lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+          />
+        </Slide>
+        <Slide index={1}>
+          <LavaLampImages
+            lamp1={generateLavaLamp({
+              attribute: 0, base: , background: 5, lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp2={generateLavaLamp({
+              attribute: 0, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp3={generateLavaLamp({
+              attribute: 1, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp4={generateLavaLamp({
+              attribute: 2, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp5={generateLavaLamp({
+              attribute: 3, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+          />
+        </Slide>
+        <Slide index={2}>
+          <LavaLampImages
+            lamp1={generateLavaLamp({
+              attribute: 2, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp2={generateLavaLamp({
+              attribute: 1, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp3={generateLavaLamp({
+              attribute: 3, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp4={generateLavaLamp({
+              attribute: 0, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp5={generateLavaLamp({
+              attribute: 1, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+          />
+        </Slide>
+        <Slide index={3}>
+          <LavaLampImages
+            lamp1={generateLavaLamp({
+              attribute: 0, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp2={generateLavaLamp({
+              attribute: 0, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp3={generateLavaLamp({
+              attribute: 1, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp4={generateLavaLamp({
+              attribute: 2, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+            lamp5={generateLavaLamp({
+              attribute: 3, base: , background: , lava1: , lava2: , lava3: , lava4: , glass: , overlay:
+            })}
+          />
+        </Slide>*/}
       </Slider>
     </CarouselProvider>
   );

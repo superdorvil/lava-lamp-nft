@@ -4,7 +4,7 @@ import { LampContainer, LampImage } from './LavaLampElements';
 function LavaLamp ({lamp}) {
   return (
       <LampContainer>
-        <LampImage src={lamp} />
+        <LampImage src={`data:image/svg+xml;base64,${btoa(lamp)}`} />
       </LampContainer>
   );
 }

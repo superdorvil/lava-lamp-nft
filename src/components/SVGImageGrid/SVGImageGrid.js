@@ -3,7 +3,7 @@ import {SVGContainer} from './ImageGridElements';
 import LavaLampImages from './LavaLampImages';
 import LavaLamp from './LavaLamp';
 
-import {generateNRandomLavaLamps} from './LavaLampGenerator';
+import {generateNRandomLavaLamps} from '../../LavaLampGenerator';
 
 function SVGImageGrid() {
   const lavaLamps = generateNRandomLavaLamps({n: 49});
