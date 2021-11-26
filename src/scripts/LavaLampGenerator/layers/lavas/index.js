@@ -1,3 +1,3 @@
-import Lavas from './Lavas.js';
+import Lavas from './Lavas';
 
 export {Lavas};

@@ -2,7 +2,6 @@
   "name": "lava-lamp-nft",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@openzeppelin/contracts": "^4.3.2",
     "@testing-library/jest-dom": "^5.11.4",

@@ -1,13 +1,13 @@
-import Black from './Black.js';
-import Blueberry from './Blueberry.js';
-import LightBlueberry from './LightBlueberry.js';
-import LightRaspberry from './LightRaspberry.js';
-import LightStrawberry from './LightStrawberry.js';
-import Raspberry from './Raspberry.js';
-import Sky from './Sky.js';
-import Purple from './Purple.js';
-import Stars from './Stars.js';
-import Strawberry from './Strawberry.js';
+import Black from './Black';
+import Blueberry from './Blueberry';
+import LightBlueberry from './LightBlueberry';
+import LightRaspberry from './LightRaspberry';
+import LightStrawberry from './LightStrawberry';
+import Raspberry from './Raspberry';
+import Sky from './Sky';
+import Purple from './Purple';
+import Stars from './Stars';
+import Strawberry from './Strawberry';
 
 export {
   Black,

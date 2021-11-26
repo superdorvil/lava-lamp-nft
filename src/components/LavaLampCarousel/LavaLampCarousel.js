@@ -6,7 +6,7 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import LavaLampImages from './LavaLampImages';
-import {generateRandomLavaLamp} from '../../LavaLampGenerator';
+import {generateRandomLavaLamp} from '../../scripts/LavaLampGenerator';
 
 function LavaLampCarousel() {
   return (

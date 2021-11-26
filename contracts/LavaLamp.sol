@@ -2,27 +2,23 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-// import "@openzeppelin/contracts/utils/Counters.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-// import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
 
 contract LavaLamp is Ownable, ERC721 {
-  //using Counters for Counters.Counter;
-  //Counters.Counter private _tokenIds;
-
   struct Metadata {
+    uint8 attribute;
+    uint8 background; // 10 - (black, blueberry, light blueberry, light raspberry, light strawberry, raspberry, sky, purple, stars, strawberry)
+    uint8 base; // 25 - (standard, alien, rocket, bong, pumpkin) (types og, gold, diamond, ruby, emerald)
+    uint8 glass; // 2 (white or black) - (carbon)
+
+    // 10 (None, red, green, yellow, blue, purple, light blue, orange, white, pink)
     uint8 lava_count;
+    uint8 lava_1;
+    uint8 lava_2;
+    uint8 lava_3;
+    uint8 lava_4;
 
-    // 0 - 9 (None, blue, Green, light blue, orange, pink, purple, red, White, yerllow)
-
-    uint8 color_1;
-    uint8 color_2;
-    uint8 color_3;
-    uint8 color_4;
-
-    uint8 base; // 5 - (alien, rocket, more)
-    uint8 background; // 9 - (space, more)
-    uint8 sticker; // 5 - (star, lightning bolt, heart, diamond, planet)
+    uint8 overlay; //9 (none, bitcoin, ethereum, lavaception leaves, peace, smoke, swirls, yinyang)
   }
   mapping(uint256 => Metadata) id_to_lavalamp;
 
@@ -35,8 +31,6 @@ contract LavaLamp is Ownable, ERC721 {
   uint256 lampSetSize = 399;
 
   constructor() ERC721("LavaLamp", "LAVALAMP") {
-    // must have the http portion in it
-    //https://peaceful-plains-52194.herokuapp.com
     setBaseURI("http://www.superdorvil.tech/token/");
 
     for (int i = 0; i < 20; i++){
@@ -54,100 +48,175 @@ contract LavaLamp is Ownable, ERC721 {
 
   function mint () internal {
     uint256 tokenId = getId();
-    uint256 r;
     uint256 lava_index = tokenId;
-    uint8 lava_count = 0;
-    uint8 color_1;
-    uint8 color_2;
-    uint8 color_3;
-    uint8 color_4;
-    uint8 base;
+    uint256 r;
+
+    uint8 attribute;
     uint8 background;
-    uint8 sticker;
+    uint8 base;
+    uint8 glass;
+    uint8 lava_count = 0;
+    uint8 lava_1;
+    uint8 lava_2;
+    uint8 lava_3;
+    uint8 lava_4;
+    uint8 overlay;
 
-    color_1 = uint8(lava_index % 10);
-    lava_index = (lava_index - color_1) / 10;
-    color_2 = uint8(lava_index % 10);
-    lava_index = (lava_index - color_2) / 10;
-    color_3 = uint8(lava_index % 10);
-    lava_index = (lava_index - color_3) / 10;
-    color_4 = uint8(lava_index % 10);
-    lava_index = (lava_index - color_4) / 10;
+    lava_1 = uint8(lava_index % 10);
+    lava_index = (lava_index - lava_1) / 10;
+    lava_2 = uint8(lava_index % 10);
+    lava_index = (lava_index - lava_2) / 10;
+    lava_3 = uint8(lava_index % 10);
+    lava_index = (lava_index - lava_3) / 10;
+    lava_4 = uint8(lava_index % 10);
+    lava_index = (lava_index - lava_4) / 10;
 
-    if (color_1 > 0) {
+    if (lava_1 > 0) {
       lava_count++;
     }
-    if (color_2 > 0) {
+    if (lava_2 > 0) {
       lava_count++;
     }
-    if (color_3 > 0) {
+    if (lava_3 > 0) {
       lava_count++;
     }
-    if (color_4 > 0) {
+    if (lava_4 > 0) {
       lava_count++;
     }
 
-    // bases
-    r = pseudoRNG(color_1, color_2, color_3, color_4, 0) % 1000000;
-    if (r < 200000) {
-        base = 0;
-    } else if (r < 400000) {
-        base = 1;
-    } else if (r < 600000) {
-        base = 2;
-    } else if (r < 800000) {
-        base = 3;
+    // attribute
+    r = pseudoRNG(tokenId, r) % 1000000;
+    if (r < 250000) {
+      attribute = 0;
+    } else if (r < 500000) {
+      attribute = 1;
+    } else if (r < 750000) {
+      attribute = 2;
     } else {
-        base = 4;
+      attribute = 3;
     }
 
     // background
-    r = pseudoRNG(color_1, color_2, color_3, color_4, r) % 1000000;
-    if (r < 111111) {
-        background = 0;
-    } else if (r < 222222) {
-        background = 1;
-    } else if (r < 333333) {
-        background = 2;
-    } else if (r < 444444) {
-        background = 3;
-    } else if (r < 555555) {
-        background = 4;
-    } else if (r < 666666) {
-        background = 5;
-    } else if (r < 777777) {
-        background = 6;
-    } else if (r < 888888) {
-        background = 7;
-    } else {
-        background = 8;
-    }
-
-    // sticker
-    r = pseudoRNG(color_1, color_2, color_3, color_4, r) % 1000000;
-    if (r < 20000) {
-        sticker = 9;
-    } else if (r < 50000) {
-        sticker = 8;
-    } else if (r < 100000) {
-        sticker = 7;
-    } else if (r < 170000) {
-        sticker = 6;
-    } else if (r < 260000) {
-        sticker = 5;
-    } else if (r < 370000) {
-        sticker = 4;
+    r = pseudoRNG(tokenId, r) % 1000000;
+    if (r < 100000) {
+      background = 0;
+    } else if (r < 200000) {
+      background = 1;
+    } else if (r < 300000) {
+      background = 2;
+    } else if (r < 400000) {
+      background = 3;
     } else if (r < 500000) {
-        sticker = 3;
-    } else if (r < 650000) {
-        sticker = 2;
-    } else if (r < 820000) {
-        sticker = 1;
+      background = 4;
+    } else if (r < 600000) {
+      background = 5;
+    } else if (r < 700000) {
+      background = 6;
+    } else if (r < 800000) {
+      background = 7;
+    } else if (r < 900000) {
+      background = 8;
     } else {
-        sticker = 0;
+      background = 9;
     }
 
-    id_to_lavalamp[tokenId] = Metadata(lava_count, color_1, color_2, color_3, color_4, base, background, sticker);
+    // bases
+    r = pseudoRNG(tokenId, r) % 1000000;
+    if (r < 40000) {
+      base = 0;
+    } else if (r < 80000) {
+      base = 1;
+    } else if (r < 120000) {
+      base = 2;
+    } else if (r < 160000) {
+      base = 3;
+    } else if (r < 200000) {
+      base = 4;
+    } else if (r < 240000) {
+      base = 5;
+    } else if (r < 280000) {
+      base = 6;
+    } else if (r < 320000) {
+      base = 7;
+    } else if (r < 360000) {
+      base = 8;
+    } else if (r < 400000) {
+      base = 9;
+    } else if (r < 440000) {
+      base = 10;
+    } else if (r < 480000) {
+      base = 11;
+    } else if (r < 520000) {
+      base = 12;
+    } else if (r < 560000) {
+      base = 13;
+    } else if (r < 600000) {
+      base = 14;
+    } else if (r < 640000) {
+      base = 15;
+    } else if (r < 680000) {
+      base = 16;
+    } else if (r < 720000) {
+      base = 17;
+    } else if (r < 760000) {
+      base = 18;
+    } else if (r < 800000) {
+      base = 19;
+    } else if (r < 840000) {
+      base = 20;
+    } else if (r < 880000) {
+      base = 21;
+    } else if (r < 920000) {
+      base = 22;
+    } else if (r < 960000) {
+      base = 23;
+    } else {
+      base = 24;
+    }
+
+    // glass
+    r = pseudoRNG(tokenId, r) % 1000000;
+    if (r < 500000) {
+        glass = 0;
+    } else {
+        glass = 1;
+    }
+
+    // overlay
+    r = pseudoRNG(tokenId, r) % 1000000;
+    if (r < 111111) {
+      overlay = 0;
+    } else if (r < 222222) {
+      overlay = 1;
+    } else if (r < 333333) {
+      overlay = 2;
+    } else if (r < 444444) {
+      overlay = 3;
+    } else if (r < 555555) {
+      overlay = 4;
+    } else if (r < 666666) {
+      overlay = 5;
+    } else if (r < 777777) {
+      overlay = 6;
+    } else if (r < 888888) {
+      overlay = 7;
+    } else {
+      overlay = 8;
+    }
+
+    id_to_lavalamp[tokenId] =
+      Metadata(
+        attribute,
+        background,
+        base,
+        glass,
+        lava_count,
+        lava_1,
+        lava_2,
+        lava_3,
+        lava_4,
+        overlay
+      );
 
     _safeMint(msg.sender, tokenId);
 
@@ -230,18 +299,18 @@ contract LavaLamp is Ownable, ERC721 {
   function get(uint256 tokenId) external view returns(uint8[] memory) {
     require(_exists(tokenId), "token not minted");
     Metadata memory lavalamp = id_to_lavalamp[tokenId];
-    uint8[] memory meta = new uint8[](8);
+    uint8[] memory meta = new uint8[](10);
 
-    meta[0] = lavalamp.lava_count;
-
-    meta[1] = lavalamp.color_1;
-    meta[2] = lavalamp.color_2;
-    meta[3] = lavalamp.color_3;
-    meta[4] = lavalamp.color_4;
-
-    meta[5] = lavalamp.base;
-    meta[6] = lavalamp.background;
-    meta[7] = lavalamp.sticker;
+    meta[0] = lavalamp.attribute;
+    meta[1] = lavalamp.background;
+    meta[2] = lavalamp.base;
+    meta[3] = lavalamp.glass;
+    meta[4] = lavalamp.lava_count;
+    meta[5] = lavalamp.lava_1;
+    meta[6] = lavalamp.lava_2;
+    meta[7] = lavalamp.lava_3;
+    meta[8] = lavalamp.lava_4;
+    meta[9] = lavalamp.overlay;
 
     return meta;
   }
@@ -265,7 +334,7 @@ contract LavaLamp is Ownable, ERC721 {
   }*/
 
   // psuedo_rng is the previous rng value, this is just top make sure we get something different everytime and don't use the same psuedo for the, base, sticker, and background
-  function pseudoRNG(uint8 color_1, uint8 color_2, uint8 color_3, uint8 color_4, uint256 prev_rng) internal view returns (uint256) {
-      return uint256(keccak256(abi.encode(block.timestamp, block.difficulty, color_1, color_2, color_3, color_4, prev_rng)));
+  function pseudoRNG(uint256 tokenId, uint256 prev_rng) internal view returns (uint256) {
+      return uint256(keccak256(abi.encode(block.timestamp, block.difficulty, tokenId, prev_rng)));
   }
 }

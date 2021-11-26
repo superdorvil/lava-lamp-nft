@@ -1,5 +1,5 @@
-import Lavalien from './Lavalien.js';
-import Halo from './Halo.js';
-import Wings from './Wings.js';
+import Lavalien from './Lavalien';
+import Halo from './Halo';
+import Wings from './Wings';
 
 export {Lavalien, Halo, Wings};

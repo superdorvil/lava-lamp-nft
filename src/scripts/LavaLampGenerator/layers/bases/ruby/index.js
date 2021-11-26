@@ -1,8 +1,8 @@
-import RubyAlien from './RubyAlien.js';
-import RubyBong from './RubyBong.js';
-import RubyNormal from './RubyNormal.js';
-import RubyPumpkin from './RubyPumpkin.js';
-import RubyRocket from './RubyRocket.js';
+import RubyAlien from './RubyAlien';
+import RubyBong from './RubyBong';
+import RubyNormal from './RubyNormal';
+import RubyPumpkin from './RubyPumpkin';
+import RubyRocket from './RubyRocket';
 
 export {
   RubyAlien,

@@ -1,8 +1,8 @@
-import OriginalAlien from './OriginalAlien.js';
-import OriginalBong from './OriginalBong.js';
-import OriginalNormal from './OriginalNormal.js';
-import OriginalPumpkin from './OriginalPumpkin.js';
-import OriginalRocket from './OriginalRocket.js';
+import OriginalAlien from './OriginalAlien';
+import OriginalBong from './OriginalBong';
+import OriginalNormal from './OriginalNormal';
+import OriginalPumpkin from './OriginalPumpkin';
+import OriginalRocket from './OriginalRocket';
 
 export {
   OriginalAlien,

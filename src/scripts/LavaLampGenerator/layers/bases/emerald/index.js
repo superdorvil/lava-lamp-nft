@@ -1,8 +1,8 @@
-import EmeraldAlien from './EmeraldAlien.js';
-import EmeraldBong from './EmeraldBong.js';
-import EmeraldNormal from './EmeraldNormal.js';
-import EmeraldPumpkin from './EmeraldPumpkin.js';
-import EmeraldRocket from './EmeraldRocket.js';
+import EmeraldAlien from './EmeraldAlien';
+import EmeraldBong from './EmeraldBong';
+import EmeraldNormal from './EmeraldNormal';
+import EmeraldPumpkin from './EmeraldPumpkin';
+import EmeraldRocket from './EmeraldRocket';
 
 export {
   EmeraldAlien,

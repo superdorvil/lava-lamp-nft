@@ -1,8 +1,8 @@
-import GoldAlien from './GoldAlien.js';
-import GoldBong from './GoldBong.js';
-import GoldNormal from './GoldNormal.js';
-import GoldPumpkin from './GoldPumpkin.js';
-import GoldRocket from './GoldRocket.js';
+import GoldAlien from './GoldAlien';
+import GoldBong from './GoldBong';
+import GoldNormal from './GoldNormal';
+import GoldPumpkin from './GoldPumpkin';
+import GoldRocket from './GoldRocket';
 
 export {
   GoldAlien,

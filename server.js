@@ -1,31 +1,23 @@
-import dotenv from 'dotenv';
-dotenv.config({ silent: process.env.NODE_ENV === 'production' });
-import express from 'express';
-//import fs from 'fs';
-import {fileURLToPath} from 'url';
-import {dirname, join} from 'path';
-import Web3 from 'web3';
-import LavaLampABI from './src/abis/LavaLampABI.js';
-import {
+require('dotenv').config()
+const express = require('express');
+const path = require('path');
+const Web3 = require('web3');
+const {
   generateLavaLamp,
-  generateMetaData,
   generateRandomLavaLamp,
-  generateNRandomLavaLamps,
-} from './src/scripts/LavaLampGenerator/index.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+  generateMetaData,
+} = require('./src/scripts/LavaLampGeneratorExpress/');
 
 const app = express();
 
 const port = process.env.PORT || 3000;
 const baseUri = process.env.BASE_URI || 'http://localhost:3000';
-const contractAddress = process.env.CONTRACT_ADDRESS || '0x2035Ad61e93F6389CadA67B6C16B60Ec4665aDFA';
+const contractAddress = process.env.CONTRACT_ADDRESS;
 const network = process.env.NETWORK || 'rinkeby';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.ETH_CLIENT_URL));
-
-const contract = new web3.eth.Contract(LavaLampABI, contractAddress);
+const LavaLamp = require("./src/abis/LavaLamp.json");
+const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
 
 //const NodeCache = require( "node-cache" );
 //const cache = new NodeCache({
@@ -34,8 +26,7 @@ const contract = new web3.eth.Contract(LavaLampABI, contractAddress);
 //    useClones: false,
 //});
 
-
-app.use(express.static(join(__dirname, 'build'))); // use build for development
+app.use(express.static(path.join(__dirname, 'build'))); // use build for development
 
 app.get('/token/:tokenId', async (req, res) => {
   const tokenId = req.params.tokenId;
@@ -51,17 +42,33 @@ app.get('/token/:tokenId', async (req, res) => {
   try {
     const metadata = await contract.methods.get(tokenId).call();
 
-    const lavaCount = metadata[0];
-    const lava1 = metadata[1];
-    const lava2 = metadata[2];
-    const lava3 = metadata[3];
-    const lava4 = metadata[4];
-    const base = metadata[5];
-    const background = metadata[6];
-    const sticker = metadata[7];
-    const uri = `${baseUri}/token/lavalamp/${tokenId}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${base}/${background}/${sticker}`;
+    const attribute = metadata[0];
+    const background = metadata[1];
+    const base = metadata[2];
+    const glass = metadata[3];
+    const lavaCount = metadata[4];
+    const lava1 = metadata[5];
+    const lava2 = metadata[6];
+    const lava3 = metadata[7];
+    const lava4 = metadata[8];
+    const overlay = metadata[9];
 
-    const  metadataJson = generateMetaData(tokenId, lavaCount, lava1, lava2, lava3, lava4, base, background, sticker, uri);
+    const uri = `${baseUri}/token/lavalamp/${tokenId}/${attribute}/${background}/${base}/${glass}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${overlay}`;
+
+    const  metadataJson = generateMetaData({
+      attribute,
+      background,
+      base,
+      glass,
+      lavaCount,
+      lava1,
+      lava2,
+      lava3,
+      lava4,
+      overlay,
+      tokenId,
+      uri
+    });
 
     //cache.set(tokenId, result);
     res.json(metadataJson);
@@ -72,20 +79,32 @@ app.get('/token/:tokenId', async (req, res) => {
   }
 });
 
-app.get('/token/lavalamp/:tokenId/:lavaCount/:lava1/:lava2/:lava3/:lava4/:base/:background/:sticker', async (req, res) => {
-  const tokenId = req.params.tokenId;
-  const lavaCount = req.params.lavaCount;
-  const lava1 = req.params.lava1;
-  const lava2 = req.params.lava2;
-  const lava3 = req.params.lava3;
-  const lava4 = req.params.lava4;
-  const base = req.params.base;
-  const background = req.params.background;
-  const sticker = req.params.sticker;
+app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:lavaCount/:lava1/:lava2/:lava3/:lava4/:overlay', async (req, res) => {
+  const tokenId = parseInt(req.params.tokenId, 10);
+  const attribute = parseInt(req.params.attribute, 10);
+  const background = parseInt(req.params.background, 10);
+  const base = parseInt(req.params.base, 10);
+  const glass = parseInt(req.params.glass, 10);
+  const lavaCount = parseInt(req.params.lavaCount, 10);
+  const lava1 = parseInt(req.params.lava1, 10);
+  const lava2 = parseInt(req.params.lava2, 10);
+  const lava3 = parseInt(req.params.lava3, 10);
+  const lava4 = parseInt(req.params.lava4, 10);
+  const overlay = parseInt(req.params.overlay, 10);
 
   try {
     res.setHeader('Content-Type', 'image/svg+xml');
-    res.send(generateLavaLampSvg(background, base, lava1, lava2, lava3, lava4));
+    res.send(generateLavaLamp({
+      attribute,
+      background,
+      base,
+      glass,
+      lava1,
+      lava2,
+      lava3,
+      lava4,
+      overlay
+    }));
   }
   catch {
     res.sendStatus(404)
@@ -98,11 +117,6 @@ app.get('/opensea', async (req, res) => {
   } else {
     res.redirect('https://opensea.io');
   }
-});
-
-app.get('/svg', async (req, res) => {
-  res.setHeader('Content-Type', 'image/svg+xml');
-  res.send(generateRandomLavaLamp());
 });
 
 app.listen(port, () => {

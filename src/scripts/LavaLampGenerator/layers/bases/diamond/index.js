@@ -1,8 +1,8 @@
-import DiamondAlien from './DiamondAlien.js';
-import DiamondBong from './DiamondBong.js';
-import DiamondNormal from './DiamondNormal.js';
-import DiamondPumpkin from './DiamondPumpkin.js';
-import DiamondRocket from './DiamondRocket.js';
+import DiamondAlien from './DiamondAlien';
+import DiamondBong from './DiamondBong';
+import DiamondNormal from './DiamondNormal';
+import DiamondPumpkin from './DiamondPumpkin';
+import DiamondRocket from './DiamondRocket';
 
 export {
   DiamondAlien,
