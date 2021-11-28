@@ -5,11 +5,11 @@ function Lava2({lava2}) {
 
   return `
     <!-- Color -->
-    <path d="M177.734 130.914C177.734 127.951 179.774 122.048 187.933 122.136C196.091 122.224 198.203 128.025 198.239 130.914C198.312 133.035 197.089 137.629 191.621 139.033C184.786 140.789 177.734 136.839 177.734 130.914Z" fill="url(#paint0_radial_702_67018)"/>
+    <path d="M178.202 131.059C178.202 128.163 180.222 122.394 188.299 122.479C196.377 122.565 198.468 128.235 198.504 131.059C198.576 133.132 197.365 137.622 191.952 138.995C185.184 140.711 178.202 136.85 178.202 131.059Z" fill="url(#paint0_radial_765_91905)"/>
 
     <defs>
       <!-- Color -->
-      <radialGradient id="paint0_radial_702_67018" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(182.539 125.892) rotate(45.8803) scale(10.3998 11.5271)">
+      <radialGradient id="paint0_radial_765_91905" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(182.959 126.151) rotate(45.5119) scale(10.2292 11.3416)">
         <stop offset="0.203125" style="stop-color: ${lava2.color1};"/>
         <stop offset="0.890625" style="stop-color: ${lava2.color2};"/>
       </radialGradient>

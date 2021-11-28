@@ -5,20 +5,20 @@ function Lava4({lava4}) {
 
   return `
     <!-- Color -->
-    <path d="M223.109 211.89C217.522 215.445 199.996 225.13 174.887 225.13C146.901 225.13 128.335 213.098 125.221 210.933C125.032 210.801 124.911 210.606 124.87 210.39C128.808 199.004 144.115 175.86 164.064 181.919C173.943 184.919 180.859 192.452 187.364 199.536C197.438 210.508 206.525 220.404 224.106 210.722C223.783 211.11 223.451 211.499 223.109 211.89Z" fill="url(#paint0_radial_702_67020)"/>
+    <path d="M225 209.659C220.5 213 200.704 224 175.402 224C147.201 224 128.492 212.024 125.354 209.869C125.163 209.738 125.042 209.543 125 209.328C128.968 197.996 144.393 174.959 164.496 180.99C174.451 183.976 181.421 191.474 187.975 198.525C198.127 209.446 208 212.5 225 209.659C224.675 210.045 225.345 209.27 225 209.659Z" fill="url(#paint0_radial_765_91939)"/>
 
     <!-- Filter -->
-    <mask id="mask0_702_67020" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="124" y="180" width="101" height="46">
-      <path d="M223.109 211.89C217.522 215.445 199.996 225.13 174.887 225.13C146.901 225.13 128.335 213.098 125.221 210.933C125.032 210.802 124.911 210.606 124.87 210.39C128.808 199.004 144.115 175.86 164.064 181.919C173.943 184.92 180.859 192.452 187.364 199.536C197.438 210.508 206.525 220.405 224.106 210.722C223.783 211.11 223.451 211.499 223.109 211.89Z" fill="url(#paint1_radial_702_67020)"/>
+    <mask id="mask0_765_91939" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="124" y="179" width="101" height="45">
+      <path d="M223.865 210.799C218.235 214.343 200.574 224 175.272 224C147.071 224 128.362 212.003 125.224 209.845C125.033 209.714 124.911 209.519 124.87 209.303C128.838 197.951 144.263 174.875 164.365 180.916C174.321 183.908 181.29 191.418 187.845 198.481C197.997 209.421 207.153 219.288 224.87 209.635C224.545 210.021 224.21 210.409 223.865 210.799Z" fill="url(#paint1_radial_765_91939)"/>
     </mask>
-    <g mask="url(#mask0_702_67020)">
-      <g filter="url(#filter0_f_702_67020)">
-        <mask id="mask1_702_67020" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="124" y="94" width="102" height="132">
-          <path d="M148.862 95.0639C148.949 94.6401 149.322 94.3359 149.754 94.3359H200.246C200.678 94.3359 201.051 94.6401 201.138 95.0639L224.993 211.159C225.074 211.555 224.888 211.955 224.527 212.137C220.624 214.109 198.375 224.817 175 225.128C151.578 225.438 129.287 214.178 125.45 212.141C125.099 211.954 124.924 211.562 125.004 211.173L148.862 95.0639Z" fill="#577096" fill-opacity="0.75"/>
+    <g mask="url(#mask0_765_91939)">
+      <g filter="url(#filter0_f_765_91939)">
+        <mask id="mask1_765_91939" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="124" y="93" width="102" height="132">
+          <path d="M148.861 94.3198C148.948 93.896 149.322 93.5918 149.754 93.5918H200.245C200.678 93.5918 201.051 93.896 201.138 94.3198L224.993 210.414C225.074 210.811 224.887 211.211 224.527 211.393C220.623 213.365 198.375 224.073 175 224.383C151.578 224.694 129.287 213.434 125.45 211.396C125.099 211.21 124.924 210.818 125.004 210.429L148.861 94.3198Z" fill="#577096" fill-opacity="0.75"/>
         </mask>
-        <g mask="url(#mask1_702_67020)">
-          <g filter="url(#filter1_f_702_67020)">
-            <path d="M155.407 125.301C156.469 105.018 134.471 86.183 128.929 66.9987C133.388 65.1975 144.05 70.7899 152.675 76.125C163.456 82.7938 162.879 109.124 164.625 125.784C166.022 139.112 148.453 223.401 144.015 241.482L131.716 240.837C140.242 214.68 154.587 140.955 155.407 125.301Z" fill="url(#paint2_linear_702_67020)" fill-opacity="0.6"/>
+        <g mask="url(#mask1_765_91939)">
+          <g filter="url(#filter1_f_765_91939)">
+            <path d="M155.407 124.557C156.469 104.274 134.471 85.4391 128.928 66.2548C133.387 64.4536 144.05 70.046 152.675 75.3811C163.455 82.0499 162.878 108.38 164.625 125.04C166.022 138.368 148.453 222.657 144.014 240.738L131.716 240.094C140.242 213.936 154.587 140.211 155.407 124.557Z" fill="url(#paint2_linear_765_91939)" fill-opacity="0.6"/>
           </g>
         </g>
       </g>
@@ -26,27 +26,27 @@ function Lava4({lava4}) {
 
     <defs>
       <!-- Color -->
-      <radialGradient id="paint0_radial_702_67020" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(148.118 190.514) rotate(28.5454) scale(39.8814 37.1287)">
+      <radialGradient id="paint0_radial_765_91939" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(148.451 189.545) rotate(28.2255) scale(40.1081 37.0676)">
         <stop offset="0.203125" style="stop-color: ${lava4.color1};"/>
         <stop offset="0.890625" style="stop-color: ${lava4.color2};"/>
       </radialGradient>
 
       <!-- Filter -->
-      <filter id="filter0_f_702_67020" x="122.591" y="92.0573" width="104.818" height="135.355" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <filter id="filter0_f_765_91939" x="122.591" y="91.3132" width="105.59" height="135.355" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur stdDeviation="1.13932" result="effect1_foregroundBlur_702_67020"/>
+        <feGaussianBlur stdDeviation="1.13932" result="effect1_foregroundBlur_765_91939"/>
       </filter>
-      <filter id="filter1_f_702_67020" x="128.017" y="65.7428" width="37.5979" height="176.65" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <filter id="filter1_f_765_91939" x="128.017" y="64.9987" width="37.5983" height="176.651" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
         <feFlood flood-opacity="0" result="BackgroundImageFix"/>
         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur stdDeviation="0.455729" result="effect1_foregroundBlur_702_67020"/>
+        <feGaussianBlur stdDeviation="0.455729" result="effect1_foregroundBlur_765_91939"/>
       </filter>
-      <radialGradient id="paint1_radial_702_67020" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(146.218 191.259) rotate(27.3324) scale(58.602 42.3474)">
+      <radialGradient id="paint1_radial_765_91939" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(146.382 190.229) rotate(27.0849) scale(58.9221 42.3164)">
         <stop offset="0.302083" stop-color="#FFB800"/>
         <stop offset="1" stop-color="#FF7800"/>
       </radialGradient>
-      <linearGradient id="paint2_linear_702_67020" x1="160.729" y1="220.939" x2="201.954" y2="178" gradientUnits="userSpaceOnUse">
+      <linearGradient id="paint2_linear_765_91939" x1="160.729" y1="220.195" x2="201.954" y2="177.257" gradientUnits="userSpaceOnUse">
         <stop stop-color="#F2F2F2"/>
         <stop offset="0.0001" stop-color="#F2F2F2"/>
         <stop offset="0.0520833" stop-color="#F2F2F2" stop-opacity="0.948011"/>
@@ -55,6 +55,5 @@ function Lava4({lava4}) {
     </defs>
   `;
 }
-
 
 module.exports = {Lava4};

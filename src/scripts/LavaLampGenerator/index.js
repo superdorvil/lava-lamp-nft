@@ -396,6 +396,8 @@ function generate7979LavaLamps() {
   return lavaLamps;
 }
 
+generateAssets();
+
 export {
   generateLavaLamp,
   generateRandomLavaLamp,
