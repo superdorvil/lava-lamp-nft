@@ -58,8 +58,6 @@ export const TopLeftText = styled.p`
 `;
 
 export const ConnectButton = styled.div`
-  display: flex;
-  flex: 1;
   align-items: flex-end;
   justify-content: flex-end;
   padding-right: 54px;
@@ -288,14 +286,10 @@ export const BuyTextContainer = styled.div`
 export const LinkContainer = styled.div`
   display: flex;
   flex: 1;
-  position: absolute;
-  align-self: center;
+  align-self: baseline;
+  align-items: center;
   justify-content: center;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin-top: 54px;
+  padding-top: 54px;
   @media screen and (max-width: 1024px) {
     padding-top: 54px;
   }

@@ -52,8 +52,7 @@ export const connect = () => {
         });
         console.log(accounts);
 
-        /*
-        https://medium.com/metamask/breaking-changes-to-the-metamask-inpage-provider-b4dde069dd0a
+        //https://medium.com/metamask/breaking-changes-to-the-metamask-inpage-provider-b4dde069dd0a
         console.log([]);
         if (accounts.length === [].length) {
           console.log('no account');
@@ -61,7 +60,6 @@ export const connect = () => {
         } else {
           console.log('hey');
         }
-        */
 
         const networkId = await window.ethereum.request({
           method: 'net_version',

@@ -57,6 +57,9 @@ function HeroSection() {
   const initialTimeDiff = (releaseDate - new Date()) / 1000;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
+  const [NFTS, setNFTS] = useState([]);
   const [dropComing, setDropComing] = useState(initialTimeDiff > 0 ? true : false);
   const [dropTime, setDropTime] = useState(getTimeDiff);
   const [lampCount, setLampCount] = useState(1);
@@ -98,7 +101,11 @@ function HeroSection() {
         <TopLeftText>LAVA LAMPS</TopLeftText>
         <SocialMediaLinks />
         <ConnectButton>
-          <ConnectWalletButton connected={false} connectedWallet='' buttonPressed={() => {}} />
+          <ConnectWalletButton
+            connected={false}
+            connectedWallet={blockchain.account}
+            buttonPressed={() => dispatch(connect())}
+          />
         </ConnectButton>
       </HeaderContainer>
       <Title>7,979 LAVA LAMPS</Title>

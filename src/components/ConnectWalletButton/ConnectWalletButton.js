@@ -1,17 +1,20 @@
 import React from 'react';
-import { StyledButton, Ccccc } from './ButtonElements';
+import { StyledButton } from './ButtonElements';
 
 function ConnectWalletButton({connected, connectedWallet, buttonPressed}) {
   return (
     <StyledButton
       onClick={(e) => {
         e.preventDefault();
-        buttonPressed();
+        connectedWallet ?
+          window.open("https://etherscan.io/address/" + connectedWallet, "_blank")
+          : buttonPressed();
       }}
+      connectedWallet={connectedWallet}
     >
-    {connected ? 'DISCONNECT WALLET' : 'CONNECT WALLET'}
+    {connectedWallet ? connectedWallet.substring(0, 6) : 'CONNECT WALLET'}
     </StyledButton>
   );
 }
-
+//https://etherscan.io/address/
 export default ConnectWalletButton;

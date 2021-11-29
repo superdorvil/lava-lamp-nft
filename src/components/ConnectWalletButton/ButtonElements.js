@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
+//height:  ${props => props.dropComing ? 250 : 300}px;
+
 export const StyledButton = styled.button`
-  border-width: 4px;
+  border-width: ${props => props.connectedWallet ? 0 : 4}px;
   border-style: solid;
   border-color: #FFFFFF;
   border-radius: 10px;
