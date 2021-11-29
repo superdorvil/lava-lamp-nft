@@ -8,17 +8,18 @@ contract LavaLamp is Ownable, ERC721 {
   struct Metadata {
     uint8 attribute;
     uint8 background; // 10 - (black, blueberry, light blueberry, light raspberry, light strawberry, raspberry, sky, purple, stars, strawberry)
-    uint8 base; // 25 - (standard, alien, rocket, bong, pumpkin) (types og, gold, diamond, ruby, emerald)
+    uint8 base; // 6 - (standard, alien, rocket, bong, pumpkin, wizard)
     uint8 glass; // 2 (white or black) - (carbon)
 
-    // 10 (None, red, green, yellow, blue, purple, light blue, orange, white, pink)
+    // 109 (None, red, green, yellow, blue, purple, light blue, orange, white, pink)
     uint8 lava_count;
     uint8 lava_1;
     uint8 lava_2;
     uint8 lava_3;
     uint8 lava_4;
 
-    uint8 overlay; //9 (none, bitcoin, ethereum, lavaception leaves, peace, smoke, swirls, yinyang)
+    uint8 overlay; // 9 (none, bitcoin, ethereum, lavaception leaves, peace, smoke, swirls, yinyang)
+    uint8 rarity; // 6 (og, gold, diamond, ruby, emerald, rainbow)
   }
   mapping(uint256 => Metadata) id_to_lavalamp;
 
@@ -61,6 +62,7 @@ contract LavaLamp is Ownable, ERC721 {
     uint8 lava_3;
     uint8 lava_4;
     uint8 overlay;
+    uint8 rarity;
 
     lava_1 = uint8(lava_index % 10);
     lava_index = (lava_index - lava_1) / 10;
@@ -122,56 +124,18 @@ contract LavaLamp is Ownable, ERC721 {
 
     // bases
     r = pseudoRNG(tokenId, r) % 1000000;
-    if (r < 40000) {
+    if (r < 166666) {
       base = 0;
-    } else if (r < 80000) {
+    } else if (r < 333332) {
       base = 1;
-    } else if (r < 120000) {
+    } else if (r < 499998) {
       base = 2;
-    } else if (r < 160000) {
+    } else if (r < 666664) {
       base = 3;
-    } else if (r < 200000) {
+    } else if (r < 833330) {
       base = 4;
-    } else if (r < 240000) {
-      base = 5;
-    } else if (r < 280000) {
-      base = 6;
-    } else if (r < 320000) {
-      base = 7;
-    } else if (r < 360000) {
-      base = 8;
-    } else if (r < 400000) {
-      base = 9;
-    } else if (r < 440000) {
-      base = 10;
-    } else if (r < 480000) {
-      base = 11;
-    } else if (r < 520000) {
-      base = 12;
-    } else if (r < 560000) {
-      base = 13;
-    } else if (r < 600000) {
-      base = 14;
-    } else if (r < 640000) {
-      base = 15;
-    } else if (r < 680000) {
-      base = 16;
-    } else if (r < 720000) {
-      base = 17;
-    } else if (r < 760000) {
-      base = 18;
-    } else if (r < 800000) {
-      base = 19;
-    } else if (r < 840000) {
-      base = 20;
-    } else if (r < 880000) {
-      base = 21;
-    } else if (r < 920000) {
-      base = 22;
-    } else if (r < 960000) {
-      base = 23;
     } else {
-      base = 24;
+      base = 5;
     }
 
     // glass
@@ -204,6 +168,22 @@ contract LavaLamp is Ownable, ERC721 {
       overlay = 8;
     }
 
+    // rarity
+    r = pseudoRNG(tokenId, r) % 1000000;
+    if (r < 166666) {
+      base = 0;
+    } else if (r < 333332) {
+      base = 1;
+    } else if (r < 499998) {
+      base = 2;
+    } else if (r < 666664) {
+      base = 3;
+    } else if (r < 833330) {
+      base = 4;
+    } else {
+      base = 5;
+    }
+
     id_to_lavalamp[tokenId] =
       Metadata(
         attribute,
@@ -215,7 +195,8 @@ contract LavaLamp is Ownable, ERC721 {
         lava_2,
         lava_3,
         lava_4,
-        overlay
+        overlay,
+        rarity
       );
 
     _safeMint(msg.sender, tokenId);
@@ -299,7 +280,7 @@ contract LavaLamp is Ownable, ERC721 {
   function get(uint256 tokenId) external view returns(uint8[] memory) {
     require(_exists(tokenId), "token not minted");
     Metadata memory lavalamp = id_to_lavalamp[tokenId];
-    uint8[] memory meta = new uint8[](10);
+    uint8[] memory meta = new uint8[](11);
 
     meta[0] = lavalamp.attribute;
     meta[1] = lavalamp.background;
@@ -311,6 +292,7 @@ contract LavaLamp is Ownable, ERC721 {
     meta[7] = lavalamp.lava_3;
     meta[8] = lavalamp.lava_4;
     meta[9] = lavalamp.overlay;
+    meta[10] = lavalamp.rarity;
 
     return meta;
   }
