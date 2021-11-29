@@ -125,7 +125,7 @@ function HeroSection() {
           lampPrice={lampPrice}
           incrementLampCount={
             () => {
-              const lc = lampCount + 1;
+              const lc = lampCount < 20 ? lampCount + 1 : lampCount;
               setLampCount(lc);
               setLampPrice(decimalMultiply(lc, .03));
             }
