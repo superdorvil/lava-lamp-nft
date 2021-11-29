@@ -23,6 +23,11 @@ export const LavaBackground = styled.div`
   }
 `;
 
+export const HeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export const TopLeftText = styled.p`
   margin: 0px;
   padding-left: 54px;
@@ -49,6 +54,31 @@ export const TopLeftText = styled.p`
     padding-left: 24px;
     padding-top: 24px;
     font-size: 20px;
+  }
+`;
+
+export const ConnectButton = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 54px;
+  padding-top: 44px;
+  @media screen and (max-width: 1024px) {
+    padding-right: 54px;
+    padding-top: 44px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-right: 36px;
+    padding-top: 26px;
+  }
+  @media screen and (max-width: 600px) {
+    padding-right: 36px;
+    padding-top: 22px;
+  }
+  @media screen and (max-width: 480px) {
+    padding-right: 24px;
+    padding-top: 14px;
   }
 `;
 
@@ -257,13 +287,26 @@ export const BuyTextContainer = styled.div`
 
 export const LinkContainer = styled.div`
   display: flex;
+  flex: 1;
+  position: absolute;
+  align-self: center;
   justify-content: center;
-  margin-top: 32px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: 54px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 54px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-top: 36px;
+  }
   @media screen and (max-width: 600px) {
-    margin-top: 24px;
+    padding-top: 36px;
   }
   @media screen and (max-width: 480px) {
-
+    padding-top: 24px;
   }
 `;
 

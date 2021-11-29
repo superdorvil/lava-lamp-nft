@@ -7,8 +7,11 @@ import {
   Title,
   SubTitle,
   MintDetails,
+  HeaderContainer,
+  ConnectButton,
 } from './HeroElements';
 import MintButton from './MintButton';
+import ConnectWalletButton from '../ConnectWalletButton';
 import SocialMediaLinks from './SocialMediaLinks';
 import DropTimer from './DropTimer';
 import Web3 from 'web3';
@@ -91,7 +94,13 @@ function HeroSection() {
 
   return (
     <LavaBackground dropComing={dropComing}>
-      <TopLeftText>LAVA LAMPS</TopLeftText>
+      <HeaderContainer>
+        <TopLeftText>LAVA LAMPS</TopLeftText>
+        <SocialMediaLinks />
+        <ConnectButton>
+          <ConnectWalletButton connected={false} connectedWallet='' buttonPressed={() => {}} />
+        </ConnectButton>
+      </HeaderContainer>
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>
       {dropComing ?
@@ -124,7 +133,6 @@ function HeroSection() {
         />
       }
       <MintDetails>max of 20. minted at .03 ETH</MintDetails>
-      <SocialMediaLinks />
     </LavaBackground>
   );
 }

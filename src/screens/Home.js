@@ -20,7 +20,6 @@ function Home() {
 
   return (
     <>
-      <SVGImageGrid />
       <HeroSection />
       <LavaLampCarousel/>
       <InfoSection info={infoSectionOne} toggleModal={toggleModal} />
@@ -28,6 +27,7 @@ function Home() {
       <LampProperties />
       <Footer />
       <LavaList isOpen={isOpen} toggleModal={toggleModal} />
+      <SVGImageGrid />
     </>
   );
 }
