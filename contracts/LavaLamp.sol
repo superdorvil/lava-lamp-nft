@@ -3,8 +3,16 @@ pragma solidity >=0.4.22 <0.9.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+// FIXME:: check this out
+// https://stackoverflow.com/questions/68810515/totalsupply-is-not-a-function-openzeppelin-contracts
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+//import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
 
-contract LavaLamp is Ownable, ERC721 {
+// FIXME:: todo, counter to see how many things were minted
+// FIXME:: Should I add the ability to pause the contract???
+// FIXME:: Update contract to the most recent ERC shit
+
+contract LavaLamp is Ownable, ERC721, ERC721Enumerable {
   struct Metadata {
     uint8 attribute;
     uint8 background; // 10 - (black, blueberry, light blueberry, light raspberry, light strawberry, raspberry, sky, purple, stars, strawberry)
@@ -25,18 +33,28 @@ contract LavaLamp is Ownable, ERC721 {
 
   string private _currentBaseURI;
 
-  uint256 maxLamps = 7980;
+  uint256 maxSupply = 7980;
+  uint256 cost = 0.03 ether;
+  uint256 maxMintAmount = 20;
   uint256 lampCount = 0;
   uint256 currentLampSet = 0;
   uint256 numOfLampBlocks = 19;
   uint256 lampSetSize = 399;
 
   constructor() ERC721("LavaLamp", "LAVALAMP") {
-    setBaseURI("http://www.superdorvil.tech/token/");
+    setBaseURI("http://localhost:3000/token/"); // setBaseURI("http://www.superdorvil.tech/token/");
 
-    for (int i = 0; i < 20; i++){
+    for (int i = 0; i < 2; i++){
       mint();
     }
+  }
+
+  function _beforeTokenTransfer(address from, address to, uint256 tokenId) internal override(ERC721, ERC721Enumerable) {
+    super._beforeTokenTransfer(from, to, tokenId);
+  }
+
+  function supportsInterface(bytes4 interfaceId) public view override(ERC721, ERC721Enumerable) returns (bool) {
+    return super.supportsInterface(interfaceId);
   }
 
   function setBaseURI(string memory baseURI) public onlyOwner {
@@ -48,46 +66,68 @@ contract LavaLamp is Ownable, ERC721 {
   }
 
   function mint () internal {
+    Metadata memory metadata;
     uint256 tokenId = getId();
     uint256 lava_index = tokenId;
     uint256 r;
 
-    uint8 attribute;
-    uint8 background;
-    uint8 base;
-    uint8 glass;
     uint8 lava_count = 0;
     uint8 lava_1;
     uint8 lava_2;
     uint8 lava_3;
     uint8 lava_4;
-    uint8 overlay;
-    uint8 rarity;
 
-    lava_1 = uint8(lava_index % 10);
-    lava_index = (lava_index - lava_1) / 10;
-    lava_2 = uint8(lava_index % 10);
-    lava_index = (lava_index - lava_2) / 10;
-    lava_3 = uint8(lava_index % 10);
-    lava_index = (lava_index - lava_3) / 10;
     lava_4 = uint8(lava_index % 10);
     lava_index = (lava_index - lava_4) / 10;
+    lava_3 = uint8(lava_index % 10);
+    lava_index = (lava_index - lava_3) / 10;
+    lava_2 = uint8(lava_index % 10);
+    lava_index = (lava_index - lava_2) / 10;
+    lava_1 = uint8(lava_index % 10);
+    lava_index = (lava_index - lava_1) / 10;
 
-    if (lava_1 > 0) {
-      lava_count++;
-    }
-    if (lava_2 > 0) {
+    if (lava_4 > 0) {
       lava_count++;
     }
     if (lava_3 > 0) {
       lava_count++;
     }
-    if (lava_4 > 0) {
+    if (lava_2 > 0) {
+      lava_count++;
+    }
+    if (lava_1 > 0) {
       lava_count++;
     }
 
-    // attribute
+    metadata.lava_count = lava_count;
+    metadata.lava_1 = lava_1;
+    metadata.lava_2 = lava_2;
+    metadata.lava_3 = lava_3;
+    metadata.lava_4 = lava_4;
+
     r = pseudoRNG(tokenId, r) % 1000000;
+    metadata.attribute = generateAttribute(r);
+    r = pseudoRNG(tokenId, r) % 1000000;
+    metadata.background = generateBackground(r);
+    r = pseudoRNG(tokenId, r) % 1000000;
+    metadata.base = generateBase(r);
+    r = pseudoRNG(tokenId, r) % 1000000;
+    metadata.glass = generateGlass(r);
+    r = pseudoRNG(tokenId, r) % 1000000;
+    metadata.overlay = generateOverlay(r);
+    r = pseudoRNG(tokenId, r) % 1000000;
+    metadata.rarity = generateRarity(r);
+
+    id_to_lavalamp[tokenId] = metadata;
+
+    _safeMint(msg.sender, tokenId);
+
+    incrementId();
+  }
+
+  function generateAttribute(uint256 r) internal pure returns(uint8) {
+    uint8 attribute;
+
     if (r < 250000) {
       attribute = 0;
     } else if (r < 500000) {
@@ -98,8 +138,12 @@ contract LavaLamp is Ownable, ERC721 {
       attribute = 3;
     }
 
-    // background
-    r = pseudoRNG(tokenId, r) % 1000000;
+    return attribute;
+  }
+
+  function generateBackground(uint256 r) internal pure returns(uint8) {
+    uint8 background;
+
     if (r < 100000) {
       background = 0;
     } else if (r < 200000) {
@@ -122,8 +166,12 @@ contract LavaLamp is Ownable, ERC721 {
       background = 9;
     }
 
-    // bases
-    r = pseudoRNG(tokenId, r) % 1000000;
+    return background;
+  }
+
+  function generateBase(uint256 r) internal pure returns(uint8) {
+    uint8 base;
+
     if (r < 166666) {
       base = 0;
     } else if (r < 333332) {
@@ -138,16 +186,24 @@ contract LavaLamp is Ownable, ERC721 {
       base = 5;
     }
 
-    // glass
-    r = pseudoRNG(tokenId, r) % 1000000;
+    return base;
+  }
+
+  function generateGlass(uint256 r) internal pure returns(uint8) {
+    uint8 glass;
+
     if (r < 500000) {
         glass = 0;
     } else {
         glass = 1;
     }
 
-    // overlay
-    r = pseudoRNG(tokenId, r) % 1000000;
+    return glass;
+  }
+
+  function generateOverlay(uint256 r) internal pure returns(uint8) {
+    uint8 overlay;
+
     if (r < 111111) {
       overlay = 0;
     } else if (r < 222222) {
@@ -168,46 +224,42 @@ contract LavaLamp is Ownable, ERC721 {
       overlay = 8;
     }
 
-    // rarity
-    r = pseudoRNG(tokenId, r) % 1000000;
-    if (r < 166666) {
-      base = 0;
-    } else if (r < 333332) {
-      base = 1;
-    } else if (r < 499998) {
-      base = 2;
-    } else if (r < 666664) {
-      base = 3;
-    } else if (r < 833330) {
-      base = 4;
-    } else {
-      base = 5;
-    }
-
-    id_to_lavalamp[tokenId] =
-      Metadata(
-        attribute,
-        background,
-        base,
-        glass,
-        lava_count,
-        lava_1,
-        lava_2,
-        lava_3,
-        lava_4,
-        overlay,
-        rarity
-      );
-
-    _safeMint(msg.sender, tokenId);
-
-    incrementId();
+    return overlay;
   }
 
-  function claim() external payable {
-    require(msg.value == 0.03 ether, "claiming a lava lamp costs 30 finney");
+  function generateRarity(uint256 r) internal pure returns(uint8) {
+    uint8 rarity;
 
-    mint();
+    if (r < 166666) {
+      rarity = 0;
+    } else if (r < 333332) {
+      rarity = 1;
+    } else if (r < 499998) {
+      rarity = 2;
+    } else if (r < 666664) {
+      rarity = 3;
+    } else if (r < 833330) {
+      rarity = 4;
+    } else {
+      rarity = 5;
+    }
+
+    return rarity;
+  }
+
+  function claim(uint256 mintAmount) external payable {
+    uint256 supply = totalSupply();
+    require(mintAmount > 0);
+    require(mintAmount <= maxMintAmount);
+    require(supply + mintAmount <= maxSupply);
+
+    if (msg.sender != owner()) {
+      require(msg.value >= cost * mintAmount);
+    }
+
+    for (uint256 i = 1; i <= mintAmount; i++) {
+      mint();
+    }
 
     payable(owner()).transfer(0.03 ether);
   }

@@ -13,8 +13,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 const baseUri = process.env.BASE_URI || 'http://localhost:3000';
 const contractAddress = process.env.CONTRACT_ADDRESS;
-const network = process.env.NETWORK || 'rinkeby';
-
+const network = process.env.NETWORK || 'rinkeby'; // rink or main probably
+// This is either ganache or rinkeby
+//const web3 = new Web3(new Web3.providers.HttpProvider(`https://${network}.infura.io/v3/${infuraToken}`));
+// ETH_CLIENT_URL="http://localhost:7545"
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.ETH_CLIENT_URL));
 const LavaLamp = require("./src/abis/LavaLamp.json");
 const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
@@ -52,8 +54,9 @@ app.get('/token/:tokenId', async (req, res) => {
     const lava3 = metadata[7];
     const lava4 = metadata[8];
     const overlay = metadata[9];
+    const rarity = metadata[10];
 
-    const uri = `${baseUri}/token/lavalamp/${tokenId}/${attribute}/${background}/${base}/${glass}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${overlay}`;
+    const uri = `${baseUri}/token/lavalamp/${tokenId}/${attribute}/${background}/${base}/${glass}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${overlay}/${rarity}`;
 
     const  metadataJson = generateMetaData({
       attribute,
@@ -67,6 +70,7 @@ app.get('/token/:tokenId', async (req, res) => {
       lava4,
       overlay,
       tokenId,
+      rarity,
       uri
     });
 
@@ -79,7 +83,7 @@ app.get('/token/:tokenId', async (req, res) => {
   }
 });
 
-app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:lavaCount/:lava1/:lava2/:lava3/:lava4/:overlay', async (req, res) => {
+app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:lavaCount/:lava1/:lava2/:lava3/:lava4/:overlay/:rarity/', async (req, res) => {
   const tokenId = parseInt(req.params.tokenId, 10);
   const attribute = parseInt(req.params.attribute, 10);
   const background = parseInt(req.params.background, 10);
@@ -91,6 +95,7 @@ app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:lavaCount
   const lava3 = parseInt(req.params.lava3, 10);
   const lava4 = parseInt(req.params.lava4, 10);
   const overlay = parseInt(req.params.overlay, 10);
+  const rarity = parseInt(req.params.rarity, 10);
 
   try {
     res.setHeader('Content-Type', 'image/svg+xml');
@@ -103,7 +108,8 @@ app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:lavaCount
       lava2,
       lava3,
       lava4,
-      overlay
+      overlay,
+      rarity
     }));
   }
   catch {

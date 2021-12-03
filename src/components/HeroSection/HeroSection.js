@@ -76,9 +76,13 @@ function HeroSection() {
    }
   };
 
-  const mint = (uri, tokenId) => {
+  const mint = () => {
+    if (!blockchain.account) {
+      return;
+    }
+
     blockchain.smartContract.methods
-    .claim(blockchain.account, uri, tokenId)
+    .claim(lampCount)
     .send({ from: blockchain.account, value: lampPrice })
     .once("error", (err) => {
       console.log(err);
@@ -123,6 +127,7 @@ function HeroSection() {
         <MintButton
           lampCount={lampCount}
           lampPrice={lampPrice}
+          mint={() => {mint()}}
           incrementLampCount={
             () => {
               const lc = lampCount < 20 ? lampCount + 1 : lampCount;
