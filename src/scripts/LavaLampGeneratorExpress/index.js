@@ -1,7 +1,9 @@
+const fs = require('fs');
+const path = require('path');
 const {
   Lavalien,
   Halo,
-  Wings
+  Kitty,
 } = require('./layers/attributes');
 const {
   Black,
@@ -21,27 +23,51 @@ const {
   DiamondNormal,
   DiamondPumpkin,
   DiamondRocket,
+  DiamondWizard,
+  DiamondWitch,
+  DiamondKitty,
   EmeraldAlien,
   EmeraldBong,
   EmeraldNormal,
   EmeraldPumpkin,
   EmeraldRocket,
+  EmeraldWizard,
+  EmeraldWitch,
+  EmeraldKitty,
   GoldAlien,
   GoldBong,
   GoldNormal,
   GoldPumpkin,
   GoldRocket,
+  GoldWizard,
+  GoldWitch,
+  GoldKitty,
   OriginalAlien,
   OriginalBong,
   OriginalNormal,
   OriginalPumpkin,
   OriginalRocket,
+  OriginalWizard,
+  OriginalWitch,
+  OriginalKitty,
   RubyAlien,
   RubyBong,
   RubyNormal,
   RubyPumpkin,
   RubyRocket,
+  RubyWizard,
+  RubyWitch,
+  RubyKitty,
+  RainbowAlien,
+  RainbowBong,
+  RainbowNormal,
+  RainbowPumpkin,
+  RainbowRocket,
+  RainbowWizard,
+  RainbowWitch,
+  RainbowKitty,
 } = require('./layers/bases');
+const {Glass} = require('./layers/glass');
 const {Lavas} = require('./layers/lavas');
 const {
   Bitcoin,
@@ -53,23 +79,161 @@ const {
   Swirls,
   YinYang
 } = require('./layers/overlays');
+const myArgs = process.argv.slice(2);
+const dir = __dirname + '/bananas/';
+const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
+const closeTag = '</svg>';
 
 const lavaColors = [
-  {color1: '', color2: '', color: 'none'},
-  {color1: '#F85449', color2: '#C53434', color: 'red'},
-  {color1: '#71FF30', color2: '#25BC46', color: 'green'},
-  {color1: '#FABE09', color2: '#FDF21B', color: 'yellow'},
-  {color1: '#321A93', color2: '#3603FF', color: 'blue'},
-  {color1: '#5000B6', color2: '#7E5EFF', color: 'purple'},
-  {color1: '#21F6EA', color2: '#2183F6', color: 'light blue'},
-  {color1: '#FFB800', color2: '#FF7800', color: 'orange'},
-  {color1: '#FFFFFF', color2: '#D0C9C9', color: 'white'},
-  {color1: '#FF00D6', color2: '#D700B4', color: 'pink'},
+  {color1: '', color2: ''},
+  {color1: '#F85449', color2: '#C53434'},
+  {color1: '#71FF30', color2: '#25BC46'},
+  {color1: '#FABE09', color2: '#FDF21B'},
+  {color1: '#321A93', color2: '#3603FF'},
+  {color1: '#5000B6', color2: '#7E5EFF'},
+  {color1: '#21F6EA', color2: '#2183F6'},
+  {color1: '#FFB800', color2: '#FF7800'},
+  {color1: '#FFFFFF', color2: '#D0C9C9'},
+  {color1: '#FF00D6', color2: '#D700B4'},
 ];
 
 const glassColors = [
-  '#FFFFFF',
-  '#000000',
+  '#FFFFFF', // white
+  '#000000', // carbon / black
+  '#FFFA8D', // yellow
+  '#F59B13', // orange
+  '#FF67EC', // pink
+  '#A15BFA', // purple
+  '#2D34E6', // blue / ocean
+  '#F41B1B', // crimson / red
+];
+
+const attributes = {
+  none: 0,
+  lavalien: 1,
+  halo: 2,
+  kitty: 3,
+};
+
+const backgrounds = {
+  black: 0,
+  blueberry: 1,
+  lightBlueberry: 2,
+  lightRaspberry: 3,
+  lightStrawberry: 4,
+  raspberry: 5,
+  sky: 6,
+  purple: 7,
+  stars: 8,
+  strawberry: 9,
+};
+
+const bases = {
+  standard: 0,
+  alien: 1,
+  rocket: 2,
+  bong: 3,
+  pumpkin: 4,
+  wizard: 5,
+  witch: 6,
+  kitty: 7,
+};
+
+const rarities = {
+  og: 0,
+  gold: 1,
+  diamond: 2,
+  ruby: 3,
+  emerald: 4,
+  rainbow: 5
+};
+
+const overlays = {
+  none: 0,
+  bitcoin: 1,
+  ethereum: 2,
+  lavaCeption: 3,
+  leaves: 4,
+  peace: 5,
+  smoke: 6,
+  swirls: 7,
+  yinYang: 8,
+};
+
+const attributeMetadata = [
+  '',
+  'Lavalien',
+  'Halo',
+  'Kitty',
+];
+
+const backgroundMetadata = [
+  'Black',
+  'Blueberry',
+  'Light Blueberry',
+  'Light Raspberry',
+  'Light Strawberry',
+  'Raspberry',
+  'Sky',
+  'Purple',
+  'Stars',
+  'Strawberry',
+];
+
+const baseMetadata = [
+  'Standard',
+  'Alien',
+  'Rocket',
+  'Bong',
+  'Pumpkin',
+  'Wizard',
+  'Witch',
+  'Kitty',
+];
+
+const rarityMetadata = [
+  'OG',
+  'Gold',
+  'Diamond',
+  'Ruby',
+  'Emerald',
+  'Rainbow',
+];
+
+const lavaColorMetadata = [
+  'None',
+  'Red',
+  'Green',
+  'Yellow',
+  'Blue',
+  'Purple',
+  'Light Blue',
+  'Orange',
+  'White',
+  'Pink',
+];
+
+const glassColorMetadata = [
+  'White',
+  'Black',
+  'Yellow',
+  'Orange',
+  'Pink',
+  'Purple',
+  'Blue',
+  'Red',
+];
+
+const overlayMetadata = [
+  'None',
+  'Bitcoin',
+  'Ethereum',
+  'LavaCeption',
+  'Leaves',
+  'Peace',
+  'Smoke',
+  'Swirls',
+  'Yin-Yang',
 ];
 
 function generateRandomNumber({n}) {
@@ -82,17 +246,17 @@ function generateAttributeSVG({index}) {
   let attribute = '';
 
   switch(index) {
-    case 0:
+    case attributes.none:
       attribute = '';
       break;
-    case 1:
+    case attributes.lavalien:
       attribute = Lavalien();
       break;
-    case 2:
+    case attributes.halo:
       attribute = Halo();
       break;
-    case 3:
-      attribute = Wings();
+    case attributes.kitty:
+      attribute = Kitty();
       break;
     default:
     // add error checking
@@ -105,34 +269,34 @@ function generateBackgroundSVG({index}) {
   let background = '';
 
   switch(index) {
-    case 0:
+    case backgrounds.black:
       background = Black();
       break;
-    case 1:
+    case backgrounds.blueberry:
       background = Blueberry();
       break;
-    case 2:
+    case backgrounds.lightBlueberry:
       background = LightBlueberry();
       break;
-    case 3:
+    case backgrounds.lightRaspberry:
       background = LightRaspberry();
       break;
-    case 4:
+    case backgrounds.lightStrawberry:
       background = LightStrawberry();
       break;
-    case 5:
+    case backgrounds.raspberry:
       background = Raspberry();
       break;
-    case 6:
+    case backgrounds.sky:
       background = Sky();
       break;
-    case 7:
+    case backgrounds.purple:
       background = Purple();
       break;
-    case 8:
+    case backgrounds.stars:
       background = Stars();
       break;
-    case 9:
+    case backgrounds.strawberry:
       background = Strawberry();
       break;
     default:
@@ -142,131 +306,232 @@ function generateBackgroundSVG({index}) {
   return background;
 }
 
-function generateBaseSVG({index}) {
+function generateBaseSVG({index, rarity}) {
+  console.log(index)
+  console.log(rarity)
   let base = '';
 
-  switch(index) {
-    case 0:
-      base = DiamondAlien();
-      break;
-    case 1:
-      base = DiamondBong();
-      break;
-    case 2:
-      base = DiamondNormal();
-      break;
-    case 3:
-      base = DiamondPumpkin();
-      break;
-    case 4:
-      base = DiamondRocket();
-      break;
-    case 5:
-      base = EmeraldAlien();
-      break;
-    case 6:
-      base = EmeraldBong();
-      break;
-    case 7:
-      base = EmeraldNormal();
-      break;
-    case 8:
-      base = EmeraldPumpkin();
-      break;
-    case 9:
-      base = EmeraldRocket();
-      break;
-    case 10:
-      base = GoldAlien();
-      break;
-    case 11:
-      base = GoldBong();
-      break;
-    case 12:
-      base = GoldNormal();
-      break;
-    case 13:
-      base = GoldPumpkin();
-      break;
-    case 14:
-      base = GoldRocket();
-      break;
-    case 15:
-      base = OriginalAlien();
-      break;
-    case 16:
-      base = OriginalBong();
-      break;
-    case 17:
-      base = OriginalNormal();
-      break;
-    case 18:
-      base = OriginalPumpkin();
-      break;
-    case 19:
-      base = OriginalRocket();
-      break;
-    case 20:
-      base = RubyAlien();
-      break;
-    case 21:
-      base = RubyBong();
-      break;
-    case 22:
-      base = RubyNormal();
-      break;
-    case 23:
-      base = RubyPumpkin();
-      break;
-    case 24:
-      base = RubyRocket();
-      break;
-    default:
-    // add error checking
+  if (rarity === rarities.og) {
+    switch(index) {
+      case bases.standard:
+        base = OriginalNormal();
+        break;
+      case bases.alien:
+        base = OriginalAlien();
+        break;
+      case bases.rocket:
+        base = OriginalRocket();
+        break;
+      case bases.bong:
+        base = OriginalBong();
+        break;
+      case bases.pumpkin:
+        base = OriginalPumpkin();
+        break;
+      case bases.wizard:
+        base = OriginalWizard();
+        break;
+      case bases.witch:
+        base = OriginalWitch();
+        break;
+      case bases.kitty:
+        base = OriginalKitty();
+        break;
+        default:
+        // add error checking
+    }
+  } else if (rarity === rarities.gold) {
+    switch(index) {
+      case bases.standard:
+        base = GoldNormal();
+        break;
+      case bases.alien:
+        base = GoldAlien();
+        break;
+      case bases.rocket:
+        base = GoldRocket();
+        break;
+      case bases.bong:
+        base = GoldBong();
+        break;
+      case bases.pumpkin:
+        base = GoldPumpkin();
+        break;
+      case bases.wizard:
+        base = GoldWizard();
+        break;
+      case bases.witch:
+        base = GoldWitch();
+        break;
+      case bases.kitty:
+        base = GoldKitty();
+        break;
+        default:
+        // add error checking
+    }
+  } else if (rarity === rarities.diamond) {
+    switch(index) {
+      case bases.standard:
+        base = DiamondNormal();
+        break;
+      case bases.alien:
+        base = DiamondAlien();
+        break;
+      case bases.rocket:
+        base = DiamondRocket();
+        break;
+      case bases.bong:
+        base = DiamondBong();
+        break;
+      case bases.pumpkin:
+        base = DiamondPumpkin();
+        break;
+      case bases.wizard:
+        base = DiamondWizard();
+        break;
+      case bases.witch:
+        base = DiamondWitch();
+        break;
+      case bases.kitty:
+        base = DiamondKitty();
+        break;
+        default:
+        // add error checking
+    }
+  } else if (rarity === rarities.ruby) {
+    switch(index) {
+      case bases.standard:
+        base = RubyNormal();
+        break;
+      case bases.alien:
+        base = RubyAlien();
+        break;
+      case bases.rocket:
+        base = RubyRocket();
+        break;
+      case bases.bong:
+        base = RubyBong();
+        break;
+      case bases.pumpkin:
+        base = RubyPumpkin();
+        break;
+      case bases.wizard:
+        base = RubyWizard();
+        break;
+      case bases.witch:
+        base = RubyWitch();
+        break;
+      case bases.kitty:
+        base = RubyKitty();
+        break;
+        default:
+        // add error checking
+    }
+  } else if (rarity === rarities.emerald) {
+    switch(index) {
+      case bases.standard:
+        base = EmeraldNormal();
+        break;
+      case bases.alien:
+        base = EmeraldAlien();
+        break;
+      case bases.rocket:
+        base = EmeraldRocket();
+        break;
+      case bases.bong:
+        base = EmeraldBong();
+        break;
+      case bases.pumpkin:
+        base = EmeraldPumpkin();
+        break;
+      case bases.wizard:
+        base = EmeraldWizard();
+        break;
+      case bases.witch:
+        base = EmeraldWitch();
+        break;
+      case bases.kitty:
+        base = EmeraldKitty();
+        break;
+        default:
+        // add error checking
+    }
+  } else if (rarity === rarities.rainbow) {
+    switch(index) {
+      case bases.standard:
+        base = RainbowNormal();
+        break;
+      case bases.alien:
+        base = RainbowAlien();
+        break;
+      case bases.rocket:
+        base = RainbowRocket();
+        break;
+      case bases.bong:
+        base = RainbowBong();
+        break;
+      case bases.pumpkin:
+        base = RainbowPumpkin();
+        break;
+      case bases.wizard:
+        base = RainbowWizard();
+        break;
+      case bases.witch:
+        base = RainbowWitch();
+        break;
+      case bases.kitty:
+        base = RainbowKitty();
+        break;
+        default:
+        // add error checking
+    }
   }
 
   return base;
 }
 
-function generateLavasSVG({lava1, lava2, lava3, lava4, glass}) {
+function generateLavasSVG({lava1, lava2, lava3, lava4}) {
   return Lavas({
     lava1: lavaColors[lava1],
     lava2: lavaColors[lava2],
     lava3: lavaColors[lava3],
     lava4: lavaColors[lava4],
-    glassColor: glassColors[glass],
   });
+}
+
+function generateGlassSVG({lava1, lava2, lava3, lava4, glass}) {
+  return Glass({glassColor: glassColors[glass]});
 }
 
 function generateOverlaySVG({index}) {
   let overlay = '';
 
   switch(index) {
-    case 0:
+    case overlays.none:
       overlay = '';
       break;
-    case 1:
+    case overlays.bitcoin:
       overlay = Bitcoin();
       break;
-    case 2:
+    case overlays.ethereum:
       overlay = Ethereum();
       break;
-    case 3:
+    case overlays.lavaCeption:
       overlay = LavaCeption();
       break;
-    case 4:
+    case overlays.leaves:
       overlay = Leaves();
       break;
-    case 5:
+    case overlays.peace:
       overlay = Peace();
       break;
-    case 6:
+    case overlays.smoke:
       overlay = Smoke();
       break;
-    case 7:
+    case overlays.swirls:
       overlay = Swirls();
       break;
-    case 8:
+    case overlays.yinYang:
       overlay = YinYang();
       break;
     default:
@@ -276,280 +541,47 @@ function generateOverlaySVG({index}) {
   return overlay;
 }
 
-function generateAttributeMetaData({index}) {
-  let attribute = '';
-
-  switch(index) {
-    case '0':
-      attribute = '';
-      break;
-    case '1':
-      attribute = 'Lavalien';
-      break;
-    case '2':
-      attribute = 'Halo';
-      break;
-    case '3':
-      attribute = 'Wings';
-      break;
-    default:
-    // add error checking
-  }
-
-  return attribute;
-}
-
-function generateBackgroundMetaData({index}) {
-  let background = '';
-
-  switch(index) {
-    case '0':
-      background = 'Black';
-      break;
-    case '1':
-      background = 'Blueberry';
-      break;
-    case '2':
-      background = 'Light Blueberry';
-      break;
-    case '3':
-      background = 'Light Raspberry';
-      break;
-    case '4':
-      background = 'Light Strawberry';
-      break;
-    case '5':
-      background = 'Raspberry';
-      break;
-    case '6':
-      background = 'Sky';
-      break;
-    case '7':
-      background = 'Purple';
-      break;
-    case '8':
-      background = 'Stars';
-      break;
-    case '9':
-      background = 'Strawberry';
-      break;
-    default:
-    // add error checking
-  }
-
-  return background;
+function generateNameMetadata({base, glass, tokenId}) {
+  return baseMetadata[parseInt(base, 10)] + ' ' + glassMetadata[parseInt(glass, 10)] + ' LavaLamp ' + tokenId;
 };
 
-function generateBaseMetaData({index}) {
-  let base = '';
-
-  switch(index) {
-    case '0':
-      base = 'Diamond Alien';
-      break;
-    case '1':
-      base = 'Diamond Bong';
-      break;
-    case '2':
-      base = 'Diamond Standard';
-      break;
-    case '3':
-      base = 'Diamond Pumpkin';
-      break;
-    case '4':
-      base = 'Diamond Rocket';
-      break;
-    case '5':
-      base = 'Emerald Alien';
-      break;
-    case '6':
-      base = 'Emerald Bong';
-      break;
-    case '7':
-      base = 'Emerald Standard';
-      break;
-    case '8':
-      base = 'Emerald Pumpkin';
-      break;
-    case '9':
-      base = 'Emerald Rocket';
-      break;
-    case '10':
-      base = 'Gold Alien';
-      break;
-    case '11':
-      base = 'Gold Bong';
-      break;
-    case '12':
-      base = 'Gold Standard';
-      break;
-    case '13':
-      base = 'Gold Pumpkin';
-      break;
-    case '14':
-      base = 'Gold Rocket';
-      break;
-    case '15':
-      base = 'OG Alien';
-      break;
-    case '16':
-      base = 'OG Bong';
-      break;
-    case '17':
-      base = 'OG Standard';
-      break;
-    case '18':
-      base = 'OG Pumpkin';
-      break;
-    case '19':
-      base = 'OG Rocket';
-      break;
-    case '20':
-      base = 'Ruby Alien';
-      break;
-    case '21':
-      base = 'Ruby Bong';
-      break;
-    case '22':
-      base = 'Ruby Standard';
-      break;
-    case '23':
-      base = 'Ruby Pumpkin';
-      break;
-    case '24':
-      base = 'Ruby Rocket';
-      break;
-    default:
-    // add error checking
-  }
-
-  return base;
-}
-
-function generateLavaColorMetaData({index}) {
-  let lava = '';
-
-  switch(index) {
-    case '0':
-      lava = 'none';
-      break;
-    case '1':
-      lava = 'Red';
-      break;
-    case '2':
-      lava = 'Green';
-      break;
-    case '3':
-      lava = 'Yellow';
-      break;
-    case '4':
-      lava = 'Blue';
-      break;
-    case '5':
-      lava = 'Purple';
-      break;
-    case '6':
-      lava = 'Light Blue';
-      break;
-    case '7':
-      lava = 'Orange';
-      break;
-    case '8':
-      lava = 'White';
-      break;
-    case '9':
-      lava = 'Pink';
-      break;
-    default:
-    // add error checking
-  }
-
-  return lava;
-};
-
-function generateOverlayMetaData({index}) {
-  let overlay = '';
-
-  switch(index) {
-    case '0':
-      overlay = '';
-      break;
-    case '1':
-      overlay = 'Bitcoin';
-      break;
-    case '2':
-      overlay = 'Ethereum';
-      break;
-    case '3':
-      overlay = 'LavaCeption';
-      break;
-    case '4':
-      overlay = 'Leaves';
-      break;
-    case '5':
-      overlay = 'Peace';
-      break;
-    case '6':
-      overlay = 'Smoke';
-      break;
-    case '7':
-      overlay = 'Swirls';
-      break;
-    case '8':
-      overlay = 'YinYang';
-      break;
-    default:
-    // add error checking
-  }
-
-  return overlay;
-}
-
-function generateNameMetaData({base, glass, tokenId}) {
-  let lavalamp = ' LavaLamp ';
-  if (glass === 1) {
-    lavalamp = ' carbon' + lavalamp;
-  }
-
-  return generateBaseMetaData({index: base}) + lavalamp + tokenId;
-};
-
-function generateDescriptionMetaData({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, tokenId}) {
-  const b = generateBaseMetaData({index: base});
-  const bg = generateBackgroundMetaData({index: background});
-  const a = generateAttributeMetaData({index: attribute});
-  const l1 = generateLavaColorMetaData({index: lava1});
-  const l2 = generateLavaColorMetaData({index: lava2});
-  const l3 = generateLavaColorMetaData({index: lava3});
-  const l4 = generateLavaColorMetaData({index: lava4});
-  const o = generateOverlayMetaData({index: overlay});
+function generateDescriptionMetadata({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, tokenId}) {
+  const b = baseMetadata[parseInt(base, 10)];
+  const bg = backgroundMetadata[parseInt(background, 10)];
+  const g = glassMetadata[parseInt(glass, 10)];
+  const a = attributeMetadata[parseInt(attribute, 10)];
+  const l1 = lavaColorMetadata[parseInt(lava1, 10)];
+  const l2 = lavaColorMetadata[parseInt(lava2, 10)];
+  const l3 = lavaColorMetadata[parseInt(lava3, 10)];
+  const l4 = lavaColorMetadata[parseInt(lava4, 10)];
+  const o = overlayMetadata[parseInt(overlay, 10)];
   const s = ' ';
 
   // update me, lol
-  return b + s + 'LavaLamp ' + tokenId + ' with a ' + bg + s + 'background';
+  return b + s + g + s + 'LavaLamp ' + tokenId + ' with a ' + bg + s + 'background';
 };
 
-const generateMetaData = ({attribute, background, base, glass, lavaCount, lava1, lava2, lava3, lava4, overlay, tokenId, uri}) => {
+const generateMetadata = ({attribute, background, base, glass, lavaCount, lava1, lava2, lava3, lava4, overlay, tokenId, uri}) => {
   const metadata = {
-    name: generateNameMetaData({base, glass, tokenId}),
-    decription: generateDescriptionMetaData({attribute, background, base, lava1, lava2, lava3, lava4, overlay, tokenId}),
+    name: generateNameMetadata({base, glass, tokenId}),
+    decription: generateDescriptionMetadata({attribute, background, base, lava1, lava2, lava3, lava4, overlay, tokenId}),
     image: uri,
     attributes: [
       {
         "trait_type": "Attribute",
-        "value": generateAttributeMetaData({index: attribute}),
+        "value": attributeMetadata[parseInt(attribute, 10)],
       },
       {
         "trait_type": "Background",
-        "value": generateBackgroundMetaData({index: background}),
+        "value": backgroundMetadata[parseInt(background, 10)],
       },
       {
         "trait_type": "Base",
-        "value": generateBaseMetaData({index: base}),
+        "value": baseMetadata[parseInt(base, 10)],
       },
       {
         "trait_type": "Glass",
-        "value": generateBaseMetaData({index: glass}),
+        "value": glassMetadata[parseInt(glass, 10)],
       },
       {
         "trait_type": "Lava Count",
@@ -557,23 +589,23 @@ const generateMetaData = ({attribute, background, base, glass, lavaCount, lava1,
       },
       {
         "trait_type": "Lava Color 1",
-        "value": generateLavaColorMetaData({index: lava1}),
+        "value": lavaColorMetadata[parseInt(lava1, 10)],
       },
       {
         "trait_type": "Lava Color 2",
-        "value": generateLavaColorMetaData({index: lava2}),
+        "value": lavaColorMetadata[parseInt(lava2, 10)],
       },
       {
         "trait_type": "Lava Color 3",
-        "value": generateLavaColorMetaData({index: lava3}),
+        "value": lavaColorMetadata[parseInt(lava3, 10)],
       },
       {
         "trait_type": "Lava Color 4",
-        "value": generateLavaColorMetaData({index: lava4}),
+        "value": lavaColorMetadata[parseInt(lava4, 10)],
       },
       {
         "trait_type": "overlay",
-        "value": generateOverlayMetaData({index: overlay}),
+        "value": overlayMetadata[parseInt(overlay, 10)],
       },
     ]
   };
@@ -581,35 +613,48 @@ const generateMetaData = ({attribute, background, base, glass, lavaCount, lava1,
   return metadata;
 };
 
-function generateLavaLamp({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay}) {
-  const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
-  const closeTag = '</svg>';
-
+function generateLavaLamp({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, rarity}) {
   return `
     ${openTag}
     ${generateBackgroundSVG({index: background})}
     ${generateOverlaySVG({index: overlay})}
     ${generateAttributeSVG({index: attribute})}
-    ${generateBaseSVG({index: base})}
-    ${generateLavasSVG({lava1, lava2, lava3, lava4, glass})}
+    ${generateBaseSVG({index: base, rarity})}
+    ${generateGlassSVG({glass})}
+    ${generateLavasSVG({lava1, lava2, lava3, lava4})}
     ${closeTag}
   `;
 }
 
 function generateAssets() {
-  const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
-  const closeTag = '</svg>';
   const assets = [];
 
+  console.log('bases with glass')
+  // bases with glass
+  for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 8; j++) {
+      assets.push(`
+        ${openTag}
+        ${generateBackgroundSVG({index: 0})}
+        ${generateBaseSVG({index: j, rarity: i})}
+        ${generateGlassSVG({glass: 0})}
+        ${closeTag}
+      `);
+    }
+  }
+
+  console.log('attributes');
   // attributes
   for (let i = 0; i < 4; i++) {
     assets.push(`
       ${openTag}
+      ${generateBackgroundSVG({index: 0})}
       ${generateAttributeSVG({index: i})}
       ${closeTag}
     `);
   }
 
+  console.log('backgrounds');
   // backgrounds
   for (let i = 0; i < 10; i++) {
     assets.push(`
@@ -619,16 +664,44 @@ function generateAssets() {
     `);
   }
 
+  console.log('bases')
   // bases
-  for (let i = 0; i < 25; i++) {
+  for (let i = 0; i < 6; i++) {
+    for (let j = 0; j < 8; j++) {
+      assets.push(`
+        ${openTag}
+        ${generateBackgroundSVG({index: 0})}
+        ${generateBaseSVG({index: j, rarity: i})}
+        ${closeTag}
+      `);
+    }
+  }
+
+  console.log('glasses')
+  // glasses
+  for (let i = 0; i < 8; i++) {
     assets.push(`
       ${openTag}
       ${generateBackgroundSVG({index: 0})}
-      ${generateBaseSVG({index: i, lava1: 0, lava2: 1, lava3: 2, lava4: 3, glass: 1})}
+      ${generateGlassSVG({glass: i})}
       ${closeTag}
     `);
   }
 
+  console.log('lavas')
+  // lavas
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 8; j++) {
+      assets.push(`
+        ${openTag}
+        ${generateBackgroundSVG({index: 0})}
+        ${generateLavasSVG({lava1: i === 0 ? j : 0, lava2: i === 1 ? j : 0, lava3: i === 2 ? j : 0, lava4: i === 3 ? j : 0})}
+        ${closeTag}
+      `);
+    }
+  }
+
+  console.log('overlays')
   // overlays
   for (let i = 0; i < 9; i++) {
     assets.push(`
@@ -639,13 +712,15 @@ function generateAssets() {
     `);
   }
 
+  saveNLavaLamps({lavaLamps: assets})
+
   return assets;
 }
 
 function generateRandomLavaLamp() {
   return generateLavaLamp({
     attribute: generateRandomNumber({n: 4}),
-    base: generateRandomNumber({n: 25}),
+    base: generateRandomNumber({n: 8}),
     background: generateRandomNumber({n: 10}),
     glass: generateRandomNumber({n: 2}),
     lava1: generateRandomNumber({n: 10}),
@@ -653,6 +728,7 @@ function generateRandomLavaLamp() {
     lava3: generateRandomNumber({n: 10}),
     lava4: generateRandomNumber({n: 10}),
     overlay: generateRandomNumber({n: 9}),
+    rarity: generateRandomNumber({n: 6}),
   });
 }
 
@@ -689,21 +765,45 @@ function generate7979LavaLamps() {
       attribute: generateRandomNumber({n: 4}),
       base: generateRandomNumber({n: 10}),
       background: generateRandomNumber({n: 10}),
-      glass: generateRandomNumber({n: 2}),
+      glass: generateRandomNumber({n: 8}),
       lava1,
       lava2,
       lava3,
       lava4,
       overlay: generateRandomNumber({n: 7}),
+      rarity: generateRandomNumber({n: 6}),
     }));
   }
 
   return lavaLamps;
 }
 
+function saveLavaLamp({lavaLamp, id}) {
+  const filePath = dir + 'lamp_' + id + '.svg';
+
+  // writeFile function with filename, content and callback function
+  fs.writeFile(filePath, lavaLamp, function (err) {
+    if (err) throw err;
+  });
+}
+
+function saveNLavaLamps({lavaLamps}) {
+  // Check if files exist
+  if (!fs.existsSync(dir)){
+      fs.mkdirSync(dir);
+  }
+
+  // save all lamps
+  lavaLamps.forEach((lavaLamp, id) => {
+    saveLavaLamp({lavaLamp, id, dir});
+  });
+}
+
+generateAssets()
+
 module.exports = {
   generateLavaLamp,
-  generateMetaData,
+  generateMetadata,
   generateRandomLavaLamp,
   generateNRandomLavaLamps,
 };
