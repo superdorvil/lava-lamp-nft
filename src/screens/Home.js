@@ -9,7 +9,6 @@ import {
   infoSectionTwo,
 } from '../components/InfoSection/Data';
 import LampProperties from '../components/LampProperties';
-import SVGImageGrid from '../components/SVGImageGrid';
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +26,6 @@ function Home() {
       <LampProperties />
       <Footer />
       <LavaList isOpen={isOpen} toggleModal={toggleModal} />
-      <SVGImageGrid />
     </>
   );
 }
