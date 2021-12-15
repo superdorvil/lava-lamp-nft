@@ -80,12 +80,18 @@ const {
   YinYang
 } = require('./layers/overlays');
 const myArgs = process.argv.slice(2);
-const dir = __dirname + '/bananas/';
+
+const assetDir = __dirname + '/generatedLamps/assets/';
+const lamps7979 = __dirname + '/generatedLamps/lamps7979/';
+const blackLamps7979 = __dirname + '/generatedLamps/blackLamps7979/';
+const nLamps = __dirname + '/generatedLamps/nLamps/';
+let blackLavaActive = false;
+
 const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
 const closeTag = '</svg>';
 
 const lavaColors = [
-  {color1: '', color2: ''},
+  'none',
   {color1: '#F85449', color2: '#C53434'},
   {color1: '#71FF30', color2: '#25BC46'},
   {color1: '#FABE09', color2: '#FDF21B'},
@@ -307,8 +313,6 @@ function generateBackgroundSVG({index}) {
 }
 
 function generateBaseSVG({index, rarity}) {
-  console.log(index)
-  console.log(rarity)
   let base = '';
 
   if (rarity === rarities.og) {
@@ -491,6 +495,21 @@ function generateBaseSVG({index, rarity}) {
 }
 
 function generateLavasSVG({lava1, lava2, lava3, lava4}) {
+  if (blackLavaActive) {
+    const black = {color1: 'none', color2: 'none'}
+    let l1 = lava1 === 0 ? black : lavaColors[lava1];
+    let l2 = lava2 === 0 ? black : lavaColors[lava2];
+    let l3 = lava3 === 0 ? black : lavaColors[lava3];
+    let l4 = lava4 === 0 ? black : lavaColors[lava4];
+
+    return Lavas({
+      lava1: l1,
+      lava2: l2,
+      lava3: l3,
+      lava4: l4,
+    });
+  }
+
   return Lavas({
     lava1: lavaColors[lava1],
     lava2: lavaColors[lava2],
@@ -619,9 +638,9 @@ function generateLavaLamp({attribute, background, base, glass, lava1, lava2, lav
     ${generateBackgroundSVG({index: background})}
     ${generateOverlaySVG({index: overlay})}
     ${generateAttributeSVG({index: attribute})}
-    ${generateBaseSVG({index: base, rarity})}
     ${generateGlassSVG({glass})}
     ${generateLavasSVG({lava1, lava2, lava3, lava4})}
+    ${generateBaseSVG({index: base, rarity})}
     ${closeTag}
   `;
 }
@@ -629,21 +648,23 @@ function generateLavaLamp({attribute, background, base, glass, lava1, lava2, lav
 function generateAssets() {
   const assets = [];
 
-  console.log('bases with glass')
+//  console.log('bases with glass')
   // bases with glass
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 8; j++) {
       assets.push(`
         ${openTag}
         ${generateBackgroundSVG({index: 0})}
-        ${generateBaseSVG({index: j, rarity: i})}
         ${generateGlassSVG({glass: 0})}
+
+        ${generateBaseSVG({index: j, rarity: i})}
         ${closeTag}
       `);
     }
   }
+//    ${generateLavasSVG({lava1: 1, lava2: 1, lava3: 1, lava4: 1})}
 
-  console.log('attributes');
+//  console.log('attributes');
   // attributes
   for (let i = 0; i < 4; i++) {
     assets.push(`
@@ -654,7 +675,7 @@ function generateAssets() {
     `);
   }
 
-  console.log('backgrounds');
+//  console.log('backgrounds');
   // backgrounds
   for (let i = 0; i < 10; i++) {
     assets.push(`
@@ -664,7 +685,7 @@ function generateAssets() {
     `);
   }
 
-  console.log('bases')
+//  console.log('bases')
   // bases
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 8; j++) {
@@ -677,7 +698,7 @@ function generateAssets() {
     }
   }
 
-  console.log('glasses')
+//  console.log('glasses')
   // glasses
   for (let i = 0; i < 8; i++) {
     assets.push(`
@@ -688,7 +709,7 @@ function generateAssets() {
     `);
   }
 
-  console.log('lavas')
+//  console.log('lavas')
   // lavas
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 8; j++) {
@@ -700,8 +721,21 @@ function generateAssets() {
       `);
     }
   }
+//  console.log('lavas with glass')
+  // lavas with glass
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 8; j++) {
+      assets.push(`
+        ${openTag}
+        ${generateBackgroundSVG({index: 0})}
+        ${generateGlassSVG({glass: 0})}
+        ${generateLavasSVG({lava1: i === 0 ? j : 0, lava2: i === 1 ? j : 0, lava3: i === 2 ? j : 0, lava4: i === 3 ? j : 0})}
+        ${closeTag}
+      `);
+    }
+  }
 
-  console.log('overlays')
+//  console.log('overlays')
   // overlays
   for (let i = 0; i < 9; i++) {
     assets.push(`
@@ -712,7 +746,7 @@ function generateAssets() {
     `);
   }
 
-  saveNLavaLamps({lavaLamps: assets})
+  saveNLavaLamps({lavaLamps: assets, dir: assetDir})
 
   return assets;
 }
@@ -720,9 +754,9 @@ function generateAssets() {
 function generateRandomLavaLamp() {
   return generateLavaLamp({
     attribute: generateRandomNumber({n: 4}),
-    base: generateRandomNumber({n: 8}),
     background: generateRandomNumber({n: 10}),
-    glass: generateRandomNumber({n: 2}),
+    base: generateRandomNumber({n: 8}),
+    glass: generateRandomNumber({n: 8}),
     lava1: generateRandomNumber({n: 10}),
     lava2: generateRandomNumber({n: 10}),
     lava3: generateRandomNumber({n: 10}),
@@ -732,17 +766,21 @@ function generateRandomLavaLamp() {
   });
 }
 
-function generateNRandomLavaLamps({n}) {
+function generateNRandomLavaLamps({n,save}) {
   const lavaLamps = [];
 
   for (let i = 0; i < n; i++) {
     lavaLamps.push(generateRandomLavaLamp());
   }
 
+  if (save) {
+    saveNLavaLamps({lavaLamps, dir: nLamps})
+  }
+
   return lavaLamps;
 }
 
-function generate7979LavaLamps() {
+function generate7979LavaLamps({save}) {
   const lavaLamps = [];
   let lavaIndex;
   let lava1;
@@ -761,24 +799,34 @@ function generate7979LavaLamps() {
     lava4 = lavaIndex % 10;
     lavaIndex = (lavaIndex - lava4) / 10;
 
-    lavaLamps.push(generateLavaLamp({
-      attribute: generateRandomNumber({n: 4}),
-      base: generateRandomNumber({n: 10}),
-      background: generateRandomNumber({n: 10}),
-      glass: generateRandomNumber({n: 8}),
-      lava1,
-      lava2,
-      lava3,
-      lava4,
-      overlay: generateRandomNumber({n: 7}),
-      rarity: generateRandomNumber({n: 6}),
-    }));
+    lavaLamps.push(
+      generateLavaLamp({
+        attribute: generateRandomNumber({n: 4}),
+        background: generateRandomNumber({n: 10}),
+        base: generateRandomNumber({n: 8}),
+        glass: generateRandomNumber({n: 8}),
+        lava1,
+        lava2,
+        lava3,
+        lava4,
+        overlay: generateRandomNumber({n: 9}),
+        rarity: generateRandomNumber({n: 6}),
+      })
+    );
+  }
+
+  if (save) {
+    if (blackLavaActive) {
+      saveNLavaLamps({lavaLamps, dir: blackLamps7979});
+    } else {
+      saveNLavaLamps({lavaLamps, dir: lamps7979});
+    }
   }
 
   return lavaLamps;
 }
 
-function saveLavaLamp({lavaLamp, id}) {
+function saveLavaLamp({lavaLamp, id, dir}) {
   const filePath = dir + 'lamp_' + id + '.svg';
 
   // writeFile function with filename, content and callback function
@@ -787,7 +835,7 @@ function saveLavaLamp({lavaLamp, id}) {
   });
 }
 
-function saveNLavaLamps({lavaLamps}) {
+function saveNLavaLamps({lavaLamps, dir}) {
   // Check if files exist
   if (!fs.existsSync(dir)){
       fs.mkdirSync(dir);
@@ -799,7 +847,14 @@ function saveNLavaLamps({lavaLamps}) {
   });
 }
 
-generateAssets()
+if (myArgs[0] === 'generate some random bullshit') {
+  generateAssets();
+  //generateNRandomLavaLamps({n: 10000, save: true});
+  generate7979LavaLamps({save: true});
+  blackLavaActive = true;
+  generate7979LavaLamps({save: true});
+  blackLavaActive = false;
+}
 
 module.exports = {
   generateLavaLamp,
