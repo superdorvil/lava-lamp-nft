@@ -85,7 +85,7 @@ const assetDir = __dirname + '/generatedLamps/assets/';
 const lamps7979 = __dirname + '/generatedLamps/lamps7979/';
 const blackLamps7979 = __dirname + '/generatedLamps/blackLamps7979/';
 const nLamps = __dirname + '/generatedLamps/nLamps/';
-let blackLavaActive = false;
+let blackLavaActive = true;
 
 const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
 const closeTag = '</svg>';
@@ -207,27 +207,27 @@ const rarityMetadata = [
 ];
 
 const lavaColorMetadata = [
-  'None',
-  'Red',
-  'Green',
-  'Yellow',
-  'Blue',
-  'Purple',
+  blackLavaActive ? 'Black' : 'None', // carbon, onyx, ebony,
+  'Red', // crimson, ruby, rosy, fiery, flame, blaze, cherry
+  'Green', // leafy, emerald,
+  'Yellow', // golden, saffron, amber,
+  'Blue', // ocean, cerulean, aqua, azure, sky,
+  'Purple', // violet, lilac, lavender, royal,
   'Light Blue',
-  'Orange',
-  'White',
-  'Pink',
+  'Orange', // tangerine, apricot, coral, peach
+  'White', // snowy, pearly, blank,
+  'Pink', // blossom, rosy, coral,reseate
 ];
 
-const glassColorMetadata = [
-  'White',
-  'Black',
-  'Yellow',
-  'Orange',
-  'Pink',
-  'Purple',
-  'Blue',
-  'Red',
+const glassMetadata = [
+  'White', // snowy, pearly, bnlank,
+  'Black', // carbon, onyx, ebony,
+  'Yellow', // golden, saffron, amber,
+  'Orange', // tangerine, apricot, coral, peach
+  'Pink', // blossom, rosy, coral,reseate
+  'Purple', // violet, lilac, lavender, royal,
+  'Blue', // ocean, cerulean, aqua, azure, sky,
+  'Red', // crimson, ruby, rosy, fiery, flame, blaze, cherry
 ];
 
 const overlayMetadata = [
@@ -235,7 +235,7 @@ const overlayMetadata = [
   'Bitcoin',
   'Ethereum',
   'LavaCeption',
-  'Leaves',
+  '420 Leaves',
   'Peace',
   'Smoke',
   'Swirls',
@@ -560,11 +560,32 @@ function generateOverlaySVG({index}) {
   return overlay;
 }
 
-function generateNameMetadata({base, glass, tokenId}) {
-  return baseMetadata[parseInt(base, 10)] + ' ' + glassMetadata[parseInt(glass, 10)] + ' LavaLamp ' + tokenId;
+function generateNameMetadata({attribute, base, glass, rarity, tokenId}) {
+  const b = baseMetadata[parseInt(base, 10)];
+  const g = glassMetadata[parseInt(glass, 10)];
+  const r = rarityMetadata[parseInt(rarity, 10)];
+  const s = ' ';
+  let holy = '';
+  let buddy = '';
+
+  if (parseInt(attribute, 10) === attributes.halo) {
+    holy = 'Angelic ';
+  }
+
+  if (parseInt(attribute, 10) === attributes.lavalien || parseInt(attribute, 10) === attributes.kitty) {
+    buddy = ' with a ' + attributeMetadata[parseInt(attribute,10)] + ' buddy';
+  }
+
+  //cause santas a wizard of course
+  if (parseInt(base, 10) === bases.wizard && // wizard
+      parseInt(rarity, 10) === rarities.ruby) { // ruby
+        return g + ' Glass ' + holy + 'Santa LavaLamp ' + tokenId + buddy;
+  }
+
+  return g + ' Glass ' + holy + r + s + b + ' LavaLamp ' + tokenId + buddy;
 };
 
-function generateDescriptionMetadata({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, tokenId}) {
+function generateDescriptionMetadata({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, rarity, tokenId}) {
   const b = baseMetadata[parseInt(base, 10)];
   const bg = backgroundMetadata[parseInt(background, 10)];
   const g = glassMetadata[parseInt(glass, 10)];
@@ -573,17 +594,34 @@ function generateDescriptionMetadata({attribute, background, base, glass, lava1,
   const l2 = lavaColorMetadata[parseInt(lava2, 10)];
   const l3 = lavaColorMetadata[parseInt(lava3, 10)];
   const l4 = lavaColorMetadata[parseInt(lava4, 10)];
-  const o = overlayMetadata[parseInt(overlay, 10)];
+  const o = overlay === 0 ? '' : ' with a ' + overlayMetadata[parseInt(overlay, 10)] + ' overlay';
+  const r = rarityMetadata[parseInt(rarity, 10)];
   const s = ' ';
+  let holy = '';
+  let buddy = '';
+
+  if (parseInt(attribute, 10) === attributes.halo) {
+    holy = 'Angelic ';
+  }
+
+  if (parseInt(attribute, 10) === attributes.lavalien || parseInt(attribute, 10) === attributes.kitty) {
+    buddy = ' with a ' + attributeMetadata[parseInt(attribute,10)] + ' buddy';
+  }
+
+  //cause santas a wizard of course
+  if (baseMetadata[parseInt(base, 10)] === baseMetadata[5] && // wizard
+      rarityMetadata[parseInt(rarity, 10)] === rarityMetadata[3]) { // ruby
+        return g + ' Glass ' + holy + 'Santa LavaLamp ' + tokenId + buddy + ' with a ' + bg + s + 'background' + o;
+  }
 
   // update me, lol
-  return b + s + g + s + 'LavaLamp ' + tokenId + ' with a ' + bg + s + 'background';
+  return g + ' Glass ' + holy + r + s + b + ' LavaLamp ' + tokenId + buddy + ' with a ' + bg + s + 'background' + o;
 };
 
-const generateMetadata = ({attribute, background, base, glass, lavaCount, lava1, lava2, lava3, lava4, overlay, tokenId, uri}) => {
+const generateMetadata = ({attribute, background, base, glass, lavaCount, lava1, lava2, lava3, lava4, overlay, rarity, tokenId, uri}) => {
   const metadata = {
-    name: generateNameMetadata({base, glass, tokenId}),
-    decription: generateDescriptionMetadata({attribute, background, base, lava1, lava2, lava3, lava4, overlay, tokenId}),
+    name: generateNameMetadata({attribute, base, glass, rarity, tokenId}),
+    decription: generateDescriptionMetadata({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, rarity, tokenId}),
     image: uri,
     attributes: [
       {
@@ -625,6 +663,10 @@ const generateMetadata = ({attribute, background, base, glass, lavaCount, lava1,
       {
         "trait_type": "overlay",
         "value": overlayMetadata[parseInt(overlay, 10)],
+      },
+      {
+        "trait_type": "rarity",
+        "value": rarityMetadata[parseInt(rarity, 10)],
       },
     ]
   };

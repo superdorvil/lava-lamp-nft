@@ -8,18 +8,18 @@ function generateRandomNumber() {
 function metaDataToID(meta) {
   return meta[5] + meta[6] + meta[7] + meta[8]
 }
-const test = false
+const test = true
 
 require("chai")
   .use(require("chai-as-promised"))
   .should()
 
 contract('LavaLamp', (accounts) => {
-  const [ superdorvil, zac, kate, nick, dao, burner, purchases, royalties, minter1, minter2 ] = accounts;
+  const [ lavaLampsETH, minter1, minter2 ] = accounts;
   let address;
 
   before(async () => {
-    contract = await LavaLamp.new(purchases) // deployed
+    contract = await LavaLamp.new() // deployed
     address = contract.address
   })
 
@@ -44,16 +44,16 @@ contract('LavaLamp', (accounts) => {
     it("has correct tokenURI", async () => {
       let tokenURI = await contract.tokenURI(1197)
       expect(tokenURI).to.equal("http://localhost:3000/token/1197")
-      //expect(tokenURI).to.equal("http://www.superdorvil.tech/token/1197")
+      //expect(tokenURI).to.equal("http://www.lavaLampsETH.tech/token/1197")
       tokenURI = await contract.tokenURI(6783)
       expect(tokenURI).to.equal("http://localhost:3000/token/6783")
-      //expect(tokenURI).to.equal("http://www.superdorvil.tech/token/6783")
+      //expect(tokenURI).to.equal("http://www.lavaLampsETH.tech/token/6783")
     })
 
     it("owner has correct metadata", async () => {
       let owner = await contract.ownerOf(1197)
-      expect(owner).to.equal(superdorvil)
-      let meta = await contract.getToken(1197)
+      expect(owner).to.equal(lavaLampsETH)
+      let meta = await contract.getTokenMetadata(1197)
       //console.log(meta)
 
       //assert.equal(meta[0], )= lavalamp.attribute;
@@ -73,8 +73,8 @@ contract('LavaLamp', (accounts) => {
       // FIXME:: Mint all of them and store an array and check ids, lit
 
       owner = await contract.ownerOf(6783)
-      expect(owner).to.equal(superdorvil)
-      meta = await contract.getToken(6783)
+      expect(owner).to.equal(lavaLampsETH)
+      meta = await contract.getTokenMetadata(6783)
 
       //assert.equal(meta[0], )= lavalamp.attribute;
       //assert.equal(meta[1], )= lavalamp.background;
@@ -110,7 +110,7 @@ contract('LavaLamp', (accounts) => {
 
     before(async ()=> {
       //console.log('getting balances')
-      ownerBalanceBefore = await web3.eth.getBalance(superdorvil);
+      ownerBalanceBefore = await web3.eth.getBalance(lavaLampsETH);
       //console.log(ownerBalanceBefore)
       ownerBalanceBefore = web3.utils.toBN(ownerBalanceBefore)
       //console.log(ownerBalanceBefore)
@@ -131,7 +131,7 @@ contract('LavaLamp', (accounts) => {
       totalSupply = await contract.totalSupply()
       assert.equal(totalSupply, 3)
 
-      let meta = await contract.getToken(3990)
+      let meta = await contract.getTokenMetadata(3990)
       //console.log(meta)
 
       //assert.equal(meta[0], )= lavalamp.attribute;
@@ -160,7 +160,7 @@ contract('LavaLamp', (accounts) => {
       console.log('total supply = ' + totalSupply)
       assert.equal(totalSupply, 3)
         //let owner = await contract.ownerOf(1197)
-        // superdorvil
+        // lavaLampsETH
         // minter1
       await contract.claim(10, { from: minter1, value: price * 10 })
       const allTokens = await contract.getAllTokenMetadata()
@@ -229,18 +229,18 @@ contract('LavaLamp', (accounts) => {
         assert.equal(randToken14, idList[rand14])
         assert.equal(token7979, idList[7979])
 
-        const superdorvilToken0 = await contract.tokenOfOwnerByIndex(superdorvil, 0)
-        const superdorvilToken1 = await contract.tokenOfOwnerByIndex(superdorvil, 1)
-        const superdorvilToken2 = await contract.tokenOfOwnerByIndex(superdorvil, 2)
+        const lavaLampsETHToken0 = await contract.tokenOfOwnerByIndex(lavaLampsETH, 0)
+        const lavaLampsETHToken1 = await contract.tokenOfOwnerByIndex(lavaLampsETH, 1)
+        const lavaLampsETHToken2 = await contract.tokenOfOwnerByIndex(lavaLampsETH, 2)
         const minter1Token0 = await contract.tokenOfOwnerByIndex(minter1, 0)
         const minter1Token1 = await contract.tokenOfOwnerByIndex(minter1, 1)
         const minter1Token2 = await contract.tokenOfOwnerByIndex(minter1, 2)
         const minter1Token3 = await contract.tokenOfOwnerByIndex(minter1, 3)
 
-        console.log('superdorvil tokens')
-        console.log(superdorvilToken0)
-        console.log(superdorvilToken1)
-        console.log(superdorvilToken2)
+        console.log('lavaLampsETH tokens')
+        console.log(lavaLampsETHToken0)
+        console.log(lavaLampsETHToken1)
+        console.log(lavaLampsETHToken2)
         console.log('minter1 tokens')
         console.log(minter1Token0)
         console.log(minter1Token1)

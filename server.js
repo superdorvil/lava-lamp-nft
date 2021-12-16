@@ -4,9 +4,8 @@ const path = require('path');
 const Web3 = require('web3');
 const {
   generateLavaLamp,
-  generateRandomLavaLamp,
-  generateMetaData,
-} = require('./src/scripts/LavaLampGeneratorExpress/');
+  generateMetadata,
+} = require('./src/scripts/LavaLampGenerator/');
 
 const app = express();
 
@@ -42,7 +41,7 @@ app.get('/token/:tokenId', async (req, res) => {
   //}
 
   try {
-    const metadata = await contract.methods.get(tokenId).call();
+    const metadata = await contract.methods.getTokenMetadata(tokenId).call();
 
     const attribute = metadata[0];
     const background = metadata[1];
@@ -58,7 +57,7 @@ app.get('/token/:tokenId', async (req, res) => {
 
     const uri = `${baseUri}/token/lavalamp/${tokenId}/${attribute}/${background}/${base}/${glass}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${overlay}/${rarity}`;
 
-    const  metadataJson = generateMetaData({
+    const  metadataJson = generateMetadata({
       attribute,
       background,
       base,
@@ -75,6 +74,7 @@ app.get('/token/:tokenId', async (req, res) => {
     });
 
     //cache.set(tokenId, result);
+    //res.setHeader('Content-Type', 'application/json');
     res.json(metadataJson);
   }
   catch(error) {

@@ -3,23 +3,19 @@ pragma solidity >=0.4.22 <0.9.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-// FIXME:: check this out
-// https://stackoverflow.com/questions/68810515/totalsupply-is-not-a-function-openzeppelin-contracts
-//import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/IERC721Enumerable.sol";
 
-// FIXME:: todo, counter to see how many things were minted
 // FIXME:: Should I add the ability to pause the contract???
 // FIXME:: Update contract to the most recent ERC shit
 
 contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     struct Metadata {
-        uint8 attribute;
+        uint8 attribute; // (none, lavalien, halo, kitty)
         uint8 background; // 10 - (black, blueberry, light blueberry, light raspberry, light strawberry, raspberry, sky, purple, stars, strawberry)
-        uint8 base; // 6 - (standard, alien, rocket, bong, pumpkin, wizard)
-        uint8 glass; // 2 (white or black) - (carbon)
+        uint8 base; // 8 - (standard, alien, rocket, bong, pumpkin, wizard, witch, kitty)
+        uint8 glass; // 2 (white, black, yellow, orange, pink, purple, blue, red)
 
-        // 109 (None, red, green, yellow, blue, purple, light blue, orange, white, pink)
+        // 10 (None, red, green, yellow, blue, purple, light blue, orange, white, pink)
         uint8 lava_count;
         uint8 lava_1;
         uint8 lava_2;
@@ -40,12 +36,8 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     uint256 currentLampSet = 0;
     uint256 lampsMinted = 0;
 
-    address payable public purchases;
-
-    constructor(address _purchases) ERC721("LavaLamp", "LAVALAMP") {
+    constructor() ERC721("LavaLamp", "LAVALAMP") {
         setBaseURI("http://localhost:3000/token/"); // setBaseURI("http://www.superdorvil.tech/token/");
-
-        purchases = payable(_purchases);
 
         for (int i = 0; i < 2; i++)
             mint();
@@ -129,8 +121,9 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
             mint();
 
         // payable(owner()).transfer(price ether);
+        (bool success, ) = payable(owner()).call{value: price}("");
         // (bool success, ) = payable(purchases).call.value(price)("");
-        (bool success, ) = payable(purchases).call{value: price}("");
+        //(bool success, ) = payable(purchases).call{value: price}("");
         require(success, "Transfer failed.");
     }
 
@@ -179,31 +172,47 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateBase(uint256 r) internal pure returns(uint8) {
         uint8 base;
 
-        if (r < 166666)
+        if (r < 125000)
             base = 0;
-        else if (r < 333332)
+        else if (r < 250000)
             base = 1;
-        else if (r < 499998)
+        else if (r < 375000)
             base = 2;
-        else if (r < 666664)
+        else if (r < 500000)
             base = 3;
-        else if (r < 833330)
+        else if (r < 625000)
             base = 4;
-        else
+        else if (r < 750000)
             base = 5;
+        else if (r < 875000)
+            base = 6;
+        else
+            base = 7;
 
         return base;
     }
 
     function generateGlass(uint256 r) internal pure returns(uint8) {
-        uint8 glass;
+      uint8 glass;
 
-        if (r < 500000)
-            glass = 0;
-        else
-            glass = 1;
+      if (r < 125000)
+          glass = 0;
+      else if (r < 250000)
+          glass = 1;
+      else if (r < 375000)
+          glass = 2;
+      else if (r < 500000)
+          glass = 3;
+      else if (r < 625000)
+          glass = 4;
+      else if (r < 750000)
+          glass = 5;
+      else if (r < 875000)
+          glass = 6;
+      else
+          glass = 7;
 
-        return glass;
+      return glass;
     }
 
     function generateOverlay(uint256 r) internal pure returns(uint8) {
@@ -316,7 +325,7 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
         return randomLampBlock;
     }
 
-    function getToken(uint256 tokenId) external view returns(uint8[] memory) {
+    function getTokenMetadata(uint256 tokenId) external view returns(uint8[] memory) {
         require(_exists(tokenId), "token not minted");
         Metadata memory lavalamp = id_to_lavalamp[tokenId];
         uint8[] memory meta = new uint8[](11);
@@ -424,7 +433,7 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
           }
         }
 
-        return 0;
+        return 0; //FIXME:: Maybe Return 9999999 for error
     }
 
     function tokenByIndex(uint256 index) external pure returns (uint256) {
