@@ -1,6 +1,6 @@
 const {DiamondAlien} = require('./DiamondAlien');
 const {DiamondBong} = require('./DiamondBong');
-const {DiamondNormal} = require('./DiamondNormal');
+const {DiamondStandard} = require('./DiamondStandard');
 const {DiamondPumpkin} = require('./DiamondPumpkin');
 const {DiamondRocket} = require('./DiamondRocket');
 const {DiamondWizard} = require('./DiamondWizard');
@@ -10,7 +10,7 @@ const {DiamondKitty} = require('./DiamondKitty');
 export {
   DiamondAlien,
   DiamondBong,
-  DiamondNormal,
+  DiamondStandard,
   DiamondPumpkin,
   DiamondRocket,
   DiamondWizard,

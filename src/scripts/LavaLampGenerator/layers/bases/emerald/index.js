@@ -1,6 +1,6 @@
 const {EmeraldAlien} = require('./EmeraldAlien');
 const {EmeraldBong} = require('./EmeraldBong');
-const {EmeraldNormal} = require('./EmeraldNormal');
+const {EmeraldStandard} = require('./EmeraldStandard');
 const {EmeraldPumpkin} = require('./EmeraldPumpkin');
 const {EmeraldRocket} = require('./EmeraldRocket');
 const {EmeraldWizard} = require('./EmeraldWizard');
@@ -10,7 +10,7 @@ const {EmeraldKitty} = require('./EmeraldKitty');
 module.exports = {
   EmeraldAlien,
   EmeraldBong,
-  EmeraldNormal,
+  EmeraldStandard,
   EmeraldPumpkin,
   EmeraldRocket,
   EmeraldWizard,

@@ -13,7 +13,8 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
         uint8 attribute; // (none, lavalien, halo, kitty)
         uint8 background; // 10 - (black, blueberry, light blueberry, light raspberry, light strawberry, raspberry, sky, purple, stars, strawberry)
         uint8 base; // 8 - (standard, alien, rocket, bong, pumpkin, wizard, witch, kitty)
-        uint8 glass; // 2 (white, black, yellow, orange, pink, purple, blue, red)
+        uint8 glass; // glowing or normal
+        uint8 glassColor; // 2 (white, black, yellow, orange, pink, purple, blue, red)
 
         // 10 (None, red, green, yellow, blue, purple, light blue, orange, white, pink)
         uint8 lava_count;
@@ -38,9 +39,6 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
 
     constructor() ERC721("LavaLamp", "LAVALAMP") {
         setBaseURI("http://localhost:3000/token/"); // setBaseURI("http://www.superdorvil.tech/token/");
-
-        for (int i = 0; i < 2; i++)
-            mint();
     }
 
     function setBaseURI(string memory baseURI) public onlyOwner {
@@ -95,6 +93,8 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
         metadata.base = generateBase(r);
         r = pseudoRNG(tokenId, r) % 1000000;
         metadata.glass = generateGlass(r);
+        r = pseudoRNG(tokenId, r) % 1000000;
+        metadata.glassColor = generateGlassColor(r);
         r = pseudoRNG(tokenId, r) % 1000000;
         metadata.overlay = generateOverlay(r);
         r = pseudoRNG(tokenId, r) % 1000000;
@@ -195,24 +195,35 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateGlass(uint256 r) internal pure returns(uint8) {
       uint8 glass;
 
-      if (r < 125000)
+      if (r < 500000)
           glass = 0;
-      else if (r < 250000)
-          glass = 1;
-      else if (r < 375000)
-          glass = 2;
-      else if (r < 500000)
-          glass = 3;
-      else if (r < 625000)
-          glass = 4;
-      else if (r < 750000)
-          glass = 5;
-      else if (r < 875000)
-          glass = 6;
       else
-          glass = 7;
+          glass = 1;
 
       return glass;
+    }
+
+    function generateGlassColor(uint256 r) internal pure returns(uint8) {
+      uint8 glassColor;
+
+      if (r < 125000)
+          glassColor = 0;
+      else if (r < 250000)
+          glassColor = 1;
+      else if (r < 375000)
+          glassColor = 2;
+      else if (r < 500000)
+          glassColor = 3;
+      else if (r < 625000)
+          glassColor = 4;
+      else if (r < 750000)
+          glassColor = 5;
+      else if (r < 875000)
+          glassColor = 6;
+      else
+          glassColor = 7;
+
+      return glassColor;
     }
 
     function generateOverlay(uint256 r) internal pure returns(uint8) {
@@ -328,19 +339,20 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function getTokenMetadata(uint256 tokenId) external view returns(uint8[] memory) {
         require(_exists(tokenId), "token not minted");
         Metadata memory lavalamp = id_to_lavalamp[tokenId];
-        uint8[] memory meta = new uint8[](11);
+        uint8[] memory meta = new uint8[](12);
 
         meta[0] = lavalamp.attribute;
         meta[1] = lavalamp.background;
         meta[2] = lavalamp.base;
         meta[3] = lavalamp.glass;
-        meta[4] = lavalamp.lava_count;
-        meta[5] = lavalamp.lava_1;
-        meta[6] = lavalamp.lava_2;
-        meta[7] = lavalamp.lava_3;
-        meta[8] = lavalamp.lava_4;
-        meta[9] = lavalamp.overlay;
-        meta[10] = lavalamp.rarity;
+        meta[4] = lavalamp.glassColor;
+        meta[5] = lavalamp.lava_count;
+        meta[6] = lavalamp.lava_1;
+        meta[7] = lavalamp.lava_2;
+        meta[8] = lavalamp.lava_3;
+        meta[9] = lavalamp.lava_4;
+        meta[10] = lavalamp.overlay;
+        meta[11] = lavalamp.rarity;
 
         return meta;
     }

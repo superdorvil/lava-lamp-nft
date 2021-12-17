@@ -20,7 +20,7 @@ const {
 const {
   DiamondAlien,
   DiamondBong,
-  DiamondNormal,
+  DiamondStandard,
   DiamondPumpkin,
   DiamondRocket,
   DiamondWizard,
@@ -28,7 +28,7 @@ const {
   DiamondKitty,
   EmeraldAlien,
   EmeraldBong,
-  EmeraldNormal,
+  EmeraldStandard,
   EmeraldPumpkin,
   EmeraldRocket,
   EmeraldWizard,
@@ -36,7 +36,7 @@ const {
   EmeraldKitty,
   GoldAlien,
   GoldBong,
-  GoldNormal,
+  GoldStandard,
   GoldPumpkin,
   GoldRocket,
   GoldWizard,
@@ -44,7 +44,7 @@ const {
   GoldKitty,
   OriginalAlien,
   OriginalBong,
-  OriginalNormal,
+  OriginalStandard,
   OriginalPumpkin,
   OriginalRocket,
   OriginalWizard,
@@ -52,7 +52,7 @@ const {
   OriginalKitty,
   RubyAlien,
   RubyBong,
-  RubyNormal,
+  RubyStandard,
   RubyPumpkin,
   RubyRocket,
   RubyWizard,
@@ -60,14 +60,17 @@ const {
   RubyKitty,
   RainbowAlien,
   RainbowBong,
-  RainbowNormal,
+  RainbowStandard,
   RainbowPumpkin,
   RainbowRocket,
   RainbowWizard,
   RainbowWitch,
   RainbowKitty,
 } = require('./layers/bases');
-const {Glass} = require('./layers/glass');
+const {
+  HolographicGlass,
+  NormalGlass,
+} = require('./layers/glass');
 const {Lavas} = require('./layers/lavas');
 const {
   Bitcoin,
@@ -89,30 +92,6 @@ let blackLavaActive = true;
 
 const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
 const closeTag = '</svg>';
-
-const lavaColors = [
-  'none',
-  {color1: '#F85449', color2: '#C53434'},
-  {color1: '#71FF30', color2: '#25BC46'},
-  {color1: '#FABE09', color2: '#FDF21B'},
-  {color1: '#321A93', color2: '#3603FF'},
-  {color1: '#5000B6', color2: '#7E5EFF'},
-  {color1: '#21F6EA', color2: '#2183F6'},
-  {color1: '#FFB800', color2: '#FF7800'},
-  {color1: '#FFFFFF', color2: '#D0C9C9'},
-  {color1: '#FF00D6', color2: '#D700B4'},
-];
-
-const glassColors = [
-  '#FFFFFF', // white
-  '#000000', // carbon / black
-  '#FFFA8D', // yellow
-  '#F59B13', // orange
-  '#FF67EC', // pink
-  '#A15BFA', // purple
-  '#2D34E6', // blue / ocean
-  '#F41B1B', // crimson / red
-];
 
 const attributes = {
   none: 0,
@@ -144,6 +123,35 @@ const bases = {
   witch: 6,
   kitty: 7,
 };
+
+const glasses = {
+  normal: 0,
+  holographic: 1,
+};
+
+const glassColors = [
+  '#FFFFFF', // white
+  '#000000', // carbon / black
+  '#FFFA8D', // yellow
+  '#F59B13', // orange
+  '#FF67EC', // pink
+  '#A15BFA', // purple
+  '#2D34E6', // blue / ocean
+  '#F41B1B', // crimson / red
+];
+
+const lavaColors = [
+  'none',
+  {color1: '#F85449', color2: '#C53434'},
+  {color1: '#71FF30', color2: '#25BC46'},
+  {color1: '#FABE09', color2: '#FDF21B'},
+  {color1: '#321A93', color2: '#3603FF'},
+  {color1: '#5000B6', color2: '#7E5EFF'},
+  {color1: '#21F6EA', color2: '#2183F6'},
+  {color1: '#FFB800', color2: '#FF7800'},
+  {color1: '#FFFFFF', color2: '#D0C9C9'},
+  {color1: '#FF00D6', color2: '#D700B4'},
+];
 
 const rarities = {
   og: 0,
@@ -197,17 +205,24 @@ const baseMetadata = [
   'Kitty',
 ];
 
-const rarityMetadata = [
-  'OG',
-  'Gold',
-  'Diamond',
-  'Ruby',
-  'Emerald',
-  'Rainbow',
+const glassMetadata = [
+  'Glass',
+  'Halographic Glass',
+];
+
+const glassColorMetadata = [
+  'White', // snowy, pearly, bnlank,
+  'Black', // carbon, onyx, ebony,
+  'Yellow', // golden, saffron, amber,
+  'Orange', // tangerine, apricot, coral, peach
+  'Pink', // blossom, rosy, coral,reseate
+  'Purple', // violet, lilac, lavender, royal,
+  'Blue', // ocean, cerulean, aqua, azure, sky,
+  'Red', // crimson, ruby, rosy, fiery, flame, blaze, cherry
 ];
 
 const lavaColorMetadata = [
-  blackLavaActive ? 'Black' : 'None', // carbon, onyx, ebony,
+  blackLavaActive ? 'Black' : 'none', // carbon, onyx, ebony,
   'Red', // crimson, ruby, rosy, fiery, flame, blaze, cherry
   'Green', // leafy, emerald,
   'Yellow', // golden, saffron, amber,
@@ -219,15 +234,13 @@ const lavaColorMetadata = [
   'Pink', // blossom, rosy, coral,reseate
 ];
 
-const glassMetadata = [
-  'White', // snowy, pearly, bnlank,
-  'Black', // carbon, onyx, ebony,
-  'Yellow', // golden, saffron, amber,
-  'Orange', // tangerine, apricot, coral, peach
-  'Pink', // blossom, rosy, coral,reseate
-  'Purple', // violet, lilac, lavender, royal,
-  'Blue', // ocean, cerulean, aqua, azure, sky,
-  'Red', // crimson, ruby, rosy, fiery, flame, blaze, cherry
+const rarityMetadata = [
+  'OG',
+  'Gold',
+  'Diamond',
+  'Ruby',
+  'Emerald',
+  'Rainbow',
 ];
 
 const overlayMetadata = [
@@ -318,7 +331,7 @@ function generateBaseSVG({index, rarity}) {
   if (rarity === rarities.og) {
     switch(index) {
       case bases.standard:
-        base = OriginalNormal();
+        base = OriginalStandard();
         break;
       case bases.alien:
         base = OriginalAlien();
@@ -347,7 +360,7 @@ function generateBaseSVG({index, rarity}) {
   } else if (rarity === rarities.gold) {
     switch(index) {
       case bases.standard:
-        base = GoldNormal();
+        base = GoldStandard();
         break;
       case bases.alien:
         base = GoldAlien();
@@ -376,7 +389,7 @@ function generateBaseSVG({index, rarity}) {
   } else if (rarity === rarities.diamond) {
     switch(index) {
       case bases.standard:
-        base = DiamondNormal();
+        base = DiamondStandard();
         break;
       case bases.alien:
         base = DiamondAlien();
@@ -405,7 +418,7 @@ function generateBaseSVG({index, rarity}) {
   } else if (rarity === rarities.ruby) {
     switch(index) {
       case bases.standard:
-        base = RubyNormal();
+        base = RubyStandard();
         break;
       case bases.alien:
         base = RubyAlien();
@@ -434,7 +447,7 @@ function generateBaseSVG({index, rarity}) {
   } else if (rarity === rarities.emerald) {
     switch(index) {
       case bases.standard:
-        base = EmeraldNormal();
+        base = EmeraldStandard();
         break;
       case bases.alien:
         base = EmeraldAlien();
@@ -463,7 +476,7 @@ function generateBaseSVG({index, rarity}) {
   } else if (rarity === rarities.rainbow) {
     switch(index) {
       case bases.standard:
-        base = RainbowNormal();
+        base = RainbowStandard();
         break;
       case bases.alien:
         base = RainbowAlien();
@@ -494,6 +507,23 @@ function generateBaseSVG({index, rarity}) {
   return base;
 }
 
+function generateGlassSVG({index, glassColor}) {
+  let glass = '';
+
+  switch (index) {
+    case glasses.normal:
+      glass = NormalGlass({glassColor: glassColors[glassColor]});
+      break;
+    case glasses.holographic:
+      glass = HolographicGlass({glassColor: glassColors[glassColor]});
+      break;
+    default:
+    // add error checking
+  }
+
+  return glass;
+}
+
 function generateLavasSVG({lava1, lava2, lava3, lava4}) {
   if (blackLavaActive) {
     const black = {color1: 'none', color2: 'none'}
@@ -516,10 +546,6 @@ function generateLavasSVG({lava1, lava2, lava3, lava4}) {
     lava3: lavaColors[lava3],
     lava4: lavaColors[lava4],
   });
-}
-
-function generateGlassSVG({lava1, lava2, lava3, lava4, glass}) {
-  return Glass({glassColor: glassColors[glass]});
 }
 
 function generateOverlaySVG({index}) {
@@ -560,9 +586,10 @@ function generateOverlaySVG({index}) {
   return overlay;
 }
 
-function generateNameMetadata({attribute, base, glass, rarity, tokenId}) {
+function generateNameMetadata({attribute, base, glass, glassColor, rarity, tokenId}) {
   const b = baseMetadata[parseInt(base, 10)];
   const g = glassMetadata[parseInt(glass, 10)];
+  const gc = glassColorMetadata[parseInt(glassColor, 10)];
   const r = rarityMetadata[parseInt(rarity, 10)];
   const s = ' ';
   let holy = '';
@@ -579,16 +606,17 @@ function generateNameMetadata({attribute, base, glass, rarity, tokenId}) {
   //cause santas a wizard of course
   if (parseInt(base, 10) === bases.wizard && // wizard
       parseInt(rarity, 10) === rarities.ruby) { // ruby
-        return g + ' Glass ' + holy + 'Santa LavaLamp ' + tokenId + buddy;
+        return gc + s + g + s + holy + 'Santa LavaLamp ' + tokenId + buddy;
   }
 
-  return g + ' Glass ' + holy + r + s + b + ' LavaLamp ' + tokenId + buddy;
+  return gc + s + g + s + holy + r + s + b + ' LavaLamp ' + tokenId + buddy;
 };
 
-function generateDescriptionMetadata({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, rarity, tokenId}) {
+function generateDescriptionMetadata({attribute, background, base, glass, glassColor, lava1, lava2, lava3, lava4, overlay, rarity, tokenId}) {
   const b = baseMetadata[parseInt(base, 10)];
   const bg = backgroundMetadata[parseInt(background, 10)];
   const g = glassMetadata[parseInt(glass, 10)];
+  const gc = glassColorMetadata[parseInt(glassColor, 10)];
   const a = attributeMetadata[parseInt(attribute, 10)];
   const l1 = lavaColorMetadata[parseInt(lava1, 10)];
   const l2 = lavaColorMetadata[parseInt(lava2, 10)];
@@ -611,17 +639,17 @@ function generateDescriptionMetadata({attribute, background, base, glass, lava1,
   //cause santas a wizard of course
   if (baseMetadata[parseInt(base, 10)] === baseMetadata[5] && // wizard
       rarityMetadata[parseInt(rarity, 10)] === rarityMetadata[3]) { // ruby
-        return g + ' Glass ' + holy + 'Santa LavaLamp ' + tokenId + buddy + ' with a ' + bg + s + 'background' + o;
+        return gc + s + g + s + holy + 'Santa LavaLamp ' + tokenId + buddy + ' with a ' + bg + s + 'background' + o;
   }
 
   // update me, lol
-  return g + ' Glass ' + holy + r + s + b + ' LavaLamp ' + tokenId + buddy + ' with a ' + bg + s + 'background' + o;
+  return gc + s + g + s + holy + r + s + b + ' LavaLamp ' + tokenId + buddy + ' with a ' + bg + s + 'background' + o;
 };
 
-const generateMetadata = ({attribute, background, base, glass, lavaCount, lava1, lava2, lava3, lava4, overlay, rarity, tokenId, uri}) => {
+const generateMetadata = ({attribute, background, base, glass, glassColor, lavaCount, lava1, lava2, lava3, lava4, overlay, rarity, tokenId, uri}) => {
   const metadata = {
-    name: generateNameMetadata({attribute, base, glass, rarity, tokenId}),
-    decription: generateDescriptionMetadata({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, rarity, tokenId}),
+    name: generateNameMetadata({attribute, base, glass, glassColor, rarity, tokenId}),
+    decription: generateDescriptionMetadata({attribute, background, base, glass, glassColor, lava1, lava2, lava3, lava4, overlay, rarity, tokenId}),
     image: uri,
     attributes: [
       {
@@ -639,6 +667,10 @@ const generateMetadata = ({attribute, background, base, glass, lavaCount, lava1,
       {
         "trait_type": "Glass",
         "value": glassMetadata[parseInt(glass, 10)],
+      },
+      {
+        "trait_type": "Glass Color",
+        "value": glassColorMetadata[parseInt(glassColor, 10)],
       },
       {
         "trait_type": "Lava Count",
@@ -674,13 +706,13 @@ const generateMetadata = ({attribute, background, base, glass, lavaCount, lava1,
   return metadata;
 };
 
-function generateLavaLamp({attribute, background, base, glass, lava1, lava2, lava3, lava4, overlay, rarity}) {
+function generateLavaLamp({attribute, background, base, glass, glassColor, lava1, lava2, lava3, lava4, overlay, rarity}) {
   return `
     ${openTag}
     ${generateBackgroundSVG({index: background})}
     ${generateOverlaySVG({index: overlay})}
     ${generateAttributeSVG({index: attribute})}
-    ${generateGlassSVG({glass})}
+    ${generateGlassSVG({index: glass, glassColor})}
     ${generateLavasSVG({lava1, lava2, lava3, lava4})}
     ${generateBaseSVG({index: base, rarity})}
     ${closeTag}
@@ -697,8 +729,7 @@ function generateAssets() {
       assets.push(`
         ${openTag}
         ${generateBackgroundSVG({index: 0})}
-        ${generateGlassSVG({glass: 0})}
-
+        ${generateGlassSVG({index: 1, glassColor: 0})}
         ${generateBaseSVG({index: j, rarity: i})}
         ${closeTag}
       `);
@@ -740,15 +771,17 @@ function generateAssets() {
     }
   }
 
-//  console.log('glasses')
+  //  console.log('glasses')
   // glasses
-  for (let i = 0; i < 8; i++) {
-    assets.push(`
-      ${openTag}
-      ${generateBackgroundSVG({index: 0})}
-      ${generateGlassSVG({glass: i})}
-      ${closeTag}
-    `);
+  for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < 8; j++) {
+      assets.push(`
+        ${openTag}
+        ${generateBackgroundSVG({index: 0})}
+        ${generateGlassSVG({index: i, glassColor: j})}
+        ${closeTag}
+      `);
+    }
   }
 
 //  console.log('lavas')
@@ -763,6 +796,7 @@ function generateAssets() {
       `);
     }
   }
+
 //  console.log('lavas with glass')
   // lavas with glass
   for (let i = 0; i < 4; i++) {
@@ -770,7 +804,7 @@ function generateAssets() {
       assets.push(`
         ${openTag}
         ${generateBackgroundSVG({index: 0})}
-        ${generateGlassSVG({glass: 0})}
+        ${generateGlassSVG({index: 0, glassColor: 0})}
         ${generateLavasSVG({lava1: i === 0 ? j : 0, lava2: i === 1 ? j : 0, lava3: i === 2 ? j : 0, lava4: i === 3 ? j : 0})}
         ${closeTag}
       `);
@@ -798,7 +832,8 @@ function generateRandomLavaLamp() {
     attribute: generateRandomNumber({n: 4}),
     background: generateRandomNumber({n: 10}),
     base: generateRandomNumber({n: 8}),
-    glass: generateRandomNumber({n: 8}),
+    glass: generateRandomNumber({n: 2}),
+    glassColor: generateRandomNumber({n: 8}),
     lava1: generateRandomNumber({n: 10}),
     lava2: generateRandomNumber({n: 10}),
     lava3: generateRandomNumber({n: 10}),
@@ -846,7 +881,8 @@ function generate7979LavaLamps({save}) {
         attribute: generateRandomNumber({n: 4}),
         background: generateRandomNumber({n: 10}),
         base: generateRandomNumber({n: 8}),
-        glass: generateRandomNumber({n: 8}),
+        glass: generateRandomNumber({n: 2}),
+        glassColor: generateRandomNumber({n: 8}),
         lava1,
         lava2,
         lava3,
@@ -891,11 +927,8 @@ function saveNLavaLamps({lavaLamps, dir}) {
 
 if (myArgs[0] === 'generate some random bullshit') {
   generateAssets();
-  //generateNRandomLavaLamps({n: 10000, save: true});
+  //generateNRandomLavaLamps({n: 10, save: true});
   generate7979LavaLamps({save: true});
-  blackLavaActive = true;
-  generate7979LavaLamps({save: true});
-  blackLavaActive = false;
 }
 
 module.exports = {

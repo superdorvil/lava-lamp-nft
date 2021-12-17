@@ -1,6 +1,6 @@
 const {OriginalAlien} = require('./OriginalAlien');
 const {OriginalBong} = require('./OriginalBong');
-const {OriginalNormal} = require('./OriginalNormal');
+const {OriginalStandard} = require('./OriginalStandard');
 const {OriginalPumpkin} = require('./OriginalPumpkin');
 const {OriginalRocket} = require('./OriginalRocket');
 const {OriginalWizard} = require('./OriginalWizard');
@@ -10,7 +10,7 @@ const {OriginalKitty} = require('./OriginalKitty');
 module.exports = {
   OriginalAlien,
   OriginalBong,
-  OriginalNormal,
+  OriginalStandard,
   OriginalPumpkin,
   OriginalRocket,
   OriginalWizard,

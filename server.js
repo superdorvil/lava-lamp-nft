@@ -47,21 +47,23 @@ app.get('/token/:tokenId', async (req, res) => {
     const background = metadata[1];
     const base = metadata[2];
     const glass = metadata[3];
-    const lavaCount = metadata[4];
-    const lava1 = metadata[5];
-    const lava2 = metadata[6];
-    const lava3 = metadata[7];
-    const lava4 = metadata[8];
-    const overlay = metadata[9];
-    const rarity = metadata[10];
+    const glassColor = metadata[4];
+    const lavaCount = metadata[5];
+    const lava1 = metadata[6];
+    const lava2 = metadata[7];
+    const lava3 = metadata[8];
+    const lava4 = metadata[9];
+    const overlay = metadata[10];
+    const rarity = metadata[11];
 
-    const uri = `${baseUri}/token/lavalamp/${tokenId}/${attribute}/${background}/${base}/${glass}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${overlay}/${rarity}`;
+    const uri = `${baseUri}/token/lavalamp/${tokenId}/${attribute}/${background}/${base}/${glass}/${glassColor}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${overlay}/${rarity}`;
 
     const  metadataJson = generateMetadata({
       attribute,
       background,
       base,
       glass,
+      glassColor,
       lavaCount,
       lava1,
       lava2,
@@ -70,7 +72,7 @@ app.get('/token/:tokenId', async (req, res) => {
       overlay,
       tokenId,
       rarity,
-      uri
+      uri,
     });
 
     //cache.set(tokenId, result);
@@ -83,12 +85,13 @@ app.get('/token/:tokenId', async (req, res) => {
   }
 });
 
-app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:lavaCount/:lava1/:lava2/:lava3/:lava4/:overlay/:rarity/', async (req, res) => {
+app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:glassColor/:lavaCount/:lava1/:lava2/:lava3/:lava4/:overlay/:rarity/', async (req, res) => {
   const tokenId = parseInt(req.params.tokenId, 10);
   const attribute = parseInt(req.params.attribute, 10);
   const background = parseInt(req.params.background, 10);
   const base = parseInt(req.params.base, 10);
   const glass = parseInt(req.params.glass, 10);
+  const glassColor = parseInt(req.params.glassColor, 10);
   const lavaCount = parseInt(req.params.lavaCount, 10);
   const lava1 = parseInt(req.params.lava1, 10);
   const lava2 = parseInt(req.params.lava2, 10);
@@ -104,6 +107,7 @@ app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:lavaCount
       background,
       base,
       glass,
+      glassColor,
       lava1,
       lava2,
       lava3,

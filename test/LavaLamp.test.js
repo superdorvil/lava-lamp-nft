@@ -6,7 +6,7 @@ function generateRandomNumber() {
   return rand
 };
 function metaDataToID(meta) {
-  return meta[5] + meta[6] + meta[7] + meta[8]
+  return meta[6] + meta[7] + meta[8] + meta[9]
 }
 const test = true
 
@@ -60,13 +60,14 @@ contract('LavaLamp', (accounts) => {
       //assert.equal(meta[1], )= lavalamp.background;
       //assert.equal(meta[2], )= lavalamp.base;
       //assert.equal(meta[3], )= lavalamp.glass;
-      assert.equal(meta[4], 4)//= lavalamp.lava_count;
-      assert.equal(meta[5], 1)//= lavalamp.lava_1;
-      assert.equal(meta[6], 1)//= lavalamp.lava_2;
-      assert.equal(meta[7], 9)//= lavalamp.lava_3;
-      assert.equal(meta[8], 7)//= lavalamp.lava_4;
-      //assert.equal(meta[9], )= lavalamp.overlay;
-      //assert.equal(meta[10], )= lavalamp.rarity;
+      //assert.equal(meta[4], )= lavalamp.glassColor;
+      assert.equal(meta[5], 4)//= lavalamp.lava_count;
+      assert.equal(meta[6], 1)//= lavalamp.lava_1;
+      assert.equal(meta[7], 1)//= lavalamp.lava_2;
+      assert.equal(meta[8], 9)//= lavalamp.lava_3;
+      assert.equal(meta[9], 7)//= lavalamp.lava_4;
+      //assert.equal(meta[10], )= lavalamp.overlay;
+      //assert.equal(meta[11], )= lavalamp.rarity;
 
       // FIXME:: check each lava colors
       // FIXME:: how to handle the randoms
@@ -80,13 +81,14 @@ contract('LavaLamp', (accounts) => {
       //assert.equal(meta[1], )= lavalamp.background;
       //assert.equal(meta[2], )= lavalamp.base;
       //assert.equal(meta[3], )= lavalamp.glass;
-      assert.equal(meta[4], 4)//= lavalamp.lava_count;
-      assert.equal(meta[5], 6)//= lavalamp.lava_1;
-      assert.equal(meta[6], 7)//= lavalamp.lava_2;
-      assert.equal(meta[7], 8)//= lavalamp.lava_3;
-      assert.equal(meta[8], 3)//= lavalamp.lava_4;
-      //assert.equal(meta[9], )= lavalamp.overlay;
-      //assert.equal(meta[10], )= lavalamp.rarity;
+      //assert.equal(meta[4], )= lavalamp.glassColor;
+      assert.equal(meta[5], 4)//= lavalamp.lava_count;
+      assert.equal(meta[6], 6)//= lavalamp.lava_1;
+      assert.equal(meta[7], 7)//= lavalamp.lava_2;
+      assert.equal(meta[8], 8)//= lavalamp.lava_3;
+      assert.equal(meta[9], 3)//= lavalamp.lava_4;
+      //assert.equal(meta[10], )= lavalamp.overlay;
+      //assert.equal(meta[11], )= lavalamp.rarity;
 
       //totalSupply = await contract.totalSupply()
       //assert.equal(totalSupply, 6)
@@ -138,13 +140,14 @@ contract('LavaLamp', (accounts) => {
       //assert.equal(meta[1], )= lavalamp.background;
       //assert.equal(meta[2], )= lavalamp.base;
       //assert.equal(meta[3], )= lavalamp.glass;
-      assert.equal(meta[4], 3)//= lavalamp.lava_count;
-      assert.equal(meta[5], 3)//= lavalamp.lava_1;
-      assert.equal(meta[6], 9)//= lavalamp.lava_2;
-      assert.equal(meta[7], 9)//= lavalamp.lava_3;
-      assert.equal(meta[8], 0)//= lavalamp.lava_4;
-      //assert.equal(meta[9], )= lavalamp.overlay;
-      //assert.equal(meta[10], )= lavalamp.rarity;
+      //assert.equal(meta[4], )= lavalamp.glassColor;
+      assert.equal(meta[5], 3)//= lavalamp.lava_count;
+      assert.equal(meta[6], 3)//= lavalamp.lava_1;
+      assert.equal(meta[7], 9)//= lavalamp.lava_2;
+      assert.equal(meta[8], 9)//= lavalamp.lava_3;
+      assert.equal(meta[9], 0)//= lavalamp.lava_4;
+      //assert.equal(meta[10], )= lavalamp.overlay;
+      //assert.equal(meta[11], )= lavalamp.rarity;
 
       const allTokens = await contract.getAllTokenMetadata()
       allTokens.forEach((meta, i) => {
