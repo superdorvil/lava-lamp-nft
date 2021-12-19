@@ -1,5 +1,6 @@
 import Web3 from 'web3';
 import LavaLamp from '../../abis/LavaLamp.json';
+import { fetchMetadata } from "../metadata/metadataActions";
 import {
   CONNECTION_REQUEST,
   CONNECTION_SUCCESS,
@@ -91,7 +92,7 @@ export const connect = () => {
             window.location.reload();
           });
         } else {
-          dispatch(connectFailed('Change network to Polygon')); // why polygon
+          dispatch(connectFailed('Change network to Mainnet')); // why polygon
         }
       } catch (err) {
         console.log('error, somthing went wrong ' + err);
@@ -106,6 +107,6 @@ export const connect = () => {
 export const updateAccount = (account) => {
   return async (dispatch) => {
     dispatch(updateAccountRequest({ account: account }));
-    // dispatch(fetchData(account));
+    dispatch(fetchMetadata(account));
   };
 };

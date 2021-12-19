@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { connect } from '../../redux/blockchain/blockchainActions';
+import { fetchMetadata } from '../../redux/metadata/metadataActions';
 import {
   LavaBackground,
   TopLeftText,
@@ -11,13 +12,13 @@ import {
   ConnectButton,
 } from './HeroElements';
 import MintButton from './MintButton';
+import LavaLampCarousel from '../LavaLampCarousel/LavaLampCarousel';
 import ConnectWalletButton from '../ConnectWalletButton';
 import SocialMediaLinks from './SocialMediaLinks';
 import DropTimer from './DropTimer';
 import Web3 from 'web3';
-import styled from "styled-components";
 
-const releaseDate = new Date(2021, 10, 2, 0, 0, 0, 0);
+const releaseDate = new Date(2021, 0, 8, 0, 0, 0, 0);
 const getTimeDiff = () => {
   const secondsDiff = (releaseDate - new Date()) / 1000;
 
@@ -57,6 +58,7 @@ function HeroSection() {
   const initialTimeDiff = (releaseDate - new Date()) / 1000;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
+  const metadata = useSelector((state) => state.metadata);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
   const [NFTS, setNFTS] = useState([]);
@@ -64,7 +66,6 @@ function HeroSection() {
   const [dropTime, setDropTime] = useState(getTimeDiff);
   const [lampCount, setLampCount] = useState(1);
   const [lampPrice, setLampPrice] = useState(0.03);
-  const lampETH = Web3.utils.toWei('30', 'finney');
 
   const updateDropTimer = () => {
     const time = getTimeDiff();
@@ -77,27 +78,50 @@ function HeroSection() {
   };
 
   const mint = () => {
-    if (!blockchain.account) {
-      return;
-    }
-
     blockchain.smartContract.methods
     .claim(lampCount)
-    .send({ from: blockchain.account, value: lampPrice })
+    .send({ from: blockchain.account, value: Web3.utils.toWei((lampCount * 30).toString(), 'finney') })
     .once("error", (err) => {
       console.log(err);
-      // setLoading(false);
-      // setStatus("Error");
+      setLoading(false);
+      setStatus("Error");
     })
     .then((receipt) => {
       console.log(receipt);
-      // setLoading(false);
-      // dispatch(fetchData(blockchain.account));
-      // setStatus("Successfully minting your NFT");
+      setLoading(false);
+      dispatch(fetchMetadata(blockchain.account));
+      setStatus("Successfully minting your NFT");
     });
   };
 
+  /*const fetchMetatDataForNFTS = () => {
+    setNFTS([]);
+    data.allTokens.forEach((nft) => {
+      fetch(nft.uri)
+        .then((response) => response.json())
+        .then((metaData) => {
+          setNFTS((prevState) => [
+            ...prevState,
+            { id: nft.id, metaData: metaData },
+          ]);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    });
+  };*/
+
   useInterval(() => updateDropTimer(), 1000);
+
+  useEffect(() => {
+    if (blockchain.account !== "" && blockchain.smartContract !== null) {
+      dispatch(fetchMetadata(blockchain.account));
+    }
+  }, [blockchain.smartContract, blockchain.account, dispatch]);
+
+  /*useEffect(() => {
+    //fetchMetatDataForNFTS();
+  }, [metadata.allMetadata]);*/
 
   return (
     <LavaBackground dropComing={dropComing}>
@@ -127,7 +151,7 @@ function HeroSection() {
         <MintButton
           lampCount={lampCount}
           lampPrice={lampPrice}
-          mint={() => {mint()}}
+          mint={() => {blockchain.account ? mint() : window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')}}
           incrementLampCount={
             () => {
               const lc = lampCount < 20 ? lampCount + 1 : lampCount;
@@ -145,6 +169,7 @@ function HeroSection() {
         />
       }
       <MintDetails>max of 20. minted at .03 ETH</MintDetails>
+      <LavaLampCarousel />
     </LavaBackground>
   );
 }
