@@ -1,5 +1,6 @@
 function Sky() {
   return `
+  <!-- Sky BG -->
   <g clip-path="url(#clip0_28_498)">
   <rect width="350" height="350" fill="url(#paint0_linear_28_498)"/>
   <g opacity="0.7" filter="url(#filter0_f_28_498)">

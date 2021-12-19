@@ -1,5 +1,6 @@
 function Bitcoin() {
   return `
+  <!-- Bitcoin Overlay -->
   <g clip-path="url(#clip0_625_52580)">
   <g clip-path="url(#clip1_625_52580)">
   <g style="mix-blend-mode:overlay">

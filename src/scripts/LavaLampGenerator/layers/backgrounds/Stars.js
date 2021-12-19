@@ -1,5 +1,6 @@
 function Stars() {
   return `
+  <!-- Stars BG -->
   <g clip-path="url(#clip0_28_300)">
   <g filter="url(#filter0_f_28_300)">
   <rect x="350.08" y="350.045" width="350" height="350" transform="rotate(-180 350.08 350.045)" fill="#0E103E"/>

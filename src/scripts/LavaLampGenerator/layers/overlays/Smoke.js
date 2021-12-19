@@ -1,5 +1,6 @@
 function Smoke() {
   return `
+  <!-- Smoke Overlay -->
   <g clip-path="url(#clip0_589_112918)">
   <g opacity="0.7" filter="url(#filter0_f_589_112918)">
   <g style="mix-blend-mode:overlay" opacity="0.5">

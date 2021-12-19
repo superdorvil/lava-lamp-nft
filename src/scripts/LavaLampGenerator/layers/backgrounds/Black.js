@@ -1,5 +1,6 @@
 function Black() {
   return`
+  <!-- Black BG -->
   <g clip-path="url(#clip0_28_290)">
   <rect x="0.0789795" y="0.0444336" width="350" height="350" fill="black" fill-opacity="0.89"/>
   <rect x="0.0789795" y="0.0444336" width="350" height="350" fill="url(#paint0_radial_28_290)" fill-opacity="0.2"/>

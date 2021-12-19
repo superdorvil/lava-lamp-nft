@@ -1,9 +1,6 @@
 function RainbowWitch() {
   return `
-  <g clip-path="url(#clip0_902_116284)">
-  <g clip-path="url(#clip1_902_116284)">
-  <path d="M148.717 95.0001L125.019 209.98C124.948 210.324 125.078 210.673 125.367 210.873C128.479 213.027 147.033 225 175 225C202.967 225 221.521 213.027 224.633 210.873C224.922 210.673 225.052 210.324 224.981 209.98L201.283 95.0001C201.249 95.0667 201.205 95.1286 201.15 95.1837C199.818 96.5243 193.18 102.106 175 102.106C156.82 102.106 150.182 96.5243 148.85 95.1837C148.795 95.1286 148.751 95.0667 148.717 95.0001Z" fill="white" fill-opacity="0.75"/>
-  </g>
+  <!-- Rainbow Witch -->
   <path d="M105 286.95C141.989 290.761 221.974 296.097 246 286.95C220.04 271.895 155.495 250.819 105 286.95Z" fill="#0C011C"/>
   <path d="M167.741 341.159C170.742 340.83 168.992 332.249 167.741 328H144.399C140.092 331.153 130.312 338.198 137.648 341.159C144.984 344.12 156.765 338.555 160.239 335.402C161.489 337.458 164.74 341.488 167.741 341.159Z" fill="url(#paint0_radial_902_116284)"/>
   <path d="M168 279.802V328H144.455L131 277L168 279.802Z" fill="black"/>
@@ -64,7 +61,6 @@ function RainbowWitch() {
   <path d="M125 208C125 208 143.5 218 175 218C206.5 218 225 208 225 208L228 221.5C228 221.5 208.5 232 175 232C141.5 232 121.5 221 121.5 221L125 208Z" fill="#0C011C"/>
   <g filter="url(#filter0_d_902_116284)">
   <rect x="165" y="216" width="20" height="18" stroke="#FDF21B" stroke-width="4" shape-rendering="crispEdges"/>
-  </g>
   </g>
   <defs>
   <filter id="filter0_d_902_116284" x="159.559" y="210.56" width="30.8811" height="28.8811" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
@@ -195,12 +191,6 @@ function RainbowWitch() {
   <stop offset="0.453125" stop-color="#564D61"/>
   <stop offset="1" stop-color="#1D1A21"/>
   </radialGradient>
-  <clipPath id="clip0_902_116284">
-  <rect width="350" height="350" fill="white" transform="translate(0 0.00012207)"/>
-  </clipPath>
-  <clipPath id="clip1_902_116284">
-  <rect width="350" height="350" fill="white" transform="translate(0 0.00012207)"/>
-  </clipPath>
   </defs>
   `;
 };

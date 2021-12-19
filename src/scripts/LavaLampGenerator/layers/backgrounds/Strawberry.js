@@ -1,5 +1,6 @@
 function Strawberry() {
   return `
+  <!-- Strawberry BG -->
   <g clip-path="url(#clip0_28_264)">
   <rect x="0.0800781" y="0.0449219" width="350" height="350" fill="#5A1320"/>
   <rect x="0.0800781" y="0.0449219" width="350" height="350" fill="url(#paint0_radial_28_264)" fill-opacity="0.2"/>

@@ -1,5 +1,6 @@
 function LavaCeption() {
   return `
+  <!-- LavaCeption Overlay -->
   <g style="mix-blend-mode:overlay" clip-path="url(#clip0_559_45925)">
   <circle cx="267.057" cy="334.049" r="28.7109" fill="white" fill-opacity="0.25"/>
   <circle cx="114.388" cy="66.5365" r="22.7865" fill="white" fill-opacity="0.25"/>

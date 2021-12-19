@@ -1,5 +1,6 @@
 function Ethereum() {
   return `
+  <!-- Ethereum Overlay -->
   <g clip-path="url(#clip0_625_53334)">
   <g clip-path="url(#clip1_625_53334)">
   <path d="M42.1058 2.27863L41.2437 5.26917V92.0478L42.1058 92.9261L81.5757 69.1157L42.1058 2.27863Z" fill="white" fill-opacity="0.05"/>
