@@ -12,6 +12,7 @@ import {
   ConnectButton,
 } from './HeroElements';
 import MintButton from './MintButton';
+import MyLavaLampsCarousel from '../MyLavaLampsCarousel/MyLavaLampsCarousel';
 import LavaLampCarousel from '../LavaLampCarousel/LavaLampCarousel';
 import ConnectWalletButton from '../ConnectWalletButton';
 import SocialMediaLinks from './SocialMediaLinks';
@@ -94,23 +95,6 @@ function HeroSection() {
     });
   };
 
-  /*const fetchMetatDataForNFTS = () => {
-    setNFTS([]);
-    data.allTokens.forEach((nft) => {
-      fetch(nft.uri)
-        .then((response) => response.json())
-        .then((metaData) => {
-          setNFTS((prevState) => [
-            ...prevState,
-            { id: nft.id, metaData: metaData },
-          ]);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    });
-  };*/
-
   useInterval(() => updateDropTimer(), 1000);
 
   useEffect(() => {
@@ -124,6 +108,7 @@ function HeroSection() {
   }, [metadata.allMetadata]);*/
 
   return (
+    <div>
     <LavaBackground dropComing={dropComing}>
       <HeaderContainer>
         <TopLeftText>LAVA LAMPS</TopLeftText>
@@ -169,8 +154,12 @@ function HeroSection() {
         />
       }
       <MintDetails>max of 20. minted at .03 ETH</MintDetails>
-      <LavaLampCarousel />
     </LavaBackground>
+    {metadata.allMetadata.length > 0 ?
+      <MyLavaLampsCarousel metadata={metadata.allMetadata} /> :
+      <LavaLampCarousel />
+    }
+    </div>
   );
 }
 

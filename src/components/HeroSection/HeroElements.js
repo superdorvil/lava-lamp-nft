@@ -4,20 +4,20 @@ import lavaBackgroundMobile from '../../images/LavaBackgroundMobile.png';
 import {COLORS} from '../../constants/colors';
 
 export const LavaBackground = styled.div`
-  height: 750px;
+  height: 650px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #000000;
   background-image: url(${lavaBackground});
   @media screen and (max-width: 1024px) {
-    height: 650px;
+    height: 575px;
   }
   @media screen and (max-width: 800px) {
-    height: 550px;
+    height: 480px;
   }
   @media screen and (max-width: 480px) {
-    height:  ${props => props.dropComing ? 250 : 300}px;;
+    height:  ${props => props.dropComing ? 250 : 375}px;;
     width: 100vw;
     background-image: url(${lavaBackgroundMobile});
   }

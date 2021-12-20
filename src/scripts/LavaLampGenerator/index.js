@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const {
+  BuyMoreLavaLamps,
+} = require('./layers/buyMoreLavaLamps');
+const {
   Lavalien,
   Halo,
   Kitty,
@@ -88,7 +91,7 @@ const assetDir = __dirname + '/generatedLamps/assets/';
 const lamps7979 = __dirname + '/generatedLamps/lamps7979/';
 const blackLamps7979 = __dirname + '/generatedLamps/blackLamps7979/';
 const nLamps = __dirname + '/generatedLamps/nLamps/';
-let blackLavaActive = true;
+let blackLavaActive = false;
 
 const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
 const closeTag = '</svg>';
@@ -936,4 +939,5 @@ module.exports = {
   generateMetadata,
   generateRandomLavaLamp,
   generateNRandomLavaLamps,
+  BuyMoreLavaLamps,
 };
