@@ -1,4 +1,4 @@
-export const COLORS = {
+const COLORS = {
   mint_red: '#D91412',
   dark_green: '#25BC46',
   dark_blue: '#2183F6',
@@ -11,3 +11,5 @@ export const COLORS = {
   white: '#FFFFFF',
   button_highlight: '#3A3A3A',
 };
+
+export default COLORS;

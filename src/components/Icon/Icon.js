@@ -1,15 +1,12 @@
 import React from 'react';
 import { IconSVG, IconPath } from './IconElements';
 
-function Icon ({ icon, iconColor }) {
+function Icon ({ icon, iconColor, width, height }) {
   return(
-    <IconSVG viewBox="0 0 1024 1024">
+    <IconSVG viewBox="0 0 1024 1024" width={width} height={height}>
       <IconPath d={icon} iconColor={iconColor} />
     </IconSVG>
   );
 };
-
-// size=60
-// width={size} height={size}
 
 export default Icon;

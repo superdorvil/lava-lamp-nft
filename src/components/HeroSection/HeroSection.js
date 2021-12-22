@@ -9,13 +9,14 @@ import {
   SubTitle,
   MintDetails,
   HeaderContainer,
-  ConnectButton,
+  TopRightLava,
+  SocialContainer,
 } from './HeroElements';
-import MintButton from './MintButton';
+import MintButton from '../MintButton';
 import MyLavaLampsCarousel from '../MyLavaLampsCarousel/MyLavaLampsCarousel';
 import LavaLampCarousel from '../LavaLampCarousel/LavaLampCarousel';
 import ConnectWalletButton from '../ConnectWalletButton';
-import SocialMediaLinks from './SocialMediaLinks';
+import SocialMediaLinks from '../SocialMediaLinks';
 import DropTimer from './DropTimer';
 import Web3 from 'web3';
 
@@ -108,18 +109,14 @@ function HeroSection() {
   }, [metadata.allMetadata]);*/
 
   return (
-    <div>
     <LavaBackground dropComing={dropComing}>
       <HeaderContainer>
         <TopLeftText>LAVA LAMPS</TopLeftText>
-        <SocialMediaLinks />
-        <ConnectButton>
-          <ConnectWalletButton
-            connected={false}
-            connectedWallet={blockchain.account}
-            buttonPressed={() => dispatch(connect())}
-          />
-        </ConnectButton>
+        <ConnectWalletButton
+          connected={false}
+          connectedWallet={blockchain.account}
+          buttonPressed={() => dispatch(connect())}
+        />
       </HeaderContainer>
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>
@@ -154,12 +151,14 @@ function HeroSection() {
         />
       }
       <MintDetails>max of 20. minted at .03 ETH</MintDetails>
+      <SocialContainer>
+        <SocialMediaLinks />
+      </SocialContainer>
+      {metadata.allMetadata.length > 0 ?
+        <MyLavaLampsCarousel metadata={metadata.allMetadata} /> :
+        <LavaLampCarousel />
+      }
     </LavaBackground>
-    {metadata.allMetadata.length > 0 ?
-      <MyLavaLampsCarousel metadata={metadata.allMetadata} /> :
-      <LavaLampCarousel />
-    }
-    </div>
   );
 }
 

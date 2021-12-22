@@ -5,7 +5,7 @@ const Web3 = require('web3');
 const {
   generateLavaLamp,
   generateMetadata,
-} = require('./src/scripts/LavaLampGenerator/');
+} = require('./src/images/LavaLampGenerator/');
 
 const app = express();
 

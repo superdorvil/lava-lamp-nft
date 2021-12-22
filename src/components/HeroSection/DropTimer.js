@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  DropTime,
-  DropContainer,
-  DropItem,
-  DropUnit,
-} from './HeroElements';
-import {COLORS} from '../../constants/colors';
+import DataBlock from '../DataBlock';
+import {COLORS} from '../../constants';
+import {DropContainer} from './HeroElements';
 
 function DropTimer({days, hours, minutes, seconds}) {
   const doubleDigits = (time) => {
@@ -14,22 +10,30 @@ function DropTimer({days, hours, minutes, seconds}) {
 
   return (
     <DropContainer>
-      <DropItem lightColor={COLORS.light_yellow} darkColor={COLORS.dark_yellow}>
-        <DropTime>{doubleDigits(days)}</DropTime>
-        <DropUnit>DAYS</DropUnit>
-      </DropItem>
-      <DropItem lightColor={COLORS.light_green} darkColor={COLORS.dark_green}>
-        <DropTime>{doubleDigits(hours)}</DropTime>
-        <DropUnit>HRS</DropUnit>
-      </DropItem>
-      <DropItem lightColor={COLORS.light_blue} darkColor={COLORS.dark_blue}>
-        <DropTime>{doubleDigits(minutes)}</DropTime>
-        <DropUnit>MINS</DropUnit>
-      </DropItem>
-      <DropItem lightColor={COLORS.light_orange} darkColor={COLORS.dark_orange}>
-        <DropTime>{doubleDigits(seconds)}</DropTime>
-        <DropUnit>SECS</DropUnit>
-      </DropItem>
+      <DataBlock
+        lightColor={COLORS.light_yellow}
+        darkColor={COLORS.dark_yellow}
+        data={doubleDigits(days)}
+        units="DAYS"
+      />
+      <DataBlock
+        lightColor={COLORS.light_green}
+        darkColor={COLORS.dark_green}
+        data={doubleDigits(hours)}
+        units="HRS"
+      />
+      <DataBlock
+        lightColor={COLORS.light_blue}
+        darkColor={COLORS.dark_blue}
+        data={doubleDigits(minutes)}
+        units="MINS"
+      />
+      <DataBlock
+        lightColor={COLORS.light_orange}
+        darkColor={COLORS.dark_orange}
+        data={doubleDigits(seconds)}
+        units="SECS"
+      />
     </DropContainer>
   );
 }

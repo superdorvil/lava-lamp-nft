@@ -5,10 +5,12 @@ import {
   Header,
   Text,
 } from './FooterElements';
+import SocialMediaLinks from '../SocialMediaLinks';
 
 function Footer() {
   return (
     <Container>
+      <SocialMediaLinks />
       <OurTeamContainer>
         <Header>OUR TEAM</Header>
         <Text>{"Founder: @ReignofWain"}</Text>

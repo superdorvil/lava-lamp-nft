@@ -12,7 +12,7 @@ const {
   generateLavaLamp,
   generateRandomLavaLamp,
   BuyMoreLavaLamps,
-} = require('../../../src/scripts/LavaLampGenerator/');
+} = require('../../../src/images/LavaLampGenerator/');
 
 
 function MyLavaLampsCarousel({metadata}) {
@@ -121,7 +121,7 @@ function MyLavaLampsCarousel({metadata}) {
       />
     );
   });
-console.log(lampMetadata[0][3]);
+
   return (
     <Container>
       <MyLavaLamps>My LavaLamps</MyLavaLamps>
