@@ -9,7 +9,6 @@ import {
   SubTitle,
   MintDetails,
   HeaderContainer,
-  TopRightLava,
   SocialContainer,
 } from './HeroElements';
 import MintButton from '../MintButton';

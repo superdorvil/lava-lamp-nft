@@ -2,18 +2,12 @@ import styled from 'styled-components';
 import lavaBackground from '../../images/LavaBackground.svg';
 import lavaBackgroundMobile from '../../images/LavaBackgroundMobile.svg';
 import lavaBackgroundMobile2 from '../../images/LavaBackgroundMobile2.svg';
-import {COLORS} from '../../constants/colors';
 
 export const LavaBackground = styled.div`
   background-repeat: no-repeat;
   background-size: 100%;
   background-color: #000000;
   background-image: url(${lavaBackground});
-`;
-
-export const TopRightLava = styled.img`
-  position: absolute;
-  right: 0px;
 `;
 
 export const HeaderContainer = styled.div`

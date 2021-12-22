@@ -1,16 +1,8 @@
 import React from 'react';
-import {
-  CarouselProvider,
-  Slide,
-  Slider,
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import LavaLampImages from './LavaLampImages';
-import LavaLamp from './LavaLamp';
 import { MyLavaLamps, Container } from './LavaLampElements';
 const {
   generateLavaLamp,
-  generateRandomLavaLamp,
   BuyMoreLavaLamps,
 } = require('../../../src/images/LavaLampGenerator/');
 
@@ -20,7 +12,6 @@ function MyLavaLampsCarousel({metadata}) {
   const tempMetadata = [];
   const lampMetadata = [];
   const emptyLampCount = 5 - (metadata.length % 5);
-  const totalLampCount = metadata.length;
   let count = 0;
 
   metadata.forEach((meta, i) => {
