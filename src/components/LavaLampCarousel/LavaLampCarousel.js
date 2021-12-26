@@ -30,6 +30,8 @@ function LavaLampCarousel() {
             lamp3={generateRandomLavaLamp()}
             lamp4={generateRandomLavaLamp()}
             lamp5={generateRandomLavaLamp()}
+            lamp6={generateRandomLavaLamp()}
+            lamp7={generateRandomLavaLamp()}
           />
         </Slide>
         <Slide index={1}>
@@ -39,6 +41,8 @@ function LavaLampCarousel() {
             lamp3={generateRandomLavaLamp()}
             lamp4={generateRandomLavaLamp()}
             lamp5={generateRandomLavaLamp()}
+            lamp6={generateRandomLavaLamp()}
+            lamp7={generateRandomLavaLamp()}
           />
         </Slide>
         <Slide index={2}>
@@ -48,6 +52,8 @@ function LavaLampCarousel() {
             lamp3={generateRandomLavaLamp()}
             lamp4={generateRandomLavaLamp()}
             lamp5={generateRandomLavaLamp()}
+            lamp6={generateRandomLavaLamp()}
+            lamp7={generateRandomLavaLamp()}
           />
         </Slide>
         <Slide index={3}>
@@ -57,6 +63,8 @@ function LavaLampCarousel() {
             lamp3={generateRandomLavaLamp()}
             lamp4={generateRandomLavaLamp()}
             lamp5={generateRandomLavaLamp()}
+            lamp6={generateRandomLavaLamp()}
+            lamp7={generateRandomLavaLamp()}
           />
         </Slide>
       </Slider>

@@ -10,7 +10,7 @@ import {
   MintDetails,
   HeaderContainer,
   SocialContainer,
-} from './HeroElements';
+} from './Elements';
 import MintButton from '../MintButton';
 import MyLavaLampsCarousel from '../MyLavaLampsCarousel/MyLavaLampsCarousel';
 import LavaLampCarousel from '../LavaLampCarousel/LavaLampCarousel';
@@ -19,7 +19,7 @@ import SocialMediaLinks from '../SocialMediaLinks';
 import DropTimer from './DropTimer';
 import Web3 from 'web3';
 
-const releaseDate = new Date(2021, 0, 8, 0, 0, 0, 0);
+const releaseDate = new Date(2022, 0, 8, 0, 0, 0, 0);
 const getTimeDiff = () => {
   const secondsDiff = (releaseDate - new Date()) / 1000;
 
@@ -111,11 +111,14 @@ function HeroSection() {
     <LavaBackground dropComing={dropComing}>
       <HeaderContainer>
         <TopLeftText>LAVA LAMPS</TopLeftText>
-        <ConnectWalletButton
-          connected={false}
-          connectedWallet={blockchain.account}
-          buttonPressed={() => dispatch(connect())}
-        />
+        {dropComing ?
+           <></> :
+           <ConnectWalletButton
+             connected={false}
+             connectedWallet={blockchain.account}
+             buttonPressed={() => dispatch(connect())}
+           />
+        }
       </HeaderContainer>
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>

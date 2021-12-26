@@ -6,7 +6,7 @@ import {
   BuyNow,
   EthPrice,
   EthPriceHover,
-} from './ButtonElements';
+} from './Elements';
 import LampIncrementer from './LampIncrementer';
 
 function MintButton({

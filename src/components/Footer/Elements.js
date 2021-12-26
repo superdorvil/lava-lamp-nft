@@ -8,10 +8,11 @@ export const Container = styled.div`
   justify-content: center;
   border-width: 2;
   border-color: red;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
 `;
 
 export const OurTeamContainer = styled.div`
-  padding-bottom: 70px;
   background-color: #000000;
   display: flex;
   flex-direction: column;

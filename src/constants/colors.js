@@ -8,6 +8,8 @@ const COLORS = {
   light_blue: '#21F6EA',
   light_orange: '#FFB800',
   light_yellow: '#FDF21B',
+  light_purple: '#FF00D6',
+  dark_purple: '#D700B4',
   white: '#FFFFFF',
   button_highlight: '#3A3A3A',
 };

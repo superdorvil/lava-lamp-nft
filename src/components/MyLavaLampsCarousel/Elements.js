@@ -16,11 +16,6 @@ export const ListContainer = styled.div`
 export const LampContainer = styled.div`
   padding-left: 1.5vw;
   padding-right: 1.5vw;
-`;
-
-export const LampImage = styled.img`
-  height: 15vw;
-  width: 15vw;
   margin-top: 1vw;
   margin-bottom: 1vw;
 `;

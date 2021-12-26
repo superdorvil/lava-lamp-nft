@@ -1,6 +1,6 @@
 import React from 'react';
 import LavaLampImages from './LavaLampImages';
-import { MyLavaLamps, Container } from './LavaLampElements';
+import { MyLavaLamps, Container } from './Elements';
 const {
   generateLavaLamp,
   BuyMoreLavaLamps,

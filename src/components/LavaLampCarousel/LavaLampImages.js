@@ -1,15 +1,17 @@
 import React from 'react';
-import LavaLamp from './LavaLamp';
-import { ListContainer } from './LavaLampElements';
+import LavaLamp from '../LavaLamp';
+import { ListContainer } from './Elements';
 
-function LavaLampImages({lamp1,lamp2,lamp3, lamp4, lamp5}) {
+function LavaLampImages({lamp1,lamp2,lamp3, lamp4, lamp5,lamp6, lamp7}) {
   return (
     <ListContainer>
-      <LavaLamp lamp={lamp1} />
-      <LavaLamp lamp={lamp2} />
-      <LavaLamp lamp={lamp3} />
-      <LavaLamp lamp={lamp4} />
-      <LavaLamp lamp={lamp5} />
+      <LavaLamp src={lamp1} size={14.2857} />
+      <LavaLamp src={lamp2} size={14.2857} />
+      <LavaLamp src={lamp3} size={14.2857} />
+      <LavaLamp src={lamp4} size={14.2857} />
+      <LavaLamp src={lamp5} size={14.2857} />
+      <LavaLamp src={lamp6} size={14.2857} />
+      <LavaLamp src={lamp7} size={14.2857} />
     </ListContainer>
   );
 }

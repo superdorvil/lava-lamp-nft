@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Container,
   ConnectButton,
-} from './ButtonElements';
+} from './Elements';
 
 function ConnectWalletButton({connected, connectedWallet, buttonPressed}) {
   return (

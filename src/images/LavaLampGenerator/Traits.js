@@ -45,6 +45,17 @@ const glassColors = [
   '#F41B1B', // crimson / red
 ];
 
+const glassColorIndexes = {
+  white: 0,
+  black: 1,
+  yellow: 2,
+  orange: 3,
+  pink: 4,
+  purple: 5,
+  blue: 6,
+  red: 7,
+};
+
 const lavaColors = [
   'none',
   {color1: '#F85449', color2: '#C53434'},
@@ -57,6 +68,19 @@ const lavaColors = [
   {color1: '#FFFFFF', color2: '#D0C9C9'},
   {color1: '#FF00D6', color2: '#D700B4'},
 ];
+
+const lavaColorIndexes = {
+  none: 0,
+  red: 1,
+  green: 2,
+  yellow: 3,
+  blue: 4,
+  purple: 5,
+  lightBlue: 6,
+  orange: 7,
+  white: 8,
+  pink: 9,
+};
 
 const rarities = {
   og: 0,
@@ -166,7 +190,9 @@ module.exports = {
   bases,
   glasses,
   glassColors,
+  glassColorIndexes,
   lavaColors,
+  lavaColorIndexes,
   rarities,
   overlays,
   attributeMetadata,

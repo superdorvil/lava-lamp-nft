@@ -5,7 +5,7 @@ import {
   LampCount,
   LampCountContainer,
   IncrementButton,
-} from './ButtonElements';
+} from './Elements';
 import Icon from '../Icon';
 import {ICONS} from '../../constants';
 

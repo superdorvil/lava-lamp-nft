@@ -1,7 +1,7 @@
 import React from 'react';
 import DataBlock from '../DataBlock';
 import {COLORS} from '../../constants';
-import {DropContainer} from './HeroElements';
+import {DropContainer} from './Elements';
 
 function DropTimer({days, hours, minutes, seconds}) {
   const doubleDigits = (time) => {

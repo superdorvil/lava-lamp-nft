@@ -4,7 +4,7 @@ import {
   OurTeamContainer,
   Header,
   Text,
-} from './FooterElements';
+} from './Elements';
 import SocialMediaLinks from '../SocialMediaLinks';
 
 function Footer() {

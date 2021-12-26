@@ -3,8 +3,7 @@ import {
   Data,
   Container,
   DataUnit,
-} from './HeroElements';
-import {COLORS} from '../../constants/colors';
+} from './Elements';
 
 function DataBlock({lightColor, darkColor, data, units}) {
   return (

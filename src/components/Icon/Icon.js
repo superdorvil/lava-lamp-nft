@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconSVG, IconPath } from './IconElements';
+import { IconSVG, IconPath } from './Elements';
 
 function Icon ({ icon, iconColor, width, height }) {
   return(

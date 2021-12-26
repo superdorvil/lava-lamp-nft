@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, LinkContainer } from './LinkElements';
+import { Container, LinkContainer } from './Elements';
 import Icon from '../Icon';
 import {ICONS} from '../../constants';
 
