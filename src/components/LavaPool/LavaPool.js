@@ -4,9 +4,9 @@ import {
   Title,
   SubTitle,
   Description,
-  Breakdown,
   CenterItems,
 } from './Elements';
+import Button from '../Button';
 
 function LavaPool() {
   return(
@@ -19,7 +19,7 @@ function LavaPool() {
         <Description>After 1 year we will vote... will it be distributed to the community or held for another year?!</Description>
       </CenterItems>
       <CenterItems>
-        <Breakdown>BREAKDOWN</Breakdown>
+        <Button description="BREAKDOWN" dark={true} />
       </CenterItems>
     </LavaPoolBackground>
   );

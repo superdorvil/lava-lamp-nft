@@ -10,36 +10,64 @@ export const LavaBackground = styled.div`
   background-image: url(${lavaBackground});
 `;
 
-export const HeaderContainer = styled.div`
+export const NavBarContainer = styled.div`
   display: flex;
   flex-direction: row;
+  padding-top: 54px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 54px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-top: 36px;
+  }
+  @media screen and (max-width: 600px) {
+    padding-top: 36px;
+  }
+  @media screen and (max-width: 480px) {
+    padding-top: 24px;
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 54px;
+  @media screen and (max-width: 1024px) {
+    padding-right: 54px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-right: 36px;
+  }
+  @media screen and (max-width: 600px) {
+    padding-right: 36px;
+  }
+  @media screen and (max-width: 480px) {
+    padding-right: 24px;
+  }
 `;
 
 export const TopLeftText = styled.p`
   margin: 0px;
   padding-left: 54px;
-  padding-top: 54px;
   font-size: 48px;
   color: #ffffff;
   font-family: Bangers;
   @media screen and (max-width: 1024px) {
     padding-left: 54px;
-    padding-top: 54px;
     font-size: 48px;
   }
   @media screen and (max-width: 800px) {
     padding-left: 36px;
-    padding-top: 36px;
     font-size: 36px;
   }
   @media screen and (max-width: 600px) {
     padding-left: 36px;
-    padding-top: 36px;
     font-size: 30px;
   }
   @media screen and (max-width: 480px) {
     padding-left: 24px;
-    padding-top: 24px;
     font-size: 20px;
   }
 `;

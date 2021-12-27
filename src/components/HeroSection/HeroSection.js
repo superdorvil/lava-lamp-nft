@@ -4,17 +4,15 @@ import { connect } from '../../redux/blockchain/blockchainActions';
 import { fetchMetadata } from '../../redux/metadata/metadataActions';
 import {
   LavaBackground,
-  TopLeftText,
   Title,
   SubTitle,
   MintDetails,
-  HeaderContainer,
   SocialContainer,
 } from './Elements';
+import NavBar from './NavBar';
 import MintButton from '../MintButton';
 import MyLavaLampsCarousel from '../MyLavaLampsCarousel/MyLavaLampsCarousel';
 import LavaLampCarousel from '../LavaLampCarousel/LavaLampCarousel';
-import ConnectWalletButton from '../ConnectWalletButton';
 import SocialMediaLinks from '../SocialMediaLinks';
 import DropTimer from './DropTimer';
 import Web3 from 'web3';
@@ -109,17 +107,10 @@ function HeroSection() {
 
   return (
     <LavaBackground dropComing={dropComing}>
-      <HeaderContainer>
-        <TopLeftText>LAVA LAMPS</TopLeftText>
-        {dropComing ?
-           <></> :
-           <ConnectWalletButton
-             connected={false}
-             connectedWallet={blockchain.account}
-             buttonPressed={() => dispatch(connect())}
-           />
-        }
-      </HeaderContainer>
+      <NavBar
+        blockchainAccount={blockchain.account}
+        connectWallet={() => dispatch(connect())}
+      />
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>
       {dropComing ?
@@ -131,8 +122,8 @@ function HeroSection() {
             minutes={dropTime.minutes}
             seconds={dropTime.seconds}
           />
-        </> :
-        <MintButton
+        </> : <></>
+        /*<MintButton
           lampCount={lampCount}
           lampPrice={lampPrice}
           mint={() => {blockchain.account ? mint() : window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')}}
@@ -150,7 +141,7 @@ function HeroSection() {
               setLampPrice(decimalMultiply(lc, .03));
             }
           }
-        />
+        />*/
       }
       <MintDetails>max of 20. minted at .03 ETH</MintDetails>
       <SocialContainer>

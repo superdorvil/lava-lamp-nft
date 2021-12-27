@@ -4,13 +4,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 6vw;
+  padding-top: 0vw;
   padding-bottom: 6vw;
 `;
 
 export const InnerContainer = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 4vw;
 `;
 
 export const Title = styled.p`

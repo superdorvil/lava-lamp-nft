@@ -41,13 +41,6 @@ export const Description = styled.p`
   color: #FFFFFF;
 `;
 
-export const Breakdown = styled.button`
-  font-family: Montserrat;
-  font-size: 16px;
-  color: #FFFFFF;
-  background-color: transparent;
-`;
-
 export const CenterItems = styled.div`
   display: flex;
   justify-content: center;
