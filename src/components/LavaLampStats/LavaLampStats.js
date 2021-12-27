@@ -21,8 +21,8 @@ function LavaLampStats() {
         units="BURNED LAMPS"
       />
       <DataBlock
-        lightColor={COLORS.light_green}
-        darkColor={COLORS.dark_green}
+        lightColor={COLORS.light_red}
+        darkColor={COLORS.dark_red}
         data="5%"
         units="CRYPTO PER SHARE"
       />
