@@ -18,7 +18,7 @@ function LavaLampFaqs() {
     "WHAT HAPPENS NEXT?",
   ];
   return (
-    <Container>
+    <Container id='FAQS'>
       <Title>FAQS</Title>
       <AccordionComponent triggers={triggers} descriptions={descriptions} />
     </Container>

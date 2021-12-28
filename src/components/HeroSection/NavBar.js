@@ -5,6 +5,7 @@ import {
   TopLeftText
 } from './Elements';
 import Button from '../Button';
+import ScrollButton from '../ScrollButton';
 import ConnectWalletButton from '../ConnectWalletButton';
 
 function NavBar({dropComing, connectWallet, blockchainAccount}) {
@@ -12,8 +13,8 @@ function NavBar({dropComing, connectWallet, blockchainAccount}) {
     <NavBarContainer>
       <TopLeftText>LAVA LAMPS</TopLeftText>
       <ButtonContainer>
-        <Button description="FAQS" />
-        <Button description="STATS" />
+        <ScrollButton description="FAQS" />
+        <ScrollButton description="STATS" />
         <Button description="LAVALIST" />
         {dropComing ?
            <></> :

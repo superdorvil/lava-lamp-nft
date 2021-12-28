@@ -1,6 +1,7 @@
+import { Link as LinkS } from 'react-scroll';
 import styled from 'styled-components';
 
-export const Container = styled.button`
+export const Container = styled(LinkS)`
   background-color: ${props => props.dark ? '#00000040' : '#FFFFFF40'};
   display: flex;
   justify-content: center;

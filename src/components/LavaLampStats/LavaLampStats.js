@@ -5,7 +5,7 @@ import {COLORS} from '../../constants';
 
 function LavaLampStats() {
   return (
-    <Container>
+    <Container id="STATS">
       <Title>STATS</Title>
       <DataBlockContainer>
       <DataBlock
