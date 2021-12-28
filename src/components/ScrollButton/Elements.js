@@ -14,6 +14,7 @@ export const Container = styled(LinkS)`
   border-width: 0px;
   margin-right: 0.6vw;
   margin-left: 0.6vw;
+  cursor: pointer;
   &:hover {
     transition: all 0.1s ease-in-out;
     background-color: ${props => props.dark ? '#FFFFFF40' : '#F0000040'};
