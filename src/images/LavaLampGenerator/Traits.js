@@ -34,17 +34,6 @@ const glasses = {
   holographic: 1,
 };
 
-const glassColors = [
-  '#FFFFFF', // white
-  '#000000', // carbon / black
-  '#FFFA8D', // yellow
-  '#F59B13', // orange
-  '#FF67EC', // pink
-  '#A15BFA', // purple
-  '#2D34E6', // blue / ocean
-  '#F41B1B', // crimson / red
-];
-
 const glassColorIndexes = {
   white: 0,
   black: 1,
@@ -55,19 +44,6 @@ const glassColorIndexes = {
   blue: 6,
   red: 7,
 };
-
-const lavaColors = [
-  'none',
-  {color1: '#F85449', color2: '#C53434'},
-  {color1: '#71FF30', color2: '#25BC46'},
-  {color1: '#FABE09', color2: '#FDF21B'},
-  {color1: '#321A93', color2: '#3603FF'},
-  {color1: '#5000B6', color2: '#7E5EFF'},
-  {color1: '#21F6EA', color2: '#2183F6'},
-  {color1: '#FFB800', color2: '#FF7800'},
-  {color1: '#FFFFFF', color2: '#D0C9C9'},
-  {color1: '#FF00D6', color2: '#D700B4'},
-];
 
 const lavaColorIndexes = {
   none: 0,
@@ -102,6 +78,30 @@ const overlays = {
   swirls: 7,
   yinYang: 8,
 };
+
+const glassColors = [
+  '#FFFFFF', // white
+  '#000000', // carbon / black
+  '#FFFA8D', // yellow
+  '#F59B13', // orange
+  '#FF67EC', // pink
+  '#A15BFA', // purple
+  '#2D34E6', // blue / ocean
+  '#F41B1B', // crimson / red
+];
+
+const lavaColors = [
+  'none',
+  {color1: '#F85449', color2: '#C53434'},
+  {color1: '#71FF30', color2: '#25BC46'},
+  {color1: '#FABE09', color2: '#FDF21B'},
+  {color1: '#321A93', color2: '#3603FF'},
+  {color1: '#5000B6', color2: '#7E5EFF'},
+  {color1: '#21F6EA', color2: '#2183F6'},
+  {color1: '#FFB800', color2: '#FF7800'},
+  {color1: '#FFFFFF', color2: '#D0C9C9'},
+  {color1: '#FF00D6', color2: '#D700B4'},
+];
 
 const attributeMetadata = [
   '',
