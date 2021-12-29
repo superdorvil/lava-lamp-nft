@@ -6,7 +6,7 @@ function Button({description, dark, buttonPressed}) {
     <Container
       onClick={(e) => {
         e.preventDefault();
-        //buttonPressed();
+        buttonPressed();
       }}
       dark={dark}>
       {description}

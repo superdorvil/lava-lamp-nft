@@ -26,10 +26,10 @@
     "web3": "^1.6.0"
   },
   "scripts": {
-    "devStart": "nodemon server.js",
     "start": "node server.js",
-    "dorvilStart": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "devNodeStart": "nodemon server.js",
+    "devReactStart": "react-scripts start"
   },
   "comments": {
     "devStart": "nodemon server.js",

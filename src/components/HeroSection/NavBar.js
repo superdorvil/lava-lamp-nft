@@ -7,7 +7,6 @@ import {
 import Button from '../Button';
 import ScrollButton from '../ScrollButton';
 import ConnectWalletButton from '../ConnectWalletButton';
-import {STATES} from '../../constants';
 
 function NavBar({dropComing, connectWallet, blockchainAccount, openLavaList }) {
   return(

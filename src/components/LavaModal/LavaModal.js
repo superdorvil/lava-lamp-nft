@@ -13,8 +13,7 @@ import lavaPoolBreakdown from '../../images/LavaPoolBreakdown.svg';
 Modal.setAppElement("#root");
 
 function LavaModal({state, toggleModal}) {
-  console.log(state);
-  if (state === STATES.lavaList) {
+  if (state === STATES.modal.lavaList) {
     return (
       <>
         <IconContainer>
@@ -22,13 +21,13 @@ function LavaModal({state, toggleModal}) {
         </IconContainer>
         <Modal
           isOpen={true}
-          onRequestClose={() => toggleModal({state: STATES.closed})}
+          onRequestClose={() => toggleModal({state: STATES.modal.closed})}
           style={CustomStyles}>
-          <LavaImage src={lavaList} />
+          <LavaImage width={80} height={50} src={lavaList} />
         </Modal>;
       </>
     );
-  } else if (state === STATES.lavaPoolBreakdown) {
+  } else if (state === STATES.modal.lavaPoolBreakdown) {
     return(
       <>
         <IconContainer>
@@ -36,13 +35,13 @@ function LavaModal({state, toggleModal}) {
         </IconContainer>
         <Modal
           isOpen={true}
-          onRequestClose={() => toggleModal({state: STATES.closed})}
+          onRequestClose={() => toggleModal({state: STATES.modal.closed})}
           style={CustomStyles}>
-          <LavaImage src={lavaPoolBreakdown} />
+          <LavaImage width={75} height={75} src={lavaPoolBreakdown} />
         </Modal>;
     </>
     );
-  } else if (state === STATES.closed) {
+  } else if (state === STATES.modal.closed) {
     return(
       <></>
     );

@@ -23,7 +23,7 @@ function LavaPool({toggleModal}) {
         <Button
           description="BREAKDOWN"
           dark={true}
-          buttonPressed={() => toggleModal({state: STATES.lavaPoolBreakdown})}
+          buttonPressed={() => toggleModal({state: STATES.modal.lavaPoolBreakdown})}
         />
       </CenterItems>
     </LavaPoolBackground>

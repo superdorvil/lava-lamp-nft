@@ -23,8 +23,8 @@ function LavaLampStats() {
       <DataBlock
         lightColor={COLORS.light_red}
         darkColor={COLORS.dark_red}
-        data="20"
-        units="CRYPTO PER SHARE"
+        data="0.03"
+        units="ETH PER SHARE"
       />
       </DataBlockContainer>
     </Container>

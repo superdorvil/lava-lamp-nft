@@ -10,10 +10,10 @@ import LavaModal from '../components/LavaModal';
 import {STATES} from '../constants';
 
 function Home() {
-  const [state, updateState] = useState(STATES.closed);
+  const [state, updateState] = useState(STATES.modal.closed);
 
-  function toggleModal({newState}) {
-    updateState(newState);
+  function toggleModal({state}) {
+    updateState(state);
   }
 
   return (

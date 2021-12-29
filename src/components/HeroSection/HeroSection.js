@@ -111,7 +111,7 @@ function HeroSection({toggleModal}) {
       <NavBar
         blockchainAccount={blockchain.account}
         connectWallet={() => dispatch(connect())}
-        openLavaList={() => toggleModal({state: STATES.lavaList})}
+        openLavaList={() => toggleModal({state: STATES.modal.lavaList})}
       />
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const LavaImage = styled.img`
-  height: 546px;
-  width: 875px;
+  height: ${props => props.height}vw;
+  width: ${props => props.width}vw;
   margin: 0px;
 `;
 
