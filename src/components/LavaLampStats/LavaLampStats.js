@@ -11,19 +11,19 @@ function LavaLampStats() {
       <DataBlock
         lightColor={COLORS.light_blue}
         darkColor={COLORS.dark_blue}
-        data="40%"
+        data="1000"
         units="REMAINING LAMPS"
       />
       <DataBlock
         lightColor={COLORS.light_yellow}
         darkColor={COLORS.dark_yellow}
-        data="10%"
+        data="300"
         units="BURNED LAMPS"
       />
       <DataBlock
         lightColor={COLORS.light_red}
         darkColor={COLORS.dark_red}
-        data="5%"
+        data="20"
         units="CRYPTO PER SHARE"
       />
       </DataBlockContainer>

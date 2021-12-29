@@ -16,6 +16,7 @@ import LavaLampCarousel from '../LavaLampCarousel/LavaLampCarousel';
 import SocialMediaLinks from '../SocialMediaLinks';
 import DropTimer from './DropTimer';
 import Web3 from 'web3';
+import {STATES} from '../../constants';
 
 const releaseDate = new Date(2022, 0, 8, 0, 0, 0, 0);
 const getTimeDiff = () => {
@@ -53,7 +54,7 @@ function decimalMultiply ( val1, val2 ) {
     return ((val1 * 10) * (val2 * 10)) / 100;
 }
 
-function HeroSection() {
+function HeroSection({toggleModal}) {
   const initialTimeDiff = (releaseDate - new Date()) / 1000;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
@@ -110,6 +111,7 @@ function HeroSection() {
       <NavBar
         blockchainAccount={blockchain.account}
         connectWallet={() => dispatch(connect())}
+        openLavaList={() => toggleModal({state: STATES.lavaList})}
       />
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>

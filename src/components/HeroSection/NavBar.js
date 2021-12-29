@@ -7,15 +7,19 @@ import {
 import Button from '../Button';
 import ScrollButton from '../ScrollButton';
 import ConnectWalletButton from '../ConnectWalletButton';
+import {STATES} from '../../constants';
 
-function NavBar({dropComing, connectWallet, blockchainAccount}) {
+function NavBar({dropComing, connectWallet, blockchainAccount, openLavaList }) {
   return(
     <NavBarContainer>
       <TopLeftText>LAVA LAMPS</TopLeftText>
       <ButtonContainer>
         <ScrollButton description="FAQS" />
         <ScrollButton description="STATS" />
-        <Button description="LAVALIST" />
+        <Button
+          description="LAVALIST"
+          buttonPressed={openLavaList}
+        />
         {dropComing ?
            <></> :
            <ConnectWalletButton
