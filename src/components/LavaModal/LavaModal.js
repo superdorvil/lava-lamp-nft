@@ -1,10 +1,11 @@
 import React from 'react';
 import Modal from 'react-modal';
 import {
-  LavaImage,
+  LavaListImage,
+  LavaPoolBreakdownImage,
   CustomStyles,
   IconContainer,
-} from './ModalElements';
+} from './Elements';
 import Icon from '../Icon';
 import {ICONS, STATES} from '../../constants';
 import lavaList from '../../images/LavaList.svg';
@@ -23,7 +24,7 @@ function LavaModal({state, toggleModal}) {
           isOpen={true}
           onRequestClose={() => toggleModal({state: STATES.modal.closed})}
           style={CustomStyles}>
-          <LavaImage width={80} height={50} src={lavaList} />
+          <LavaListImage width={80} height={50} src={lavaList} />
         </Modal>;
       </>
     );
@@ -37,7 +38,7 @@ function LavaModal({state, toggleModal}) {
           isOpen={true}
           onRequestClose={() => toggleModal({state: STATES.modal.closed})}
           style={CustomStyles}>
-          <LavaImage width={75} height={75} src={lavaPoolBreakdown} />
+          <LavaPoolBreakdownImage width={75} height={75} src={lavaPoolBreakdown} />
         </Modal>;
     </>
     );

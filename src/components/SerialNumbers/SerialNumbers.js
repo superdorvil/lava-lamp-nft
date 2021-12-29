@@ -6,7 +6,7 @@ function SerialNumbers() {
   return(
     <Container>
       <SerialImage src={serialNum} />
-      <Description>YOUR LAVA LAMP'S UNIQUE COLORS ARE TIED TOTHEIR SERIAL NUMBERS</Description>
+      <Description>YOUR LAVA LAMP'S UNIQUE COLORS ARE TIED TO THEIR SERIAL NUMBERS</Description>
     </Container>
   );
 }

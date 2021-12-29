@@ -37,7 +37,7 @@ export const Description = styled.p`
   text-align: center;
   font-family: Montserrat;
   font-size: 2.6vw;
-  width: 68vw;
+  width: 85vw;
   color: #FFFFFF;
 `;
 

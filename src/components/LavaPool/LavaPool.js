@@ -14,7 +14,7 @@ function LavaPool({toggleModal}) {
     <LavaPoolBackground>
       <Title>LAVA POOL</Title>
       <CenterItems>
-        <SubTitle>HALF THE PROCEEDS ARE USED TO PURCHASE ETHEREUM</SubTitle>
+        <SubTitle>HALF THE PROCEEDS FROM INITIAL SALES GO INTO THE POOL!</SubTitle>
       </CenterItems>
       <CenterItems>
         <Description>After 1 year we will vote... will it be distributed to the community or held for another year?!</Description>
