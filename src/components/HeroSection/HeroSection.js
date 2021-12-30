@@ -11,8 +11,8 @@ import {
 } from './Elements';
 import NavBar from './NavBar';
 import MintButton from '../MintButton';
-import MyLavaLampsCarousel from '../MyLavaLampsCarousel/MyLavaLampsCarousel';
-import LavaLampCarousel from '../LavaLampCarousel/LavaLampCarousel';
+import MyLavaLampsCarousel from '../MyLavaLampsCarousel';
+import LavaLampCarousel from '../LavaLampCarousel';
 import SocialMediaLinks from '../SocialMediaLinks';
 import DropTimer from './DropTimer';
 import Web3 from 'web3';
