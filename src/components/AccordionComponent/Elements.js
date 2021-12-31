@@ -19,7 +19,7 @@ export const Trigger = styled.p`
   flex: 1;
   justify-content: flex-start;
   font-family: Bangers;
-  font-size: 2vw;
+  font-size: 2.25vw;
   color: #FFFFFF;
 `;
 
@@ -27,7 +27,7 @@ export const Description = styled.p`
   display: flex;
   justify-content: flex-start;
   font-family: Montserrat-Bold;
-  font-size: 1.25vw;
+  font-size: 1.2vw;
   width: 40vw;
   color: #FFFFFF;
   margin-left: 3vw;
@@ -38,7 +38,7 @@ export const Description = styled.p`
 
 export const OpenIcon = styled.div`
   background-color: #515151;
-  border-radius: 24px;
+  border-radius: 100px;
   display: flex;
   align-self: center;
   justify-content: flex-end;

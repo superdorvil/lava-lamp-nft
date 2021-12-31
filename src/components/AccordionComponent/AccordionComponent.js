@@ -49,7 +49,7 @@ function AccordionComponent({triggers, descriptions}) {
           <ItemContainer>
             <Trigger>{triggers[i]}</Trigger>
             <OpenIcon>
-              <Icon icon={ICONS.PLUS} iconColor={"#FFFFFF"} width={24} height={24} />
+              <Icon icon={ICONS.PLUS} iconColor={"#FFFFFF"} width={3.125} height={3.125} />
             </OpenIcon>
           </ItemContainer>
         }>

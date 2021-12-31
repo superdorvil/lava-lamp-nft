@@ -15,24 +15,28 @@ function DropTimer({days, hours, minutes, seconds}) {
         darkColor={COLORS.dark_yellow}
         data={doubleDigits(days)}
         units="DAYS"
+        timeData={true}
       />
       <DataBlock
         lightColor={COLORS.light_green}
         darkColor={COLORS.dark_green}
         data={doubleDigits(hours)}
         units="HRS"
+        timeData={true}
       />
       <DataBlock
         lightColor={COLORS.light_blue}
         darkColor={COLORS.dark_blue}
         data={doubleDigits(minutes)}
         units="MINS"
+        timeData={true}
       />
       <DataBlock
         lightColor={COLORS.light_orange}
         darkColor={COLORS.dark_orange}
         data={doubleDigits(seconds)}
         units="SECS"
+        timeData={true}
       />
     </DropContainer>
   );

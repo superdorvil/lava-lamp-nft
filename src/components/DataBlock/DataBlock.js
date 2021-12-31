@@ -1,16 +1,26 @@
 import React from 'react';
 import {
   Data,
-  Container,
+  TimeContainer,
+  TraitContainer,
   DataUnit,
 } from './Elements';
 
-function DataBlock({lightColor, darkColor, data, units}) {
+function DataBlock({lightColor, darkColor, data, units, timeData}) {
+  if (timeData) {
+    return (
+      <TimeContainer lightColor={lightColor} darkColor={darkColor}>
+        <Data>{data}</Data>
+        <DataUnit>{units}</DataUnit>
+      </TimeContainer>
+    );
+  }
+
   return (
-    <Container lightColor={lightColor} darkColor={darkColor}>
+    <TraitContainer lightColor={lightColor} darkColor={darkColor}>
       <Data>{data}</Data>
       <DataUnit>{units}</DataUnit>
-    </Container>
+    </TraitContainer>
   );
 }
 

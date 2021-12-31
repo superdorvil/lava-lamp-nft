@@ -3,8 +3,8 @@ import styled from 'styled-components';
  export const IconSVG = styled.svg`
    display: 'inline-block';
    verticalAlign: 'middle';
-   width: ${props => props.width}px;
-   height: ${props => props.height}px;
+   width: ${props => props.width}vw;
+   height: ${props => props.height}vw;
    border-radius: 100px;
    fill: #FFFFFF;
    &:hover {

@@ -8,15 +8,6 @@ export const Container = styled.div`
 `;
 
 export const LinkContainer = styled.a`
-  margin-right: 16px;
-  margin-left: 16px;
-  @media screen and (max-width: 600px) {
-    margin-right: 12px;
-    margin-left: 12px;
-  }
-  @media screen and (max-width: 480px) {
-    margin-right: 8px;
-    margin-left: 8px;
-  }
-
+  margin-right: ${props => props.pad}vw;
+  margin-left: ${props => props.pad}vw;
 `;

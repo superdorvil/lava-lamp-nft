@@ -5,14 +5,15 @@ export const Container = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Montserrat;
-  font-size: 1.5vw;
+  align-self: center;
+  font-family: Montserrat-Bold;
+  font-size: 1.25vw;
   color: #FFFFFF;
   padding: 1.25vw;
   border-radius: 2px;
   border-width: 0px;
-  margin-right: 0.6vw;
-  margin-left: 0.6vw;
+  margin-right: 0.625vw;
+  margin-left: 0.625vw;
   cursor: pointer;
   &:hover {
     transition: all 0.1s ease-in-out;

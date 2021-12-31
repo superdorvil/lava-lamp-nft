@@ -13,19 +13,16 @@ export const LavaBackground = styled.div`
 export const NavBarContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding-top: 54px;
-  @media screen and (max-width: 1024px) {
-    padding-top: 54px;
-  }
-  @media screen and (max-width: 800px) {
-    padding-top: 36px;
-  }
-  @media screen and (max-width: 600px) {
-    padding-top: 36px;
-  }
-  @media screen and (max-width: 480px) {
-    padding-top: 24px;
-  }
+  padding-top: 3.75vw;
+`;
+
+export const TopLeftText = styled.p`
+  margin: 0px;
+  padding-left: 4.7vw;
+  font-size: 3.75vw;
+  color: #ffffff;
+  font-family: Bangers;
+  align-self: center;
 `;
 
 export const ButtonContainer = styled.div`
@@ -33,114 +30,42 @@ export const ButtonContainer = styled.div`
   flex: 1;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 54px;
-  @media screen and (max-width: 1024px) {
-    padding-right: 54px;
-  }
-  @media screen and (max-width: 800px) {
-    padding-right: 36px;
-  }
-  @media screen and (max-width: 600px) {
-    padding-right: 36px;
-  }
-  @media screen and (max-width: 480px) {
-    padding-right: 24px;
-  }
-`;
-
-export const TopLeftText = styled.p`
-  margin: 0px;
-  padding-left: 54px;
-  font-size: 48px;
-  color: #ffffff;
-  font-family: Bangers;
-  @media screen and (max-width: 1024px) {
-    padding-left: 54px;
-    font-size: 48px;
-  }
-  @media screen and (max-width: 800px) {
-    padding-left: 36px;
-    font-size: 36px;
-  }
-  @media screen and (max-width: 600px) {
-    padding-left: 36px;
-    font-size: 30px;
-  }
-  @media screen and (max-width: 480px) {
-    padding-left: 24px;
-    font-size: 20px;
-  }
+  padding-right: 4.7vw;
 `;
 
 export const Title = styled.p`
   margin: 0;
-  margin-top: 80px;
+  margin-top: 8.33vw;
   text-align: center;
-  font-size: 150px;
+  font-size: 9vw;
   color: #ffffff;
   font-family: Bangers;
-  @media screen and (max-width: 1024px) {
-    margin-top: 80px;
-    font-size: 120px;
-  }
-  @media screen and (max-width: 800px) {
-    margin-top: 80px;
-    font-size: 100px;
-  }
-  @media screen and (max-width: 600px) {
-    margin-top: 60px;
-    font-size: 80px;
-  }
-  @media screen and (max-width: 480px) {
-    margin-top: 30px;
-    font-size: 40px;
-  }
 `;
 
 export const SubTitle = styled.p`
   text-align: center;
-  font-size: 42px;
+  font-size: 3vw;
+  margin-bottom: 3.33vw;
   color: #ffffff;
   font-family: Bangers;
-  @media screen and (max-width: 1024px) {
-    font-size: 36px;
-  }
-  @media screen and (max-width: 800px) {
-    font-size: 30px;
-  }
-  @media screen and (max-width: 600px) {
-    font-size: 24px;
-  }
-  @media screen and (max-width: 480px) {
-    font-size: 14px;
-  }
 `;
 
 export const MintDetails = styled.p`
   text-align: center;
-  font-size: 24px;
+  font-size: 1.25vw;
   color: #ffffff;
   font-family: Montserrat;
-  @media screen and (max-width: 1024px) {
-    font-size: 20px;
-  }
-  @media screen and (max-width: 800px) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: 600px) {
-    font-size: 12px;
-  }
 `;
 
 export const DropContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 1.5vw;
-  margin-bottom: 1.5vw;
+  margin-top: 1.25vw;
+  margin-bottom: 1.25vw;
 `;
 
 export const SocialContainer = styled.div`
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 3.33vw;
+  padding-bottom: 6.75vw;
 `;

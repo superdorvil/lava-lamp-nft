@@ -147,7 +147,7 @@ function HeroSection({toggleModal}) {
       }
       <MintDetails>max of 20. minted at .03 ETH</MintDetails>
       <SocialContainer>
-        <SocialMediaLinks />
+        <SocialMediaLinks size={5} />
       </SocialContainer>
       {metadata.allMetadata.length > 0 ?
         <MyLavaLampsCarousel metadata={metadata.allMetadata} /> :

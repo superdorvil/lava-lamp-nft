@@ -9,8 +9,8 @@ export const Container = styled.button`
   font-family: Bangers;
   cursor: pointer;
   background: transparent;
-  font-size: 2.5vw;
-  padding: 0.75vw;
+  font-size: 1.875vw;
+  padding: 0.725vw;
   margin-left: 0.6vw;
 
   &:hover {

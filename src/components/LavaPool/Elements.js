@@ -7,38 +7,40 @@ export const LavaPoolBackground = styled.div`
   background-size: cover;
   background-color: #000000;
   background-image: url(${lavaPool});
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 4.8vw;
+  margin-bottom: 6.25vw;
 `;
 
 export const Title = styled.p`
   padding-top: 6.5vw;
-  padding-bottom: 1.3vw;
+  padding-bottom: 1.5vw;
   display: flex;
   justify-content: center;
   font-family: Bangers;
-  font-size: 6vw;
+  font-size: 5.725vw;
   color: #FFFFFF;
 `;
 
 export const SubTitle = styled.p`
-  margin-bottom: 1vw;
   font-family: Montserrat-Bold;
-  font-size: 2.6vw;
+  font-size: 1.875vw;
   color: #FFFFFF;
   background-color: #000000;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-top: .95vw;
+  padding-bottom: .95vw;
+  padding-left: .85vw;
+  padding-right: .85vw;
 `;
 
 export const Description = styled.p`
+  margin-top: 1.25vw;
+  margin-bottom: 1.5vw;
   text-align: center;
   font-family: Montserrat;
-  font-size: 2.6vw;
-  width: 85vw;
+  font-size: 1.75vw;
+  width: 57vw;
   color: #FFFFFF;
+  line-height: 2.5vw;
 `;
 
 export const CenterItems = styled.div`
