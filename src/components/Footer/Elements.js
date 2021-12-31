@@ -8,8 +8,8 @@ export const Container = styled.div`
   justify-content: center;
   border-width: 2;
   border-color: red;
-  padding-top: 10vw;
-  padding-bottom: 10vw;
+  padding-top: 7.8vw;
+  padding-bottom: 5vw;
 `;
 
 export const OurTeamContainer = styled.div`
@@ -18,21 +18,21 @@ export const OurTeamContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2.3vw;
 `;
 
-export const Header = styled.p`
-  margin-top: 0px;
-  margin-bottom:18px;
-  font-size: 36px;
+export const OurTeam = styled.p`
+  margin-bottom: .5vw;
+  font-size: 2.25vw;
   font-family: Bangers;
   font-weight: 'bold';
   color: #FFFFFF;
 `;
 
-export const Text = styled.p`
+export const TeamMember = styled.p`
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 14;
-  font-family: Montserrat-Bold;
+  font-size: .7vw;
+  font-family: Montserrat;
   color: #FFFFFF;
 `;

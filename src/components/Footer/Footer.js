@@ -2,8 +2,8 @@ import React from "react";
 import {
   Container,
   OurTeamContainer,
-  Header,
-  Text,
+  OurTeam,
+  TeamMember,
 } from './Elements';
 import SocialMediaLinks from '../SocialMediaLinks';
 
@@ -12,11 +12,11 @@ function Footer() {
     <Container>
       <SocialMediaLinks size={3.125} />
       <OurTeamContainer>
-        <Header>OUR TEAM</Header>
-        <Text>{"Founder: @ReignofWain"}</Text>
-        <Text>{"Graphic Design: @KateHurd_Design"}</Text>
-        <Text>{"Dev: @superdorvil"}</Text>
-        <Text>{"Dev: @nwain24"}</Text>
+        <OurTeam>OUR TEAM</OurTeam>
+        <TeamMember>{"Founder: @ReignofWain"}</TeamMember>
+        <TeamMember>{"Graphic Design: @KateHurd_Design"}</TeamMember>
+        <TeamMember>{"Dev: @superdorvil"}</TeamMember>
+        <TeamMember>{"Dev: @nwain24"}</TeamMember>
       </OurTeamContainer>
     </Container>
   );

@@ -6,18 +6,18 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   align-self: center;
-  margin-top: 6vw;
-  margin-bottom: 6vw;
+  margin-top: 8.33vw;
+  margin-bottom: 8.33vw;
 `;
 
 export const Description = styled.p`
   text-align: center;
   font-family: Montserrat-Bold;
-  font-size: 1.75vw;
+  font-size: 1.95vw;
   color: #FFFFFF;
-  margin-top: 1.5vw;
+  margin-top: 2.25vw;
 `;
 
 export const SerialImage = styled.img`
-  width: 80vw;
+  width: 82.8125vw;
 `;

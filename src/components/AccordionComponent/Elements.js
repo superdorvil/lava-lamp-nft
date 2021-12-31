@@ -19,7 +19,7 @@ export const Trigger = styled.p`
   flex: 1;
   justify-content: flex-start;
   font-family: Bangers;
-  font-size: 2.25vw;
+  font-size: 2.075vw;
   color: #FFFFFF;
 `;
 
