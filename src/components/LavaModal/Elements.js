@@ -3,13 +3,11 @@ import styled from 'styled-components';
 export const LavaListImage = styled.img`
   height: ${props => props.height}vw;
   width: ${props => props.width}vw;
-  margin: 0px;
 `;
 
 export const LavaPoolBreakdownImage = styled.img`
   height: ${props => props.height}vw;
   width: ${props => props.width}vw;
-  margin: 0px;
   @media screen and (orientation: landscape) {
     height: ${props => props.height}vh;
     width: ${props => props.width}vh;
@@ -20,7 +18,6 @@ export const IconContainer = styled.div`
   position: fixed;
   right: 0px;
   top: 0px;
-  padding: 0;
 `;
 
 export const CustomStyles = {

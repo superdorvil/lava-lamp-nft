@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import lavaBackground from '../../images/LavaBackground.svg';
-import lavaBackgroundMobile from '../../images/LavaBackgroundMobile.svg';
-import lavaBackgroundMobile2 from '../../images/LavaBackgroundMobile2.svg';
 
 export const LavaBackground = styled.div`
   background-repeat: no-repeat;

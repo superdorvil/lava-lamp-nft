@@ -3,33 +3,33 @@ import { Container, LinkContainer } from './Elements';
 import Icon from '../Icon';
 import {ICONS} from '../../constants';
 
-function SocialMediaLinks({size}) {
+function SocialMediaLinks() {
   return (
     <Container>
-      <LinkContainer pad={size / 4} href="https://twitter.com/LavaLampsNFT">
+      <LinkContainer href="https://twitter.com/LavaLampsNFT">
         <Icon
           icon={ICONS.TWITTER}
           iconColor='#FFFFFF'
-          width={size}
-          height={size}
+          width={5}
+          height={5}
           highlight={true}
         />
       </LinkContainer>
-      <LinkContainer pad={size / 4} href="/opensea">
+      <LinkContainer href="/opensea">
         <Icon
           icon={ICONS.OPENSEA}
           iconColor='#FFFFFF'
-          width={size}
-          height={size}
+          width={5}
+          height={5}
           highlight={true}
         />
       </LinkContainer>
-      <LinkContainer pad={size / 4} href="https://discord.gg/kHjfv5t2Ns">
+      <LinkContainer href="https://discord.gg/kHjfv5t2Ns">
         <Icon
           icon={ICONS.DISCORD}
           iconColor='#FFFFFF'
-          width={size}
-          height={size}
+          width={5}
+          height={5}
           highlight={true}
         />
       </LinkContainer>

@@ -10,7 +10,7 @@ import SocialMediaLinks from '../SocialMediaLinks';
 function Footer() {
   return (
     <Container>
-      <SocialMediaLinks size={3.125} />
+      <SocialMediaLinks />
       <OurTeamContainer>
         <OurTeam>OUR TEAM</OurTeam>
         <TeamMember>{"Founder: @ReignofWain"}</TeamMember>

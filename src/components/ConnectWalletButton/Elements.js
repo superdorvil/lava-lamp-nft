@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.button`
-  border-width: ${props => props.connectedWallet ? 0 : 2}px;
+  border-width: ${props => props.connectedWallet ? 0 : .25}vw;
   border-style: solid;
   border-color: #FFFFFF;
-  border-radius: 5px;
+  border-radius: .45vw;
   color: #FFFFFF;
   font-family: Bangers;
   cursor: pointer;
@@ -12,7 +12,6 @@ export const Container = styled.button`
   font-size: 1.875vw;
   padding: 0.725vw;
   margin-left: 0.6vw;
-
   &:hover {
     transition: all 0.1s ease-in-out;
     background: #FFFFFF;

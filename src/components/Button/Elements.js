@@ -10,8 +10,8 @@ export const Container = styled.button`
   font-size: 1.25vw;
   color: #FFFFFF;
   padding: 1.25vw;
-  border-radius: 2px;
-  border-width: 0px;
+  border-width: 0;
+  border-radius: .25vw;
   margin-right: 0.625vw;
   margin-left: 0.625vw;
   cursor: pointer;

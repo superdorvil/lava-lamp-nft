@@ -4,10 +4,8 @@ export const Container = styled.div`
   padding-top: 2.75vw;
   padding-bottom: 6.25vw;
   background-color: #221F1F;
-`;
-
-export const InnerContainer = styled.div`
   display: flex;
+  flex-direction: column;
   flex: 1;
 `;
 
@@ -30,8 +28,8 @@ export const Title = styled.p`
 `;
 
 export const AttributeImage = styled.img`
-  height: 10vw;
-  width: 10vw;
+  height: 25.5vw;
+  width: 19vw;
   position: absolute;
   right: 0;
 `;

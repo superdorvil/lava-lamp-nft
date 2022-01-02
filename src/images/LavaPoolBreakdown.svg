@@ -332,12 +332,10 @@
 <radialGradient id="paint0_radial_1212_58202" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(205.421 692.676) rotate(43.3187) scale(275.672 349.877)">
 <stop offset="0.3125" stop-color="#F85449"/>
 <stop offset="1" stop-color="#CF0000"/>
-<stop offset="1" stop-color="#C53434"/>
 </radialGradient>
 <radialGradient id="paint1_radial_1212_58202" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(400.966 327.837) rotate(62.2548) scale(62.9554 65.9549)">
 <stop offset="0.3125" stop-color="#F85449"/>
 <stop offset="1" stop-color="#CF0000"/>
-<stop offset="1" stop-color="#C53434"/>
 </radialGradient>
 <radialGradient id="paint2_radial_1212_58202" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(71.525 338.976) rotate(32.7155) scale(105.864 85.285)">
 <stop offset="0.328125" stop-color="#FF00D6"/>

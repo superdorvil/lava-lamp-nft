@@ -18,7 +18,13 @@ function LavaModal({state, toggleModal}) {
     return (
       <>
         <IconContainer>
-          <Icon icon={ICONS.CLOSE} iconColor='#FFFFFF' width={32} height={32} />
+          <Icon
+            icon={ICONS.CLOSE}
+            iconColor='#FFFFFF'
+            width={10}
+            height={10}
+            highlight={true}
+          />
         </IconContainer>
         <Modal
           isOpen={true}
@@ -32,7 +38,13 @@ function LavaModal({state, toggleModal}) {
     return(
       <>
         <IconContainer>
-          <Icon icon={ICONS.CLOSE} iconColor='#FFFFFF' width={32} height={32} />
+        <Icon
+          icon={ICONS.CLOSE}
+          iconColor='#FFFFFF'
+          width={15}
+          height={15}
+          highlight={true}
+        />
         </IconContainer>
         <Modal
           isOpen={true}

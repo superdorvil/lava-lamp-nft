@@ -18,6 +18,14 @@ export const Description = styled.p`
   margin-top: 2.25vw;
 `;
 
+export const Description2 = styled.span`
+  text-align: center;
+  font-family: Bangers;
+  font-size: 1.95vw;
+  color: #FFFFFF;
+  margin-top: 2.25vw;
+`;
+
 export const SerialImage = styled.img`
   width: 82.8125vw;
 `;

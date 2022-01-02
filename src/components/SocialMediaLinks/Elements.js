@@ -8,6 +8,6 @@ export const Container = styled.div`
 `;
 
 export const LinkContainer = styled.a`
-  margin-right: ${props => props.pad}vw;
-  margin-left: ${props => props.pad}vw;
+  margin-right: 1.25vw;
+  margin-left: 1.25vw;
 `;
