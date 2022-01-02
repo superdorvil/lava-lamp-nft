@@ -28,7 +28,7 @@ export const TraitContainer = styled.div`
   border-style: solid;
   border-color: transparent;
   background:
-    linear-gradient(90deg, #221F1F, #221F1F) padding-box,
+    linear-gradient(90deg, #000000, #000000) padding-box,
     linear-gradient(90deg, ${props => props.lightColor}, ${props => props.darkColor}) border-box;
   padding-top: 1.875vw;
   padding-bottom: 1.5vw;
