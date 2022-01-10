@@ -1,12 +1,8 @@
 const {
   attributes,
-  // backgrounds,
   bases,
-  // glasses,
-  // glassColors,
-  // lavaColors,
   rarities,
-  // overlays,
+  swagger,
   attributeMetadata,
   backgroundMetadata,
   baseMetadata,
@@ -15,9 +11,18 @@ const {
   lavaColorMetadata,
   rarityMetadata,
   overlayMetadata,
+  swagMetadata,
 } = require('./Traits');
 
-function generateNameMetadata({attribute, base, glass, glassColor, rarity, tokenId}) {
+function generateNameMetadata({
+  attribute,
+  base,
+  glass,
+  glassColor,
+  rarity,
+  swag,
+  tokenId
+}) {
   const b = baseMetadata[parseInt(base, 10)];
   const g = glassMetadata[parseInt(glass, 10)];
   const gc = glassColorMetadata[parseInt(glassColor, 10)];
@@ -25,6 +30,11 @@ function generateNameMetadata({attribute, base, glass, glassColor, rarity, token
   const s = ' ';
   let holy = '';
   let buddy = '';
+  let sw = '';
+
+  if (swag === swagger.active) {
+    sw = 'and ' + swagMetadata[base] + ' swagger';
+  }
 
   if (parseInt(attribute, 10) === attributes.halo) {
     holy = 'Angelic ';
@@ -37,13 +47,23 @@ function generateNameMetadata({attribute, base, glass, glassColor, rarity, token
   //cause santas a wizard of course
   if (parseInt(base, 10) === bases.wizard && // wizard
       parseInt(rarity, 10) === rarities.ruby) { // ruby
-        return gc + s + g + s + holy + 'Santa LavaLamp ' + tokenId + buddy;
+        return gc + s + g + s + holy + 'Santa LavaLamp ' + tokenId + buddy + sw;
   }
 
-  return gc + s + g + s + holy + r + s + b + ' LavaLamp ' + tokenId + buddy;
+  return gc + s + g + s + holy + r + s + b + ' LavaLamp ' + tokenId + buddy + sw;
 };
 
-function generateDescriptionMetadata({attribute, background, base, glass, glassColor, overlay, rarity, tokenId}) {
+function generateDescriptionMetadata({
+  attribute,
+  background,
+  base,
+  glass,
+  glassColor,
+  overlay,
+  rarity,
+  swag,
+  tokenId
+}) {
   const b = baseMetadata[parseInt(base, 10)];
   const bg = backgroundMetadata[parseInt(background, 10)];
   const g = glassMetadata[parseInt(glass, 10)];
@@ -53,6 +73,11 @@ function generateDescriptionMetadata({attribute, background, base, glass, glassC
   const s = ' ';
   let holy = '';
   let buddy = '';
+  let sw = '';
+
+  if (swag === swagger.active) {
+    sw = 'and ' + swagMetadata[base] + ' swagger';
+  }
 
   if (parseInt(attribute, 10) === attributes.halo) {
     holy = 'Angelic ';
@@ -69,13 +94,29 @@ function generateDescriptionMetadata({attribute, background, base, glass, glassC
   }
 
   // update me, lol
-  return gc + s + g + s + holy + r + s + b + ' LavaLamp ' + tokenId + buddy + ' with a ' + bg + s + 'background' + o;
+  return gc + s + g + s + holy + r + s + b + ' LavaLamp ' + tokenId + buddy + sw + ' with a ' + bg + s + 'background' + o;
 };
 
-const generateMetadata = ({attribute, background, base, glass, glassColor, lavaCount, lava1, lava2, lava3, lava4, overlay, rarity, tokenId, uri}) => {
+const generateMetadata = ({
+  attribute,
+  background,
+  base,
+  glass,
+  glassColor,
+  lavaCount,
+  lava1,
+  lava2,
+  lava3,
+  lava4,
+  overlay,
+  rarity,
+  swag,
+  tokenId,
+  uri
+}) => {
   const metadata = {
-    name: generateNameMetadata({attribute, base, glass, glassColor, rarity, tokenId}),
-    decription: generateDescriptionMetadata({attribute, background, base, glass, glassColor, overlay, rarity, tokenId}),
+    name: generateNameMetadata({attribute, base, glass, glassColor, rarity, swag, tokenId}),
+    decription: generateDescriptionMetadata({attribute, background, base, glass, glassColor, overlay, rarity, swag, tokenId}),
     image: uri,
     attributes: [
       {
@@ -119,12 +160,16 @@ const generateMetadata = ({attribute, background, base, glass, glassColor, lavaC
         "value": lavaColorMetadata[parseInt(lava4, 10)],
       },
       {
-        "trait_type": "overlay",
+        "trait_type": "Overlay",
         "value": overlayMetadata[parseInt(overlay, 10)],
       },
       {
-        "trait_type": "rarity",
+        "trait_type": "Rarity",
         "value": rarityMetadata[parseInt(rarity, 10)],
+      },
+      {
+        "trait_type": "Swagger",
+        "value": swag === swagger.active ? swagMetadata[parseInt(base, 10)] : 'none',
       },
     ]
   };

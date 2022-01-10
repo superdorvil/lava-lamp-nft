@@ -55,8 +55,9 @@ app.get('/token/:tokenId', async (req, res) => {
     const lava4 = metadata[9];
     const overlay = metadata[10];
     const rarity = metadata[11];
+    const swag = metadata[12];
 
-    const uri = `${baseUri}/token/lavalamp/${tokenId}/${attribute}/${background}/${base}/${glass}/${glassColor}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${overlay}/${rarity}`;
+    const uri = `${baseUri}/token/lavalamp/${tokenId}/${attribute}/${background}/${base}/${glass}/${glassColor}/${lavaCount}/${lava1}/${lava2}/${lava3}/${lava4}/${overlay}/${rarity}/${swag}`;
 
     const  metadataJson = generateMetadata({
       attribute,
@@ -72,6 +73,7 @@ app.get('/token/:tokenId', async (req, res) => {
       overlay,
       tokenId,
       rarity,
+      swag,
       uri,
     });
 
@@ -85,7 +87,7 @@ app.get('/token/:tokenId', async (req, res) => {
   }
 });
 
-app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:glassColor/:lavaCount/:lava1/:lava2/:lava3/:lava4/:overlay/:rarity/', async (req, res) => {
+app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:glassColor/:lavaCount/:lava1/:lava2/:lava3/:lava4/:overlay/:rarity/:swag', async (req, res) => {
   const tokenId = parseInt(req.params.tokenId, 10);
   const attribute = parseInt(req.params.attribute, 10);
   const background = parseInt(req.params.background, 10);
@@ -99,6 +101,7 @@ app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:glassColo
   const lava4 = parseInt(req.params.lava4, 10);
   const overlay = parseInt(req.params.overlay, 10);
   const rarity = parseInt(req.params.rarity, 10);
+  const swag = parseInt(req.params.rarity, 10);
 
   try {
     res.setHeader('Content-Type', 'image/svg+xml');
@@ -113,7 +116,8 @@ app.get('/token/lavalamp/:tokenId/:attribute/:background/:base/:glass/:glassColo
       lava3,
       lava4,
       overlay,
-      rarity
+      rarity,
+      swag,
     }));
   }
   catch {

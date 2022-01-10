@@ -1,6 +1,6 @@
-function EmeraldKitty() {
+function EmeraldCat() {
   return `
-  <!-- Emerald Kitty -->
+  <!-- Emerald Cat -->
   <g filter="url(#filter0_d_954_417015)">
   <path d="M231 315.132L204.528 285H174.802H145.255L119 315.132C119 315.132 136.809 335 175 335C213.191 335 231 315.132 231 315.132Z" fill="black"/>
   </g>
@@ -105,4 +105,4 @@ function EmeraldKitty() {
   `;
 };
 
-module.exports = {EmeraldKitty};
+module.exports = {EmeraldCat};

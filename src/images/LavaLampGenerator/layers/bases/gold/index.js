@@ -5,7 +5,7 @@ const {GoldPumpkin} = require('./GoldPumpkin');
 const {GoldRocket} = require('./GoldRocket');
 const {GoldWizard} = require('./GoldWizard');
 const {GoldWitch} = require('./GoldWitch');
-const {GoldKitty} = require('./GoldKitty');
+const {GoldCat} = require('./GoldCat');
 
 module.exports = {
   GoldAlien,
@@ -15,5 +15,5 @@ module.exports = {
   GoldRocket,
   GoldWizard,
   GoldWitch,
-  GoldKitty,
+  GoldCat,
 };

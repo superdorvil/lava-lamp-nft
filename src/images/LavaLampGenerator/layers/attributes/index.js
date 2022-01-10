@@ -1,5 +1,5 @@
 const {Lavalien} = require('./Lavalien');
 const {Halo} = require('./Halo');
-const {Kitty} = require('./Kitty');
+const {LavaKitty} = require('./LavaKitty');
 
-module.exports = {Lavalien, Halo, Kitty};
+module.exports = {Lavalien, Halo, LavaKitty};

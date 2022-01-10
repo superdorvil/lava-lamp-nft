@@ -5,7 +5,7 @@ const {RubyPumpkin} = require('./RubyPumpkin');
 const {RubyRocket} = require('./RubyRocket');
 const {RubyWizard} = require('./RubyWizard');
 const {RubyWitch} = require('./RubyWitch');
-const {RubyKitty} = require('./RubyKitty');
+const {RubyCat} = require('./RubyCat');
 
 module.exports = {
   RubyAlien,
@@ -15,5 +15,5 @@ module.exports = {
   RubyRocket,
   RubyWizard,
   RubyWitch,
-  RubyKitty,
+  RubyCat,
 };

@@ -1,6 +1,6 @@
-function Swirls() {
+function Swirl() {
   return `
-  <!-- Swirls Overlay -->
+  <!-- Swirl Overlay -->
   <g opacity="0.5" clip-path="url(#clip0_579_26007)">
   <g style="mix-blend-mode:overlay" opacity="0.5">
   <path d="M64.4994 79.5454C24.135 52.5678 120.937 3.24074 154.082 0H44.7912C11.8248 3.53535 2.38872 19.7391 1.7915 27.399V91.9192C11.0484 104.293 29.883 128.728 88.6868 144.066C166.624 164.394 260.616 124.902 228.436 79.5454C203.353 44.1919 120.041 116.667 64.4994 79.5454Z" fill="white"/>
@@ -21,4 +21,4 @@ function Swirls() {
 };
 
 
-module.exports = {Swirls};
+module.exports = {Swirl};

@@ -5,7 +5,7 @@ const {RainbowPumpkin} = require('./RainbowPumpkin');
 const {RainbowRocket} = require('./RainbowRocket');
 const {RainbowWizard} = require('./RainbowWizard');
 const {RainbowWitch} = require('./RainbowWitch');
-const {RainbowKitty} = require('./RainbowKitty');
+const {RainbowCat} = require('./RainbowCat');
 
 export {
   RainbowAlien,
@@ -15,5 +15,5 @@ export {
   RainbowRocket,
   RainbowWizard,
   RainbowWitch,
-  RainbowKitty,
+  RainbowCat,
 };

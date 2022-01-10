@@ -22,6 +22,7 @@ const {
   lavaColorIndexes,
   rarities,
   overlays,
+  swagger,
 } = require('../../../src/images/LavaLampGenerator/');
 
 function LavaLampTraits() {
@@ -42,6 +43,7 @@ function LavaLampTraits() {
               lava4: lavaColorIndexes.purple,
               overlay: overlays.smoke,
               rarity: rarities.diamond,
+              swag: swagger.inactive,
             })}
             size={32}
           />

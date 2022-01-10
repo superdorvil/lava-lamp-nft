@@ -1,6 +1,6 @@
-function LightRaspberry() {
+function BubbleGum() {
   return `
-  <!-- Light Raspberry BG -->
+  <!-- BubbleGum BG -->
   <g clip-path="url(#clip0_28_269)">
   <rect width="350" height="350" fill="white"/>
   <rect x="0.0788574" y="0.0444336" width="350" height="350" fill="#E9C4E7" fill-opacity="0.78"/>
@@ -43,4 +43,4 @@ function LightRaspberry() {
 };
 
 
-module.exports = {LightRaspberry};
+module.exports = {BubbleGum};

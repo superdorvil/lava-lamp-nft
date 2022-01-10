@@ -52,6 +52,7 @@ function MyLavaLampsCarousel({metadata}) {
             lava4: parseInt(meta[0].lava_4, 10),
             overlay: parseInt(meta[0].overlay, 10),
             rarity: parseInt(meta[0].rarity, 10),
+            swag: parseInt(meta[0].swag, 10),
           }) : ''}
         lamp2={meta[1] !== '' ?
           generateLavaLamp({
@@ -66,6 +67,7 @@ function MyLavaLampsCarousel({metadata}) {
             lava4: parseInt(meta[1].lava_4, 10),
             overlay: parseInt(meta[1].overlay, 10),
             rarity: parseInt(meta[1].rarity, 10),
+            swag: parseInt(meta[1].swag, 10),
           }) : ''}
         lamp3={meta[2] !== '' ?
           generateLavaLamp({
@@ -80,6 +82,7 @@ function MyLavaLampsCarousel({metadata}) {
             lava4: parseInt(meta[2].lava_4, 10),
             overlay: parseInt(meta[2].overlay, 10),
             rarity: parseInt(meta[2].rarity, 10),
+            swag: parseInt(meta[2].swag, 10),
           }) : ''}
         lamp4={meta[3] !== '' ?
           generateLavaLamp({
@@ -94,6 +97,7 @@ function MyLavaLampsCarousel({metadata}) {
             lava4: parseInt(meta[3].lava_4, 10),
             overlay: parseInt(meta[3].overlay, 10),
             rarity: parseInt(meta[3].rarity, 10),
+            swag: parseInt(meta[3].swag, 10),
           }) : BuyMoreLavaLamps()}
         lamp5={meta[4] !== '' ?
           generateLavaLamp({
@@ -108,6 +112,7 @@ function MyLavaLampsCarousel({metadata}) {
             lava4: parseInt(meta[4].lava_4, 10),
             overlay: parseInt(meta[4].overlay, 10),
             rarity: parseInt(meta[4].rarity, 10),
+            swag: parseInt(meta[4].swag, 10),
           }) : BuyMoreLavaLamps()}
       />
     );

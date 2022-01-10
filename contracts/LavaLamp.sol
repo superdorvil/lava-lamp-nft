@@ -25,6 +25,7 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
 
         uint8 overlay; // 9 (none, bitcoin, ethereum, lavaception leaves, peace, smoke, swirls, yinyang)
         uint8 rarity; // 6 (og, gold, diamond, ruby, emerald, rainbow)
+        uint8 swag;
     }
     mapping(uint256 => Metadata) id_to_lavalamp;
 
@@ -99,6 +100,8 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
         metadata.overlay = generateOverlay(r);
         r = pseudoRNG(tokenId, r) % 1000000;
         metadata.rarity = generateRarity(r);
+        r = pseudoRNG(tokenId, r) % 1000000;
+        metadata.swag = generateSwag(r);
 
         id_to_lavalamp[tokenId] = metadata;
 
@@ -130,11 +133,11 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateAttribute(uint256 r) internal pure returns(uint8) {
         uint8 attribute;
 
-        if (r < 250000)
+        if (r < 160000)
             attribute = 0;
-        else if (r < 500000)
+        else if (r < 210000)
             attribute = 1;
-        else if (r < 750000)
+        else if (r < 300000)
             attribute = 2;
         else
             attribute = 3;
@@ -145,26 +148,28 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateBackground(uint256 r) internal pure returns(uint8) {
         uint8 background;
 
-        if (r < 100000)
+        if (r < 20000)
             background = 0;
-        else if (r < 200000)
+        else if (r < 150000)
             background = 1;
-        else if (r < 300000)
+        else if (r < 220000)
             background = 2;
-        else if (r < 400000)
+        else if (r < 320000)
             background = 3;
-        else if (r < 500000)
+        else if (r < 440000)
             background = 4;
-        else if (r < 600000)
+        else if (r < 560000)
             background = 5;
-        else if (r < 700000)
+        else if (r < 620000)
             background = 6;
-        else if (r < 800000)
+        else if (r < 770000)
             background = 7;
-        else if (r < 900000)
+        else if (r < 850000)
             background = 8;
-        else
+        else if (r < 890000)
             background = 9;
+        else
+            background = 10;
 
         return background;
     }
@@ -172,19 +177,19 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateBase(uint256 r) internal pure returns(uint8) {
         uint8 base;
 
-        if (r < 125000)
+        if (r < 230000)
             base = 0;
-        else if (r < 250000)
+        else if (r < 310000)
             base = 1;
-        else if (r < 375000)
+        else if (r < 490000)
             base = 2;
-        else if (r < 500000)
+        else if (r < 560000)
             base = 3;
-        else if (r < 625000)
+        else if (r < 710000)
             base = 4;
-        else if (r < 750000)
+        else if (r < 830000)
             base = 5;
-        else if (r < 875000)
+        else if (r < 950000)
             base = 6;
         else
             base = 7;
@@ -195,7 +200,7 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateGlass(uint256 r) internal pure returns(uint8) {
       uint8 glass;
 
-      if (r < 500000)
+      if (r < 800000)
           glass = 0;
       else
           glass = 1;
@@ -206,19 +211,19 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateGlassColor(uint256 r) internal pure returns(uint8) {
       uint8 glassColor;
 
-      if (r < 125000)
+      if (r < 200000)
           glassColor = 0;
-      else if (r < 250000)
+      else if (r < 240000)
           glassColor = 1;
-      else if (r < 375000)
+      else if (r < 360000)
           glassColor = 2;
-      else if (r < 500000)
+      else if (r < 510000)
           glassColor = 3;
-      else if (r < 625000)
+      else if (r < 600000)
           glassColor = 4;
-      else if (r < 750000)
+      else if (r < 660000)
           glassColor = 5;
-      else if (r < 875000)
+      else if (r < 820000)
           glassColor = 6;
       else
           glassColor = 7;
@@ -229,24 +234,26 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateOverlay(uint256 r) internal pure returns(uint8) {
         uint8 overlay;
 
-        if (r < 111111)
+        if (r < 150000)
             overlay = 0;
-        else if (r < 222222)
+        else if (r < 250000)
             overlay = 1;
-        else if (r < 333333)
+        else if (r < 350000)
             overlay = 2;
-        else if (r < 444444)
+        else if (r < 470000)
             overlay = 3;
-        else if (r < 555555)
+        else if (r < 580000)
             overlay = 4;
-        else if (r < 666666)
+        else if (r < 630000)
             overlay = 5;
-        else if (r < 777777)
+        else if (r < 660000)
             overlay = 6;
-        else if (r < 888888)
+        else if (r < 720000)
             overlay = 7;
-        else
+        else if (r < 800000)
             overlay = 8;
+        else
+            overlay = 9;
 
         return overlay;
     }
@@ -254,20 +261,31 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
     function generateRarity(uint256 r) internal pure returns(uint8) {
         uint8 rarity;
 
-        if (r < 166666)
+        if (r < 300000)
             rarity = 0;
-        else if (r < 333332)
+        else if (r < 340000)
             rarity = 1;
-        else if (r < 499998)
+        else if (r < 420000)
             rarity = 2;
-        else if (r < 666664)
+        else if (r < 650000)
             rarity = 3;
-        else if (r < 833330)
+        else if (r < 850000)
             rarity = 4;
         else
             rarity = 5;
 
         return rarity;
+    }
+
+    function generateSwag(uint256 r) internal pure returns(uint8) {
+        uint8 swag;
+
+        if (r < 98000)
+            swag = 0;
+        else
+            swag = 1;
+
+        return swag;
     }
 
     function getId() internal view returns(uint256) {
@@ -353,6 +371,7 @@ contract LavaLamp is Ownable, ERC721, IERC721Enumerable {
         meta[9] = lavalamp.lava_4;
         meta[10] = lavalamp.overlay;
         meta[11] = lavalamp.rarity;
+        meta[12] = lavalamp.swag;
 
         return meta;
     }

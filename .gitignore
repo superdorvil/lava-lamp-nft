@@ -6,6 +6,7 @@
 /src/images/LavaLampGenerator/generatedLamps
 .pnp.js
 .env
+/helperScripts.js
 
 # testing
 /coverage

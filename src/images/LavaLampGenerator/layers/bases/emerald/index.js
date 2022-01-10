@@ -5,7 +5,7 @@ const {EmeraldPumpkin} = require('./EmeraldPumpkin');
 const {EmeraldRocket} = require('./EmeraldRocket');
 const {EmeraldWizard} = require('./EmeraldWizard');
 const {EmeraldWitch} = require('./EmeraldWitch');
-const {EmeraldKitty} = require('./EmeraldKitty');
+const {EmeraldCat} = require('./EmeraldCat');
 
 module.exports = {
   EmeraldAlien,
@@ -15,5 +15,5 @@ module.exports = {
   EmeraldRocket,
   EmeraldWizard,
   EmeraldWitch,
-  EmeraldKitty,
+  EmeraldCat,
 };

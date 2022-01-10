@@ -1,6 +1,6 @@
-function LightBlueberry() {
+function CottonCandy() {
   return `
-  <!-- Light Blueberry BG -->
+  <!-- CottonCandy BG -->
   <g clip-path="url(#clip0_28_276)">
   <rect width="350" height="350" fill="white"/>
   <rect x="0.0788574" y="0.0444336" width="350" height="350" fill="#2183F7" fill-opacity="0.25"/>
@@ -43,4 +43,4 @@ function LightBlueberry() {
 };
 
 
-module.exports = {LightBlueberry};
+module.exports = {CottonCandy};

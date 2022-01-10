@@ -1,4 +1,4 @@
-const {HolographicGlass} = require('./HolographicGlass');
+const {GlowingGlass} = require('./GlowingGlass');
 const {NormalGlass} = require('./NormalGlass');
 
-module.exports = {HolographicGlass, NormalGlass};
+module.exports = {GlowingGlass, NormalGlass};

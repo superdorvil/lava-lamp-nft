@@ -1,6 +1,6 @@
-function Purple() {
+function Royal() {
   return `
-  <!-- Purple BG -->
+  <!-- Royal BG -->
   <g clip-path="url(#clip0_559_25940)">
   <rect x="0.0799561" y="0.0449219" width="350" height="350" fill="#27004F" fill-opacity="0.89"/>
   <rect x="0.0799561" y="0.0449219" width="350" height="350" fill="url(#paint0_radial_559_25940)" fill-opacity="0.2"/>
@@ -35,4 +35,4 @@ function Purple() {
 };
 
 
-module.exports = {Purple};
+module.exports = {Royal};

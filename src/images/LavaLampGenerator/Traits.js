@@ -1,21 +1,22 @@
 const attributes = {
   none: 0,
-  lavalien: 1,
-  halo: 2,
-  kitty: 3,
+  halo: 1,
+  lavalien: 3,
+  lavaKitty: 2,
 };
 
 const backgrounds = {
-  black: 0,
-  blueberry: 1,
-  lightBlueberry: 2,
-  lightRaspberry: 3,
-  lightStrawberry: 4,
-  raspberry: 5,
-  sky: 6,
-  purple: 7,
-  stars: 8,
-  strawberry: 9,
+  allGoldEverything: 0,
+  ash: 1,
+  bubbleGum: 2,
+  cottonCandy: 3,
+  magma: 4,
+  peach: 5,
+  plum: 6,
+  royal: 7,
+  sapphire: 8,
+  sky: 9,
+  star: 10,
 };
 
 const bases = {
@@ -26,23 +27,23 @@ const bases = {
   pumpkin: 4,
   wizard: 5,
   witch: 6,
-  kitty: 7,
+  cat: 7,
 };
 
 const glasses = {
   normal: 0,
-  holographic: 1,
+  glowing: 1,
 };
 
 const glassColorIndexes = {
-  white: 0,
-  black: 1,
-  yellow: 2,
-  orange: 3,
-  pink: 4,
-  purple: 5,
-  blue: 6,
-  red: 7,
+  pearl: 0,
+  carbon: 1,
+  amber: 2,
+  tiger: 3,
+  blossom: 4,
+  purpleHaze: 5,
+  cerulean: 6,
+  molten: 7,
 };
 
 const lavaColorIndexes = {
@@ -72,22 +73,28 @@ const overlays = {
   bitcoin: 1,
   ethereum: 2,
   lavaCeption: 3,
-  leaves: 4,
-  peace: 5,
-  smoke: 6,
-  swirls: 7,
-  yinYang: 8,
+  peace: 4,
+  smoke: 5,
+  swirl: 6,
+  weed: 7,
+  words: 8,
+  yinYang: 9,
+};
+
+const swagger = {
+  inactive: 0,
+  active: 1,
 };
 
 const glassColors = [
-  '#FFFFFF', // white
-  '#000000', // carbon / black
-  '#FFFA8D', // yellow
-  '#F59B13', // orange
-  '#FF67EC', // pink
-  '#A15BFA', // purple
-  '#2D34E6', // blue / ocean
-  '#F41B1B', // crimson / red
+  '#FFFFFF', // pearl white
+  '#000000', // carbon black
+  '#FFFA8D', // amber yellow
+  '#F59B13', // tiger orange
+  '#FF67EC', // blossom pink
+  '#A15BFA', // purplehaze purple
+  '#2D34E6', // cerulean blue
+  '#F41B1B', // molten red
 ];
 
 const lavaColors = [
@@ -105,22 +112,23 @@ const lavaColors = [
 
 const attributeMetadata = [
   '',
-  'Lavalien',
   'Halo',
-  'Kitty',
+  'Lavalien',
+  'Lava Kitty',
 ];
 
 const backgroundMetadata = [
-  'Black',
-  'Blueberry',
-  'Light Blueberry',
-  'Light Raspberry',
-  'Light Strawberry',
-  'Raspberry',
+  'All Gold Everything',
+  'Ash',
+  'Bubble Gum',
+  'Cotton Candy',
+  'Magma',
+  'Peach',
+  'Plum',
+  'Royal',
+  'Sapphire',
   'Sky',
-  'Purple',
-  'Stars',
-  'Strawberry',
+  'Star'
 ];
 
 const baseMetadata = [
@@ -131,23 +139,23 @@ const baseMetadata = [
   'Pumpkin',
   'Wizard',
   'Witch',
-  'Kitty',
+  'Cat',
 ];
 
 const glassMetadata = [
   'Glass',
-  'Halographic Glass',
+  'Glowing Glass',
 ];
 
 const glassColorMetadata = [
-  'White', // snowy, pearly, bnlank,
-  'Black', // carbon, onyx, ebony,
-  'Yellow', // golden, saffron, amber,
-  'Orange', // tangerine, apricot, coral, peach
-  'Pink', // blossom, rosy, coral,reseate
-  'Purple', // violet, lilac, lavender, royal,
-  'Blue', // ocean, cerulean, aqua, azure, sky,
-  'Red', // crimson, ruby, rosy, fiery, flame, blaze, cherry
+  'Pearl',
+  'Carbon',
+  'Amber',
+  'Tiger',
+  'Blossom',
+  'Purple Haze',
+  'Cerulean',
+  'Molten',
 ];
 
 const lavaColorMetadata = [
@@ -177,11 +185,23 @@ const overlayMetadata = [
   'Bitcoin',
   'Ethereum',
   'LavaCeption',
-  '420 Leaves',
   'Peace',
   'Smoke',
-  'Swirls',
-  'Yin-Yang',
+  'Swirl',
+  'Weed',
+  'Words',
+  'Yin-Yang'
+];
+
+const swagMetadata = [
+  'JPEG Hat',
+  'Flames',
+  'Glasses',
+  'Gold Bubbles',
+  'Gold Chain',
+  'Grillz',
+  'JPEG Belt',
+  'Stud Earring',
 ];
 
 module.exports = {
@@ -195,6 +215,7 @@ module.exports = {
   lavaColorIndexes,
   rarities,
   overlays,
+  swagger,
   attributeMetadata,
   backgroundMetadata,
   baseMetadata,
@@ -203,4 +224,5 @@ module.exports = {
   lavaColorMetadata,
   rarityMetadata,
   overlayMetadata,
+  swagMetadata,
 };

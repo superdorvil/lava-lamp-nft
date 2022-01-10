@@ -1,6 +1,6 @@
-function Blueberry() {
+function Sapphire() {
   return `
-  <!-- Blueberry BG -->
+  <!-- Sapphire BG -->
   <g clip-path="url(#clip0_28_259)">
   <rect x="0.0788574" y="0.0444336" width="350" height="350" fill="#13235A"/>
   <rect x="0.0788574" y="0.0444336" width="350" height="350" fill="url(#paint0_radial_28_259)" fill-opacity="0.2"/>
@@ -47,4 +47,4 @@ function Blueberry() {
 };
 
 
-module.exports = {Blueberry};
+module.exports = {Sapphire};

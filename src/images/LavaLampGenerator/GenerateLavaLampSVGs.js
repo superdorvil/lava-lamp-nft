@@ -3,21 +3,22 @@ const {
   BuyMoreLavaLamps,
 } = require('./layers/buyMoreLavaLamps');
 const {
-  Lavalien,
   Halo,
-  Kitty,
+  LavaKitty,
+  Lavalien,
 } = require('./layers/attributes');
 const {
-  Black,
-  Blueberry,
-  LightBlueberry,
-  LightRaspberry,
-  LightStrawberry,
-  Raspberry,
+  AllGoldEverything,
+  Ash,
+  BubbleGum,
+  CottonCandy,
+  Magma,
+  Peach,
+  Plum,
+  Royal,
+  Sapphire,
   Sky,
-  Purple,
-  Stars,
-  Strawberry,
+  Star,
 } = require('./layers/backgrounds');
 const {
   DiamondAlien,
@@ -27,7 +28,7 @@ const {
   DiamondRocket,
   DiamondWizard,
   DiamondWitch,
-  DiamondKitty,
+  DiamondCat,
   EmeraldAlien,
   EmeraldBong,
   EmeraldStandard,
@@ -35,7 +36,7 @@ const {
   EmeraldRocket,
   EmeraldWizard,
   EmeraldWitch,
-  EmeraldKitty,
+  EmeraldCat,
   GoldAlien,
   GoldBong,
   GoldStandard,
@@ -43,7 +44,7 @@ const {
   GoldRocket,
   GoldWizard,
   GoldWitch,
-  GoldKitty,
+  GoldCat,
   OriginalAlien,
   OriginalBong,
   OriginalStandard,
@@ -51,7 +52,7 @@ const {
   OriginalRocket,
   OriginalWizard,
   OriginalWitch,
-  OriginalKitty,
+  OriginalCat,
   RubyAlien,
   RubyBong,
   RubyStandard,
@@ -59,7 +60,7 @@ const {
   RubyRocket,
   RubyWizard,
   RubyWitch,
-  RubyKitty,
+  RubyCat,
   RainbowAlien,
   RainbowBong,
   RainbowStandard,
@@ -67,10 +68,10 @@ const {
   RainbowRocket,
   RainbowWizard,
   RainbowWitch,
-  RainbowKitty,
+  RainbowCat,
 } = require('./layers/bases');
 const {
-  HolographicGlass,
+  GlowingGlass,
   NormalGlass,
 } = require('./layers/glass');
 const {Lavas} = require('./layers/lavas');
@@ -81,9 +82,21 @@ const {
   Leaves,
   Peace,
   Smoke,
-  Swirls,
-  YinYang
+  Swirl,
+  Weed,
+  Words,
+  YinYang,
 } = require('./layers/overlays');
+const {
+  Flames,
+  Glasses,
+  GoldenBubbles,
+  GoldChain,
+  Grillz,
+  JpegBelt,
+  JpegHat,
+  StudEarring
+} = require('./layers/swag');
 const {
   attributes,
   backgrounds,
@@ -93,6 +106,7 @@ const {
   lavaColors,
   rarities,
   overlays,
+  swagger,
 } = require('./Traits');
 
 const myArgs = process.argv.slice(2);
@@ -118,14 +132,14 @@ function generateAttributeSVG({index}) {
     case attributes.none:
       attribute = '';
       break;
-    case attributes.lavalien:
-      attribute = Lavalien();
-      break;
     case attributes.halo:
       attribute = Halo();
       break;
-    case attributes.kitty:
-      attribute = Kitty();
+    case attributes.lavaKitty:
+      attribute = LavaKitty();
+      break;
+    case attributes.lavalien:
+      attribute = Lavalien();
       break;
     default:
     // add error checking
@@ -138,35 +152,38 @@ function generateBackgroundSVG({index}) {
   let background = '';
 
   switch(index) {
-    case backgrounds.black:
-      background = Black();
+    case backgrounds.allGoldEverything:
+      background = AllGoldEverything();
       break;
-    case backgrounds.blueberry:
-      background = Blueberry();
+    case backgrounds.ash:
+      background = Ash();
       break;
-    case backgrounds.lightBlueberry:
-      background = LightBlueberry();
+    case backgrounds.bubbleGum:
+      background = BubbleGum();
       break;
-    case backgrounds.lightRaspberry:
-      background = LightRaspberry();
+    case backgrounds.cottonCandy:
+      background = CottonCandy();
       break;
-    case backgrounds.lightStrawberry:
-      background = LightStrawberry();
+    case backgrounds.magma:
+      background = Magma();
       break;
-    case backgrounds.raspberry:
-      background = Raspberry();
+    case backgrounds.peach:
+      background = Peach();
+      break;
+    case backgrounds.plum:
+      background = Plum();
+      break;
+    case backgrounds.royal:
+      background = Royal();
+      break;
+    case backgrounds.sapphire:
+      background = Sapphire();
       break;
     case backgrounds.sky:
       background = Sky();
       break;
-    case backgrounds.purple:
-      background = Purple();
-      break;
-    case backgrounds.stars:
-      background = Stars();
-      break;
-    case backgrounds.strawberry:
-      background = Strawberry();
+    case backgrounds.star:
+      background = Star();
       break;
     default:
     // add error checking
@@ -201,8 +218,8 @@ function generateBaseSVG({index, rarity}) {
       case bases.witch:
         base = OriginalWitch();
         break;
-      case bases.kitty:
-        base = OriginalKitty();
+      case bases.cat:
+        base = OriginalCat();
         break;
         default:
         // add error checking
@@ -230,8 +247,8 @@ function generateBaseSVG({index, rarity}) {
       case bases.witch:
         base = GoldWitch();
         break;
-      case bases.kitty:
-        base = GoldKitty();
+      case bases.cat:
+        base = GoldCat();
         break;
         default:
         // add error checking
@@ -259,8 +276,8 @@ function generateBaseSVG({index, rarity}) {
       case bases.witch:
         base = DiamondWitch();
         break;
-      case bases.kitty:
-        base = DiamondKitty();
+      case bases.cat:
+        base = DiamondCat();
         break;
         default:
         // add error checking
@@ -288,8 +305,8 @@ function generateBaseSVG({index, rarity}) {
       case bases.witch:
         base = RubyWitch();
         break;
-      case bases.kitty:
-        base = RubyKitty();
+      case bases.cat:
+        base = RubyCat();
         break;
         default:
         // add error checking
@@ -317,8 +334,8 @@ function generateBaseSVG({index, rarity}) {
       case bases.witch:
         base = EmeraldWitch();
         break;
-      case bases.kitty:
-        base = EmeraldKitty();
+      case bases.cat:
+        base = EmeraldCat();
         break;
         default:
         // add error checking
@@ -346,8 +363,8 @@ function generateBaseSVG({index, rarity}) {
       case bases.witch:
         base = RainbowWitch();
         break;
-      case bases.kitty:
-        base = RainbowKitty();
+      case bases.cat:
+        base = RainbowCat();
         break;
         default:
         // add error checking
@@ -364,8 +381,8 @@ function generateGlassSVG({index, glassColor}) {
     case glasses.normal:
       glass = NormalGlass({glassColor: glassColors[glassColor]});
       break;
-    case glasses.holographic:
-      glass = HolographicGlass({glassColor: glassColors[glassColor]});
+    case glasses.glowing:
+      glass = GlowingGlass({glassColor: glassColors[glassColor]});
       break;
     default:
     // add error checking
@@ -414,17 +431,20 @@ function generateOverlaySVG({index}) {
     case overlays.lavaCeption:
       overlay = LavaCeption();
       break;
-    case overlays.leaves:
-      overlay = Leaves();
-      break;
     case overlays.peace:
       overlay = Peace();
       break;
     case overlays.smoke:
       overlay = Smoke();
       break;
-    case overlays.swirls:
-      overlay = Swirls();
+    case overlays.swirl:
+      overlay = Swirl();
+      break;
+    case overlays.weed:
+      overlay = Weed();
+      break;
+    case overlays.words:
+      overlay = Words();
       break;
     case overlays.yinYang:
       overlay = YinYang();
@@ -436,7 +456,57 @@ function generateOverlaySVG({index}) {
   return overlay;
 }
 
-function generateLavaLamp({attribute, background, base, glass, glassColor, lava1, lava2, lava3, lava4, overlay, rarity}) {
+function generateSwagSVG({index, base}) {
+  let swag = '';
+
+  if (index === swagger.active) {
+    switch(base) {
+      case bases.standard:
+        swag = JpegHat();
+        break;
+      case bases.alien:
+        swag = Glasses();
+        break;
+      case bases.rocket:
+        swag = Flames();
+        break;
+      case bases.bong:
+        swag = GoldenBubbles();
+        break;
+      case bases.pumpkin:
+        swag = Grillz();
+        break;
+      case bases.wizard:
+        swag = GoldChain();
+        break;
+      case bases.witch:
+        swag = JpegBelt();
+        break;
+      case bases.cat:
+        swag = StudEarring();
+        break;
+        default:
+        // add error checking
+    }
+  }
+
+  return swag;
+}
+
+function generateLavaLamp({
+  attribute,
+  background,
+  base,
+  glass,
+  glassColor,
+  lava1,
+  lava2,
+  lava3,
+  lava4,
+  overlay,
+  swag,
+  rarity
+}) {
   return `
     ${openTag}
     ${generateBackgroundSVG({index: background})}
@@ -445,6 +515,7 @@ function generateLavaLamp({attribute, background, base, glass, glassColor, lava1
     ${generateGlassSVG({index: glass, glassColor})}
     ${generateLavasSVG({lava1, lava2, lava3, lava4})}
     ${generateBaseSVG({index: base, rarity})}
+    ${generateSwagSVG({index: swag, base})}
     ${closeTag}
   `;
 }
@@ -552,6 +623,16 @@ function generateAssets() {
     `);
   }
 
+//  console.log('swag')
+  // swag
+  for (let i = 0; i < 7; i++) {
+    assets.push(`
+      ${openTag}
+      ${generateSwagSVG({index: swagger.active, base: i})}
+      ${closeTag}
+    `);
+  }
+
   saveNLavaLamps({lavaLamps: assets, dir: assetDir})
 
   return assets;
@@ -570,10 +651,11 @@ function generateRandomLavaLamp() {
     lava4: generateRandomNumber({n: 10}),
     overlay: generateRandomNumber({n: 9}),
     rarity: generateRandomNumber({n: 6}),
+    swag: generateRandomNumber({n: 2}),
   });
 }
 
-function generateNRandomLavaLamps({n,save}) {
+function generateNRandomLavaLamps({n, save}) {
   const lavaLamps = [];
 
   for (let i = 0; i < n; i++) {
@@ -619,6 +701,7 @@ function generate7979LavaLamps({save}) {
         lava4,
         overlay: generateRandomNumber({n: 9}),
         rarity: generateRandomNumber({n: 6}),
+        swag: generateRandomNumber({n: 2}),
       })
     );
   }

@@ -16,6 +16,7 @@ const {
   lavaColorIndexes,
   rarities,
   overlays,
+  swagger,
   attributeMetadata,
   backgroundMetadata,
   baseMetadata,
@@ -24,6 +25,7 @@ const {
   lavaColorMetadata,
   rarityMetadata,
   overlayMetadata,
+  swagMetadata,
 } = require('./Traits');
 
 module.exports = {
@@ -42,6 +44,7 @@ module.exports = {
   lavaColorIndexes,
   rarities,
   overlays,
+  swagger,
   attributeMetadata,
   backgroundMetadata,
   baseMetadata,
@@ -50,4 +53,5 @@ module.exports = {
   lavaColorMetadata,
   rarityMetadata,
   overlayMetadata,
+  swagMetadata,
 };

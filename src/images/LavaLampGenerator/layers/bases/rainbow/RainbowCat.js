@@ -1,6 +1,6 @@
-function RainbowKitty() {
+function RainbowCat() {
   return `
-  <!-- Rainbow Kitty -->
+  <!-- Rainbow Cat -->
   <g filter="url(#filter0_d_954_417013)">
   <path d="M231 315.133L204.528 285H174.802H145.255L119 315.133C119 315.133 136.809 335 175 335C213.191 335 231 315.133 231 315.133Z" fill="black"/>
   </g>
@@ -223,4 +223,4 @@ function RainbowKitty() {
   `;
 };
 
-module.exports = {RainbowKitty};
+module.exports = {RainbowCat};

@@ -1,6 +1,6 @@
-function LightStrawberry() {
+function Peach() {
   return `
-  <!-- Light Strawberry BG -->
+  <!-- Peach BG -->
   <g clip-path="url(#clip0_28_283)">
   <rect width="350" height="350" fill="white"/>
   <rect x="0.0800781" y="0.0449219" width="350" height="350" fill="#FFA19B"/>
@@ -43,4 +43,4 @@ function LightStrawberry() {
 };
 
 
-module.exports = {LightStrawberry};
+module.exports = {Peach};

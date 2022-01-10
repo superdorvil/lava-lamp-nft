@@ -5,7 +5,7 @@ const {OriginalPumpkin} = require('./OriginalPumpkin');
 const {OriginalRocket} = require('./OriginalRocket');
 const {OriginalWizard} = require('./OriginalWizard');
 const {OriginalWitch} = require('./OriginalWitch');
-const {OriginalKitty} = require('./OriginalKitty');
+const {OriginalCat} = require('./OriginalCat');
 
 module.exports = {
   OriginalAlien,
@@ -15,5 +15,5 @@ module.exports = {
   OriginalRocket,
   OriginalWizard,
   OriginalWitch,
-  OriginalKitty,
+  OriginalCat,
 };
