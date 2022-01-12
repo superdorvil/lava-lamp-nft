@@ -12,41 +12,14 @@ import {
   TraitDataBlocks,
 } from './Elements';
 import {COLORS} from '../../constants';
-const {
-  generateLavaLamp,
-  attributes,
-  backgrounds,
-  bases,
-  glasses,
-  glassColorIndexes,
-  lavaColorIndexes,
-  rarities,
-  overlays,
-  swagger,
-} = require('../../../src/images/LavaLampGenerator/');
+import alienLamp from '../../../src/images/LavaLampTraitAlien.svg';
 
 function LavaLampTraits() {
   return (
     <Container>
       <InnerContainer>
         <LavaLampContainer>
-          <LavaLamp
-            src={generateLavaLamp({
-              attribute: attributes.lavalien,
-              background: backgrounds.purple,
-              base: bases.alien,
-              glass: glasses.normal,
-              glassColor: glassColorIndexes.white,
-              lava1: lavaColorIndexes.orange,
-              lava2: lavaColorIndexes.pink,
-              lava3: lavaColorIndexes.lightBlue,
-              lava4: lavaColorIndexes.purple,
-              overlay: overlays.smoke,
-              rarity: rarities.diamond,
-              swag: swagger.inactive,
-            })}
-            size={32}
-          />
+          <LavaLamp src={alienLamp} size={32} />
         </LavaLampContainer>
         <TraitContainer>
           <Title>YOUR TRAITS</Title>

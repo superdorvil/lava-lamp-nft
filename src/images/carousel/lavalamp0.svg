@@ -1,0 +1,586 @@
+
+    <svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+    
+    <!-- Star BG -->
+    <g clip-path="url(#clip0_1285_67308)">
+      <g filter="url(#filter0_f_1285_67308)">
+        <rect x="350" y="350" width="350" height="350" transform="rotate(-180 350.08 350.045)" fill="#0E103E"/>
+      </g>
+      <g style="mix-blend-mode:overlay" filter="url(#filter1_f_1285_67308)">
+        <ellipse rx="270.447" ry="92.7881" transform="matrix(0.999998 0.00221055 0.00221055 -0.999998 176.734 365.185)" fill="url(#paint0_radial_1285_67308)"/>
+      </g>
+      <g style="mix-blend-mode:overlay" filter="url(#filter2_f_1285_67308)">
+        <ellipse cx="174.396" cy="133.052" rx="273.297" ry="336.951" transform="rotate(0.126655 174.396 133.052)" fill="url(#paint1_radial_1285_67308)"/>
+      </g>
+
+      <g opacity="0.6">
+        <use href="#basicStar1" transform="translate(19.83253, 74.88159)" />
+        <use href="#basicStar2" transform="translate(212.81703000000002, 244.46479)" />
+        <use href="#basicStar3" transform="translate(324.04303, 109.39579)" />
+        <use href="#basicStar4" transform="translate(338.53103, 121.17279)" />
+        <use href="#basicStar5" transform="translate(321.21303, 78.78959)" />
+        <use href="#basicStar1" transform="translate(155.57303000000002, 142.96979000000002)" />
+        <use href="#basicStar2" transform="translate(264.94802999999996, 138.86779)" />
+        <use href="#basicStar3" transform="translate(7.215819999999999, 26.38089)" />
+        <use href="#basicStar4" transform="translate(62.929730000000006, 114.55579)" />
+        <use href="#basicStar5" transform="translate(160.92003000000003, 217.29679000000002)" />
+        <use href="#basicStar1" transform="translate(296.87503, 161.29279)" />
+        <use href="#basicStar2" transform="translate(128.40503, 194.86679)" />
+        <use href="#basicStar3" transform="translate(237.78003, 190.76479)" />
+        <use href="#basicStar4" transform="translate(39.08223, 90.04859)" />
+        <use href="#basicStar5" transform="translate(56.86163, 75.97069)" />
+        <use href="#basicStar1" transform="translate(176.76803, 252.99678999999998)" />
+        <use href="#basicStar2" transform="translate(332.57403, 145.44479)" />
+        <use href="#basicStar3" transform="translate(164.10403000000002, 179.01879)" />
+        <use href="#basicStar4" transform="translate(273.47902999999997, 174.91779)" />
+        <use href="#basicStar5" transform="translate(292.50203, 191.35479)" />
+        <use href="#basicStar1" transform="translate(65.54933, 97.92979)" />
+        <use href="#basicStar2" transform="translate(15.78743, 166.05379)" />
+        <use href="#basicStar3" transform="translate(193.12703000000002, 155.35279)" />
+        <use href="#basicStar4" transform="translate(234.93003000000002, 129.08579)" />
+        <use href="#basicStar5" transform="translate(66.46073, 162.65979000000002)" />
+        <use href="#basicStar1" transform="translate(175.83603000000002, 158.55779)" />
+        <use href="#basicStar2" transform="translate(1.9404700000000001, 155.94079)" />
+        <use href="#basicStar3" transform="translate(209.12003, 161.53679)" />
+        <use href="#basicStar4" transform="translate(241.11503000000002, 113.09279000000001)" />
+        <use href="#basicStar5" transform="translate(72.64503, 146.66679)" />
+        <use href="#basicStar1" transform="translate(182.02003000000002, 142.56579)" />
+        <use href="#basicStar2" transform="translate(50.79373, 171.03279)" />
+        <use href="#basicStar3" transform="translate(57.99513, 188.35779)" />
+        <use href="#basicStar4" transform="translate(158.02503000000002, 159.60379)" />
+        <use href="#basicStar5" transform="translate(277.46303, 299.81879)" />
+        <use href="#basicStar1" transform="translate(70.71163, 197.76179)" />
+        <use href="#basicStar2" transform="translate(180.08703000000003, 193.65979000000002)" />
+        <use href="#basicStar3" transform="translate(7.6970600000000005, 87.01729)" />
+        <use href="#basicStar4" transform="translate(221.39803, 229.60179)" />
+        <use href="#basicStar5" transform="translate(309.18003, 100.81479)" />
+        <use href="#basicStar1" transform="translate(212.75003, 303.00879)" />
+        <use href="#basicStar2" transform="translate(250.08503000000002, 130.28679)" />
+        <use href="#basicStar3" transform="translate(8.583029999999999, 8.60739)" />
+        <use href="#basicStar4" transform="translate(318.67203, 227.55079)" />
+        <use href="#basicStar5" transform="translate(216.25703000000001, 204.40279)" />
+        <use href="#basicStar1" transform="translate(215.48403000000002, 66.94069)" />
+        <use href="#basicStar2" transform="translate(115.51103, 139.52979)" />
+        <use href="#basicStar3" transform="translate(224.88503, 135.42879)" />
+        <use href="#basicStar4" transform="translate(26.18773, 34.71239)" />
+        <use href="#basicStar5" transform="translate(22.16633, 118.13379)" />
+        <use href="#basicStar1" transform="translate(199.36903, 203.29079000000002)" />
+        <use href="#basicStar2" transform="translate(282.86803, 122.84479)" />
+        <use href="#basicStar3" transform="translate(12.22903, 319.87079)" />
+        <use href="#basicStar4" transform="translate(223.77303, 152.31679)" />
+        <use href="#basicStar5" transform="translate(25.07543, 51.60059)" />
+        <use href="#basicStar1" transform="translate(41.58893, 57.563889999999994)" />
+        <use href="#basicStar2" transform="translate(47.96933, 23.38419)" />
+        <use href="#basicStar3" transform="translate(68.02133, 37.511689999999994)" />
+        <use href="#basicStar4" transform="translate(79.87013, 7.433590000000001)" />
+        <use href="#basicStar5" transform="translate(272.18802999999997, 79.89449)" />
+        <use href="#basicStar1" transform="translate(311.38103, 32.04289)" />
+        <use href="#basicStar2" transform="translate(252.13603, 51.183589999999995)" />
+        <use href="#basicStar3" transform="translate(247.57903000000002, 25.66279)" />
+        <use href="#basicStar4" transform="translate(165.54703, 1.9647999999999999)" />
+        <use href="#basicStar5" transform="translate(132.27903, 5.15498)" />
+        <use href="#basicStar1" transform="translate(134.55803, 37.05609)" />
+        <use href="#basicStar2" transform="translate(88.98493, 68.04559)" />
+        <use href="#basicStar3" transform="translate(206.56303000000003, 13.81389)" />
+        <use href="#basicStar4" transform="translate(217.50103000000001, 43.436189999999996)" />
+        <use href="#basicStar5" transform="translate(242.11003000000002, 86.27489)" />
+        <use href="#basicStar1" transform="translate(121.79703, 68.04559)" />
+        <use href="#basicStar2" transform="translate(106.30303, 92.65499)" />
+        <use href="#basicStar3" transform="translate(142.81403, 262.73879)" />
+        <use href="#basicStar4" transform="translate(342.31603, 179.39879)" />
+        <use href="#basicStar5" transform="translate(173.84703000000002, 212.97179)" />
+        <use href="#basicStar1" transform="translate(283.22202999999996, 208.87079)" />
+        <use href="#basicStar2" transform="translate(84.52393, 108.15479)" />
+        <use href="#basicStar3" transform="translate(7.865029999999999, 52.095189999999995)" />
+        <use href="#basicStar4" transform="translate(124.72103, 259.53279)" />
+        <use href="#basicStar5" transform="translate(339.11102999999997, 197.49179)" />
+        <use href="#basicStar1" transform="translate(112.94503, 327.61779)" />
+        <use href="#basicStar2" transform="translate(280.01703, 226.96379000000002)" />
+        <use href="#basicStar3" transform="translate(306.63003, 242.39679)" />
+        <use href="#basicStar4" transform="translate(278.37503, 250.14379)" />
+        <use href="#basicStar5" transform="translate(238.27003000000002, 274.75379)" />
+        <use href="#basicStar1" transform="translate(196.34303000000003, 181.32879)" />
+        <use href="#basicStar2" transform="translate(143.47903000000002, 203.20379)" />
+        <use href="#basicStar3" transform="translate(144.39003000000002, 240.57379)" />
+        <use href="#basicStar4" transform="translate(92.43723, 205.93779)" />
+        <use href="#basicStar5" transform="translate(91.52593, 180.41779)" />
+        <use href="#basicStar1" transform="translate(81.31863, 126.24779000000001)" />
+        <use href="#basicStar2" transform="translate(100.27003, 126.53578999999999)" />
+        <use href="#basicStar3" transform="translate(121.75203, 215.38979)" />
+        <use href="#basicStar4" transform="translate(324.85902999999996, 262.44879000000003)" />
+        <use href="#basicStar5" transform="translate(312.09902999999997, 184.06279)" />
+        <use href="#basicStar1" transform="translate(320.30203, 165.83379)" />
+        <use href="#basicStar2" transform="translate(283.84303, 144.87079)" />
+        <use href="#basicStar3" transform="translate(327.59303, 318.95879)" />
+        <use href="#basicStar4" transform="translate(254.22103, 153.98479)" />
+        <use href="#basicStar5" transform="translate(336.25203, 87.44849)" />
+        <use href="#basicStar1" transform="translate(339.89803, 65.57349)" />
+        <use href="#basicStar2" transform="translate(126.49802999999999, 234.03479000000002)" />
+        <use href="#basicStar3" transform="translate(235.87303, 229.93379000000002)" />
+        <use href="#basicStar4" transform="translate(245.56203000000002, 212.77379)" />
+        <use href="#basicStar5" transform="translate(220.04103, 180.87279)" />
+        <use href="#basicStar1" transform="translate(37.17503, 129.21679)" />
+        <use href="#basicStar2" transform="translate(45.23493, 338.29279)" />
+        <use href="#basicStar3" transform="translate(129.52103000000002, 183.67079)" />
+        <use href="#basicStar4" transform="translate(263.24903, 192.69179)" />
+        <use href="#basicStar5" transform="translate(94.77883, 226.26579)" />
+        <use href="#basicStar1" transform="translate(204.15403, 222.16379)" />
+        <use href="#basicStar2" transform="translate(267.89303, 333.08679)" />
+        <use href="#basicStar3" transform="translate(78.33203, 169.16579000000002)" />
+        <use href="#basicStar4" transform="translate(131.90803000000002, 168.53479000000002)" />
+        <use href="#basicStar5" transform="translate(248.11203, 190.30479)" />
+        <use href="#basicStar1" transform="translate(79.64263, 223.87879)" />
+        <use href="#basicStar2" transform="translate(189.01803, 219.77679)" />
+        <use href="#basicStar3" transform="translate(104.15903, 154.85179)" />
+        <use href="#basicStar4" transform="translate(110.66603, 189.04479)" />
+        <use href="#basicStar5" transform="translate(268.62302999999997, 211.54679000000002)" />
+        <use href="#basicStar1" transform="translate(100.15303, 245.11979)" />
+        <use href="#basicStar2" transform="translate(209.52803, 241.01879)" />
+        <use href="#basicStar3" transform="translate(10.83003, 140.30279000000002)" />
+
+        <use href="#smallStar1" transform="translate(339.252, 47.7729)" />
+        <use href="#smallStar2" transform="translate(239.907, 220.862)" />
+        <use href="#smallStar3" transform="translate(80.4019, 217.672)" />
+        <use href="#smallStar4" transform="translate(45.3109, 122.424)" />
+        <use href="#smallStar5" transform="translate(288.214, 116.5)" />
+        <use href="#smallStar1" transform="translate(250.642, 205.148)" />
+        <use href="#smallStar2" transform="translate(250.642, 205.148)" />
+        <use href="#smallStar3" transform="translate(91.137, 201.958)" />
+        <use href="#smallStar4" transform="translate(56.046, 106.71)" />
+        <use href="#smallStar5" transform="translate(298.95, 100.786)" />
+        <use href="#smallStar1" transform="translate(248.308, 243.577)" />
+        <use href="#smallStar2" transform="translate(270.892, 243.737)" />
+        <use href="#smallStar3" transform="translate(254.486, 258.33)" />
+        <use href="#smallStar4" transform="translate(88.8035, 240.387)" />
+        <use href="#smallStar5" transform="translate(53.7122, 145.139)" />
+        <use href="#smallStar1" transform="translate(296.616, 139.215)" />
+        <use href="#smallStar2" transform="translate(227.461, 250.423)" />
+        <use href="#smallStar3" transform="translate(67.9554, 247.232)" />
+        <use href="#smallStar4" transform="translate(32.8641, 151.985)" />
+        <use href="#smallStar5" transform="translate(275.768, 146.061)" />
+        <use href="#smallStar1" transform="translate(210.657, 227.396)" />
+        <use href="#smallStar2" transform="translate(51.1519, 224.206)" />
+        <use href="#smallStar3" transform="translate(196.152, 340.807)" />
+        <use href="#smallStar4" transform="translate(249.473, 297.057)" />
+        <use href="#smallStar5" transform="translate(48.0406, 263.102)" />
+        <use href="#smallStar1" transform="translate(15.6837, 205.911)" />
+        <use href="#smallStar2" transform="translate(266.791, 160.338)" />
+        <use href="#smallStar3" transform="translate(254, 172)" />
+        <use href="#smallStar4" transform="translate(87.3, 160.5)" />
+        <use href="#smallStar5" transform="translate(53.7122, 68.2808)" />
+
+        <use href="#mediumStar1" transform="translate(333, .5)" />
+        <use href="#mediumStar2" transform="translate(277.1, 13.5)" />
+        <use href="#mediumStar3" transform="translate(96, 38)" />
+        <use href="#mediumStar4" transform="translate(284.5, 45)" />
+        <use href="#mediumStar5" transform="translate(325, 61)" />
+        <use href="#mediumStar1" transform="translate(299, 81)" />
+        <use href="#mediumStar2" transform="translate(24, 95)" />
+        <use href="#mediumStar3" transform="translate(310, 118)" />
+        <use href="#mediumStar4" transform="translate(88.5, 141)" />
+        <use href="#mediumStar5" transform="translate(277, 165)" />
+        <use href="#mediumStar1" transform="translate(229.6, 170)" />
+        <use href="#mediumStar2" transform="translate(34, 180.3)" />
+        <use href="#mediumStar3" transform="translate(219, 194)" />
+        <use href="#mediumStar4" transform="translate(308, 204)" />
+        <use href="#mediumStar5" transform="translate(102, 220)" />
+        <use href="#mediumStar1" transform="translate(262, 222.5)" />
+        <use href="#mediumStar2" transform="translate(26.5, 230)" />
+        <use href="#mediumStar3" transform="translate(108, 242)" />
+        <use href="#mediumStar4" transform="translate(13, 255.5)" />
+        <use href="#mediumStar5" transform="translate(289, 262)" />
+        <use href="#mediumStar1" transform="translate(71, 267.5)" />
+        <use href="#mediumStar2" transform="translate(262, 280)" />
+        <use href="#mediumStar3" transform="translate(119, 292)" />
+        <use href="#mediumStar4" transform="translate(63, 298)" />
+        <use href="#mediumStar5" transform="translate(159, 305)" />
+
+        <use href="#largeStar1" transform="translate(109.1, 14)" />
+        <use href="#largeStar2" transform="translate(32, 275)" />
+        <use href="#largeStar3" transform="translate(308, 143)" />
+
+      </g>
+    </g>
+
+    <defs>
+      <circle id="basicStar1" cx="1.50497" cy="3.75921" r="1.16688" fill="white">
+        <animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite" />
+      </circle>
+      <circle id="basicStar2" cx="1.50497" cy="3.75921" r="1.16688" fill="white">
+        <animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" />
+      </circle>
+      <circle id="basicStar3" cx="1.50497" cy="3.75921" r="1.16688" fill="white">
+        <animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite" />
+      </circle>
+      <circle id="basicStar4" cx="1.50497" cy="3.75921" r="1.16688" fill="white">
+        <animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite" />
+      </circle>
+      <circle id="basicStar5" cx="1.50497" cy="3.75921" r="1.16688" fill="white">
+        <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite" />
+      </circle>
+
+      <path id="smallStar1" d="M1.55354 3.10986L1.13332 1.97424L-0.00229941 1.55403L1.13332 1.13381L1.55354 -0.0018114L1.97376 1.13381L3.10938 1.55403L1.97376 1.97424L1.55354 3.10986Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.1s" repeatCount="indefinite" />
+      </path>
+      <path id="smallStar2" d="M1.55354 3.10986L1.13332 1.97424L-0.00229941 1.55403L1.13332 1.13381L1.55354 -0.0018114L1.97376 1.13381L3.10938 1.55403L1.97376 1.97424L1.55354 3.10986Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite" />
+      </path>
+      <path id="smallStar3" d="M1.55354 3.10986L1.13332 1.97424L-0.00229941 1.55403L1.13332 1.13381L1.55354 -0.0018114L1.97376 1.13381L3.10938 1.55403L1.97376 1.97424L1.55354 3.10986Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite" />
+      </path>
+      <path id="smallStar4" d="M1.55354 3.10986L1.13332 1.97424L-0.00229941 1.55403L1.13332 1.13381L1.55354 -0.0018114L1.97376 1.13381L3.10938 1.55403L1.97376 1.97424L1.55354 3.10986Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.7s" repeatCount="indefinite" />
+      </path>
+      <path id="smallStar5" d="M1.55354 3.10986L1.13332 1.97424L-0.00229941 1.55403L1.13332 1.13381L1.55354 -0.0018114L1.97376 1.13381L3.10938 1.55403L1.97376 1.97424L1.55354 3.10986Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.9s" repeatCount="indefinite" />
+      </path>
+
+      <path id="mediumStar1" opacity="0.5" d="M2.7265 5.4502L1.99112 3.46286L0.00378823 2.72748L1.99112 1.9921L2.7265 0.00476432L3.46188 1.9921L5.44922 2.72748L3.46188 3.46286L2.7265 5.4502Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.15s" repeatCount="indefinite" />
+      </path>
+      <path id="mediumStar2" opacity="0.5" d="M2.7265 5.4502L1.99112 3.46286L0.00378823 2.72748L1.99112 1.9921L2.7265 0.00476432L3.46188 1.9921L5.44922 2.72748L3.46188 3.46286L2.7265 5.4502Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.35s" repeatCount="indefinite" />
+      </path>
+      <path id="mediumStar3" opacity="0.5" d="M2.7265 5.4502L1.99112 3.46286L0.00378823 2.72748L1.99112 1.9921L2.7265 0.00476432L3.46188 1.9921L5.44922 2.72748L3.46188 3.46286L2.7265 5.4502Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.55s" repeatCount="indefinite" />
+      </path>
+      <path id="mediumStar4" opacity="0.5" d="M2.7265 5.4502L1.99112 3.46286L0.00378823 2.72748L1.99112 1.9921L2.7265 0.00476432L3.46188 1.9921L5.44922 2.72748L3.46188 3.46286L2.7265 5.4502Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.75s" repeatCount="indefinite" />
+      </path>
+      <path id="mediumStar5" opacity="0.5" d="M2.7265 5.4502L1.99112 3.46286L0.00378823 2.72748L1.99112 1.9921L2.7265 0.00476432L3.46188 1.9921L5.44922 2.72748L3.46188 3.46286L2.7265 5.4502Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.95s" repeatCount="indefinite" />
+      </path>
+
+      <path id="largeStar1" d="M5.92513 11.8501L4.32498 7.52577L0.000650924 5.92562L4.32498 4.32547L5.92513 0.00114008L7.52528 4.32547L11.8496 5.92562L7.52528 7.52577L5.92513 11.8501Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.05s" repeatCount="indefinite" />
+      </path>
+      <path id="largeStar2" d="M5.92513 11.8501L4.32498 7.52577L0.000650924 5.92562L4.32498 4.32547L5.92513 0.00114008L7.52528 4.32547L11.8496 5.92562L7.52528 7.52577L5.92513 11.8501Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.25s" repeatCount="indefinite" />
+      </path>
+      <path id="largeStar3" d="M5.92513 11.8501L4.32498 7.52577L0.000650924 5.92562L4.32498 4.32547L5.92513 0.00114008L7.52528 4.32547L11.8496 5.92562L7.52528 7.52577L5.92513 11.8501Z" fill="#FFF7B0">
+        <animate attributeName="opacity" values="1;0;1" dur="2.45s" repeatCount="indefinite" />
+      </path>
+
+      <filter id="filter0_f_1285_67308" x="-1.74284" y="-1.77799" width="353.646" height="353.646" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="0.911458" result="effect1_foregroundBlur_1285_67308"/>
+      </filter>
+      <filter id="filter1_f_1285_67308" x="-98.2702" y="267.838" width="550.007" height="194.694" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="2.27865" result="effect1_foregroundBlur_1285_67308"/>
+      </filter>
+      <filter id="filter2_f_1285_67308" x="-103.46" y="-208.456" width="555.71" height="683.015" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+        <feGaussianBlur stdDeviation="2.27865" result="effect1_foregroundBlur_1285_67308"/>
+      </filter>
+      <radialGradient id="paint0_radial_1285_67308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(270.447 106.491) rotate(99.1226) scale(61.1193 174.192)">
+        <stop stop-color="white" stop-opacity="0.75"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="paint1_radial_1285_67308" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(174.396 182.812) rotate(92.5586) scale(219.36 178.105)">
+        <stop stop-color="white" stop-opacity="0.75"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+      </radialGradient>
+      <clipPath id="clip0_1285_67308">
+        <rect width="350" height="350" fill="white"/>
+      </clipPath>
+    </defs>
+  
+    
+    
+  <!-- Lavalien -->
+  <g filter="url(#filter0_d_584_56451)">
+  <path d="M131 154.49C132.151 149.477 130.801 146.279 128.888 145.373C125.474 143.755 122.561 149.427 122.023 153.568C121.484 157.71 122.147 160.537 123.962 161.39C125.778 162.244 129.848 159.504 131 154.49Z" fill="#6DF244"/>
+  <path d="M100.214 190.945C99.0036 189.835 98.0955 188.541 97.4809 187.155L81.7407 187.434L81.6152 180.363L96.7623 180.094C97.3946 177.146 99.1846 174.424 102.055 172.698L106.119 170.254C108.853 168.61 111.939 168.254 114.744 168.945L121.804 156.199L127.99 159.626L120.766 172.669C121.714 173.789 122.464 175.119 122.939 176.629L127.604 197.103L124.414 212.37L100.214 190.945Z" fill="url(#paint0_radial_584_56451)"/>
+  <path d="M75.7939 187.683C70.8262 186.35 68.6346 183.658 68.7311 181.543C68.9033 177.769 75.279 177.856 79.1891 179.323C83.0992 180.789 85.2854 182.7 85.1881 184.704C85.0908 186.707 80.7617 189.017 75.7939 187.683Z" fill="#6DF244"/>
+  <path d="M62.564 151.617C60.244 144.392 59.9498 118.89 68.6994 113.629C77.449 108.369 99.0653 121.05 104.936 126.14C110.806 131.231 117.27 136.313 117.037 147.628C116.743 161.869 108.128 171.872 104.793 173.877C101.458 175.882 88.5832 178.8 75.8678 172.381C65.7642 167.281 64.884 158.842 62.564 151.617Z" fill="#6DF244"/>
+  <path d="M62.564 151.617C60.244 144.392 59.9498 118.89 68.6994 113.629C77.449 108.369 99.0653 121.05 104.936 126.14C110.806 131.231 117.27 136.313 117.037 147.628C116.743 161.869 108.128 171.872 104.793 173.877C101.458 175.882 88.5832 178.8 75.8678 172.381C65.7642 167.281 64.884 158.842 62.564 151.617Z" fill="url(#paint1_linear_584_56451)" fill-opacity="0.8"/>
+  <path d="M76.5187 168.942C69.103 164.997 66.6376 159.91 67.6021 156.579C69.3232 150.637 79.4633 153.115 85.1405 156.882C90.8178 160.65 93.5737 164.494 92.6506 167.646C91.7275 170.798 83.9343 172.887 76.5187 168.942Z" stroke="url(#paint2_linear_584_56451)" stroke-width="0.880654"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M103.541 171.793C104.87 171.142 106.677 168.883 105.707 163.641L100.131 166.994L100.131 166.994L95.3233 169.884C99.5005 173.2 102.343 172.663 103.541 171.793Z" fill="#57BF37"/>
+  <path d="M113.135 146.387C113.192 138.874 110.215 134.818 107.158 134.208C101.703 133.121 99.3098 142.19 99.8591 148.251C100.408 154.311 102.274 158.084 105.172 158.653C108.07 159.222 113.077 153.9 113.135 146.387Z" fill="#070707" stroke="#070707" stroke-width="0.220163"/>
+  <path d="M113.47 146.726C113.506 138.3 110.164 133.74 106.745 133.045C100.644 131.806 98.0034 141.968 98.6396 148.767C99.2758 155.565 101.374 159.804 104.615 160.453C107.857 161.101 113.433 155.151 113.47 146.726Z" stroke="url(#paint3_linear_584_56451)" stroke-width="0.880654"/>
+  <path d="M113.853 146.494C113.89 138.069 110.548 133.508 107.129 132.814C101.028 131.575 98.3872 141.737 99.0234 148.535C99.6595 155.334 101.758 159.573 104.999 160.221C108.241 160.87 113.817 154.92 113.853 146.494Z" stroke="url(#paint4_linear_584_56451)" stroke-width="0.880654"/>
+  <path d="M108.909 137.161C107.645 135.824 106.436 135.631 105.799 136.062C104.662 136.829 105.781 138.852 106.905 139.826C108.029 140.799 108.995 141.138 109.598 140.728C110.2 140.319 110.173 138.498 108.909 137.161Z" fill="url(#paint5_radial_584_56451)"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M98.7909 163.896C98.13 164.19 96.7259 165.199 96.3969 166.881L99.4737 165.031L102.55 163.181C100.91 162.683 99.3607 163.45 98.7909 163.896Z" fill="#57BF37"/>
+  <path d="M76.7609 168.257C70.1415 164.759 67.9499 160.23 68.8201 157.259C70.3729 151.959 79.4311 154.142 84.497 157.487C89.5629 160.832 92.0172 164.251 91.1845 167.063C90.3517 169.875 83.3804 171.755 76.7609 168.257Z" fill="#070707" stroke="#070707" stroke-width="0.220163"/>
+  <path d="M70.4977 160.255C69.9097 158.512 70.3062 157.354 70.9852 156.993C72.1968 156.349 73.4581 158.286 73.7911 159.735C74.124 161.184 73.9699 162.196 73.3254 162.537C72.681 162.877 71.0858 161.998 70.4977 160.255Z" fill="url(#paint6_radial_584_56451)"/>
+  <path d="M76.5187 168.942C69.103 164.997 66.6376 159.91 67.6021 156.579C69.3232 150.637 79.4633 153.115 85.1405 156.882C90.8178 160.65 93.5737 164.494 92.6506 167.646C91.7275 170.798 83.9343 172.887 76.5187 168.942Z" stroke="url(#paint7_linear_584_56451)" stroke-width="0.880654"/>
+  <rect width="4.0506" height="27.9009" transform="matrix(0.99987 -0.0160966 0.0193936 0.999812 87.3584 106.92)" fill="#6DF244"/>
+  <path d="M95.2877 103.653C95.2926 97.7492 92.9482 94.5458 90.5599 94.0507C86.2983 93.1675 84.4797 100.281 84.9405 105.046C85.4013 109.811 86.8765 112.787 89.1407 113.249C91.4049 113.711 95.2829 109.556 95.2877 103.653Z" fill="#57BF37"/>
+  <rect width="4.05059" height="27.9009" transform="matrix(-0.483106 0.875562 0.873962 0.485994 53.9736 126.993)" fill="#6DF244"/>
+  <path d="M47.3691 132.466C42.1528 129.701 40.4229 126.129 41.1057 123.787C42.324 119.609 49.4598 121.339 53.4524 123.98C57.445 126.622 59.3809 129.32 58.7275 131.537C58.0741 133.753 52.5853 135.23 47.3691 132.466Z" fill="#57BF37"/>
+  <g filter="url(#filter1_d_584_56451)">
+  <circle cx="110.523" cy="181.467" r="4.33642" transform="rotate(-6.77196 110.523 181.467)" fill="url(#paint8_radial_584_56451)" stroke="#56CCF2" stroke-width="0.47927"/>
+  <g filter="url(#filter2_d_584_56451)">
+  <path d="M114.083 179.006C117.013 178.182 118.278 177.96 118.426 178.383C118.637 178.985 115.662 181.231 110.761 182.947C105.86 184.664 102.543 185.004 102.332 184.402C102.182 183.973 103.246 182.992 106.119 181.786" stroke="#6DF244" stroke-width="0.684672"/>
+  </g>
+  </g>
+  </g>
+  <defs>
+  <filter id="filter0_d_584_56451" x="38.2295" y="93.5201" width="95.9297" height="123.863" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+  <feOffset dy="2.27865"/>
+  <feGaussianBlur stdDeviation="1.36719"/>
+  <feComposite in2="hardAlpha" operator="out"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584_56451"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584_56451" result="shape"/>
+  </filter>
+  <filter id="filter1_d_584_56451" x="101.702" y="176.891" width="17.3514" height="9.70081" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+  <feOffset dy="0.273869"/>
+  <feGaussianBlur stdDeviation="0.136934"/>
+  <feComposite in2="hardAlpha" operator="out"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584_56451"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584_56451" result="shape"/>
+  </filter>
+  <filter id="filter2_d_584_56451" x="101.086" y="176.941" width="18.5839" height="8.96911" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+  <feOffset/>
+  <feGaussianBlur stdDeviation="0.445037"/>
+  <feComposite in2="hardAlpha" operator="out"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584_56451"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584_56451" result="shape"/>
+  </filter>
+  <radialGradient id="paint0_radial_584_56451" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(105.858 176.821) rotate(61.8214) scale(36.1903 30.5505)">
+  <stop offset="0.552083" stop-color="white"/>
+  <stop offset="1" stop-color="#CCD0C9"/>
+  </radialGradient>
+  <linearGradient id="paint1_linear_584_56451" x1="99.1276" y1="164.455" x2="67.1981" y2="113.092" gradientUnits="userSpaceOnUse">
+  <stop offset="0.527397" stop-color="#6DF244"/>
+  <stop offset="1" stop-color="#388E1D"/>
+  </linearGradient>
+  <linearGradient id="paint2_linear_584_56451" x1="73.5638" y1="151.548" x2="86.1667" y2="172.509" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#6CB835"/>
+  <stop offset="0.40625" stop-color="#6CB835" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="paint3_linear_584_56451" x1="99.4289" y1="135.998" x2="112.032" y2="156.958" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#6CB835"/>
+  <stop offset="0.40625" stop-color="#6CB835" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="paint4_linear_584_56451" x1="99.8127" y1="135.766" x2="112.416" y2="156.727" gradientUnits="userSpaceOnUse">
+  <stop offset="0.541667" stop-color="#6CB835" stop-opacity="0"/>
+  <stop offset="1" stop-color="#6CB835"/>
+  </linearGradient>
+  <radialGradient id="paint5_radial_584_56451" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(107.665 138.344) rotate(48.0079) scale(2.79886 2.28334)">
+  <stop stop-color="white" stop-opacity="0.75"/>
+  <stop offset="1" stop-color="white" stop-opacity="0"/>
+  <stop offset="1" stop-color="white"/>
+  </radialGradient>
+  <radialGradient id="paint6_radial_584_56451" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(72.126 159.712) rotate(69.9583) scale(2.79886 2.28334)">
+  <stop stop-color="white" stop-opacity="0.75"/>
+  <stop offset="1" stop-color="white" stop-opacity="0"/>
+  <stop offset="1" stop-color="white"/>
+  </radialGradient>
+  <linearGradient id="paint7_linear_584_56451" x1="73.5638" y1="151.548" x2="86.1667" y2="172.509" gradientUnits="userSpaceOnUse">
+  <stop offset="0.671875" stop-color="#6CB835" stop-opacity="0"/>
+  <stop offset="1" stop-color="#6CB835"/>
+  </linearGradient>
+  <radialGradient id="paint8_radial_584_56451" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(107.916 179.031) rotate(49.243) scale(7.35423 6.44312)">
+  <stop offset="0.3125" stop-color="#321A93"/>
+  <stop offset="1" stop-color="#3603FF"/>
+  <stop offset="1" stop-color="#3603FF"/>
+  </radialGradient>
+  </defs>
+  
+    
+  <!-- Glowing Glass -->
+    <g filter="url(#filter0_f_953_137978)">
+    <path d="M148.717 95L125.019 209.98C124.948 210.324 125.078 210.673 125.367 210.873C128.479 213.027 147.033 225 175 225C202.967 225 221.521 213.027 224.633 210.873C224.922 210.673 225.052 210.324 224.981 209.98L201.283 95C201.249 95.0666 201.205 95.1285 201.15 95.1836C199.818 96.5241 193.18 102.106 175 102.106C156.82 102.106 150.182 96.5241 148.85 95.1836C148.795 95.1285 148.751 95.0666 148.717 95Z" fill="#FFFA8D" fill-opacity="0.6"/>
+    </g>
+    <defs>
+    <filter id="filter0_f_953_137978" x="-4" y="-4" width="358" height="358" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+    <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_953_137978"/>
+    </filter>
+    </defs>
+  
+    
+    
+    <!-- Lava 1 -->
+    <!-- Color -->
+    <!-- filter -->
+    <path d="M201.33 94.2312L205.4 114.032C203.808 113.761 202.153 113.448 200.459 113.128C186.293 110.453 169.479 107.277 165.223 123.731C163.365 130.915 166.057 135.213 168.676 139.394C171.205 143.431 173.665 147.359 171.9 153.669C169.751 161.35 158.067 166.325 148.671 162.995C138.746 159.477 139.443 144.904 145.148 137.85C150.853 130.795 151.677 120.031 150.853 112.871C150.454 109.41 148.742 106.935 146.502 105.251L148.841 93.8809C148.875 93.9478 148.92 94.0101 148.975 94.0656C150.853 95.9589 156.979 101.03 175.237 101.03C192.824 101.03 199.656 95.8196 201.33 94.2312Z" fill="url(#paint0_radial_931_113783)"/>
+    <mask id="mask0_931_113783" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="141" y="93" width="65" height="72">
+    <path d="M201.33 94.2302L205.4 114.031C203.808 113.76 202.153 113.447 200.459 113.127C186.293 110.452 169.479 107.276 165.223 123.73C163.365 130.914 166.057 135.212 168.676 139.393C171.205 143.43 173.665 147.358 171.9 153.668C169.751 161.349 158.067 166.324 148.671 162.994C138.746 159.476 139.443 144.903 145.148 137.849C150.853 130.794 151.677 120.03 150.853 112.87C150.454 109.409 148.742 106.934 146.502 105.25L148.841 93.8799C148.875 93.9469 148.92 94.0092 148.975 94.0646C150.313 95.4133 156.979 101.029 175.237 101.029C192.824 101.029 199.656 95.8187 201.33 94.2302Z" fill="url(#paint1_radial_931_113783)"/>
+    </mask>
+    <g mask="url(#mask0_931_113783)">
+    <g filter="url(#filter0_f_931_113783)">
+    <mask id="mask1_931_113783" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="125" y="94" width="101" height="132">
+    <path d="M149.015 95.0639C149.102 94.6401 149.475 94.3359 149.907 94.3359H200.399C200.831 94.3359 201.205 94.6401 201.292 95.0639L225.146 211.159C225.227 211.555 225.041 211.955 224.68 212.137C220.777 214.109 198.528 224.817 175.153 225.128C151.731 225.438 129.441 214.178 125.603 212.141C125.253 211.954 125.077 211.562 125.157 211.173L149.015 95.0639Z" fill="#577096" fill-opacity="0.75"/>
+    </mask>
+    <g mask="url(#mask1_931_113783)">
+    <g filter="url(#filter1_f_931_113783)">
+    <path d="M207.362 76.1064C211.019 110.268 146.094 132.571 113.174 139.453L113.174 76.1064L207.362 76.1064Z" fill="url(#paint2_linear_931_113783)" fill-opacity="0.5"/>
+    </g>
+    <g filter="url(#filter2_f_931_113783)">
+    <path d="M155.56 125.301C156.622 105.018 134.624 86.1828 129.082 66.9985C133.541 65.1973 144.203 70.7896 152.828 76.1247C163.609 82.7936 163.032 109.124 164.778 125.784C166.175 139.112 148.606 223.401 144.168 241.481L131.869 240.837C140.395 214.68 154.74 140.955 155.56 125.301Z" fill="url(#paint3_linear_931_113783)" fill-opacity="0.6"/>
+    </g>
+    </g>
+    </g>
+    </g>
+    <defs>
+    <filter id="filter0_f_931_113783" x="122.744" y="92.0573" width="104.986" height="135.355" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+    <feGaussianBlur stdDeviation="1.13932" result="effect1_foregroundBlur_931_113783"/>
+    </filter>
+    <filter id="filter1_f_931_113783" x="112.262" y="75.195" width="96.1589" height="65.1696" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+    <feGaussianBlur stdDeviation="0.455729" result="effect1_foregroundBlur_931_113783"/>
+    </filter>
+    <filter id="filter2_f_931_113783" x="128.17" y="65.7428" width="37.5978" height="176.65" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+    <feGaussianBlur stdDeviation="0.455729" result="effect1_foregroundBlur_931_113783"/>
+    </filter>
+    <radialGradient id="paint0_radial_931_113783" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(156.087 109.102) rotate(53.0717) scale(37.8406 40.3077)">
+    <stop offset="0.203125" style="stop-color: #321A93;"/>
+    <stop offset="0.890625" style="stop-color: #3603FF;"/>
+    </radialGradient>
+    <radialGradient id="paint1_radial_931_113783" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(156.087 109.101) rotate(53.0717) scale(37.8406 40.3077)">
+    <stop offset="0.203125" stop-color="#71FF30"/>
+    <stop offset="0.890625" stop-color="#25BC46"/>
+    </radialGradient>
+    <linearGradient id="paint2_linear_931_113783" x1="145.368" y1="123.01" x2="155.982" y2="72.2914" gradientUnits="userSpaceOnUse">
+    <stop stop-color="white" stop-opacity="0"/>
+    <stop offset="0.471361" stop-color="white"/>
+    <stop offset="1" stop-color="white"/>
+    </linearGradient>
+    <linearGradient id="paint3_linear_931_113783" x1="160.882" y1="220.938" x2="202.107" y2="178" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#F2F2F2"/>
+    <stop offset="0.0001" stop-color="#F2F2F2"/>
+    <stop offset="0.0520833" stop-color="#F2F2F2" stop-opacity="0.948011"/>
+    <stop offset="1" stop-color="#F2F2F2" stop-opacity="0"/>
+    </linearGradient>
+    </defs>
+  
+    
+  <!-- Lava 2 -->
+    <!-- Color -->
+<path d="M178.202 131.059C178.202 128.163 180.222 122.394 188.299 122.479C196.377 122.565 198.468 128.235 198.504 131.059C198.576 133.132 197.365 137.622 191.952 138.995C185.184 140.711 178.202 136.85 178.202 131.059Z" fill="url(#paint0_radial_931_113845)"/>
+<defs>
+<radialGradient id="paint0_radial_931_113845" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(182.959 126.151) rotate(45.5119) scale(10.2292 11.3416)">
+<stop offset="0.203125" style="stop-color: #71FF30;"/>
+<stop offset="0.890625" style="stop-color: #25BC46;"/>
+</radialGradient>
+</defs>
+  
+    
+  <!-- Lava 3 -->
+    <!-- Color -->
+    <path d="M214.381 157.604L219.2 181.084C217.285 183.349 214.448 185.339 210.334 186.382C197.471 189.642 184.2 182.306 184.2 171.303C184.2 165.801 188.039 154.839 203.392 155.002C208.021 155.051 211.616 156.065 214.381 157.604Z" fill="url(#paint0_radial_931_113862)"/>
+<defs>
+<radialGradient id="paint0_radial_931_113862" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(192.4 161.977) rotate(48.2936) scale(18.5718 20.4588)">
+<stop offset="0.203125" style="stop-color: #21F6EA;"/>
+<stop offset="0.890625" style="stop-color: #2183F6;"/>
+</radialGradient>
+</defs>
+  
+    
+  <!-- Lava 4 -->
+    <!-- Color -->
+    <path d="M225 210.659C220.5 214 200.704 225 175.402 225C147.201 225 128.492 213.024 125.354 210.869C125.163 210.738 125.042 210.543 125 210.328C128.968 198.996 144.393 175.959 164.496 181.99C174.451 184.976 181.421 192.474 187.975 199.525C198.127 210.446 208 213.5 225 210.659C224.675 211.045 225.345 210.27 225 210.659Z" fill="url(#paint0_radial_931_113863)"/>
+<mask id="mask0_931_113863" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="124" y="180" width="101" height="45">
+<path d="M223.866 211.799C218.236 215.343 200.575 225 175.272 225C147.071 225 128.362 213.003 125.225 210.845C125.034 210.714 124.912 210.519 124.87 210.303C128.839 198.951 144.263 175.875 164.366 181.916C174.321 184.908 181.291 192.418 187.845 199.481C197.997 210.421 207.154 220.288 224.87 210.635C224.545 211.021 224.21 211.409 223.866 211.799Z" fill="url(#paint1_radial_931_113863)"/>
+</mask>
+<g mask="url(#mask0_931_113863)">
+<g filter="url(#filter0_f_931_113863)">
+<mask id="mask1_931_113863" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="124" y="94" width="102" height="132">
+<path d="M148.862 95.3198C148.949 94.896 149.322 94.5918 149.755 94.5918H200.246C200.679 94.5918 201.052 94.896 201.139 95.3198L224.993 211.414C225.075 211.811 224.888 212.211 224.527 212.393C220.624 214.365 198.376 225.073 175 225.383C151.578 225.694 129.288 214.434 125.45 212.396C125.1 212.21 124.924 211.818 125.004 211.429L148.862 95.3198Z" fill="#577096" fill-opacity="0.75"/>
+</mask>
+<g mask="url(#mask1_931_113863)">
+<g filter="url(#filter1_f_931_113863)">
+<path d="M155.407 125.557C156.47 105.273 134.471 86.4386 128.929 67.2543C133.388 65.4531 144.05 71.0455 152.675 76.3806C163.456 83.0494 162.879 109.38 164.625 126.04C166.022 139.368 148.453 223.657 144.015 241.737L131.716 241.093C140.242 214.936 154.587 141.211 155.407 125.557Z" fill="url(#paint2_linear_931_113863)" fill-opacity="0.6"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_931_113863" x="122.591" y="92.3132" width="105.59" height="135.355" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1.13932" result="effect1_foregroundBlur_931_113863"/>
+</filter>
+<filter id="filter1_f_931_113863" x="128.017" y="65.9987" width="37.5983" height="176.65" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.455729" result="effect1_foregroundBlur_931_113863"/>
+</filter>
+<radialGradient id="paint0_radial_931_113863" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(148.451 190.545) rotate(28.2255) scale(40.1081 37.0676)">
+<stop offset="0.203125" style="stop-color: #FABE09;"/>
+<stop offset="0.890625" style="stop-color: #FDF21B;"/>
+</radialGradient>
+<radialGradient id="paint1_radial_931_113863" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(146.382 191.229) rotate(27.0849) scale(58.9221 42.3164)">
+<stop offset="0.302083" stop-color="#FFB800"/>
+<stop offset="1" stop-color="#FF7800"/>
+</radialGradient>
+<linearGradient id="paint2_linear_931_113863" x1="160.729" y1="221.194" x2="201.954" y2="178.256" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F2F2F2"/>
+<stop offset="0.0001" stop-color="#F2F2F2"/>
+<stop offset="0.0520833" stop-color="#F2F2F2" stop-opacity="0.948011"/>
+<stop offset="1" stop-color="#F2F2F2" stop-opacity="0"/>
+</linearGradient>
+</defs>
+  
+  
+    
+  <!-- OG Rocket -->
+  <g filter="url(#filter0_d_737_226354)">
+  <path d="M147.435 221.638C147.227 220.753 145.978 220.679 145.655 221.529C135.558 248.092 116.921 274.657 115.808 335.23C115.789 336.267 117.242 336.499 117.578 335.518C131.89 293.713 145.73 277.771 159.921 280.904C160.612 281.057 161.267 280.448 161.105 279.759L147.435 221.638Z" fill="#333333"/>
+  <path d="M147.435 221.638C147.227 220.753 145.978 220.679 145.655 221.529C135.558 248.092 116.921 274.657 115.808 335.23C115.789 336.267 117.242 336.499 117.578 335.518C131.89 293.713 145.73 277.771 159.921 280.904C160.612 281.057 161.267 280.448 161.105 279.759L147.435 221.638Z" fill="url(#paint0_linear_737_226354)"/>
+  <path d="M202.566 221.638C202.774 220.753 204.023 220.679 204.346 221.529C214.443 248.092 233.08 274.657 234.193 335.23C234.212 336.267 232.759 336.499 232.423 335.518C218.111 293.713 204.271 277.771 190.08 280.904C189.389 281.057 188.734 280.448 188.896 279.759L202.566 221.638Z" fill="#333333"/>
+  <path d="M202.566 221.638C202.774 220.753 204.023 220.679 204.346 221.529C214.443 248.092 233.08 274.657 234.193 335.23C234.212 336.267 232.759 336.499 232.423 335.518C218.111 293.713 204.271 277.771 190.08 280.904C189.389 281.057 188.734 280.448 188.896 279.759L202.566 221.638Z" fill="url(#paint1_linear_737_226354)"/>
+  <path d="M125.85 211.156C125.102 210.748 124.173 211.486 124.422 212.301L137.224 254.133C137.229 254.148 137.227 254.145 137.233 254.16C137.416 254.659 153.267 297.588 175.001 297.588C196.734 297.588 212.585 254.659 212.769 254.16C212.774 254.145 212.773 254.148 212.777 254.133L225.58 212.301C225.829 211.486 224.9 210.748 224.152 211.156C218.252 214.373 200.597 222.642 175.001 222.642C149.405 222.642 131.749 214.373 125.85 211.156Z" fill="#333333"/>
+  <path d="M125.85 211.156C125.102 210.748 124.173 211.486 124.422 212.301L137.224 254.133C137.229 254.148 137.227 254.145 137.233 254.16C137.416 254.659 153.267 297.588 175.001 297.588C196.734 297.588 212.585 254.659 212.769 254.16C212.774 254.145 212.773 254.148 212.777 254.133L225.58 212.301C225.829 211.486 224.9 210.748 224.152 211.156C218.252 214.373 200.597 222.642 175.001 222.642C149.405 222.642 131.749 214.373 125.85 211.156Z" fill="url(#paint2_linear_737_226354)"/>
+  <path d="M175.001 223.322C175.001 222.373 176.245 222.069 176.665 222.919C189.647 249.186 192.092 279.874 192.252 338.861C192.255 339.924 190.945 340.088 190.745 339.044C187.346 321.3 188.497 303.068 175.217 287.116C175.08 286.951 175.001 286.74 175.001 286.525V223.322Z" fill="#333333"/>
+  <path d="M175.001 223.322C175.001 222.373 176.245 222.069 176.665 222.919C189.647 249.186 192.092 279.874 192.252 338.861C192.255 339.924 190.945 340.088 190.745 339.044C187.346 321.3 188.497 303.068 175.217 287.116C175.08 286.951 175.001 286.74 175.001 286.525V223.322Z" fill="url(#paint3_linear_737_226354)"/>
+  </g>
+  <path d="M155.659 62.5833C159.113 49.6057 161.899 33 174.786 33C187.672 33 192.187 53.5604 194.342 62.8997C196.329 71.5042 200.674 91.406 201.345 94.4841C201.403 94.7486 201.336 95.01 201.146 95.2035C199.763 96.6152 193.095 102.271 175.001 102.271C156.851 102.271 150.198 96.5809 148.843 95.1908C148.66 95.0034 148.594 94.7507 148.643 94.4937C149.178 91.6869 152.494 74.4714 155.659 62.5833Z" fill="#333333"/>
+  <path d="M155.659 62.5833C159.113 49.6057 161.899 33 174.786 33C187.672 33 192.187 53.5604 194.342 62.8997C196.329 71.5042 200.674 91.406 201.345 94.4841C201.403 94.7486 201.336 95.01 201.146 95.2035C199.763 96.6152 193.095 102.271 175.001 102.271C156.851 102.271 150.198 96.5809 148.843 95.1908C148.66 95.0034 148.594 94.7507 148.643 94.4937C149.178 91.6869 152.494 74.4714 155.659 62.5833Z" fill="url(#paint4_linear_737_226354)"/>
+  <defs>
+  <filter id="filter0_d_737_226354" x="113.529" y="211.04" width="123.854" height="134.176" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+  <feOffset dx="0.455729" dy="2.73438"/>
+  <feGaussianBlur stdDeviation="1.36719"/>
+  <feComposite in2="hardAlpha" operator="out"/>
+  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226354"/>
+  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226354" result="shape"/>
+  </filter>
+  <linearGradient id="paint0_linear_737_226354" x1="118.472" y1="229.255" x2="194.298" y2="255.219" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#ECECEC" stop-opacity="0.71"/>
+  <stop offset="1" stop-color="#C3C3C3" stop-opacity="0.15"/>
+  </linearGradient>
+  <linearGradient id="paint1_linear_737_226354" x1="231.529" y1="229.255" x2="155.703" y2="255.219" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#ECECEC" stop-opacity="0.71"/>
+  <stop offset="1" stop-color="#C3C3C3" stop-opacity="0.15"/>
+  </linearGradient>
+  <linearGradient id="paint2_linear_737_226354" x1="129.783" y1="223.106" x2="227.712" y2="318.154" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#ECECEC" stop-opacity="0.71"/>
+  <stop offset="1" stop-color="#C3C3C3" stop-opacity="0.15"/>
+  </linearGradient>
+  <linearGradient id="paint3_linear_737_226354" x1="194.134" y1="235.551" x2="94.794" y2="286.802" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#ECECEC" stop-opacity="0.71"/>
+  <stop offset="1" stop-color="#C3C3C3" stop-opacity="0.15"/>
+  </linearGradient>
+  <linearGradient id="paint4_linear_737_226354" x1="151.709" y1="57.2158" x2="203.083" y2="106.139" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#ECECEC" stop-opacity="0.71"/>
+  <stop offset="1" stop-color="#C3C3C3" stop-opacity="0.15"/>
+  </linearGradient>
+  </defs>
+  
+    
+    </svg>
+  
