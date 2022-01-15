@@ -12,7 +12,7 @@ const {
   rarityMetadata,
   overlayMetadata,
   swagMetadata,
-} = require('./Traits');
+} = require('./GenerateTraits');
 
 function generateNameMetadata({
   attribute,

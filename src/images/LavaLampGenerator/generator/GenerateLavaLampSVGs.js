@@ -1,7 +1,3 @@
-const fs = require('fs');
-const {
-  BuyMoreLavaLamps,
-} = require('./layers/buyMoreLavaLamps');
 const {
   Halo,
   LavaKitty,
@@ -107,23 +103,13 @@ const {
   rarities,
   overlays,
   swagger,
-} = require('./Traits');
-
-const myArgs = process.argv.slice(2);
-const assetDir = __dirname + '/generatedLamps/assets/';
-const lamps7979 = __dirname + '/generatedLamps/lamps7979/';
-const blackLamps7979 = __dirname + '/generatedLamps/blackLamps7979/';
-const nLamps = __dirname + '/generatedLamps/nLamps/';
-let blackLavaActive = false;
+} = require('./GenerateTraits');
+const {
+  generateRandomNumber,
+} = require('../utils');
 
 const openTag = '<svg width="350" height="350" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">';
 const closeTag = '</svg>';
-
-function generateRandomNumber({n}) {
-  const rand = Math.floor(Math.random() * n);
-
-  return rand;
-};
 
 function generateAttributeSVG({index}) {
   let attribute = '';
@@ -392,21 +378,6 @@ function generateGlassSVG({index, glassColor}) {
 }
 
 function generateLavasSVG({lava1, lava2, lava3, lava4}) {
-  if (blackLavaActive) {
-    const black = {color1: 'none', color2: 'none'}
-    let l1 = lava1 === 0 ? black : lavaColors[lava1];
-    let l2 = lava2 === 0 ? black : lavaColors[lava2];
-    let l3 = lava3 === 0 ? black : lavaColors[lava3];
-    let l4 = lava4 === 0 ? black : lavaColors[lava4];
-
-    return Lavas({
-      lava1: l1,
-      lava2: l2,
-      lava3: l3,
-      lava4: l4,
-    });
-  }
-
   return Lavas({
     lava1: lavaColors[lava1],
     lava2: lavaColors[lava2],
@@ -633,8 +604,6 @@ function generateAssets() {
     `);
   }
 
-  saveNLavaLamps({lavaLamps: assets, dir: assetDir})
-
   return assets;
 }
 
@@ -655,21 +624,17 @@ function generateRandomLavaLamp() {
   });
 }
 
-function generateNRandomLavaLamps({n, save}) {
+function generateNRandomLavaLamps({n}) {
   const lavaLamps = [];
 
   for (let i = 0; i < n; i++) {
     lavaLamps.push(generateRandomLavaLamp());
   }
 
-  if (save) {
-    saveNLavaLamps({lavaLamps, dir: nLamps})
-  }
-
   return lavaLamps;
 }
 
-function generate7979LavaLamps({save}) {
+function generate7979LavaLamps() {
   const lavaLamps = [];
   let lavaIndex;
   let lava1;
@@ -706,47 +671,13 @@ function generate7979LavaLamps({save}) {
     );
   }
 
-  if (save) {
-    if (blackLavaActive) {
-      saveNLavaLamps({lavaLamps, dir: blackLamps7979});
-    } else {
-      saveNLavaLamps({lavaLamps, dir: lamps7979});
-    }
-  }
-
   return lavaLamps;
 }
 
-function saveLavaLamp({lavaLamp, id, dir}) {
-  const filePath = dir + 'lamp_' + id + '.svg';
-
-  // writeFile function with filename, content and callback function
-  fs.writeFile(filePath, lavaLamp, function (err) {
-    if (err) throw err;
-  });
-}
-
-function saveNLavaLamps({lavaLamps, dir}) {
-  // Check if files exist
-  if (!fs.existsSync(dir)){
-      fs.mkdirSync(dir);
-  }
-
-  // save all lamps
-  lavaLamps.forEach((lavaLamp, id) => {
-    saveLavaLamp({lavaLamp, id, dir});
-  });
-}
-
-if (myArgs[0] === 'generate some random bullshit') {
-  generateAssets();
-  //generateNRandomLavaLamps({n: 10, save: true});
-  generate7979LavaLamps({save: true});
-}
-
 module.exports = {
+  generateAssets,
+  generate7979LavaLamps,
   generateLavaLamp,
   generateRandomLavaLamp,
   generateNRandomLavaLamps,
-  BuyMoreLavaLamps,
 };

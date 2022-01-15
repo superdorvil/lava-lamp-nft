@@ -3,7 +3,9 @@
 # dependencies
 /node_modules
 /.pnp
+# /src/images/LavaLampGenerator
 /src/images/LavaLampGenerator/generatedLamps
+/src/images/LavaLampGenerator/ipfs
 .pnp.js
 .env
 /helperScripts.js
