@@ -22,8 +22,8 @@ require('dotenv').config()
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
-const mnemonic = process.env.MNEMONIC
-const clientURL = process.env.ETH_CLIENT_URL
+const mnemonic = process.env.RINK_MNEMONIC
+const clientURL = process.env.RINK_ETH_CLIENT_URL
 
 module.exports = {
   /**
@@ -70,7 +70,7 @@ module.exports = {
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       //settings: {          // See the solidity docs for advice about optimization and evmVersion
         optimizer: {
-          enabled: false,
+          enabled: true,
           runs: 200
         },
         //  evmVersion: "byzantium"
