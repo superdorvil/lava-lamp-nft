@@ -75,7 +75,6 @@ const {
   Bitcoin,
   Ethereum,
   LavaCeption,
-  Leaves,
   Peace,
   Smoke,
   Swirl,

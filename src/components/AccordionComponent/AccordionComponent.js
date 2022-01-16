@@ -1,74 +1,55 @@
-import React from 'react';
-import {
-  Container,
-  ItemContainer,
-  Trigger,
-  Description,
-  OpenIcon,
-  Divider,
-} from './Elements';
+import React, { useState } from 'react';
 import Icon from '../Icon';
 import {ICONS} from '../../constants';
-import Collapsible from 'react-collapsible';
-// { useState }
-// triggerStates[i].true ? ICONS.PLUS : ICONS.MINUS
+import {
+  Container,
+  OpenIcon,
+  Trigger,
+  ItemContainer,
+  Description,
+  Divider,
+} from './Elements';
 
-function AccordionComponent({triggers, descriptions}) {
-  const length = triggers.length;
-  const accordion = [];
-  /*let initialTriggerState = [];
-  for (let i = 0; i < length; i++) {
-    initialTriggerState.push(false);
-  }
+const AccordionComponent = ({data}) => {
+  const [clicked, setClicked] = useState(false);
 
-  const [triggerStates, setTriggers] = useState(initialTriggerState);
-  const openTrigger = ({index}) => {
-    let newTriggerStates = initialTriggerState;
-    newTriggerStates[index] = true;
-    setTriggers(newTriggerStates);
+  const toggle = index => {
+    if (clicked === index) {
+      //if clicked question is already active, then close it
+      return setClicked(null);
+    }
 
-    triggerStates.forEach((item, i) => {
-      console.log(item);
-    });
-  }
-  const closeTrigger = ({index}) => {
-    let newTriggerStates = initialTriggerState;
-    newTriggerStates[index] = false;
-    setTriggers(newTriggerStates);
-
-    triggerStates.forEach((item, i) => {
-      console.log(item);
-    });
-  }*/
-
-  for (let i = 0; i < length; i++) {
-    accordion.push(
-      <div key={i}>
-        <Divider />
-        <Collapsible trigger={
-          <ItemContainer>
-            <Trigger>{triggers[i]}</Trigger>
-            <OpenIcon>
-              <Icon icon={ICONS.PLUS} iconColor={"#FFFFFF"} width={3.125} height={3.125} />
-            </OpenIcon>
-          </ItemContainer>
-        }>
-          <Description>{descriptions[i]}</Description>
-        </Collapsible>
-      </div>
-    );
-  }
-
-  if (triggers.length !== descriptions.length) {
-    return <></>;
-  }
+    setClicked(index);
+  };
 
   return (
-    <Container>
-      {accordion}
-      <Divider />
-    </Container>
+      <Container>
+        {data.map((item, index) => {
+          return (
+            <div key={index}>
+              <Divider />
+              <ItemContainer onClick={() => toggle(index)} key={index}>
+                <Trigger>{item.question}</Trigger>
+                {clicked === index ?
+                  <OpenIcon>
+                    <Icon icon={ICONS.MINUS} iconColor={"#FFFFFF"} width={3.75} height={3.75} />
+                  </OpenIcon> :
+                  <OpenIcon>
+                    <Icon icon={ICONS.PLUS} iconColor={"#FFFFFF"} width={3.75} height={3.75} />
+                  </OpenIcon>}
+              </ItemContainer>
+              {clicked === index ? (
+                <Description>
+                  {item.answer}
+                </Description>
+              ) : null}
+            </div>
+          );
+        })}
+        <Divider />
+      </Container>
+
   );
-}
+};
 
 export default AccordionComponent;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 60vw;
+  width: 70vw;
   display: flex;
   flex-direction: column;
 `;
@@ -11,24 +11,12 @@ export const ItemContainer = styled.div`
   flex-direction: row;
 `;
 
-export const Trigger = styled.p`
-  margin-top: 2vw;
-  margin-left: 1.75vw;
-  margin-bottom: 2vw;
-  display: flex;
-  flex: 1;
-  justify-content: flex-start;
-  font-family: Bangers;
-  font-size: 2.075vw;
-  color: #FFFFFF;
-`;
-
 export const Description = styled.p`
   display: flex;
   justify-content: flex-start;
   font-family: Montserrat-Bold;
-  font-size: 1.2vw;
-  width: 40vw;
+  font-size: 1.6vw;
+  width: 55vw;
   color: #FFFFFF;
   margin-left: 3vw;
   margin-top: 0.5vw;
@@ -36,9 +24,22 @@ export const Description = styled.p`
   line-height: 2vw;
 `;
 
+export const Trigger = styled.p`
+  margin-top: 2.5vw;
+  margin-left: 2vw;
+  margin-bottom: 2.5vw;
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  font-family: Bangers;
+  font-size: 2.4vw;
+  color: #FFFFFF;
+`;
+
 export const OpenIcon = styled.div`
+  margin-right: 2vw;
   background-color: #515151;
-  border-radius: 100px;
+  border-radius: 3.75vw;
   display: flex;
   align-self: center;
   justify-content: flex-end;

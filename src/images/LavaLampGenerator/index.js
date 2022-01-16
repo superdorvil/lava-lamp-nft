@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { createHash } = require('crypto');
 const {
   generateAssets,
   generate7979LavaLamps,
@@ -41,7 +40,6 @@ const metaDir = __dirname + '/ipfs/metadata/';
 const ipfsDir = __dirname + '/ipfs/';
 const assetDir = __dirname + '/generatedLamps/assets/';
 const lamps7979Dir = __dirname + '/generatedLamps/lamps7979/';
-const nLampsDir = __dirname + '/generatedLamps/nLamps/';
 
 function generateLavaLampsIPFS_7979() {
   const traits = generateTraits();
