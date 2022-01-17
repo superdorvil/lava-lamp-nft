@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { connect } from '../../redux/blockchain/blockchainActions';
-import { fetchMetadata } from '../../redux/metadata/metadataActions';
+import { fetchLamps } from '../../redux/lamps/lampActions';
 import {
   LavaBackground,
   Title,
@@ -58,7 +58,7 @@ function HeroSection({toggleModal}) {
   const initialTimeDiff = (releaseDate - new Date()) / 1000;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
-  const metadata = useSelector((state) => state.metadata);
+  const lamps = useSelector((state) => state.lamps);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
   const [NFTS, setNFTS] = useState([]);
@@ -89,7 +89,7 @@ function HeroSection({toggleModal}) {
     .then((receipt) => {
       console.log(receipt);
       setLoading(false);
-      dispatch(fetchMetadata(blockchain.account));
+      dispatch(fetchLamps(blockchain.account));
       setStatus("Successfully minting your NFT");
     });
   };
@@ -98,13 +98,9 @@ function HeroSection({toggleModal}) {
 
   useEffect(() => {
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchMetadata(blockchain.account));
+      dispatch(fetchLamps(blockchain.account));
     }
   }, [blockchain.smartContract, blockchain.account, dispatch]);
-
-  /*useEffect(() => {
-    //fetchMetatDataForNFTS();
-  }, [metadata.allMetadata]);*/
 
   return (
     <LavaBackground dropComing={dropComing}>
@@ -149,12 +145,16 @@ function HeroSection({toggleModal}) {
       <SocialContainer>
         <SocialMediaLinks />
       </SocialContainer>
-      {metadata.allMetadata.length > 0 ?
-        <MyLavaLampsCarousel metadata={metadata.allMetadata} /> :
-        <LavaLampCarousel />
-      }
+      <LavaLampCarousel />
     </LavaBackground>
   );
 }
+
+/*
+{lamps.myLamps.length > 0 ?
+  <MyLavaLampsCarousel metadata={lamps.myLamps} /> :
+  <LavaLampCarousel />
+}
+*/
 
 export default HeroSection;

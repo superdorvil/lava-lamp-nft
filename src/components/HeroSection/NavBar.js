@@ -9,6 +9,7 @@ import ScrollButton from '../ScrollButton';
 import ConnectWalletButton from '../ConnectWalletButton';
 
 function NavBar({dropComing, connectWallet, blockchainAccount, openLavaList }) {
+console.log('nav bar');
   return(
     <NavBarContainer>
       <TopLeftText>LAVA LAMPS</TopLeftText>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import {
   Container,
   Title,
@@ -10,6 +11,8 @@ import {COLORS} from '../../constants';
 import lavalien from '../../images/Lavalien.svg';
 
 function LavaLampStats() {
+  const lamps = useSelector((state) => state.lamps);
+
   return (
     <Container id="STATS">
       <Title>STATS</Title>
@@ -17,13 +20,13 @@ function LavaLampStats() {
         <DataBlock
           lightColor={COLORS.light_blue}
           darkColor={COLORS.dark_blue}
-          data="1000"
+          data={lamps.remainingLamps}
           units="REMAINING LAMPS"
         />
         <DataBlock
           lightColor={COLORS.light_yellow}
           darkColor={COLORS.dark_yellow}
-          data="300"
+          data={lamps.lampsBurned}
           units="BURNED LAMPS"
         />
         <DataBlock

@@ -1,11 +1,11 @@
 import { applyMiddleware, compose, createStore, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import blockchainReducer from './blockchain/blockchainReducer';
-import metadataReducer from './metadata/metadataReducer';
+import lampReducer from './lamps/lampReducer';
 
 const rootReducer = combineReducers({
   blockchain: blockchainReducer,
-  metadata: metadataReducer,
+  lamps: lampReducer,
 });
 
 const middleware = [thunk];

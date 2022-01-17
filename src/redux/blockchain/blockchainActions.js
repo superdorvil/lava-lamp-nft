@@ -1,6 +1,6 @@
 import Web3 from 'web3';
 import LavaLamp from '../../abis/LavaLamp.json';
-import { fetchMetadata } from "../metadata/metadataActions";
+import { fetchLamps } from "../lamps/lampActions";
 import {
   CONNECTION_REQUEST,
   CONNECTION_SUCCESS,
@@ -107,6 +107,6 @@ export const connect = () => {
 export const updateAccount = (account) => {
   return async (dispatch) => {
     dispatch(updateAccountRequest({ account: account }));
-    dispatch(fetchMetadata(account));
+    dispatch(fetchLamps(account));
   };
 };
