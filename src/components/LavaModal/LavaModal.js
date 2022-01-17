@@ -9,7 +9,7 @@ import {
 import Icon from '../Icon';
 import {ICONS, STATES} from '../../constants';
 import lavaList from '../../images/LavaList.svg';
-import lavaPoolBreakdown from '../../images/LavaPoolBreakdown.svg';
+import lavaPoolBreakdown from '../../images/LavaPoolBreakdown.png';
 
 Modal.setAppElement("#root");
 
