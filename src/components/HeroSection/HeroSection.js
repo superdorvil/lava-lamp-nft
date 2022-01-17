@@ -18,7 +18,7 @@ import DropTimer from './DropTimer';
 import Web3 from 'web3';
 import {STATES} from '../../constants';
 
-const releaseDate = new Date(2022, 0, 25, 0, 0, 0, 0);
+const releaseDate = new Date(2022, 0, 28, 0, 0, 0, 0);
 const getTimeDiff = () => {
   const secondsDiff = (releaseDate - new Date()) / 1000;
 
