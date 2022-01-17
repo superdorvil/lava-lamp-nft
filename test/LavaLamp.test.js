@@ -80,31 +80,10 @@ contract('LavaLamp', (accounts) => {
     })
   })
 
-  describe('Minting', async () => {
-    let ownerBalanceBefore
-    let buyerBalanceBefore
-    let reciept
-    let transaction
-
-    before(async ()=> {
-      //console.log('getting balances')
-      ownerBalanceBefore = await web3.eth.getBalance(lavaLampsETH);
-      //console.log(ownerBalanceBefore)
-      ownerBalanceBefore = web3.utils.toBN(ownerBalanceBefore)
-      //console.log(ownerBalanceBefore)
-      buyerBalanceBefore = await web3.eth.getBalance(minter1);
-      //console.log(buyerBalanceBefore)
-      buyerBalanceBefore = web3.utils.toBN(buyerBalanceBefore)
-      //console.log(buyerBalanceBefore)
-      //console.log('received balances')
-    })
-
+  describe('Tokens Owned By', async () => {
     it("creates a token", async () => {
-      receipt = await contract.mint(1, { from: minter1, value: price })
-      //console.log('start')
-      //console.log(receipt)
-      transaction = await web3.eth.getTransaction(receipt.tx);
-      //console.log(transaction)
+      const ownersTokens = await contract.getTokensOwnedBy(lavaLampsETH);
+      console.log(ownersTokens);
     })
   })
 })

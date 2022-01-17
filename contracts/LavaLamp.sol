@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 contract LavaLamp is Ownable, ERC721 {
   using Strings for uint256;
   string private currentBaseURI;
-  string public provenance = "";
+  string public provenance = "72a59313f86c9d8d956fef3fd61da0310de4fef2211c96f17989680f928d5ca0";
 
   uint256 private cost = 0.03 ether;
   uint256 private maxSupply = 7980;
@@ -17,8 +17,7 @@ contract LavaLamp is Ownable, ERC721 {
   uint256 public lampsMinted = 0;
 
   // string memory provenanceHash
-  constructor(string _provenance) ERC721("LavaLamp", "LAVALAMP") {
-    provenance = _provenance;
+  constructor() ERC721("LavaLamp", "LAVALAMP") {
     setBaseURI("ipfs://QmRbRi2ixepCr4f2XEgDpUUHtHuhAaCQ92VqNievCiNc39/"); // ("http://localhost:3000/token/"); // setBaseURI("http://www.superdorvil.tech/token/"); // ipfs://{}
     mint(10);
   }
