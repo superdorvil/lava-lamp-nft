@@ -11,7 +11,6 @@ import {
 } from './Elements';
 import NavBar from './NavBar';
 import MintButton from '../MintButton';
-import MyLavaLampsCarousel from '../MyLavaLampsCarousel';
 import LavaLampCarousel from '../LavaLampCarousel';
 import SocialMediaLinks from '../SocialMediaLinks';
 import DropTimer from './DropTimer';
@@ -149,12 +148,5 @@ function HeroSection({toggleModal}) {
     </LavaBackground>
   );
 }
-
-/*
-{lamps.myLamps.length > 0 ?
-  <MyLavaLampsCarousel metadata={lamps.myLamps} /> :
-  <LavaLampCarousel />
-}
-*/
 
 export default HeroSection;

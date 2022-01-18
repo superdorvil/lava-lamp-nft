@@ -26,14 +26,14 @@ const fetchLampFailed = (payload) => {
 };
 
 export const fetchLamps = (account) => {
-  console.log(account)
   return async (dispatch) => {
     dispatch(fetchLampRequest());
     try {
-      const myLamps = await store
+      const myLamps = [];
+      /*await store
         .getState()
         .blockchain.smartContract.methods.getTokensOwnedBy(account)
-        .call();
+        .call();*/
       const burnCount = await store
         .getState()
         .blockchain.smartContract.methods.burnCount()

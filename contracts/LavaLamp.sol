@@ -60,10 +60,7 @@ contract LavaLamp is Ownable, ERC721 {
       : "";
   }
 
-  // I guess I could have inherited the burnable contract
-  // But I would override it anyways
-  // I'm curious if overriding functions increases gas fees
-  // So I'm just throwing this in here and will look into gas fees later, most likely.
+  // allows the user to burn their lamps and there is a count of burned lamps
   function burn(uint256 tokenId) public virtual {
     //solhint-disable-next-line max-line-length
     require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721Burnable: caller is not owner nor approved");
@@ -75,6 +72,8 @@ contract LavaLamp is Ownable, ERC721 {
     return lampsMinted - burnCount;
   }
 
+  // returns a boolean array of all all possible lamps
+  // every index that is true is a tokenID that is owned by the account
   function getTokensOwnedBy(address owner) external view returns (bool[] memory) {
     bool[] memory tokenIds = new bool[](maxSupply);
 

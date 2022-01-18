@@ -29,12 +29,12 @@ function LavaLampStats() {
           data={lamps.lampsBurned}
           units="BURNED LAMPS"
         />
-        <DataBlock
+        {/*<DataBlock
           lightColor={COLORS.light_red}
           darkColor={COLORS.dark_red}
           data="0.03"
           units="ETH PER SHARE"
-        />
+        />*/}
       </DataBlockContainer>
       <AttributeImage src={lavalien} />
     </Container>
