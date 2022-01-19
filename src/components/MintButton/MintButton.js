@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {
   MintContainer,
-  BuyButton,
+  MintText,
   BuyTextContainer,
-  BuyNow,
+  BuyButton,
   EthPrice,
   EthPriceHover,
 } from './Elements';
@@ -33,14 +33,14 @@ function MintButton({
         >
           { isShown ? <EthPriceHover>{"PRICE: " + lampPrice + 'ETH !'}</EthPriceHover> :
             (
-                <BuyTextContainer>
-                <div>
-                  <EthPrice>TOTAL:</EthPrice>
-                  <EthPrice>{lampPrice} ETH</EthPrice>
-                </div>
-                <BuyNow>BUY NOW</BuyNow>
-                </BuyTextContainer>
-              )
+              <BuyTextContainer>
+              <div>
+                <EthPrice>TOTAL:</EthPrice>
+                <EthPrice>{lampPrice} ETH</EthPrice>
+              </div>
+              <MintText>MINT</MintText>
+              </BuyTextContainer>
+            )
           }
         </BuyButton>
       </MintContainer>

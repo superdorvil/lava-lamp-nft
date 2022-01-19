@@ -5,11 +5,10 @@ import styled from 'styled-components';
    verticalAlign: 'middle';
    width: ${props => props.width}vw;
    height: ${props => props.height}vw;
-   border-radius: 100px;
-   fill: #FFFFFF;
+   fill: ${props => props.iconColor};
    &:hover {
      transition: all 0.1s ease-in-out;
-     fill: #F0000040;
+     fill: ${props => props.hoverColor ? props.hoverColor : '#F0000040'};
    }
  `;
 

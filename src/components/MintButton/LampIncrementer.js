@@ -22,7 +22,13 @@ function LampIncrementer({
           decrementLampCount()}}
         left
       >
-        <Icon icon={ICONS.MINUS} iconColor='#FABE09' width={32} height={32} />
+        <Icon
+          icon={ICONS.MINUS}
+          iconColor='#FABE09'
+          width={3.125}
+          height={3.125}
+          hoverColor='#FDF21B'
+        />
       </IncrementButton>
       <LampCountContainer>
         <LampCount>{lampCount < 10 ? '0' + lampCount : lampCount}</LampCount>
@@ -34,7 +40,13 @@ function LampIncrementer({
           incrementLampCount()}}
         right
       >
-        <Icon icon={ICONS.PLUS} iconColor='#FABE09' width={32} height={32} />
+        <Icon
+          icon={ICONS.PLUS}
+          iconColor='#FABE09'
+          width={3.125}
+          height={3.125}
+          hoverColor='#FDF21B'
+        />
       </IncrementButton>
     </LampIncrementerContainer>
   );
