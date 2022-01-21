@@ -26,7 +26,7 @@ const lampReducer = (state = initialState, action) => {
         ...initialState,
         loading: false,
         myLamps: action.payload.myLamps,
-        ramainingLamps: action.payload.remainingLamps,
+        remainingLamps: action.payload.remainingLamps,
         lampsBurned: action.payload.lampsBurned,
         ethPerShare: action.payload.ethPerShare,
       };

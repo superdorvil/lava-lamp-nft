@@ -67,3 +67,30 @@ export const SocialContainer = styled.div`
   padding-top: 3.33vw;
   padding-bottom: 6.75vw;
 `;
+
+export const PresaleContainer = styled.div`
+  position: absolute;
+  top: 9.25vw;
+  botton: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+`;
+
+export const PresaleText = styled.p`
+  color: #FFB800;
+  text-align: center;
+  justify-content: center;
+  font-size: 3vw;
+  font-family: Bangers;
+`;
+
+export const PresaleTime = styled.p`
+  color: #FFB800;
+  text-align: center;
+  justify-content: center;
+  font-size: 3vw;
+  font-family: Bangers;
+`;

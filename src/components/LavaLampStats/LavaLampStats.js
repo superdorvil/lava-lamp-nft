@@ -20,13 +20,13 @@ function LavaLampStats() {
         <DataBlock
           lightColor={COLORS.light_blue}
           darkColor={COLORS.dark_blue}
-          data={lamps.remainingLamps}
+          data={lamps.remainingLamps || 0}
           units="REMAINING LAMPS"
         />
         <DataBlock
           lightColor={COLORS.light_yellow}
           darkColor={COLORS.dark_yellow}
-          data={lamps.lampsBurned}
+          data={lamps.lampsBurned || 0}
           units="BURNED LAMPS"
         />
         {/*<DataBlock

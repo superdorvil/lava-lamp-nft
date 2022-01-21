@@ -9,14 +9,14 @@ import {
 } from '../types';
 
 const connectRequest = () => {
-  console.log('action connect request');
+  //console.log('action connect request');
   return {
     type: CONNECTION_REQUEST,
   };
 };
 
 const connectSuccess = (payload) => {
-  console.log('action connect success');
+  //console.log('action connect success');
   return {
     type: CONNECTION_SUCCESS,
     payload: payload,
@@ -24,7 +24,7 @@ const connectSuccess = (payload) => {
 };
 
 const connectFailed = (payload) => {
-  console.log('action connect failed');
+  //console.log('action connect failed');
   return {
     type: CONNECTION_FAILED,
     payload: payload,
@@ -32,7 +32,7 @@ const connectFailed = (payload) => {
 };
 
 const updateAccountRequest = (payload) => {
-  console.log('action update account req');
+  //console.log('action update account req');
   return {
     type: UPDATE_ACCOUNT,
     payload: payload,
@@ -44,31 +44,28 @@ export const connect = () => {
     dispatch(connectRequest());
 
     if (window.ethereum) {
-      console.log('window is ether');
+      //console.log('window is ether');
       let web3 = new Web3(window.ethereum);
 
       try {
         const accounts = await window.ethereum.request({
           method: 'eth_accounts',
         });
-        console.log(accounts);
+        //console.log(accounts);
 
         //https://medium.com/metamask/breaking-changes-to-the-metamask-inpage-provider-b4dde069dd0a
-        console.log([]);
         if (accounts.length === [].length) {
-          console.log('no account');
+          //console.log('no account');
            window.ethereum.send('eth_requestAccounts');
-        } else {
-          console.log('hey');
         }
 
         const networkId = await window.ethereum.request({
           method: 'net_version',
         });
-        console.log(networkId);
+        //console.log(networkId);
 
         const NetworkData = await LavaLamp.networks[networkId];
-        console.log(NetworkData);
+        //console.log(NetworkData);
 
         if (NetworkData) {
           const SmartContractObj = new web3.eth.Contract(

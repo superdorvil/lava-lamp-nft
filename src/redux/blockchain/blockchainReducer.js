@@ -14,7 +14,7 @@ const initialState = {
 };
 
 const blockchainReducer = (state = initialState, action) => {
-  console.log('reducer type = ' + action.type);
+  //console.log('reducer type = ' + action.type);
   switch (action.type) {
     case CONNECTION_REQUEST:
       return {

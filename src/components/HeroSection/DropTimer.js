@@ -4,7 +4,6 @@ import {COLORS} from '../../constants';
 import {DropContainer} from './Elements';
 
 function DropTimer({days, hours, minutes, seconds}) {
-console.log('drop timer');
   const doubleDigits = (time) => {
     return time < 10 ? '0' + time : time;
   };
