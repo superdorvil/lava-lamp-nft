@@ -425,7 +425,7 @@ function generateTraits() {
   const ids = [];
   const traits = [];
 
-  for (let i = 0; i < 20/*7980*/; i++) {
+  for (let i = 0; i < 7980; i++) {
     ids.push(i);
   }
 
