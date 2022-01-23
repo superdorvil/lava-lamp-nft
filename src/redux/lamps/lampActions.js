@@ -42,6 +42,10 @@ export const fetchLamps = (account) => {
         .getState()
         .blockchain.smartContract.methods.totalSupply()
         .call();
+      const lampsMinted = await store
+        .getState()
+        .blockchain.smartContract.methods.lampsMinted()
+        .call();
       // need to figure out
       const ethPerShare = 0;
 
@@ -50,6 +54,7 @@ export const fetchLamps = (account) => {
           myLamps,
           burnCount,
           remainingLamps,
+          lampsMinted,
           ethPerShare,
         })
       );

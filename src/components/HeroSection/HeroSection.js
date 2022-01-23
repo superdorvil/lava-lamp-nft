@@ -81,6 +81,7 @@ function HeroSection({toggleModal}) {
   const initialTimeDiff = (whitelistDate - new Date()) / 1000;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
+  const lamps = useSelector((state) => state.lamps);
   //const [loading, setLoading] = useState(false);
   //const [status, setStatus] = useState("");
   const [dropComing, setDropComing] = useState(initialTimeDiff > 0 ? true : false);
@@ -99,6 +100,11 @@ function HeroSection({toggleModal}) {
   };
 
   const mint = () => {
+    if (lamps.lampsMinted === 7980) {
+      window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
+      return;
+    }
+
     let whitelisted = false;
     if (saleMode === STATES.drop.whitelistSale) {
       WhiteList.forEach((account, i) => {
@@ -131,6 +137,20 @@ function HeroSection({toggleModal}) {
     });
   };
 
+  const incrementLampCount = () => {
+    const lampsLeft = 7980 - lamps.lampsMinted;
+    const maxMintAmount = lampsLeft < 20 ? lampsLeft : 20;
+    const lc = lampCount < maxMintAmount ? lampCount + 1 : lampCount;
+    setLampCount(lc);
+    setLampPrice(decimalMultiply(lc, .03));
+  }
+
+  const decrementLampCount = () => {
+    const lc = lampCount > 1 ? lampCount - 1 : lampCount;
+    setLampCount(lc);
+    setLampPrice(decimalMultiply(lc, .03));
+  }
+
   useInterval(() => updateDropTimer(), 1000);
 
   useEffect(() => {
@@ -143,7 +163,13 @@ function HeroSection({toggleModal}) {
     <LavaBackground dropComing={dropComing}>
       <NavBar
         blockchainAccount={blockchain.account}
-        connectWallet={() => dispatch(connect())}
+        connectWallet={
+          () => {
+            dispatch(connect());
+            setLampCount(1);
+            setLampPrice(decimalMultiply(1, .03));
+          }
+        }
         openLavaList={() => toggleModal({state: STATES.modal.lavaList})}
       />
       <Title>7,979 LAVA LAMPS</Title>
@@ -161,19 +187,40 @@ function HeroSection({toggleModal}) {
         <MintButton
           lampCount={lampCount}
           lampPrice={lampPrice}
-          mint={() => {blockchain.account ? mint() : window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')}}
+          mint={
+            () => {
+              if (lamps.lampsMinted === 7980) {
+                window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
+                return;
+              }
+
+              blockchain.account ?
+                mint() :
+                window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
+            }
+          }
           incrementLampCount={
             () => {
-              const lc = lampCount < 20 ? lampCount + 1 : lampCount;
-              setLampCount(lc);
-              setLampPrice(decimalMultiply(lc, .03));
+              if (lamps.lampsMinted === 7980) {
+                window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
+                return;
+              }
+
+              blockchain.account ?
+                incrementLampCount() :
+                window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
             }
           }
           decrementLampCount={
             () => {
-              const lc = lampCount > 1 ? lampCount - 1 : lampCount;
-              setLampCount(lc);
-              setLampPrice(decimalMultiply(lc, .03));
+              if (lamps.lampsMinted === 7980) {
+                window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
+                return;
+              }
+
+              blockchain.account ?
+                decrementLampCount() :
+                window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
             }
           }
         />
