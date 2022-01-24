@@ -1,0 +1,38 @@
+To Do
+Express Server for partial Reveals
+Mint Button Whitelist
+Test Mint 7979
+Test All code
+Money Distribution
+Post Website without mint functionality
+
+SVG Blurry Updates
+Metadata and names and description
+Opensea Link
+Update Website
+
+Contract parameters
+	Lavagang team addresses
+	provenance
+	baseuri
+Public testnet the transferring of money
+	Have an owner only mint for lavagang members
+
+Create Project Plan
+  Create SVG Images SCript
+  Load into IPFS
+  Update Metadata uri with images CID
+  grab baseURI of metadata folder
+  Grab provenance Value and throw in contract
+  ***BASE URI IPFS or WEBSERVER hosting
+    UPDATE Metadata URI with IPFS or use lavalamps.io
+  CREATE smart contract and grab contract address - post to ethereum
+  UPDATE Eth_Client_URI to Mainnet
+  UPDATE Change BASE_URI
+
+People to contact
+  Evan Hole
+  Mark Balazon
+  Mike Sullivan
+  Pepper Dave
+  Jeff Marcus Custom House

@@ -33,6 +33,7 @@ const {
   saveFile,
   saveNFiles,
 } = require('./utils');
+const {RevealedLampMetadata} = require('./ipfs/RevealedLampMetadata');
 
 const myArgs = process.argv.slice(2);
 const lampsDir = __dirname + '/ipfs/lamps/';
@@ -84,7 +85,9 @@ function generateLavaLampsIPFS_7979() {
     data: JSON.stringify(traits),
     fileSuffix: '.js',
     dir: ipfsDir,
-    id: 'LampMetaData'
+    id: 'RevealedLampMetadata',
+    append: 'const RevealedLampMetadata = ',
+    prepend: ';\n\nmodule.exports = { RevealedLampMetadata };',
   })
   saveFile({
     data: JSON.stringify({summedHashes, svgHashes}),
@@ -145,6 +148,28 @@ if (myArgs[0] === '7979 lavalamps SVG') {
 
 if (myArgs[0] === 'Update 7979 lavalamps MetaData' && myArgs[1]) {
   updateMetadataURLs({cid: myArgs[1]});
+}
+
+if (myArgs[0] === 'Update Revealed Lamps Metadata' && myArgs[1]) {
+  const revealedLamps = parseInt(myArgs[1]);
+  const traits = [];
+
+  if (isNaN(revealedLamps)) {
+    return;
+  }
+
+  for (let i = 0; i < revealedLamps; i++) {
+    traits[i] = RevealedLampMetadata[i];
+  }
+
+  saveFile({
+    data: JSON.stringify(traits),
+    fileSuffix: '.js',
+    dir: ipfsDir,
+    id: 'LampMetadata',
+    append: 'const LampMetadata = ',
+    prepend: ';\n\nmodule.exports = { LampMetadata };',
+  })
 }
 
 // Images Qmf5gsiT9aBCK3ttuaTojWjx8uhKgQ4pWVsGhiNge8ENVh

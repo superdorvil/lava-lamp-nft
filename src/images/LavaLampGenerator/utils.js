@@ -11,13 +11,15 @@ function hash(string) {
   return createHash('sha256').update(string).digest('hex');
 }
 
-function saveFile({data, fileSuffix, id, dir}) {
+function saveFile({data, fileSuffix, id, dir, append, prepend}) {
   const filePath = dir + id + fileSuffix;
+  const newData = (append ? append : '') + data + (prepend ? prepend : '');
 
   // writeFile function with filename, content and callback function
-  fs.writeFile(filePath, data, function (err) {
+  fs.writeFile(filePath, newData, function (err) {
     if (err) throw err;
   });
+
 }
 
 function saveNFiles({data, fileSuffix, dir}) {

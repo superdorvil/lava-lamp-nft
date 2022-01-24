@@ -3,8 +3,13 @@
 # dependencies
 /node_modules
 /.pnp
-/src/images/LavaLampGenerator
-
+#/src/images/LavaLampGenerator
+src/images/LavaLampGenerator/generatedLamps
+/src/images/LavaLampGenerator/ipfs/lamps
+/src/images/LavaLampGenerator/ipfs/metadata
+/src/images/LavaLampGenerator/ipfs/ProvinanceHash.js
+/src/images/LavaLampGenerator/ipfs/ProvinanceHashList.js
+/src/images/LavaLampGenerator/ipfs/RevealedLampMetadata.js
 .pnp.js
 .env
 /helperScripts.js
