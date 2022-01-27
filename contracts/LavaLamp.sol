@@ -22,7 +22,7 @@ contract LavaLamp is Ownable, ERC721 {
         // "http://localhost:3000/token/"
         // setBaseURI("http://www.websitename.com/token/");
         // ipfs://{cid}/
-        setBaseURI("ipfs://QmRbRi2ixepCr4f2XEgDpUUHtHuhAaCQ92VqNievCiNc39/");
+        setBaseURI("ipfs://QmdtKdvzaRfxd2QpgpnXScihqXh74LFBGG1oeLdMbSS1Kh/");
     }
 
     function setBaseURI(string memory baseURI) public onlyOwner {
@@ -48,8 +48,14 @@ contract LavaLamp is Ownable, ERC721 {
         }
 
         // (bool hs, ) = payable(0x0).call{value: address(this).balance * 5 / 100}("");
-        (bool success, ) = payable(owner()).call{value: address(this).balance}("");
-        require(success);
+      //  (bool success, ) = payable(owner()).call{value: address(this).balance}("");
+      //  require(success);
+    }
+
+    function withdraw() public payable onlyOwner {
+      // (bool hs, ) = payable(0x0).call{value: address(this).balance * 5 / 100}("");
+      (bool success, ) = payable(owner()).call{value: address(this).balance}("");
+      require(success);
     }
 
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
