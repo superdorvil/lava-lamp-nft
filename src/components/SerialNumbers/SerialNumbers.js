@@ -5,7 +5,7 @@ import {
   Description2,
   SerialImage,
 } from './Elements';
-import serialNum from './../../images/SerialNumbersImage.svg';
+import serialNum from './../../images/SerialNumbersImage.png';
 
 function SerialNumbers() {
   return(

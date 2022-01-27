@@ -14,9 +14,8 @@ function Footer() {
       <OurTeamContainer>
         <OurTeam>OUR TEAM</OurTeam>
         <TeamMember>{"Founder: @ReignofWain"}</TeamMember>
-        <TeamMember>{"Graphic Design: @KateHurd_Design"}</TeamMember>
+        <TeamMember>{"Graphic Design: @cmykkate"}</TeamMember>
         <TeamMember>{"Dev: @superdorvil"}</TeamMember>
-        <TeamMember>{"Dev: @nwain24"}</TeamMember>
       </OurTeamContainer>
     </Container>
   );

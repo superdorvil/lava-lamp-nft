@@ -17,7 +17,7 @@ function LavaPool({toggleModal}) {
         <SubTitle>HALF THE PROCEEDS FROM INITIAL SALES GO INTO THE POOL!</SubTitle>
       </CenterItems>
       <CenterItems>
-        <Description>After 1 year we will vote... will it be distributed to the community or held for another year?!</Description>
+        <Description></Description>
       </CenterItems>
       <CenterItems>
         <Button

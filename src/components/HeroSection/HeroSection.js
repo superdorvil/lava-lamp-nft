@@ -21,7 +21,7 @@ import WhiteList from './WhiteList';
 
 //const releaseDate = new Date(2022, 0, 28, 20, 0, 0, 0);
 //const whitelistDate = new Date(2022, 0, 28, 19, 0, 0, 0);
-const releaseDate = new Date(2022, 0, 20, 12, 0, 0, 0);
+const releaseDate = new Date(2022, 0, 20, 11, 0, 0, 0);
 const whitelistDate = new Date(2022, 0, 20, 12, 0, 0, 0);
 let saleMode = STATES.drop.dropComingSoon;
 
@@ -122,8 +122,10 @@ function HeroSection({toggleModal}) {
     }
 
     blockchain.smartContract.methods
-    .mint(lampCount)
-    .send({ from: blockchain.account, value: Web3.utils.toWei((lampCount * 30).toString(), 'finney') })
+//    .mint(lampCount)
+//    .send({ from: blockchain.account, value: Web3.utils.toWei((lampCount * 30).toString(), 'finney') })
+    .mint(20)
+    .send({ from: blockchain.account })
     .once("error", (err) => {
       console.log(err);
       //setLoading(false);

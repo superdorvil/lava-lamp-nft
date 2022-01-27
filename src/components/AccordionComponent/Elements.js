@@ -7,6 +7,7 @@ export const Container = styled.div`
 `;
 
 export const ItemContainer = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
 `;

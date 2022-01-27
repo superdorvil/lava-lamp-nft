@@ -12,7 +12,7 @@ import {
   TraitDataBlocks,
 } from './Elements';
 import {COLORS} from '../../constants';
-import alienLamp from '../../../src/images/LavaLampTraitAlien.svg';
+import alienLamp from '../../../src/images/LavaLampTraitAlien.png';
 
 function LavaLampTraits() {
   return (
