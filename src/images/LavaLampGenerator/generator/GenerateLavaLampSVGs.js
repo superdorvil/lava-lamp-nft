@@ -500,7 +500,7 @@ function generateAssets() {
       assets.push(`
         ${openTag}
         ${generateBackgroundSVG({index: 0})}
-        ${generateGlassSVG({index: 1, glassColor: 0})}
+        ${generateGlassSVG({index: 0, glassColor: 0})}
         ${generateBaseSVG({index: j, rarity: i})}
         ${closeTag}
       `);
@@ -584,7 +584,7 @@ function generateAssets() {
 
 //  console.log('overlays')
   // overlays
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 10; i++) {
     assets.push(`
       ${openTag}
       ${generateBackgroundSVG({index: 0})}
@@ -595,9 +595,10 @@ function generateAssets() {
 
 //  console.log('swag')
   // swag
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 8; i++) {
     assets.push(`
       ${openTag}
+      ${generateBackgroundSVG({index: 1})}
       ${generateSwagSVG({index: swagger.active, base: i})}
       ${closeTag}
     `);

@@ -41,6 +41,7 @@ const metaDir = __dirname + '/ipfs/metadata/';
 const ipfsDir = __dirname + '/ipfs/';
 const assetDir = __dirname + '/generatedLamps/assets/';
 const lamps7979Dir = __dirname + '/generatedLamps/lamps7979/';
+const assetsMetadata = __dirname + '/generatedLamps/assetsMeta/';
 
 function generateLavaLampsIPFS_7979() {
   const traits = generateTraits();
@@ -139,6 +140,25 @@ if (myArgs[0] === 'generate some random bullshit') {
     data: generate7979LavaLamps(),
     fileSuffix: '.svg',
     dir: lamps7979Dir,
+  });
+}
+
+if (myArgs[0] === 'gen empty meta data' && myArgs[1] && myArgs[2]) {
+  const metaNum = parseInt(myArgs[1]);
+  const metadata = [];
+
+  for (let i = 0; i < metaNum; i++) {
+    metadata.push(`{
+      "name":"",
+      "decription":"",
+      "image":"ipfs://${myArgs[2]}/${i}.svg",
+    }`);
+  }
+
+  saveNFiles({
+    data: metadata,
+    fileSuffix: '.json',
+    dir: assetsMetadata,
   });
 }
 

@@ -14,7 +14,6 @@ function StudEarring() {
   <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1387_70668"/>
   <feOffset/>
   <feGaussianBlur stdDeviation="2"/>
-  <feComposite in2="hardAlpha" operator="out"/>
   <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.75 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1387_70668"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1387_70668" result="shape"/>
@@ -25,7 +24,6 @@ function StudEarring() {
   <feMorphology radius="2" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_1387_70668"/>
   <feOffset/>
   <feGaussianBlur stdDeviation="2"/>
-  <feComposite in2="hardAlpha" operator="out"/>
   <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.75 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1387_70668"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1387_70668" result="shape"/>

@@ -12,7 +12,7 @@ function OriginalStandard() {
   </mask>
   <g mask="url(#mask0_737_226356)">
   <g opacity="0.25" filter="url(#filter2_df_737_226356)">
-  <path d="M74.3257 272.822C169.438 275.526 231.534 227.538 250.693 203.205H74.3257V272.822Z" fill="url(#paint2_linear_737_226356)" fill-opacity="0.55" shape-rendering="crispEdges"/>
+  <path d="M74.3257 272.822C169.438 275.526 231.534 227.538 250.693 203.205H74.3257V272.822Z" fill="url(#paint2_linear_737_226356)" fill-opacity="0.55" shape-rendering="geometricPrecision"/>
   </g>
   <path opacity="0.25" d="M135.363 266.425C135.363 243.575 108.929 195.56 99.1391 174.334C105.666 172.048 122.049 168.847 135.363 174.334C152.007 181.191 157.629 243.462 161.546 262.076C164.678 276.968 140.585 326.186 135.363 346.76H69.7681C119.699 320.308 135.363 284.06 135.363 266.425Z" fill="url(#paint3_radial_737_226356)"/>
   <path opacity="0.25" d="M149.946 270.527C149.946 247.676 123.512 199.662 113.722 178.435C120.249 176.149 136.632 172.949 149.946 178.435C166.59 185.293 172.212 247.564 176.129 266.178C179.261 281.069 155.168 330.288 149.946 350.862H84.3511C134.282 324.41 149.946 288.161 149.946 270.527Z" fill="url(#paint4_radial_737_226356)"/>
@@ -27,7 +27,7 @@ function OriginalStandard() {
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dx="0.455729" dy="2.73438"/>
   <feGaussianBlur stdDeviation="1.36719"/>
-  <feComposite in2="hardAlpha" operator="out"/>
+  
   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226356"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226356" result="shape"/>
@@ -42,7 +42,7 @@ function OriginalStandard() {
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dy="0.911458"/>
   <feGaussianBlur stdDeviation="0.683594"/>
-  <feComposite in2="hardAlpha" operator="out"/>
+  
   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226356"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226356" result="shape"/>
