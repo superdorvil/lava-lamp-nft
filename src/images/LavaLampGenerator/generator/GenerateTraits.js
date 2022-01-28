@@ -369,7 +369,7 @@ function generateSwag() {
   const random = generateRandomNumber({n: 100});
   let swag = '';
 
-  if (random <  98)
+  if (random <  95)
       swag = swagger.inactive;
   else
       swag = swagger.active;
