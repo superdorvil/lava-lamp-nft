@@ -24,22 +24,22 @@ function GoldStandard() {
   </mask>
   <g mask="url(#mask1_737_226369)">
   <g style="mix-blend-mode:overlay">
-  <circle cx="146.594" cy="302.828" r="1.22977" fill="white"/>
-  <circle cx="137.222" cy="247.407" r="1.22977" fill="white"/>
-  <circle cx="158.355" cy="262.296" r="1.22977" fill="white"/>
-  <circle cx="160.734" cy="240.94" r="1.22977" fill="white"/>
-  <circle cx="180.449" cy="294.476" r="1.22977" fill="white"/>
-  <circle cx="215.03" cy="294.476" r="1.22977" fill="white"/>
-  <circle cx="198.699" cy="320.411" r="1.22977" fill="white"/>
-  <path d="M141.688 290.762L141.246 289.565L140.049 289.122L141.246 288.679L141.688 287.482L142.131 288.679L143.328 289.122L142.131 289.565L141.688 290.762Z" fill="#FFF7B0"/>
-  <path d="M188.813 264.884L188.038 262.79L185.943 262.015L188.038 261.24L188.813 259.145L189.588 261.24L191.682 262.015L189.588 262.79L188.813 264.884Z" fill="#FFF7B0"/>
-  <path d="M175.134 239.525L174.359 237.431L172.265 236.656L174.359 235.881L175.134 233.786L175.909 235.881L178.004 236.656L175.909 237.431L175.134 239.525Z" fill="#FFF7B0"/>
-  <path d="M161.463 315.632L160.688 313.537L158.593 312.762L160.688 311.987L161.463 309.893L162.238 311.987L164.332 312.762L162.238 313.537L161.463 315.632Z" fill="#FFF7B0"/>
-  <path d="M197.009 295.58L196.234 293.485L194.14 292.71L196.234 291.935L197.009 289.841L197.784 291.935L199.879 292.71L197.784 293.485L197.009 295.58Z" fill="#FFF7B0"/>
-  <path d="M206.115 246.177L204.428 241.62L199.871 239.934L204.428 238.247L206.115 233.69L207.801 238.247L212.358 239.934L207.801 241.62L206.115 246.177Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M147.199 237.432L143.63 227.785L133.983 224.216L143.63 220.646L147.199 211L150.769 220.646L160.416 224.216L150.769 227.785L147.199 237.432Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M161.783 298.955L158.214 289.143L148.567 285.511L158.214 281.88L161.783 272.067L165.353 281.88L175 285.511L165.353 289.143L161.783 298.955Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M211.686 280.271L208.547 271.788L200.064 268.649L208.547 265.511L211.686 257.028L214.824 265.511L223.307 268.649L214.824 271.788L211.686 280.271Z" fill="#FFF7B0"/>
+  <circle cx="146.594" cy="302.828" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.1s" repeatCount="indefinite" /></circle>
+  <circle cx="137.222" cy="247.407" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" /></circle>
+  <circle cx="158.355" cy="262.296" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.9s" repeatCount="indefinite" /></circle>
+  <circle cx="160.734" cy="240.94" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.7s" repeatCount="indefinite" /></circle>
+  <circle cx="180.449" cy="294.476" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite" /></circle>
+  <circle cx="215.03" cy="294.476" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" /></circle>
+  <circle cx="198.699" cy="320.411" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite" /></circle>
+  <path d="M141.688 290.762L141.246 289.565L140.049 289.122L141.246 288.679L141.688 287.482L142.131 288.679L143.328 289.122L142.131 289.565L141.688 290.762Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite" /></path>
+  <path d="M188.813 264.884L188.038 262.79L185.943 262.015L188.038 261.24L188.813 259.145L189.588 261.24L191.682 262.015L189.588 262.79L188.813 264.884Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite" /></path>
+  <path d="M175.134 239.525L174.359 237.431L172.265 236.656L174.359 235.881L175.134 233.786L175.909 235.881L178.004 236.656L175.909 237.431L175.134 239.525Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite" /></path>
+  <path d="M161.463 315.632L160.688 313.537L158.593 312.762L160.688 311.987L161.463 309.893L162.238 311.987L164.332 312.762L162.238 313.537L161.463 315.632Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.9s" repeatCount="indefinite" /></path>
+  <path d="M197.009 295.58L196.234 293.485L194.14 292.71L196.234 291.935L197.009 289.841L197.784 291.935L199.879 292.71L197.784 293.485L197.009 295.58Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.7s" repeatCount="indefinite" /></path>
+  <path d="M206.115 246.177L204.428 241.62L199.871 239.934L204.428 238.247L206.115 233.69L207.801 238.247L212.358 239.934L207.801 241.62L206.115 246.177Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M147.199 237.432L143.63 227.785L133.983 224.216L143.63 220.646L147.199 211L150.769 220.646L160.416 224.216L150.769 227.785L147.199 237.432Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.3s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M161.783 298.955L158.214 289.143L148.567 285.511L158.214 281.88L161.783 272.067L165.353 281.88L175 285.511L165.353 289.143L161.783 298.955Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.6s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M211.686 280.271L208.547 271.788L200.064 268.649L208.547 265.511L211.686 257.028L214.824 265.511L223.307 268.649L214.824 271.788L211.686 280.271Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.7s" repeatCount="indefinite" /></path>
   </g>
   </g>
   <mask id="mask2_737_226369" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="148" y="50" width="54" height="53">
@@ -47,15 +47,15 @@ function GoldStandard() {
   </mask>
   <g mask="url(#mask2_737_226369)">
   <g style="mix-blend-mode:overlay">
-  <circle cx="156.736" cy="70.7072" r="1.21779" fill="white"/>
-  <circle cx="159.47" cy="53.3567" r="1.21779" transform="rotate(75 159.47 53.3567)" fill="white"/>
-  <circle cx="175.928" cy="82.9098" r="1.21779" transform="rotate(75 175.928 82.9098)" fill="white"/>
-  <circle cx="195.706" cy="83.21" r="1.21779" fill="white"/>
-  <path d="M184.601 100.354L183.833 98.2795L181.759 97.512L183.833 96.7445L184.601 94.6705L185.368 96.7445L187.442 97.512L185.368 98.2795L184.601 100.354Z" fill="#FFF7B0"/>
-  <path d="M167.847 65.3614L167.08 63.2874L165.005 62.5199L167.08 61.7525L167.847 59.6784L168.614 61.7525L170.688 62.5199L168.614 63.2874L167.847 65.3614Z" fill="#FFF7B0"/>
-  <path d="M183.766 77.6437L182.998 75.5696L180.924 74.8022L182.998 74.0347L183.766 71.9607L184.533 74.0347L186.607 74.8022L184.533 75.5696L183.766 77.6437Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M162.696 95.6586L160.357 89.3384L154.037 86.9997L160.357 84.661L162.696 78.3409L165.034 84.661L171.354 86.9997L165.034 89.3384L162.696 95.6586Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M192.773 65.1248L190.434 58.8046L184.114 56.4659L190.434 54.1272L192.773 47.8071L195.111 54.1272L201.432 56.4659L195.111 58.8046L192.773 65.1248Z" fill="#FFF7B0"/>
+  <circle cx="156.736" cy="70.7072" r="1.21779" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite" /></circle>
+  <circle cx="159.47" cy="53.3567" r="1.21779" transform="rotate(75 159.47 53.3567)" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite" /></circle>
+  <circle cx="175.928" cy="82.9098" r="1.21779" transform="rotate(75 175.928 82.9098)" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" /></circle>
+  <circle cx="195.706" cy="83.21" r="1.21779" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite" /></circle>
+  <path d="M184.601 100.354L183.833 98.2795L181.759 97.512L183.833 96.7445L184.601 94.6705L185.368 96.7445L187.442 97.512L185.368 98.2795L184.601 100.354Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.9s" repeatCount="indefinite" /></path>
+  <path d="M167.847 65.3614L167.08 63.2874L165.005 62.5199L167.08 61.7525L167.847 59.6784L168.614 61.7525L170.688 62.5199L168.614 63.2874L167.847 65.3614Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" /></path>
+  <path d="M183.766 77.6437L182.998 75.5696L180.924 74.8022L182.998 74.0347L183.766 71.9607L184.533 74.0347L186.607 74.8022L184.533 75.5696L183.766 77.6437Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M162.696 95.6586L160.357 89.3384L154.037 86.9997L160.357 84.661L162.696 78.3409L165.034 84.661L171.354 86.9997L165.034 89.3384L162.696 95.6586Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.8s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M192.773 65.1248L190.434 58.8046L184.114 56.4659L190.434 54.1272L192.773 47.8071L195.111 54.1272L201.432 56.4659L195.111 58.8046L192.773 65.1248Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.4s" repeatCount="indefinite" /></path>
   </g>
   </g>
   <defs>
@@ -64,7 +64,7 @@ function GoldStandard() {
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dx="0.455725" dy="2.73435"/>
   <feGaussianBlur stdDeviation="1.36718"/>
-  
+
   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226369"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226369" result="shape"/>
@@ -79,7 +79,7 @@ function GoldStandard() {
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dy="0.911458"/>
   <feGaussianBlur stdDeviation="0.683594"/>
-  
+
   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226369"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226369" result="shape"/>

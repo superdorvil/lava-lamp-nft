@@ -508,6 +508,39 @@ function generateAssets() {
   }
 //    ${generateLavasSVG({lava1: 1, lava2: 1, lava3: 1, lava4: 1})}
 
+//  console.log('swag')
+  // swag
+  for (let i = 0; i < 8; i++) {
+    if (i === bases.rocket) {
+      for (j = 0; j < 6; j++) {
+        assets.push(`
+          ${openTag}
+          ${generateBackgroundSVG({index: 1})}
+          ${generateSwagSVG({index: swagger.active, base: i, rarity: j})}
+          ${closeTag}
+        `);
+      }
+    } else {
+      assets.push(`
+        ${openTag}
+        ${generateBackgroundSVG({index: 1})}
+        ${generateSwagSVG({index: swagger.active, base: i})}
+        ${closeTag}
+      `);
+    }
+  }
+
+  //  console.log('overlays')
+  // overlays
+  for (let i = 0; i < 10; i++) {
+    assets.push(`
+      ${openTag}
+      ${generateBackgroundSVG({index: 0})}
+      ${generateOverlaySVG({index: i})}
+      ${closeTag}
+    `);
+  }
+
 //  console.log('attributes');
   // attributes
   for (let i = 0; i < 4; i++) {
@@ -577,39 +610,6 @@ function generateAssets() {
         ${generateBackgroundSVG({index: 0})}
         ${generateGlassSVG({index: 0, glassColor: 0})}
         ${generateLavasSVG({lava1: i === 0 ? j : 0, lava2: i === 1 ? j : 0, lava3: i === 2 ? j : 0, lava4: i === 3 ? j : 0})}
-        ${closeTag}
-      `);
-    }
-  }
-
-//  console.log('overlays')
-  // overlays
-  for (let i = 0; i < 10; i++) {
-    assets.push(`
-      ${openTag}
-      ${generateBackgroundSVG({index: 0})}
-      ${generateOverlaySVG({index: i})}
-      ${closeTag}
-    `);
-  }
-
-//  console.log('swag')
-  // swag
-  for (let i = 0; i < 8; i++) {
-    if (i === bases.rocket) {
-      for (j = 0; j < 6; j++) {
-        assets.push(`
-          ${openTag}
-          ${generateBackgroundSVG({index: 1})}
-          ${generateSwagSVG({index: swagger.active, base: i, rarity: j})}
-          ${closeTag}
-        `);
-      }
-    } else {
-      assets.push(`
-        ${openTag}
-        ${generateBackgroundSVG({index: 1})}
-        ${generateSwagSVG({index: swagger.active, base: i})}
         ${closeTag}
       `);
     }

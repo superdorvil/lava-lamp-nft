@@ -7,19 +7,19 @@ function GoldAlien() {
   </mask>
   <g mask="url(#mask0_1553_82277)">
   <g style="mix-blend-mode:overlay">
-  <circle cx="151.27" cy="57.8972" r="1.21779" fill="white"/>
-  <circle cx="154.004" cy="40.5467" r="1.21779" transform="rotate(75 154.004 40.5467)" fill="white"/>
-  <circle cx="170.462" cy="70.0999" r="1.21779" transform="rotate(75 170.462 70.0999)" fill="white"/>
-  <circle cx="190.239" cy="70.4002" r="1.21779" fill="white"/>
-  <path d="M179.135 87.5435L178.367 85.4694L176.293 84.7019L178.367 83.9345L179.135 81.8604L179.902 83.9345L181.976 84.7019L179.902 85.4694L179.135 87.5435Z" fill="#FFF7B0"/>
-  <path d="M162.381 52.5515L161.614 50.4775L159.54 49.71L161.614 48.9425L162.381 46.8685L163.149 48.9425L165.223 49.71L163.149 50.4775L162.381 52.5515Z" fill="#FFF7B0"/>
-  <path d="M162.805 97.1904L162.038 95.1164L159.964 94.3489L162.038 93.5815L162.805 91.5074L163.573 93.5815L165.647 94.3489L163.573 95.1164L162.805 97.1904Z" fill="#FFF7B0"/>
-  <path d="M191.516 94.0005L190.749 91.9264L188.675 91.159L190.749 90.3915L191.516 88.3175L192.284 90.3915L194.358 91.159L192.284 91.9264L191.516 94.0005Z" fill="#FFF7B0"/>
-  <path d="M178.3 64.8337L177.533 62.7597L175.459 61.9922L177.533 61.2248L178.3 59.1507L179.068 61.2248L181.142 61.9922L179.068 62.7597L178.3 64.8337Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M157.229 82.8486L154.891 76.5285L148.57 74.1898L154.891 71.8511L157.229 65.5309L159.568 71.8511L165.888 74.1898L159.568 76.5285L157.229 82.8486Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M175.003 114.294L172.665 107.974L166.344 105.635L172.665 103.296L175.003 96.9762L177.342 103.296L183.662 105.635L177.342 107.974L175.003 114.294Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M144.013 101.533L141.674 95.2133L135.354 92.8746L141.674 90.5359L144.013 84.2157L146.352 90.5359L152.672 92.8746L146.352 95.2133L144.013 101.533Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M187.308 52.3147L184.969 45.9945L178.649 43.6558L184.969 41.3172L187.308 34.997L189.647 41.3172L195.967 43.6558L189.647 45.9945L187.308 52.3147Z" fill="#FFF7B0"/>
+  <circle cx="151.27" cy="57.8972" r="1.21779" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.1s" repeatCount="indefinite" /></circle>
+  <circle cx="154.004" cy="40.5467" r="1.21779" transform="rotate(75 154.004 40.5467)" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" /></circle>
+  <circle cx="170.462" cy="70.0999" r="1.21779" transform="rotate(75 170.462 70.0999)" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite" /></circle>
+  <circle cx="190.239" cy="70.4002" r="1.21779" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite" /></circle>
+  <path d="M179.135 87.5435L178.367 85.4694L176.293 84.7019L178.367 83.9345L179.135 81.8604L179.902 83.9345L181.976 84.7019L179.902 85.4694L179.135 87.5435Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.1s" repeatCount="indefinite" /></path>
+  <path d="M162.381 52.5515L161.614 50.4775L159.54 49.71L161.614 48.9425L162.381 46.8685L163.149 48.9425L165.223 49.71L163.149 50.4775L162.381 52.5515Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite" /></path>
+  <path d="M162.805 97.1904L162.038 95.1164L159.964 94.3489L162.038 93.5815L162.805 91.5074L163.573 93.5815L165.647 94.3489L163.573 95.1164L162.805 97.1904Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite" /></path>
+  <path d="M191.516 94.0005L190.749 91.9264L188.675 91.159L190.749 90.3915L191.516 88.3175L192.284 90.3915L194.358 91.159L192.284 91.9264L191.516 94.0005Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.9s" repeatCount="indefinite" /></path>
+  <path d="M178.3 64.8337L177.533 62.7597L175.459 61.9922L177.533 61.2248L178.3 59.1507L179.068 61.2248L181.142 61.9922L179.068 62.7597L178.3 64.8337Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.7s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M157.229 82.8486L154.891 76.5285L148.57 74.1898L154.891 71.8511L157.229 65.5309L159.568 71.8511L165.888 74.1898L159.568 76.5285L157.229 82.8486Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.6s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M175.003 114.294L172.665 107.974L166.344 105.635L172.665 103.296L175.003 96.9762L177.342 103.296L183.662 105.635L177.342 107.974L175.003 114.294Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.3s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M144.013 101.533L141.674 95.2133L135.354 92.8746L141.674 90.5359L144.013 84.2157L146.352 90.5359L152.672 92.8746L146.352 95.2133L144.013 101.533Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.8s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M187.308 52.3147L184.969 45.9945L178.649 43.6558L184.969 41.3172L187.308 34.997L189.647 41.3172L195.967 43.6558L189.647 45.9945L187.308 52.3147Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.1s" repeatCount="indefinite" /></path>
   </g>
   </g>
   <g filter="url(#filter0_d_1553_82277)">
@@ -31,17 +31,17 @@ function GoldAlien() {
   </mask>
   <g mask="url(#mask1_1553_82277)">
   <g style="mix-blend-mode:overlay">
-  <circle cx="170.016" cy="323.247" r="1.22977" fill="white"/>
-  <circle cx="137.859" cy="304.285" r="1.22977" fill="white"/>
-  <circle cx="154.434" cy="314.616" r="1.22977" fill="white"/>
-  <circle cx="188.714" cy="320.605" r="1.22977" fill="white"/>
-  <path d="M125.646 312.647L124.871 310.553L122.777 309.778L124.871 309.003L125.646 306.908L126.421 309.003L128.516 309.778L126.421 310.553L125.646 312.647Z" fill="#FFF7B0"/>
-  <path d="M139.312 319.189L138.537 317.095L136.442 316.32L138.537 315.545L139.312 313.45L140.087 315.545L142.181 316.32L140.087 317.095L139.312 319.189Z" fill="#FFF7B0"/>
-  <path d="M184.885 335.595L184.11 333.501L182.016 332.726L184.11 331.951L184.885 329.857L185.66 331.951L187.755 332.726L185.66 333.501L184.885 335.595Z" fill="#FFF7B0"/>
-  <path d="M222.245 312.17L220.559 307.612L216.002 305.926L220.559 304.24L222.245 299.682L223.932 304.24L228.489 305.926L223.932 307.612L222.245 312.17Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M143.278 289.752L139.709 280.106L130.062 276.536L139.709 272.967L143.278 263.32L146.848 272.967L156.495 276.536L146.848 280.106L143.278 289.752Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M157.862 351.276L154.292 341.463L144.646 337.832L154.292 334.201L157.862 324.388L161.432 334.201L171.078 337.832L161.432 341.463L157.862 351.276Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M207.764 332.591L204.625 324.108L196.143 320.97L204.625 317.831L207.764 309.349L210.902 317.831L219.385 320.97L210.902 324.108L207.764 332.591Z" fill="#FFF7B0"/>
+  <circle cx="170.016" cy="323.247" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.1s" repeatCount="indefinite" /></circle>
+  <circle cx="137.859" cy="304.285" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite" /></circle>
+  <circle cx="154.434" cy="314.616" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite" /></circle>
+  <circle cx="188.714" cy="320.605" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite" /></circle>
+  <path d="M125.646 312.647L124.871 310.553L122.777 309.778L124.871 309.003L125.646 306.908L126.421 309.003L128.516 309.778L126.421 310.553L125.646 312.647Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.9s" repeatCount="indefinite" /></path>
+  <path d="M139.312 319.189L138.537 317.095L136.442 316.32L138.537 315.545L139.312 313.45L140.087 315.545L142.181 316.32L140.087 317.095L139.312 319.189Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" /></path>
+  <path d="M184.885 335.595L184.11 333.501L182.016 332.726L184.11 331.951L184.885 329.857L185.66 331.951L187.755 332.726L185.66 333.501L184.885 335.595Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite" /></path>
+  <path d="M222.245 312.17L220.559 307.612L216.002 305.926L220.559 304.24L222.245 299.682L223.932 304.24L228.489 305.926L223.932 307.612L222.245 312.17Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M143.278 289.752L139.709 280.106L130.062 276.536L139.709 272.967L143.278 263.32L146.848 272.967L156.495 276.536L146.848 280.106L143.278 289.752Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.7s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M157.862 351.276L154.292 341.463L144.646 337.832L154.292 334.201L157.862 324.388L161.432 334.201L171.078 337.832L161.432 341.463L157.862 351.276Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.1s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M207.764 332.591L204.625 324.108L196.143 320.97L204.625 317.831L207.764 309.349L210.902 317.831L219.385 320.97L210.902 324.108L207.764 332.591Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.8s" repeatCount="indefinite" /></path>
   </g>
   </g>
   <mask id="mask2_1553_82277" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="119" y="210" width="112" height="106">
@@ -50,24 +50,24 @@ function GoldAlien() {
   </mask>
   <g mask="url(#mask2_1553_82277)">
   <g style="mix-blend-mode:overlay">
-  <circle cx="141.129" cy="301.917" r="1.22977" fill="white"/>
-  <circle cx="131.757" cy="246.496" r="1.22977" fill="white"/>
-  <circle cx="152.89" cy="261.385" r="1.22977" fill="white"/>
-  <circle cx="155.27" cy="240.029" r="1.22977" fill="white"/>
-  <circle cx="163.928" cy="308.388" r="1.22977" fill="white"/>
-  <circle cx="209.565" cy="293.564" r="1.22977" fill="white"/>
-  <path d="M134.715 289.93L134.272 288.733L133.076 288.29L134.272 287.848L134.715 286.651L135.158 287.848L136.355 288.29L135.158 288.733L134.715 289.93Z" fill="#FFF7B0"/>
-  <path d="M121.043 260.308L120.601 259.111L119.404 258.668L120.601 258.225L121.043 257.028L121.486 258.225L122.683 258.668L121.486 259.111L121.043 260.308Z" fill="#FFF7B0"/>
-  <path d="M220.849 228.407L220.406 227.21L219.209 226.767L220.406 226.324L220.849 225.127L221.291 226.324L222.488 226.767L221.291 227.21L220.849 228.407Z" fill="#FFF7B0"/>
-  <path d="M229.052 253.472L228.609 252.275L227.412 251.832L228.609 251.389L229.052 250.193L229.495 251.389L230.691 251.832L229.495 252.275L229.052 253.472Z" fill="#FFF7B0"/>
-  <path d="M183.347 263.973L182.572 261.878L180.477 261.103L182.572 260.328L183.347 258.234L184.122 260.328L186.216 261.103L184.122 261.878L183.347 263.973Z" fill="#FFF7B0"/>
-  <path d="M169.67 238.614L168.895 236.519L166.801 235.744L168.895 234.969L169.67 232.875L170.445 234.969L172.54 235.744L170.445 236.519L169.67 238.614Z" fill="#FFF7B0"/>
-  <path d="M155.998 314.72L155.223 312.626L153.128 311.851L155.223 311.076L155.998 308.982L156.773 311.076L158.867 311.851L156.773 312.626L155.998 314.72Z" fill="#FFF7B0"/>
-  <path d="M192.912 306.517L192.137 304.423L190.043 303.648L192.137 302.873L192.912 300.778L193.687 302.873L195.782 303.648L193.687 304.423L192.912 306.517Z" fill="#FFF7B0"/>
-  <path d="M200.65 245.266L198.963 240.709L194.406 239.022L198.963 237.336L200.65 232.779L202.336 237.336L206.894 239.022L202.336 240.709L200.65 245.266Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M141.735 236.521L138.165 226.874L128.518 223.305L138.165 219.735L141.735 210.088L145.304 219.735L154.951 223.305L145.304 226.874L141.735 236.521Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M159.508 277.536L155.938 267.723L146.292 264.092L155.938 260.461L159.508 250.648L163.078 260.461L172.724 264.092L163.078 267.723L159.508 277.536Z" fill="#FFF7B0"/>
-  <path opacity="0.25" d="M206.22 279.359L203.081 270.877L194.599 267.738L203.081 264.6L206.22 256.117L209.359 264.6L217.841 267.738L209.359 270.877L206.22 279.359Z" fill="#FFF7B0"/>
+  <circle cx="141.129" cy="301.917" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" /></circle>
+  <circle cx="131.757" cy="246.496" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite" /></circle>
+  <circle cx="152.89" cy="261.385" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite" /></circle>
+  <circle cx="155.27" cy="240.029" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.1s" repeatCount="indefinite" /></circle>
+  <circle cx="163.928" cy="308.388" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite" /></circle>
+  <circle cx="209.565" cy="293.564" r="1.22977" fill="white"><animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite" /></circle>
+  <path d="M134.715 289.93L134.272 288.733L133.076 288.29L134.272 287.848L134.715 286.651L135.158 287.848L136.355 288.29L135.158 288.733L134.715 289.93Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.3s" repeatCount="indefinite" /></path>
+  <path d="M121.043 260.308L120.601 259.111L119.404 258.668L120.601 258.225L121.043 257.028L121.486 258.225L122.683 258.668L121.486 259.111L121.043 260.308Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.5s" repeatCount="indefinite" /></path>
+  <path d="M220.849 228.407L220.406 227.21L219.209 226.767L220.406 226.324L220.849 225.127L221.291 226.324L222.488 226.767L221.291 227.21L220.849 228.407Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.1s" repeatCount="indefinite" /></path>
+  <path d="M229.052 253.472L228.609 252.275L227.412 251.832L228.609 251.389L229.052 250.193L229.495 251.389L230.691 251.832L229.495 252.275L229.052 253.472Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite" /></path>
+  <path d="M183.347 263.973L182.572 261.878L180.477 261.103L182.572 260.328L183.347 258.234L184.122 260.328L186.216 261.103L184.122 261.878L183.347 263.973Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" /></path>
+  <path d="M169.67 238.614L168.895 236.519L166.801 235.744L168.895 234.969L169.67 232.875L170.445 234.969L172.54 235.744L170.445 236.519L169.67 238.614Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite" /></path>
+  <path d="M155.998 314.72L155.223 312.626L153.128 311.851L155.223 311.076L155.998 308.982L156.773 311.076L158.867 311.851L156.773 312.626L155.998 314.72Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.9s" repeatCount="indefinite" /></path>
+  <path d="M192.912 306.517L192.137 304.423L190.043 303.648L192.137 302.873L192.912 300.778L193.687 302.873L195.782 303.648L193.687 304.423L192.912 306.517Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" /></path>
+  <path d="M200.65 245.266L198.963 240.709L194.406 239.022L198.963 237.336L200.65 232.779L202.336 237.336L206.894 239.022L202.336 240.709L200.65 245.266Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M141.735 236.521L138.165 226.874L128.518 223.305L138.165 219.735L141.735 210.088L145.304 219.735L154.951 223.305L145.304 226.874L141.735 236.521Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M159.508 277.536L155.938 267.723L146.292 264.092L155.938 260.461L159.508 250.648L163.078 260.461L172.724 264.092L163.078 267.723L159.508 277.536Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.4s" repeatCount="indefinite" /></path>
+  <path opacity="0.25" d="M206.22 279.359L203.081 270.877L194.599 267.738L203.081 264.6L206.22 256.117L209.359 264.6L217.841 267.738L209.359 270.877L206.22 279.359Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.9s" repeatCount="indefinite" /></path>
   </g>
   </g>
   <path d="M131.895 277.2C123.075 262.648 124.113 251.271 129.301 246.508C138.558 238.011 153.685 252.858 159.651 265.294C165.617 277.729 166.395 287.254 161.467 291.752C156.538 296.25 140.715 291.752 131.895 277.2Z" stroke="url(#paint6_linear_1553_82277)" stroke-width="1.8229"/>
@@ -88,7 +88,7 @@ function GoldAlien() {
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dy="4"/>
   <feGaussianBlur stdDeviation="2"/>
-  
+
   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1553_82277"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1553_82277" result="shape"/>
