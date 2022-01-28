@@ -22,7 +22,9 @@ const web3 = new Web3(new Web3.providers.HttpProvider(process.env.ETH_CLIENT_URL
 const LavaLamp = require("./src/abis/LavaLamp.json");
 const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
 
-app.use(express.static(path.join(__dirname, 'build'))); // use build for development
+// use build for development
+// use public for heroku push
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/token/:tokenId', async (req, res) => {
   const tokenId = req.params.tokenId;
