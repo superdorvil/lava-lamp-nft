@@ -426,7 +426,7 @@ function generateOverlaySVG({index}) {
   return overlay;
 }
 
-function generateSwagSVG({index, base}) {
+function generateSwagSVG({index, base, rarity}) {
   let swag = '';
 
   if (index === swagger.active) {
@@ -438,7 +438,7 @@ function generateSwagSVG({index, base}) {
         swag = Glasses();
         break;
       case bases.rocket:
-        swag = Flames();
+        swag = Flames({rarity});
         break;
       case bases.bong:
         swag = GoldenBubbles();
@@ -485,7 +485,7 @@ function generateLavaLamp({
     ${generateGlassSVG({index: glass, glassColor})}
     ${generateLavasSVG({lava1, lava2, lava3, lava4})}
     ${generateBaseSVG({index: base, rarity})}
-    ${generateSwagSVG({index: swag, base})}
+    ${generateSwagSVG({index: swag, base, rarity})}
     ${closeTag}
   `;
 }
@@ -596,12 +596,23 @@ function generateAssets() {
 //  console.log('swag')
   // swag
   for (let i = 0; i < 8; i++) {
-    assets.push(`
-      ${openTag}
-      ${generateBackgroundSVG({index: 1})}
-      ${generateSwagSVG({index: swagger.active, base: i})}
-      ${closeTag}
-    `);
+    if (i === bases.rocket) {
+      for (j = 0; j < 6; j++) {
+        assets.push(`
+          ${openTag}
+          ${generateBackgroundSVG({index: 1})}
+          ${generateSwagSVG({index: swagger.active, base: i, rarity: j})}
+          ${closeTag}
+        `);
+      }
+    } else {
+      assets.push(`
+        ${openTag}
+        ${generateBackgroundSVG({index: 1})}
+        ${generateSwagSVG({index: swagger.active, base: i})}
+        ${closeTag}
+      `);
+    }
   }
 
   return assets;

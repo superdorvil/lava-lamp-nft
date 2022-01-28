@@ -199,14 +199,14 @@ const overlayMetadata = [
 ];
 
 const swagMetadata = [
-  'JPEG Hat',
-  'Glasses',
-  'Flames',
-  'Gold Bubbles',
+  'JPEG Trucker Hat',
+  'Shadez',
+  'Flamez',
+  'Gold Bubblez',
   'Grillz',
   'Gold Chain',
-  'JPEG Belt',
-  'Stud Earring',
+  'JPEG Buckle',
+  'Bling',
 ];
 
 function generateAttribute() {

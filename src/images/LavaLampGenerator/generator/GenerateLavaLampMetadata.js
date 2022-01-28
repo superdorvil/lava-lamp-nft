@@ -116,7 +116,7 @@ const generateMetadata = ({
 }) => {
   const metadata = {
     name: generateNameMetadata({attribute, base, glass, glassColor, rarity, swag, tokenId}),
-    decription: generateDescriptionMetadata({attribute, background, base, glass, glassColor, overlay, rarity, swag, tokenId}),
+    description: generateDescriptionMetadata({attribute, background, base, glass, glassColor, overlay, rarity, swag, tokenId}),
     image: uri,
     attributes: [
       {
