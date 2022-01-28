@@ -40,7 +40,7 @@ function LavaLampCarousel() {
     <CarouselProvider
       isIntrinsicHeight={true}
       totalSlides={4}
-      isPlaying={true}
+      isPlaying={false}
       interval={3000}
       orientation="horizontal"
       visibleSlides={1}
