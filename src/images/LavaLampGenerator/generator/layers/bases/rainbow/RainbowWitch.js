@@ -59,20 +59,8 @@ function RainbowWitch() {
   </g>
   <path d="M149.865 79.4438C153.908 83.4581 159.604 87.0943 175.3 90.647C188.269 93.5825 198.516 92.9819 206.5 91.0001C205.378 87.8409 204 84.0001 202 81.5001C183.87 81.8438 170.179 80.8037 152.833 68.7505C150.693 72.8524 150.356 76.56 149.865 79.4438Z" fill="url(#paint27_radial_902_116284)"/>
   <path d="M125 208C125 208 143.5 218 175 218C206.5 218 225 208 225 208L228 221.5C228 221.5 208.5 232 175 232C141.5 232 121.5 221 121.5 221L125 208Z" fill="#0C011C"/>
-  <g filter="url(#filter0_d_902_116284)">
   <rect x="165" y="216" width="20" height="18" stroke="#FDF21B" stroke-width="4" shape-rendering="geometricPrecision"/>
-  </g>
   <defs>
-  <filter id="filter0_d_902_116284" x="159.559" y="210.56" width="30.8811" height="28.8811" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset/>
-  <feGaussianBlur stdDeviation="1.72028"/>
-  
-  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_902_116284"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_902_116284" result="shape"/>
-  </filter>
   <radialGradient id="paint0_radial_902_116284" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(144 328) rotate(41.1859) scale(10.6301 26.1186)">
   <stop offset="0.453125" stop-color="#564D61"/>
   <stop offset="1" stop-color="#1D1A21"/>

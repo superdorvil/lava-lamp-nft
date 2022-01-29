@@ -2,9 +2,7 @@ function DiamondAlien() {
   return `
   <!-- Diamond Alien -->
   <path d="M155.659 62.5833C159.113 49.6057 161.899 33 174.786 33C187.672 33 192.187 53.5604 194.342 62.8997C196.329 71.5042 200.674 91.406 201.345 94.4841C201.403 94.7486 201.336 95.01 201.146 95.2034C199.763 96.6152 193.095 102.271 175.001 102.271C156.851 102.271 150.198 96.5809 148.843 95.1907C148.66 95.0034 148.594 94.7507 148.643 94.4937C149.178 91.6869 152.494 74.4714 155.659 62.5833Z" fill="url(#paint0_linear_737_226349)"/>
-  <g filter="url(#filter0_d_737_226349)">
   <path d="M227.798 314.12L202.31 284.69C202.137 284.49 201.885 284.375 201.621 284.375H172.525H143.608C143.342 284.375 143.09 284.491 142.917 284.693L117.639 314.121C117.343 314.466 117.341 314.966 117.661 315.29C120.884 318.546 138.617 334.733 172.721 334.733C206.817 334.733 224.551 318.553 227.779 315.292C228.1 314.967 228.097 314.466 227.798 314.12Z" fill="url(#paint1_linear_737_226349)" shape-rendering="geometricPrecision"/>
-  </g>
   <mask id="mask0_737_226349" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="117" y="284" width="112" height="51">
   <path d="M227.798 314.12L202.31 284.69C202.137 284.49 201.885 284.375 201.621 284.375H172.525H143.608C143.342 284.375 143.09 284.491 142.917 284.693L117.639 314.121C117.343 314.466 117.341 314.966 117.661 315.29C120.884 318.546 138.617 334.733 172.721 334.733C206.817 334.733 224.551 318.553 227.779 315.292C228.1 314.967 228.097 314.466 227.798 314.12Z" fill="url(#paint2_linear_737_226349)"/>
   </mask>
@@ -83,16 +81,6 @@ function DiamondAlien() {
   </g>
   </g>
   <defs>
-  <filter id="filter0_d_737_226349" x="113.419" y="284.375" width="118.602" height="58.3581" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dy="4"/>
-  <feGaussianBlur stdDeviation="2"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226349"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226349" result="shape"/>
-  </filter>
   <linearGradient id="paint0_linear_737_226349" x1="156.368" y1="40.4645" x2="185.487" y2="100.44" gradientUnits="userSpaceOnUse">
   <stop offset="0.00712166" stop-color="#6A9EE2"/>
   <stop offset="0.282888" stop-color="#4883C2" stop-opacity="0.98"/>

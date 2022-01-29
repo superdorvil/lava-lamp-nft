@@ -1,9 +1,7 @@
 function EmeraldStandard() {
   return `
   <!-- Emerald Standard -->
-  <g filter="url(#filter0_d_737_226372)">
   <path d="M125.511 312.015C125.13 311.81 124.966 311.367 125.102 310.956L138.023 271.847C138.074 271.692 138.083 271.527 138.048 271.368L125.382 212.874C125.204 212.051 126.171 211.397 126.886 211.843C132.551 215.376 149.852 224.677 174.998 224.677C200.145 224.677 217.446 215.376 223.111 211.843C223.825 211.397 224.793 212.051 224.615 212.874L211.949 271.368C211.914 271.527 211.923 271.692 211.974 271.847L224.895 310.956C225.031 311.367 224.867 311.81 224.485 312.015C220.652 314.075 200.122 324.434 174.998 324.434C149.875 324.434 129.345 314.075 125.511 312.015Z" fill="url(#paint0_linear_737_226372)" shape-rendering="geometricPrecision"/>
-  </g>
   <g filter="url(#filter1_f_737_226372)">
   <mask id="mask0_737_226372" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="125" y="211" width="101" height="114">
   <path d="M125.642 312.073C125.261 311.869 125.097 311.425 125.233 311.014L138.154 271.881C138.205 271.726 138.214 271.561 138.18 271.402L125.374 212.226C125.217 211.503 125.939 210.879 126.634 211.134C131.867 213.055 149.387 218.68 175.13 218.68C200.873 218.68 218.393 213.055 223.626 211.134C224.321 210.879 225.043 211.503 224.886 212.226L212.08 271.402C212.046 271.561 212.055 271.726 212.106 271.881L225.027 311.014C225.163 311.425 224.999 311.869 224.618 312.073C220.785 314.134 200.254 324.5 175.13 324.5C150.006 324.5 129.475 314.134 125.642 312.073Z" fill="#2D2E32"/>
@@ -20,16 +18,6 @@ function EmeraldStandard() {
   <path d="M175.438 324.935C200.391 324.935 220.781 314.575 224.588 312.516C224.967 312.311 225.13 311.867 224.995 311.456L212.162 272.347C212.111 272.192 212.102 272.027 212.137 271.868L224.855 212.729C224.996 212.073 224.422 211.5 223.799 211.587C224.208 211.319 224.531 211.098 224.765 210.933C225.053 210.732 225.182 210.381 225.111 210.036L201.398 93.6969C201.344 93.4299 201.176 93.2103 200.953 93.0843L195.58 55.4279C195.576 55.4008 195.573 55.3741 195.57 55.3473C195.567 55.3261 195.565 55.305 195.562 55.2835C195.47 54.6579 194.147 50.1302 175 50.1302L175.438 324.935Z" fill="#161A70" fill-opacity="0.1"/>
   <path d="M154.31 56.3282C154.32 56.2595 154.322 56.1924 154.328 56.1233C154.4 55.3956 155.624 51 174.785 51C194.296 51 195.584 55.5581 195.668 56.1595C195.675 56.2036 195.678 56.2468 195.684 56.2909L201.374 94.8616C201.411 95.1109 201.344 95.3615 201.167 95.5407C199.834 96.8878 193.192 102.497 175 102.497C156.807 102.497 150.165 96.8878 148.832 95.5407C148.655 95.3615 148.588 95.1109 148.625 94.8616L154.31 56.3282Z" fill="url(#paint5_linear_737_226372)"/>
   <defs>
-  <filter id="filter0_d_737_226372" x="121.055" y="211.698" width="107.887" height="120.736" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dy="4"/>
-  <feGaussianBlur stdDeviation="2"/>
-  
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226372"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226372" result="shape"/>
-  </filter>
   <filter id="filter1_f_737_226372" x="121.721" y="208.221" width="106.185" height="118.557" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
@@ -40,7 +28,7 @@ function EmeraldStandard() {
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dy="0.911458"/>
   <feGaussianBlur stdDeviation="0.683594"/>
-  
+
   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226372"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226372" result="shape"/>

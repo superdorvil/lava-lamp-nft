@@ -1,9 +1,7 @@
 function GoldStandard() {
   return `
   <!-- Gold Standard -->
-  <g filter="url(#filter0_d_737_226369)">
   <path d="M125.511 312.012C125.13 311.807 124.966 311.364 125.102 310.953L138.023 271.844C138.074 271.689 138.083 271.524 138.048 271.365L125.382 212.871C125.204 212.048 126.171 211.394 126.886 211.84C132.551 215.373 149.852 224.674 174.998 224.674C200.145 224.674 217.446 215.373 223.111 211.84C223.825 211.394 224.793 212.048 224.615 212.871L211.949 271.365C211.914 271.524 211.923 271.689 211.974 271.844L224.895 310.953C225.031 311.364 224.867 311.807 224.485 312.012C220.652 314.072 200.122 324.431 174.998 324.431C149.875 324.431 129.345 314.072 125.511 312.012Z" fill="url(#paint0_linear_737_226369)" shape-rendering="geometricPrecision"/>
-  </g>
   <g filter="url(#filter1_f_737_226369)">
   <mask id="mask0_737_226369" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="125" y="211" width="101" height="114">
   <path d="M125.642 312.071C125.261 311.866 125.097 311.422 125.233 311.011L138.154 271.878C138.205 271.723 138.214 271.558 138.18 271.399L125.374 212.223C125.217 211.5 125.939 210.876 126.634 211.131C131.867 213.052 149.387 218.677 175.13 218.677C200.873 218.677 218.393 213.052 223.626 211.131C224.321 210.876 225.043 211.5 224.886 212.224L212.08 271.399C212.046 271.558 212.055 271.723 212.106 271.878L225.027 311.011C225.163 311.422 224.999 311.866 224.618 312.071C220.785 314.131 200.254 324.497 175.13 324.497C150.006 324.497 129.475 314.131 125.642 312.071Z" fill="#2D2E32"/>
@@ -59,16 +57,6 @@ function GoldStandard() {
   </g>
   </g>
   <defs>
-  <filter id="filter0_d_737_226369" x="122.776" y="211.696" width="105.356" height="118.204" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455725" dy="2.73435"/>
-  <feGaussianBlur stdDeviation="1.36718"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226369"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226369" result="shape"/>
-  </filter>
   <filter id="filter1_f_737_226369" x="121.721" y="208.218" width="106.185" height="118.557" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>

@@ -2,7 +2,6 @@ function GoldRocket() {
   return `
   <!-- Gold Rocket -->
   <path d="M155.609 62.4676C159.072 49.5408 161.865 33 174.785 33C187.704 33 192.23 53.48 194.391 62.7828C196.553 72.0855 201.5 95.2 201.5 95.2C201.5 95.2 195.728 102 175 102C154.272 102 148.5 95.2 148.5 95.2C148.5 95.2 152.145 75.3945 155.609 62.4676Z" fill="url(#paint0_linear_1502_79412)"/>
-  <g filter="url(#filter0_d_1502_79412)">
   <path d="M203.806 222.059C204.012 221.17 205.267 221.096 205.588 221.95C215.527 248.408 233.836 274.888 234.947 335.189C234.966 336.229 233.509 336.456 233.176 335.471C219.107 293.879 205.502 278.002 191.552 281.1C190.861 281.253 190.203 280.646 190.364 279.956L203.806 222.059Z" fill="url(#paint1_linear_1502_79412)"/>
   <path d="M147.194 222.059C146.988 221.17 145.733 221.096 145.412 221.95C135.473 248.408 117.164 274.888 116.053 335.189C116.034 336.229 117.491 336.456 117.824 335.471C131.893 293.879 145.498 278.002 159.448 281.1C160.139 281.253 160.797 280.646 160.636 279.956L147.194 222.059Z" fill="url(#paint2_linear_1502_79412)"/>
   <mask id="mask0_1502_79412" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="115" y="221" width="47" height="117">
@@ -27,7 +26,6 @@ function GoldRocket() {
   </g>
   <path d="M126.219 211.388C125.473 210.951 124.507 211.691 124.755 212.52L137.454 254.884C137.459 254.902 137.458 254.899 137.464 254.916C137.669 255.471 153.415 298 175 298C196.585 298 212.331 255.471 212.536 254.916C212.542 254.899 212.541 254.902 212.546 254.884L225.245 212.52C225.493 211.691 224.527 210.951 223.781 211.388C217.85 214.86 200.34 223.644 175 223.644C149.66 223.644 132.15 214.86 126.219 211.388Z" fill="url(#paint4_linear_1502_79412)"/>
   <path d="M174 224.508C174 223.568 175.228 223.256 175.66 224.091C189.286 250.44 191.831 281.198 191.992 340.494C191.994 341.551 190.685 341.719 190.475 340.683C186.862 322.846 188.147 304.501 174.229 288.462C174.084 288.294 174 288.078 174 287.856V224.508Z" fill="url(#paint5_linear_1502_79412)"/>
-  </g>
   <mask id="mask1_1502_79412" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="189" y="219" width="46" height="116">
   <path d="M202.805 220.398C203.013 219.512 204.261 219.438 204.584 220.288C214.682 246.851 233.318 273.416 234.432 333.989C234.451 335.027 232.998 335.258 232.662 334.277C218.35 292.472 204.51 276.53 190.319 279.664C189.628 279.816 188.973 279.207 189.135 278.518L202.805 220.398Z" fill="url(#paint6_linear_1502_79412)"/>
   </mask>
@@ -117,16 +115,6 @@ function GoldRocket() {
   </g>
   </g>
   <defs>
-  <filter id="filter0_d_1502_79412" x="113.543" y="211.258" width="124.594" height="135.58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.46" dy="2.73"/>
-  <feGaussianBlur stdDeviation="1.365"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1502_79412"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1502_79412" result="shape"/>
-  </filter>
   <linearGradient id="paint0_linear_1502_79412" x1="155.968" y1="44.316" x2="210.686" y2="88.4748" gradientUnits="userSpaceOnUse">
   <stop stop-color="#C59651"/>
   <stop offset="0.536458" stop-color="#E0AE0D" stop-opacity="0.98"/>
@@ -183,6 +171,7 @@ function GoldRocket() {
   <stop offset="1" stop-color="#E8F3FC" stop-opacity="0.98"/>
   </linearGradient>
   </defs>
+
   `;
 };
 

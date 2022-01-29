@@ -47,9 +47,7 @@ function DiamondWitch() {
   </g>
   </g>
   <path d="M125 208C125 208 143.5 218 175 218C206.5 218 225 208 225 208L228 221.5C228 221.5 208.5 232 175 232C141.5 232 121.5 221 121.5 221L125 208Z" fill="#0C011C"/>
-  <g filter="url(#filter0_d_1490_98301)">
   <rect x="165" y="216" width="20" height="18" stroke="#FDF21B" stroke-width="4" shape-rendering="geometricPrecision"/>
-  </g>
   <path d="M236.072 98.79C234.385 107.874 201.732 109.429 174.03 104.285C146.329 99.1414 116.41 85.968 118.097 76.8839C119.784 67.7997 152.437 66.2448 180.139 71.3886C207.841 76.5324 237.759 89.7058 236.072 98.79Z" fill="url(#paint4_linear_1490_98301)"/>
   <mask id="mask3_1490_98301" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="118" y="68" width="119" height="40">
   <path d="M236.072 98.79C234.385 107.874 201.732 109.429 174.03 104.285C146.329 99.1414 116.41 85.968 118.097 76.8839C119.784 67.7997 152.437 66.2448 180.139 71.3886C207.841 76.5324 237.759 89.7058 236.072 98.79Z" fill="#0C011C"/>
@@ -95,16 +93,6 @@ function DiamondWitch() {
   </g>
   <path d="M149.865 79.444C153.908 83.4584 159.604 87.0946 175.3 90.6472C188.269 93.5827 198.516 92.9822 206.5 91.0004C205.378 87.8412 204 84.0004 202 81.5004C183.87 81.8441 170.179 80.8039 152.833 68.7507C150.693 72.8527 150.356 76.5603 149.865 79.444Z" fill="url(#paint6_radial_1490_98301)"/>
   <defs>
-  <filter id="filter0_d_1490_98301" x="159.559" y="210.559" width="30.8811" height="28.8811" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset/>
-  <feGaussianBlur stdDeviation="1.72028"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1490_98301"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1490_98301" result="shape"/>
-  </filter>
   <radialGradient id="paint0_radial_1490_98301" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(144 328) rotate(41.1859) scale(10.6301 26.1186)">
   <stop offset="0.453125" stop-color="#564D61"/>
   <stop offset="1" stop-color="#1D1A21"/>

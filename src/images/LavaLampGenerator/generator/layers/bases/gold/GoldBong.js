@@ -70,7 +70,6 @@ function GoldBong() {
   <path opacity="0.25" d="M268.143 215.714L265.481 208.519L258.286 205.857L265.481 203.195L268.143 196L270.805 203.195L278 205.857L270.805 208.519L268.143 215.714Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.5s" repeatCount="indefinite" /></path>
   </g>
   </g>
-  <g filter="url(#filter1_d_737_226363)">
   <mask id="mask1_737_226363" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="113" y="211" width="128" height="104">
   <path d="M206.972 314.45H177.549H146.374C123.507 314.45 109.29 291.999 114.707 268.713L116.597 260.586L126.518 211.457C137.089 220.296 154.504 224.873 177.549 224.873C200.593 224.873 212.675 219.432 225.664 211.457L236.747 260.586L238.637 268.704C244.061 291.992 229.843 314.45 206.972 314.45Z" fill="url(#paint1_radial_737_226363)" stroke="black" stroke-width="0.455725"/>
   </mask>
@@ -117,7 +116,6 @@ function GoldBong() {
   <path opacity="0.25" d="M227.135 314.27L224.473 307.075L217.278 304.413L224.473 301.751L227.135 294.556L229.797 301.751L236.992 304.413L229.797 307.075L227.135 314.27Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.7s" repeatCount="indefinite" /></path>
   <path opacity="0.25" d="M191.857 299.744L189.194 292.549L182 289.887L189.194 287.225L191.857 280.03L194.519 287.225L201.714 289.887L194.519 292.549L191.857 299.744Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.6s" repeatCount="indefinite" /></path>
   <path opacity="0.25" d="M241.143 243.714L238.481 236.519L231.286 233.857L238.481 231.195L241.143 224L243.805 231.195L251 233.857L243.805 236.519L241.143 243.714Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.3s" repeatCount="indefinite" /></path>
-  </g>
   </g>
   </g>
   <mask id="mask2_737_226363" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="149" y="48" width="54" height="54">
@@ -183,16 +181,6 @@ function GoldBong() {
   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
   <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_737_226363"/>
-  </filter>
-  <filter id="filter1_d_737_226363" x="111.049" y="211.036" width="132.159" height="109.111" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455725" dy="2.73435"/>
-  <feGaussianBlur stdDeviation="1.36718"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226363"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226363" result="shape"/>
   </filter>
   <filter id="filter2_f_737_226363" x="-13.1281" y="-95.4347" width="555.705" height="683.009" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
   <feFlood flood-opacity="0" result="BackgroundImageFix"/>

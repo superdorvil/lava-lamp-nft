@@ -56,7 +56,6 @@ function DiamondBong() {
   <path d="M281.64 101.172L280.04 96.8475L275.716 95.2474L280.04 93.6472L281.64 89.3229L283.241 93.6472L287.565 95.2474L283.241 96.8475L281.64 101.172Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.4s" repeatCount="indefinite" /></path>
   </g>
   </g>
-  <g filter="url(#filter0_d_737_226353)">
   <mask id="mask1_737_226353" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="112" y="211" width="128" height="104">
   <path d="M205.982 314.453H176.558H145.384C122.516 314.453 108.299 292.001 113.716 268.715L115.606 260.588L125.527 211.458C136.098 220.298 153.514 224.875 176.558 224.875C199.603 224.875 211.686 219.434 224.674 211.458L235.757 260.588L237.648 268.706C243.071 291.994 228.853 314.453 205.982 314.453Z" fill="url(#paint1_radial_737_226353)" stroke="black" stroke-width="0.455729"/>
   </mask>
@@ -88,7 +87,6 @@ function DiamondBong() {
   <path opacity="0.25" d="M224.232 247.943L221.151 239.617L212.825 236.537L221.151 233.456L224.232 225.13L227.313 233.456L235.638 236.537L227.313 239.617L224.232 247.943Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.2s" repeatCount="indefinite" /></path>
   <path d="M197.884 234.895L196.873 232.163L194.141 231.152L196.873 230.141L197.884 227.409L198.895 230.141L201.627 231.152L198.895 232.163L197.884 234.895Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.1s" repeatCount="indefinite" /></path>
   <path d="M145.019 232.616L144.008 229.884L141.275 228.873L144.008 227.862L145.019 225.13L146.03 227.862L148.762 228.873L146.03 229.884L145.019 232.616Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.9s" repeatCount="indefinite" /></path>
-  </g>
   </g>
   </g>
   <path d="M183.756 300.064L182.745 297.332L180.013 296.321L182.745 295.31L183.756 292.578L184.767 295.31L187.5 296.321L184.767 297.332L183.756 300.064Z" fill="#FFF7B0"><animate attributeName="opacity" values="1;0;1" dur="2.2s" repeatCount="indefinite" /></path>
@@ -148,15 +146,6 @@ function DiamondBong() {
   <path d="M201.946 94.7346C201.946 94.7346 201.947 94.7337 201.432 94.3359L201.089 94.0696V94.8427V95.6157C201.303 95.4214 201.474 95.2529 201.606 95.1166C201.715 95.0029 201.797 94.9116 201.853 94.8465C201.881 94.814 201.903 94.788 201.918 94.7691L201.937 94.7459L201.943 94.7384L201.945 94.7357L201.946 94.7346Z" fill="black"/>
   <path d="M148.912 94.0878C148.912 94.229 148.897 94.3699 148.869 94.5083L148.681 95.4257C148.871 95.6143 149.107 95.8345 149.393 96.0785C150.31 96.8609 151.738 97.8865 153.811 98.9011C157.959 100.931 164.669 102.907 175.006 102.822C185.337 102.737 192.041 100.761 196.185 98.7768C198.255 97.7849 199.682 96.7928 200.598 96.0384C200.782 95.8872 200.945 95.7457 201.089 95.6157V94.8427V94.0696V93.7373L200.911 93.9468C200.903 93.9569 200.889 93.974 200.869 93.9976C200.828 94.0449 200.762 94.1185 200.669 94.2148C200.484 94.4072 200.191 94.6903 199.772 95.0347C198.936 95.7232 197.598 96.6584 195.623 97.6043C191.675 99.4955 185.163 101.438 174.995 101.522C164.832 101.606 158.326 99.6634 154.382 97.7334C152.41 96.7679 151.073 95.8029 150.237 95.0896C149.819 94.7328 149.525 94.4385 149.34 94.2381C149.247 94.1378 149.181 94.061 149.14 94.0115C149.12 93.9868 149.106 93.9689 149.097 93.9583L148.912 93.7447V94.081V94.0878Z" fill="black"/>
   <defs>
-  <filter id="filter0_d_737_226353" x="110.059" y="211.038" width="132.16" height="109.112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455729" dy="2.73438"/>
-  <feGaussianBlur stdDeviation="1.36719"/>
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226353"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226353" result="shape"/>
-  </filter>
   <linearGradient id="paint0_linear_737_226353" x1="338.136" y1="313.339" x2="446.504" y2="488.705" gradientUnits="userSpaceOnUse">
   <stop offset="0.00712166" stop-color="#6A9EE2"/>
   <stop offset="0.282888" stop-color="#4883C2" stop-opacity="0.98"/>

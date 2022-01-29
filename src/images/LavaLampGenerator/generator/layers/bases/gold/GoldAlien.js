@@ -22,9 +22,7 @@ function GoldAlien() {
   <path opacity="0.25" d="M187.308 52.3147L184.969 45.9945L178.649 43.6558L184.969 41.3172L187.308 34.997L189.647 41.3172L195.967 43.6558L189.647 45.9945L187.308 52.3147Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.1s" repeatCount="indefinite" /></path>
   </g>
   </g>
-  <g filter="url(#filter0_d_1553_82277)">
   <path d="M231.003 314.132L204.53 284H174.805H145.258L119.003 314.132C119.003 314.132 136.812 334 175.003 334C213.194 334 231.003 314.132 231.003 314.132Z" fill="url(#paint2_linear_1553_82277)" shape-rendering="geometricPrecision"/>
-  </g>
   <path d="M124.147 211.218C124.287 210.613 124.979 210.328 125.518 210.635C130.43 213.429 151.372 224.483 175.232 224.483C199.055 224.483 219.619 213.464 224.485 210.649C225.025 210.336 225.721 210.622 225.862 211.23C229.497 226.905 236.148 263.543 224.137 282.351C208.611 306.662 182.963 315 175.003 315C167.043 315 141.394 306.662 125.869 282.351C113.855 263.539 120.512 226.886 124.147 211.218Z" fill="url(#paint3_linear_1553_82277)"/>
   <mask id="mask1_1553_82277" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="119" y="283" width="112" height="51">
   <path d="M229.801 313.118L204.313 283.687C204.139 283.487 203.888 283.372 203.624 283.372H174.527H145.611C145.345 283.372 145.093 283.488 144.92 283.69L119.642 313.118C119.346 313.463 119.344 313.963 119.664 314.287C122.886 317.543 140.62 333.73 174.724 333.73C208.82 333.73 226.554 317.55 229.782 314.289C230.103 313.964 230.1 313.463 229.801 313.118Z" fill="url(#paint4_linear_1553_82277)"/>
@@ -83,16 +81,6 @@ function GoldAlien() {
   <path fill-rule="evenodd" clip-rule="evenodd" d="M177.406 225.999L177.304 225.999C177.89 225.998 178.473 225.991 179.05 225.98C178.504 225.992 177.956 225.999 177.406 225.999Z" fill="#161A70" fill-opacity="0.1"/>
   <path fill-rule="evenodd" clip-rule="evenodd" d="M231.003 314C231.003 314 213.503 334 174.999 334V36C187.167 36 192.18 55.6281 194.293 65.0593L194.4 65.5391C196.248 73.7729 200.678 92.4777 201.512 96.4079C201.565 96.656 201.559 96.905 201.492 97.1335L225.003 210C225.049 210.228 225.118 210.313 225.003 210.5C225.199 210.377 225.581 210.234 226.003 211.5C226.425 212.766 237.503 256.5 225.122 281C221.921 286.227 217.837 291.181 214.003 295L231.003 314ZM177.406 225.999L177.304 225.999C177.89 225.998 178.473 225.991 179.05 225.98C178.504 225.992 177.956 225.999 177.406 225.999Z" fill="#161A70" fill-opacity="0.1"/>
   <defs>
-  <filter id="filter0_d_1553_82277" x="115.003" y="284" width="120" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dy="4"/>
-  <feGaussianBlur stdDeviation="2"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1553_82277"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1553_82277" result="shape"/>
-  </filter>
   <linearGradient id="paint0_linear_1553_82277" x1="155.612" y1="47.316" x2="210.537" y2="92.4783" gradientUnits="userSpaceOnUse">
   <stop stop-color="#C59651"/>
   <stop offset="0.536458" stop-color="#E0AE0D"/>

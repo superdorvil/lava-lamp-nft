@@ -1,9 +1,7 @@
 function GoldPumpkin() {
   return `
   <!-- Gold Pumpkin -->
-  <g filter="url(#filter0_d_1503_127877)">
   <path d="M230.5 315.132L204.264 285H174.804H145.521L119.5 315.132C119.5 315.132 137.15 335 175 335C212.85 335 230.5 315.132 230.5 315.132Z" fill="url(#paint0_linear_1503_127877)" shape-rendering="geometricPrecision"/>
-  </g>
   <path d="M124.747 210C124.747 210 148.103 225.013 175.262 225.013C202.42 225.013 225.319 210 225.319 210C228.848 224.978 245.288 263.308 233.02 282.726C217.582 307.164 200.594 315.545 175.033 315.545C149.473 315.545 132.485 307.164 117.046 282.726C104.779 263.308 121.219 224.978 124.747 210Z" fill="url(#paint1_radial_1503_127877)"/>
   <mask id="mask0_1503_127877" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="112" y="210" width="126" height="107">
   <path d="M124.681 210.456C124.681 210.456 148.037 225 175.195 225C202.353 225 225.252 210.456 225.252 210.456C228.781 225.434 245.221 263.764 232.954 283.182C217.515 307.62 200.527 316.001 174.966 316.001C149.406 316.001 132.418 307.62 116.979 283.182C104.712 263.764 121.152 225.434 124.681 210.456Z" fill="url(#paint2_radial_1503_127877)"/>
@@ -83,16 +81,6 @@ function GoldPumpkin() {
   </g>
   <path d="M194.443 63.1373C192.243 53.5909 187.666 32.3999 174.999 32.3999L175.213 336.097C213.13 336.097 230.812 316.087 230.812 316.087L218.055 301.358C223.364 296.623 228.312 290.561 233.11 282.942C242.926 267.352 234.333 239.596 228.719 221.464C227.328 216.971 226.12 213.069 225.421 210.089C225.421 210.089 225.306 210.164 225.084 210.304L201.463 95.6026L194.555 63.6229L194.443 63.1373Z" fill="#161A70" fill-opacity="0.1"/>
   <defs>
-  <filter id="filter0_d_1503_127877" x="117" y="285" width="117" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.5" dy="3"/>
-  <feGaussianBlur stdDeviation="1.5"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1503_127877"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1503_127877" result="shape"/>
-  </filter>
   <linearGradient id="paint0_linear_1503_127877" x1="135.141" y1="293.2" x2="164.523" y2="361.733" gradientUnits="userSpaceOnUse">
   <stop stop-color="#C59651"/>
   <stop offset="0.536458" stop-color="#E0AE0D" stop-opacity="0.98"/>

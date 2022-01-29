@@ -1,7 +1,6 @@
 function Lavalien() {
   return `
   <!-- Lavalien -->
-  <g filter="url(#filter0_d_584_56451)">
   <path d="M132.217 148.893C133.369 143.879 132.019 140.681 130.106 139.775C126.692 138.157 123.779 143.829 123.241 147.97C122.702 152.112 123.365 154.939 125.18 155.792C126.995 156.646 131.066 153.906 132.217 148.893Z" fill="#6DF244"/>
   <path d="M101.432 185.348C100.221 184.237 99.3133 182.943 98.6987 181.557L82.9585 181.836L82.833 174.765L97.98 174.497C98.6124 171.548 100.402 168.826 103.273 167.1L107.337 164.656C110.071 163.013 113.156 162.656 115.962 163.347L123.022 150.601L129.208 154.028L121.984 167.071C122.931 168.191 123.681 169.521 124.157 171.031L128.822 191.505L125.68 206.772L101.432 185.348Z" fill="url(#paint0_radial_584_56451)"/>
   <path d="M77.0117 182.086C72.0439 180.752 69.8523 178.06 69.9489 175.945C70.1211 172.171 76.4968 172.258 80.4069 173.725C84.317 175.191 86.5032 177.103 86.4059 179.106C86.3086 181.109 81.9795 183.42 77.0117 182.086Z" fill="#6DF244"/>
@@ -21,41 +20,9 @@ function Lavalien() {
   <path d="M96.5055 98.0546C96.5103 92.1513 94.166 88.9479 91.7776 88.4528C87.5161 87.5696 85.6975 94.6833 86.1583 99.4485C86.619 104.214 88.0942 107.189 90.3584 107.651C92.6226 108.113 96.5007 103.958 96.5055 98.0546Z" fill="#57BF37"/>
   <rect width="4.05059" height="27.9009" transform="matrix(-0.483106 0.875562 0.873962 0.485994 55.1914 121.395)" fill="#6DF244"/>
   <path d="M48.5868 126.868C43.3706 124.104 41.6407 120.531 42.3234 118.189C43.5418 114.011 50.6776 115.741 54.6702 118.382C58.6628 121.024 60.5987 123.722 59.9453 125.939C59.2919 128.155 53.8031 129.632 48.5868 126.868Z" fill="#57BF37"/>
-  <g filter="url(#filter1_d_584_56451)">
   <circle cx="111.74" cy="175.87" r="4.33642" transform="rotate(-6.77196 111.74 175.87)" fill="url(#paint8_radial_584_56451)" stroke="#56CCF2" stroke-width="0.47927"/>
-  <g filter="url(#filter2_d_584_56451)">
   <path d="M115.299 173.408C118.23 172.585 119.495 172.362 119.643 172.786C119.854 173.388 116.878 175.633 111.978 177.35C107.077 179.066 103.76 179.407 103.549 178.804C103.398 178.375 104.462 177.394 107.336 176.188" stroke="#6DF244" stroke-width="0.684672"/>
-  </g>
-  </g>
-  </g>
   <defs>
-  <filter id="filter0_d_584_56451" x="39.4473" y="87.9222" width="95.9297" height="123.863" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dy="2.27865"/>
-  <feGaussianBlur stdDeviation="1.36719"/>
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584_56451"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584_56451" result="shape"/>
-  </filter>
-  <filter id="filter1_d_584_56451" x="102.919" y="171.293" width="17.3514" height="9.70081" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dy="0.273869"/>
-  <feGaussianBlur stdDeviation="0.136934"/>
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584_56451"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584_56451" result="shape"/>
-  </filter>
-  <filter id="filter2_d_584_56451" x="102.302" y="171.344" width="18.5839" height="8.96911" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset/>
-  <feGaussianBlur stdDeviation="0.445037"/>
-  <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_584_56451"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_584_56451" result="shape"/>
-  </filter>
   <radialGradient id="paint0_radial_584_56451" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(107.076 171.223) rotate(61.8214) scale(36.1903 30.5505)">
   <stop offset="0.552083" stop-color="white"/>
   <stop offset="1" stop-color="#CCD0C9"/>

@@ -1,9 +1,7 @@
 function RainbowPumpkin() {
   return `
   <!-- Rainbow Pumpkin -->
-  <g filter="url(#filter0_d_878_100587)">
   <path d="M230.599 316.09L204.316 285.742H174.804H145.469L119.401 316.09C119.401 316.09 137.083 336.1 175 336.1C212.918 336.1 230.599 316.09 230.599 316.09Z" fill="black"/>
-  </g>
   <mask id="mask0_878_100587" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="112" y="210" width="126" height="107">
   <path d="M124.722 210.55C124.722 210.55 144.814 225 175.157 225C205.5 225 225.137 210.55 225.137 210.55C228.661 225.554 245.075 263.951 232.827 283.403C217.412 307.884 200.45 316.279 174.929 316.279C149.409 316.279 132.447 307.884 117.032 283.403C104.784 263.951 121.198 225.554 124.722 210.55Z" fill="url(#paint0_radial_878_100587)"/>
   </mask>
@@ -42,15 +40,6 @@ function RainbowPumpkin() {
   <path d="M317.023 26.1265C317.023 26.1265 290.925 -1.77049 257.678 1.49534C228.177 4.39313 207.073 52.5923 165.209 52.5923C123.345 52.5923 87.0017 26.1265 87.0017 26.1265L87.0017 0.500161C87.0017 0.500161 120.259 26.5241 165.209 26.5241C185.69 26.5241 229.535 -21.417 257.678 -24.1134C291.302 -27.3348 317.023 0.50014 317.023 0.50014L317.023 26.1265Z" fill="url(#paint15_radial_878_100587)"/>
   </g>
   <defs>
-  <filter id="filter0_d_878_100587" x="117.123" y="285.742" width="116.667" height="55.8268" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455729" dy="2.73438"/>
-  <feGaussianBlur stdDeviation="1.36719"/>
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_878_100587"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_878_100587" result="shape"/>
-  </filter>
   <radialGradient id="paint0_radial_878_100587" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(153.055 257.946) rotate(36.2538) scale(76.2935 67.5721)">
   <stop offset="0.0989583" stop-color="#FFB800"/>
   <stop offset="1" stop-color="#E96D00"/>

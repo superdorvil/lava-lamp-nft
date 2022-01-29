@@ -22,7 +22,7 @@ contract LavaLamp is Ownable, ERC721 {
         // "http://localhost:3000/token/"
         // setBaseURI("http://www.websitename.com/token/");
         // ipfs://{cid}/
-        setBaseURI("ipfs://QmdtKdvzaRfxd2QpgpnXScihqXh74LFBGG1oeLdMbSS1Kh/");
+        setBaseURI("ipfs://QmNg7S8UPvkx1TH8U5quNjFaDe9hHR1N6zFhTZmnipC7oJ/");
     }
 
     function setBaseURI(string memory baseURI) public onlyOwner {
@@ -34,9 +34,9 @@ contract LavaLamp is Ownable, ERC721 {
     }
 
     function mint(uint256 mintAmount) public payable {
-        require(mintAmount > 0, 'mint amount cannot be 0');
-        require(mintAmount <= maxMintAmount, 'mint amount cannot be greater than 20');
-        require(lampsMinted + mintAmount <= maxSupply, 'minting will go over total supply of 7980 lamps');
+        //require(mintAmount > 0, 'mint amount cannot be 0');
+        //require(mintAmount <= maxMintAmount, 'mint amount cannot be greater than 20');
+        //require(lampsMinted + mintAmount <= maxSupply, 'minting will go over total supply of 7980 lamps');
         uint256 price = cost * mintAmount;
 
         if (msg.sender != owner())
@@ -48,15 +48,15 @@ contract LavaLamp is Ownable, ERC721 {
         }
 
         // (bool hs, ) = payable(0x0).call{value: address(this).balance * 5 / 100}("");
-      //  (bool success, ) = payable(owner()).call{value: address(this).balance}("");
-      //  require(success);
+        (bool success, ) = payable(owner()).call{value: address(this).balance}("");
+        require(success);
     }
 
-    function withdraw() public payable onlyOwner {
+    /*function withdraw() public payable onlyOwner {
       // (bool hs, ) = payable(0x0).call{value: address(this).balance * 5 / 100}("");
       (bool success, ) = payable(owner()).call{value: address(this).balance}("");
       require(success);
-    }
+    }*/
 
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");

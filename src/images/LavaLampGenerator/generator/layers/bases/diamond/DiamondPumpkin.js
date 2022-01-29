@@ -1,9 +1,7 @@
 function DiamondPumpkin() {
   return `
   <!-- Diamond Pumpkin -->
-  <g filter="url(#filter0_d_737_226351)">
   <path d="M230.077 315.488L204.589 286.057C204.416 285.857 204.164 285.742 203.9 285.742H174.804H145.887C145.622 285.742 145.369 285.858 145.196 286.06L119.919 315.488C119.622 315.833 119.62 316.333 119.941 316.657C123.163 319.913 140.897 336.1 175 336.1C209.097 336.1 226.83 319.92 230.058 316.659C230.379 316.335 230.376 315.833 230.077 315.488Z" fill="url(#paint0_linear_737_226351)" shape-rendering="geometricPrecision"/>
-  </g>
   <mask id="mask0_737_226351" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="119" y="285" width="111" height="51">
   <path d="M229.621 315.032L204.132 285.601C203.959 285.401 203.708 285.286 203.443 285.286H174.347H145.431C145.165 285.286 144.913 285.402 144.739 285.604L119.462 315.032C119.166 315.378 119.164 315.878 119.484 316.201C122.706 319.457 140.44 335.645 174.544 335.645C208.64 335.645 226.374 319.464 229.601 316.203C229.923 315.879 229.92 315.377 229.621 315.032Z" fill="url(#paint1_linear_737_226351)"/>
   </mask>
@@ -83,15 +81,6 @@ function DiamondPumpkin() {
   </g>
   </g>
   <defs>
-  <filter id="filter0_d_737_226351" x="117.198" y="285.742" width="116.602" height="56.3581" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.5" dy="3"/>
-  <feGaussianBlur stdDeviation="1.5"/>
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226351"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226351" result="shape"/>
-  </filter>
   <linearGradient id="paint0_linear_737_226351" x1="135.808" y1="291.169" x2="144.601" y2="343.572" gradientUnits="userSpaceOnUse">
   <stop offset="0.00712166" stop-color="#6A9EE2"/>
   <stop offset="0.282888" stop-color="#4883C2" stop-opacity="0.98"/>

@@ -60,7 +60,6 @@ function RainbowBong() {
   <path d="M284.273 98.0205L282.687 93.7334L278.4 92.1471L282.687 90.5607L284.273 86.2736L285.859 90.5607L290.146 92.1471L285.859 93.7334L284.273 98.0205Z" fill="#FFF7B0"/>
   </g>
   </g>
-  <g filter="url(#filter2_d_1490_90946)">
   <mask id="mask1_1490_90946" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="112" y="211" width="128" height="104">
   <path d="M205.991 314.453H176.568H145.393C122.525 314.453 108.308 292.002 113.725 268.715L115.616 260.588L125.537 211.458C136.107 220.298 153.523 224.875 176.568 224.875C199.612 224.875 211.695 219.434 224.683 211.458L235.766 260.588L237.657 268.706C243.08 291.995 228.863 314.453 205.991 314.453Z" fill="url(#paint10_radial_1490_90946)" stroke="black" stroke-width="0.455729"/>
   </mask>
@@ -105,7 +104,6 @@ function RainbowBong() {
   <path d="M239.292 227.646L238.598 225.659L236.722 224.924L238.598 224.188L239.292 222.201L239.986 224.188L241.861 224.924L239.986 225.659L239.292 227.646Z" fill="#FFF7B0"/>
   <path d="M129.725 253.395L129.031 251.408L127.155 250.672L129.031 249.937L129.725 247.95L130.419 249.937L132.294 250.672L130.419 251.408L129.725 253.395Z" fill="#FFF7B0"/>
   <path d="M229.233 255.652L228.837 254.516L227.765 254.096L228.837 253.676L229.233 252.54L229.63 253.676L230.702 254.096L229.63 254.516L229.233 255.652Z" fill="#FFF7B0"/>
-  </g>
   </g>
   </g>
   <mask id="mask2_1490_90946" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="148" y="48" width="54" height="54">
@@ -172,16 +170,6 @@ function RainbowBong() {
   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
   <feGaussianBlur stdDeviation="2.25901" result="effect1_foregroundBlur_1490_90946"/>
-  </filter>
-  <filter id="filter2_d_1490_90946" x="110.068" y="211.038" width="132.16" height="109.112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455729" dy="2.73438"/>
-  <feGaussianBlur stdDeviation="1.36719"/>
-  
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1490_90946"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1490_90946" result="shape"/>
   </filter>
   <filter id="filter3_f_1490_90946" x="139.976" y="-51.1935" width="170.443" height="170.443" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
   <feFlood flood-opacity="0" result="BackgroundImageFix"/>

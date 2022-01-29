@@ -1,9 +1,7 @@
 function DiamondRocket() {
   return `
   <!-- Diamond Rocket -->
-  <g filter="url(#filter0_d_1490_98306)">
   <path d="M147.434 221.639C147.226 220.753 145.978 220.68 145.655 221.53C135.557 248.092 116.921 274.657 115.808 335.231C115.789 336.268 117.241 336.499 117.577 335.518C131.889 293.713 145.73 277.771 159.92 280.905C160.611 281.057 161.266 280.448 161.104 279.759L147.434 221.639Z" fill="url(#paint0_linear_1490_98306)" shape-rendering="geometricPrecision"/>
-  </g>
   <mask id="mask0_1490_98306" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="115" y="221" width="47" height="117">
   <path d="M147.434 222.679C147.226 221.794 145.978 221.72 145.655 222.57C135.557 249.132 116.921 275.697 115.808 336.271C115.789 337.308 117.241 337.539 117.577 336.558C131.889 294.753 145.73 278.811 159.92 281.945C160.611 282.097 161.266 281.488 161.104 280.799L147.434 222.679Z" fill="url(#paint1_linear_1490_98306)"/>
   </mask>
@@ -24,9 +22,7 @@ function DiamondRocket() {
   <path opacity="0.25" d="M122.705 331.91L119.781 324.01L111.881 321.087L119.781 318.163L122.705 310.263L125.628 318.163L133.528 321.087L125.628 324.01L122.705 331.91Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.5s" repeatCount="indefinite" /></path>
   </g>
   </g>
-  <g filter="url(#filter1_d_1490_98306)">
   <path d="M202.565 221.639C202.773 220.753 204.022 220.68 204.345 221.53C214.442 248.092 233.079 274.657 234.192 335.231C234.211 336.268 232.758 336.499 232.422 335.518C218.11 293.713 204.27 277.771 190.079 280.905C189.388 281.057 188.733 280.448 188.895 279.759L202.565 221.639Z" fill="url(#paint2_linear_1490_98306)" shape-rendering="geometricPrecision"/>
-  </g>
   <mask id="mask1_1490_98306" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="188" y="219" width="46" height="116">
   <path d="M201.799 220.4C202.007 219.515 203.255 219.441 203.579 220.291C213.676 246.854 232.313 273.419 233.426 333.992C233.445 335.029 231.992 335.261 231.656 334.28C217.344 292.475 203.504 276.533 189.313 279.666C188.622 279.819 187.967 279.21 188.129 278.521L201.799 220.4Z" fill="url(#paint3_linear_1490_98306)"/>
   </mask>
@@ -43,9 +39,7 @@ function DiamondRocket() {
   <path opacity="0.25" d="M233.769 337.175L231.013 329.726L223.563 326.969L231.013 324.213L233.769 316.764L236.526 324.213L243.975 326.969L236.526 329.726L233.769 337.175Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.8s" repeatCount="indefinite" /></path>
   </g>
   </g>
-  <g filter="url(#filter2_d_1490_98306)">
   <path d="M125.849 211.156C125.101 210.748 124.172 211.486 124.421 212.301L137.223 254.133C137.228 254.148 137.226 254.145 137.232 254.16C137.415 254.659 153.266 297.588 175 297.588C196.733 297.588 212.584 254.659 212.768 254.16C212.773 254.145 212.772 254.148 212.776 254.133L225.579 212.301C225.828 211.486 224.899 210.748 224.151 211.156C218.251 214.373 200.596 222.642 175 222.642C149.404 222.642 131.748 214.373 125.849 211.156Z" fill="url(#paint4_linear_1490_98306)" shape-rendering="geometricPrecision"/>
-  </g>
   <mask id="mask2_1490_98306" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="124" y="211" width="102" height="87">
   <path d="M125.577 211.35C124.829 210.942 123.9 211.679 124.15 212.494L136.952 254.326C136.957 254.342 136.955 254.338 136.961 254.354C137.144 254.852 152.995 297.781 174.728 297.781C196.462 297.781 212.313 254.852 212.496 254.354C212.502 254.338 212.5 254.342 212.505 254.326L225.307 212.494C225.557 211.679 224.627 210.942 223.879 211.35C217.98 214.566 200.325 222.836 174.728 222.836C149.132 222.836 131.477 214.566 125.577 211.35Z" fill="url(#paint5_linear_1490_98306)"/>
   </mask>
@@ -82,9 +76,7 @@ function DiamondRocket() {
   <path opacity="0.25" d="M142.772 295.109L140.07 287.807L132.767 285.104L140.07 282.402L142.772 275.099L145.474 282.402L152.777 285.104L145.474 287.807L142.772 295.109Z" fill="#FFF7B0"><animate attributeName="opacity" values="0.25;0;0.25" dur="2.4s" repeatCount="indefinite" /></path>
   </g>
   </g>
-  <g filter="url(#filter3_d_1490_98306)">
   <path d="M175 223.321C175 222.373 176.245 222.068 176.665 222.918C189.647 249.185 192.092 279.874 192.252 338.861C192.255 339.923 190.945 340.087 190.745 339.044C187.346 321.299 188.497 303.067 175.217 287.116C175.079 286.95 175 286.74 175 286.525V223.321Z" fill="url(#paint6_linear_1490_98306)" shape-rendering="geometricPrecision"/>
-  </g>
   <mask id="mask3_1490_98306" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="174" y="223" width="19" height="119">
   <path d="M174.999 224.667C174.999 223.718 176.243 223.414 176.663 224.264C189.646 250.531 192.09 281.219 192.25 340.206C192.253 341.269 190.943 341.433 190.743 340.389C187.344 322.645 188.495 304.413 175.215 288.461C175.078 288.296 174.999 288.085 174.999 287.87V224.667Z" fill="url(#paint7_linear_1490_98306)"/>
   </mask>
@@ -122,46 +114,6 @@ function DiamondRocket() {
   </g>
   </g>
   <defs>
-  <filter id="filter0_d_1490_98306" x="115.808" y="220.932" width="46.2327" height="118.402" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455729" dy="2.73438"/>
-  <feGaussianBlur stdDeviation="0.227865"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1490_98306"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1490_98306" result="shape"/>
-  </filter>
-  <filter id="filter1_d_1490_98306" x="188.871" y="220.932" width="46.2327" height="118.402" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455729" dy="2.73438"/>
-  <feGaussianBlur stdDeviation="0.227865"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1490_98306"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1490_98306" result="shape"/>
-  </filter>
-  <filter id="filter2_d_1490_98306" x="124.38" y="211.04" width="102.152" height="89.7375" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455729" dy="2.73438"/>
-  <feGaussianBlur stdDeviation="0.227865"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1490_98306"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1490_98306" result="shape"/>
-  </filter>
-  <filter id="filter3_d_1490_98306" x="175" y="222.42" width="18.1629" height="120.518" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dx="0.455729" dy="2.73438"/>
-  <feGaussianBlur stdDeviation="0.227865"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1490_98306"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1490_98306" result="shape"/>
-  </filter>
   <linearGradient id="paint0_linear_1490_98306" x1="122.5" y1="231.805" x2="187.95" y2="297.807" gradientUnits="userSpaceOnUse">
   <stop offset="0.00712166" stop-color="#6A9EE2"/>
   <stop offset="0.282888" stop-color="#4883C2" stop-opacity="0.98"/>
