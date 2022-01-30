@@ -28,7 +28,6 @@ function RubyStandard() {
   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
   <feOffset dy="0.911458"/>
   <feGaussianBlur stdDeviation="0.683594"/>
-
   <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_737_226370"/>
   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_737_226370" result="shape"/>

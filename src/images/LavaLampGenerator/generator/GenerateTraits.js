@@ -103,7 +103,7 @@ const glassColors = [
 ];
 
 const lavaColors = [
-  'none',
+  '',
   {color1: '#F85449', color2: '#C53434'},
   {color1: '#71FF30', color2: '#25BC46'},
   {color1: '#FABE09', color2: '#FDF21B'},
@@ -164,7 +164,7 @@ const glassColorMetadata = [
 ];
 
 const lavaColorMetadata = [
-  'none', // carbon, onyx, ebony,
+  '', // carbon, onyx, ebony,
   'Red', // crimson, ruby, rosy, fiery, flame, blaze, cherry
   'Green', // leafy, emerald,
   'Yellow', // golden, saffron, amber,
@@ -186,7 +186,7 @@ const rarityMetadata = [
 ];
 
 const overlayMetadata = [
-  'None',
+  '',
   'Bitcoin',
   'Ethereum',
   'LavaCeption',
@@ -403,6 +403,25 @@ function idToLavaData(id) {
   if (lava1 > 0)
     lavaCount++;
 
+  if (id === 420) {
+    return({
+      tokenId: id,
+      lavaCount,
+      lava1,
+      lava2,
+      lava3,
+      lava4,
+      attribute: attributes.halo,
+      background: backgrounds.allGoldEverything,
+      base: bases.bong,
+      glass: glasses.glowing,
+      glassColor: glassColors.carbon,
+      overlay: overlays.weed,
+      rarity: rarities.gold,
+      swag: swagger.active,
+    });
+  }
+
   return({
     tokenId: id,
     lavaCount,
@@ -426,14 +445,8 @@ function generateTraits() {
   const traits = [];
 
   for (let i = 0; i < 7980; i++) {
-    ids.push(i);
+    traits.push(idToLavaData(i));
   }
-
-  shuffleArray(ids);
-
-  ids.forEach((id, i) => {
-    traits.push(idToLavaData(id));
-  });
 
   return traits;
 }

@@ -10,7 +10,6 @@ function RainbowWizard() {
   <path d="M259.504 100.252C259.504 100.252 233.406 72.3552 200.159 75.6211C170.658 78.5189 149.554 126.718 107.69 126.718C65.8261 126.718 29.4826 100.252 29.4826 100.252L29.4826 74.6259C29.4826 74.6259 62.7396 100.65 107.69 100.65C128.171 100.65 172.016 52.7087 200.159 50.0124C233.783 46.7909 259.504 74.6259 259.504 74.6259L259.504 100.252Z" fill="url(#paint3_radial_878_99917)"/>
   <path d="M259.504 74.6252C259.504 74.6252 233.406 46.7283 200.159 49.9941C170.658 52.8919 149.554 101.091 107.69 101.091C65.8261 101.091 29.4826 74.6253 29.4826 74.6253L29.4826 48.9989C29.4826 48.9989 62.7396 75.0229 107.69 75.0229C128.171 75.0229 172.016 27.0817 200.159 24.3854C233.783 21.1639 259.504 48.9989 259.504 48.9989L259.504 74.6252Z" fill="url(#paint4_radial_878_99917)"/>
   <path d="M259.505 48.9995C259.505 48.9995 233.407 21.1026 200.159 24.3684C170.658 27.2662 149.554 75.4653 107.691 75.4653C65.8265 75.4653 29.4831 48.9995 29.4831 48.9995L29.4831 23.3732C29.4831 23.3732 62.74 49.3972 107.691 49.3972C128.171 49.3972 172.016 1.456 200.159 -1.24032C233.784 -4.46178 259.505 23.3732 259.505 23.3732L259.505 48.9995Z" fill="url(#paint5_radial_878_99917)"/>
-  <path d="M259.506 23.3729C259.506 23.3729 233.408 -4.52403 200.16 -1.2582C170.659 1.63959 149.555 49.8388 107.691 49.8388C65.8275 49.8388 29.4841 23.373 29.4841 23.373L29.4841 -2.25338C29.4841 -2.25338 62.741 23.7706 107.691 23.7706C128.172 23.7706 172.017 -24.1706 200.16 -26.8669C233.785 -30.0884 259.506 -2.2534 259.506 -2.2534L259.506 23.3729Z" fill="url(#paint6_radial_878_99917)"/>
   </g>
   <path d="M103.819 49.622C101.941 57.338 94.6871 59.9213 86.9711 58.0434C79.2552 56.1655 73.9994 50.5375 75.8773 42.8216C77.7552 35.1056 85.0094 32.5223 92.7254 34.4002C100.441 36.2781 105.697 41.9061 103.819 49.622Z" fill="url(#paint7_linear_878_99917)" stroke="#D1CDC5" stroke-width="1.09091"/>
   <path d="M167.849 79.4541C153.475 79.4541 141.762 90.355 138.826 95.8408C138.813 95.8654 138.801 95.8848 138.785 95.9077C138.397 96.466 132.999 104.362 132.999 111.712C132.999 118.527 141.633 118.313 143.467 118.191C143.684 118.177 143.866 118.053 143.968 117.861C146.957 112.297 153.705 101.741 167.849 101.741C185.74 101.741 200.096 108.689 209.395 123.161C209.508 123.336 209.694 123.45 209.903 123.453C211.504 123.476 218.451 123.214 218.964 116.991C219.526 110.177 213.012 101.715 212.596 101.181C212.582 101.163 212.569 101.145 212.556 101.126C203.257 86.483 184.683 79.4541 167.849 79.4541Z" fill="url(#paint8_linear_878_99917)" stroke="#D1CDC5" stroke-width="1.09091"/>
@@ -27,7 +26,6 @@ function RainbowWizard() {
   <path d="M176.2 165.477C176.2 165.477 142.499 183.466 137.049 216.426C132.212 245.672 173.307 278.531 162.472 318.969C151.637 359.406 116.666 387.661 116.666 387.661L91.913 381.029C91.913 381.029 125.658 355.641 137.292 312.222C142.593 292.439 107.633 237.68 112.312 209.798C117.903 176.485 151.447 158.845 151.447 158.845L176.2 165.477Z" fill="url(#paint16_radial_878_99917)"/>
   <path d="M151.448 158.844C151.448 158.844 117.747 176.833 112.296 209.793C107.46 239.039 148.554 271.898 137.719 312.336C126.884 352.773 91.9137 381.028 91.9137 381.028L67.1606 374.396C67.1606 374.396 100.905 349.008 112.539 305.589C117.84 285.806 82.8804 231.047 87.56 203.165C93.1509 169.852 126.695 152.212 126.695 152.212L151.448 158.844Z" fill="url(#paint17_radial_878_99917)"/>
   <path d="M126.694 152.211C126.694 152.211 92.9932 170.199 87.5427 203.16C82.7063 232.405 123.801 265.265 112.966 305.702C102.131 346.14 67.1603 374.395 67.1603 374.395L42.4071 367.762C42.4071 367.762 76.1519 342.374 87.7859 298.955C93.0867 279.173 58.127 224.413 62.8066 196.531C68.3975 163.219 101.941 145.578 101.941 145.578L126.694 152.211Z" fill="url(#paint18_radial_878_99917)"/>
-  <path d="M101.942 145.579C101.942 145.579 68.2408 163.568 62.7902 196.528C57.9538 225.774 99.0486 258.633 88.2134 299.071C77.3782 339.508 42.4078 367.763 42.4078 367.763L17.6547 361.131C17.6547 361.131 51.3995 335.743 63.0335 292.324C68.3343 272.541 33.3746 217.782 38.0541 189.9C43.6451 156.587 77.1887 138.947 77.1887 138.947L101.942 145.579Z" fill="url(#paint19_radial_878_99917)"/>
   </g>
   <path d="M166.662 280.313C170.579 252.676 166.468 236.599 160.871 226.402C160.747 226.178 160.504 226.05 160.248 226.072L147.164 227.166C146.94 227.185 146.742 227.314 146.641 227.515C140.672 239.373 141.887 260.029 154.958 292.079C158.913 301.777 168.784 317.629 182.489 325.499C183.022 325.805 183.521 325.314 183.163 324.815C178.668 318.562 163.03 305.944 166.662 280.313Z" fill="url(#paint20_linear_878_99917)" stroke="#D1CDC5" stroke-width="1.09091"/>
   <path d="M155.891 289.197C142.232 255.706 156.083 228.423 165.446 218.448C165.825 218.044 165.585 217.366 165.034 217.306L147.76 215.432C147.566 215.411 147.375 215.474 147.237 215.612C135.591 227.184 129.939 254.786 145.859 293.864C145.875 293.903 145.895 293.942 145.918 293.977C157.845 312.115 177.858 327.128 172.004 320.836C169.754 318.418 158.374 296.187 155.891 289.197Z" fill="url(#paint21_linear_878_99917)" stroke="#D1CDC5" stroke-width="1.09091"/>
@@ -44,13 +42,13 @@ function RainbowWizard() {
   <path d="M179.336 212.457C164.216 211.858 141.617 212.77 133.953 232.008C127.315 248.669 118.367 253.352 112.796 252.12C112.183 251.904 111.585 251.685 111.004 251.462C111.55 251.754 112.15 251.977 112.796 252.12C134.714 259.816 176.036 262.015 179.951 213.175C179.981 212.807 179.705 212.472 179.336 212.457Z" fill="url(#paint32_linear_878_99917)" stroke="#D1CDC5" stroke-width="1.09091"/>
   <path d="M174.217 235.138C191.973 235.589 201.686 228.722 203.254 221.521C206.052 208.673 184.717 202.636 170.369 203.68C156.021 204.725 147.024 208.975 145.558 215.802C144.092 222.629 156.461 234.687 174.217 235.138Z" fill="url(#paint33_radial_878_99917)"/>
   <defs>
-  <radialGradient id="paint0_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(123.385 61.3) rotate(36.0407) scale(76.556 64.5247)">
-  <stop offset="0.239583" stop-color="#8846DD"/>
-  <stop offset="1" stop-color="#A894F7"/>
-  </radialGradient>
   <radialGradient id="paint1_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(210.89 156.514) rotate(-159.755) scale(128.615 73.9749)">
   <stop offset="0.302083" stop-color="#FFB800"/>
   <stop offset="1" stop-color="#FF7800"/>
+  </radialGradient>
+  <radialGradient id="paint0_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(123.385 61.3) rotate(36.0407) scale(76.556 64.5247)">
+  <stop offset="0.239583" stop-color="#8846DD"/>
+  <stop offset="1" stop-color="#A894F7"/>
   </radialGradient>
   <radialGradient id="paint2_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(210.022 134.351) rotate(-158.782) scale(129.445 77.3696)">
   <stop offset="0.3125" stop-color="#FABE09"/>
@@ -67,11 +65,6 @@ function RainbowWizard() {
   <radialGradient id="paint5_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(210.022 57.4721) rotate(-158.782) scale(129.445 77.3696)">
   <stop offset="0.3125" stop-color="#321A93"/>
   <stop offset="1" stop-color="#3603FF"/>
-  <stop offset="1" stop-color="#3603FF"/>
-  </radialGradient>
-  <radialGradient id="paint6_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(210.023 31.8455) rotate(-158.782) scale(129.445 77.3696)">
-  <stop offset="0.239583" stop-color="#5000B6"/>
-  <stop offset="1" stop-color="#7E5EFF"/>
   </radialGradient>
   <linearGradient id="paint7_linear_878_99917" x1="85.5687" y1="29.7186" x2="99.1452" y2="43.5331" gradientUnits="userSpaceOnUse">
   <stop stop-color="#F9F0E3"/>
@@ -98,7 +91,6 @@ function RainbowWizard() {
   <radialGradient id="paint12_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(269.464 246.257) rotate(144.375) scale(47.5523 59.2949)">
   <stop offset="0.3125" stop-color="#F85449"/>
   <stop offset="1" stop-color="#CF0000"/>
-  <stop offset="1" stop-color="#C53434"/>
   </radialGradient>
   <radialGradient id="paint13_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(242.716 233.63) rotate(125.245) scale(128.615 73.9749)">
   <stop offset="0.302083" stop-color="#FFB800"/>
@@ -119,15 +111,10 @@ function RainbowWizard() {
   <radialGradient id="paint17_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(146.824 208.834) rotate(126.218) scale(129.445 77.3696)">
   <stop offset="0.3125" stop-color="#321A93"/>
   <stop offset="1" stop-color="#3603FF"/>
-  <stop offset="1" stop-color="#3603FF"/>
   </radialGradient>
   <radialGradient id="paint18_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(122.071 202.201) rotate(126.218) scale(129.445 77.3696)">
   <stop offset="0.239583" stop-color="#5000B6"/>
   <stop offset="1" stop-color="#7E5EFF"/>
-  </radialGradient>
-  <radialGradient id="paint19_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(97.3186 195.569) rotate(126.218) scale(129.445 77.3696)">
-  <stop offset="0.328125" stop-color="#FF00D6"/>
-  <stop offset="0.619792" stop-color="#D700B4"/>
   </radialGradient>
   <linearGradient id="paint20_linear_878_99917" x1="168.192" y1="227.378" x2="140.863" y2="229.71" gradientUnits="userSpaceOnUse">
   <stop stop-color="#F9F0E3"/>
@@ -197,7 +184,6 @@ function RainbowWizard() {
   <radialGradient id="paint33_radial_878_99917" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(175 219) rotate(180) scale(22 16.5598)">
   <stop offset="0.3125" stop-color="#F85449"/>
   <stop offset="1" stop-color="#CF0000"/>
-  <stop offset="1" stop-color="#C53434"/>
   </radialGradient>
   </defs>
   `;

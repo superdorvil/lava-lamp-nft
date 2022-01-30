@@ -1,5 +1,5 @@
 function Lava1({lava1}) {
-  if (lava1 === 'none') {
+  if (lava1 === '') {
     return '';
   }
 

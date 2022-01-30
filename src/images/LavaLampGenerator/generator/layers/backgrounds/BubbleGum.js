@@ -4,7 +4,7 @@ function BubbleGum() {
   <g clip-path="url(#clip0_28_269)">
   <rect width="350" height="350" fill="white"/>
   <rect x="0.0788574" y="0.0444336" width="350" height="350" fill="#E9C4E7" fill-opacity="0.78"/>
-  <path d="M125.979 290.538L299.832 190.751L430.987 233.879L212.56 294.049L125.979 290.538Z" fill="url(#paint0_linear_28_269)" fill-opacity="0.1"/>
+  <path d="M135.979 279.538L354.5 146.5L430.987 222.879L217.56 297.049C217.56 297.049 203 274 182 273C161 272 135.979 279.538 135.979 279.538Z" fill="url(#paint0_linear_28_269)" fill-opacity="0.1"/>
   <g opacity="0.45" filter="url(#filter0_f_28_269)">
   <ellipse rx="194.596" ry="66.7643" transform="matrix(0.999998 0.00221055 0.00221055 -0.999998 176.078 304.638)" fill="url(#paint1_radial_28_269)"/>
   </g>
@@ -23,7 +23,7 @@ function BubbleGum() {
   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
   <feGaussianBlur stdDeviation="2.27865" result="effect1_foregroundBlur_28_269"/>
   </filter>
-  <linearGradient id="paint0_linear_28_269" x1="194.836" y1="271.638" x2="316.537" y2="167.936" gradientUnits="userSpaceOnUse">
+  <linearGradient id="paint0_linear_28_269" x1="194.835" y1="260.638" x2="316.537" y2="156.936" gradientUnits="userSpaceOnUse">
   <stop/>
   <stop offset="1" stop-color="#333333" stop-opacity="0"/>
   </linearGradient>

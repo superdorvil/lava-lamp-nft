@@ -464,6 +464,7 @@ function generateSwagSVG({index, base, rarity}) {
 }
 
 function generateLavaLamp({
+  tokenId,
   attribute,
   background,
   base,
@@ -477,14 +478,29 @@ function generateLavaLamp({
   swag,
   rarity
 }) {
+  if (tokenId === 420) {
+    return `
+      ${openTag}
+      ${generateBackgroundSVG({index: background})}
+      ${generateOverlaySVG({index: overlay})}
+      ${generateGlassSVG({index: glass, glassColor})}
+      ${generateLavasSVG({lava1, lava2, lava3, lava4})}
+      ${generateBaseSVG({index: base, rarity})}
+      ${generateAttributeSVG({index: attribute})}
+      ${generateAttributeSVG({index: attributes.lavalien})}
+      ${generateSwagSVG({index: swag, base, rarity})}
+      ${closeTag}
+    `;
+  }
+
   return `
     ${openTag}
     ${generateBackgroundSVG({index: background})}
     ${generateOverlaySVG({index: overlay})}
-    ${generateAttributeSVG({index: attribute})}
     ${generateGlassSVG({index: glass, glassColor})}
     ${generateLavasSVG({lava1, lava2, lava3, lava4})}
     ${generateBaseSVG({index: base, rarity})}
+    ${generateAttributeSVG({index: attribute})}
     ${generateSwagSVG({index: swag, base, rarity})}
     ${closeTag}
   `;

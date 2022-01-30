@@ -114,64 +114,84 @@ const generateMetadata = ({
   tokenId,
   uri
 }) => {
+  const traits = [];
+
+  if (attributeMetadata[parseInt(attribute, 10)] !== '') {
+    traits.push({
+      "trait_type": "Attribute",
+      "value": attributeMetadata[parseInt(attribute, 10)],
+    });
+  }
+  traits.push({
+    "trait_type": "Background",
+    "value": backgroundMetadata[parseInt(background, 10)],
+  });
+  traits.push({
+    "trait_type": "Base",
+    "value": baseMetadata[parseInt(base, 10)],
+  }),
+  traits.push({
+    "trait_type": "Glass",
+    "value": glassMetadata[parseInt(glass, 10)],
+  });
+  traits.push({
+    "trait_type": "Glass Color",
+    "value": glassColorMetadata[parseInt(glassColor, 10)],
+  });
+  traits.push({
+    "trait_type": "Lava Count",
+    "value": lavaCount,
+  });
+  if (lavaColorMetadata[parseInt(lava1, 10)] !== '') {
+    traits.push({
+      "trait_type": "Lava Color 1",
+      "value": lavaColorMetadata[parseInt(lava1, 10)],
+    });
+  }
+  if (lavaColorMetadata[parseInt(lava2, 10)] !== '') {
+    traits.push({
+      "trait_type": "Lava Color 2",
+      "value": lavaColorMetadata[parseInt(lava2, 10)],
+    });
+  }
+  if (lavaColorMetadata[parseInt(lava3, 10)] !== '') {
+    traits.push({
+      "trait_type": "Lava Color 3",
+      "value": lavaColorMetadata[parseInt(lava3, 10)],
+    });
+  }
+  if (lavaColorMetadata[parseInt(lava4, 10)] !== '') {
+    traits.push({
+      "trait_type": "Lava Color 4",
+      "value": lavaColorMetadata[parseInt(lava4, 10)],
+    });
+  }
+  if (overlayMetadata[parseInt(overlay, 10)] !== '') {
+    traits.push({
+      "trait_type": "Overlay",
+      "value": overlayMetadata[parseInt(overlay, 10)],
+    });
+  }
+  traits.push({
+    "trait_type": "Base Color",
+    "value": rarityMetadata[parseInt(rarity, 10)],
+  });
+  traits.push({
+    "trait_type": "Swag",
+    "value": swag === swagger.active ? swagMetadata[parseInt(base, 10)] : 'none',
+  });
+  if (tokenId === 420) {
+    traits.push({
+      "trait_type": "Attribute",
+      "value": attributeMetadata[parseInt(attributes.lavalien, 10)],
+    });
+  }
+
   const metadata = {
     name: 'Lava Lamp ' + tokenId,//generateNameMetadata({attribute, base, glass, glassColor, rarity, swag, tokenId}),
     description: 'Move quickly, the floor is lava.',//generateDescriptionMetadata({attribute, background, base, glass, glassColor, overlay, rarity, swag, tokenId}),
     image: uri,
-    attributes: [
-      {
-        "trait_type": "Attribute",
-        "value": attributeMetadata[parseInt(attribute, 10)],
-      },
-      {
-        "trait_type": "Background",
-        "value": backgroundMetadata[parseInt(background, 10)],
-      },
-      {
-        "trait_type": "Base",
-        "value": baseMetadata[parseInt(base, 10)],
-      },
-      {
-        "trait_type": "Glass",
-        "value": glassMetadata[parseInt(glass, 10)],
-      },
-      {
-        "trait_type": "Glass Color",
-        "value": glassColorMetadata[parseInt(glassColor, 10)],
-      },
-      {
-        "trait_type": "Lava Count",
-        "value": lavaCount,
-      },
-      {
-        "trait_type": "Lava Color 1",
-        "value": lavaColorMetadata[parseInt(lava1, 10)],
-      },
-      {
-        "trait_type": "Lava Color 2",
-        "value": lavaColorMetadata[parseInt(lava2, 10)],
-      },
-      {
-        "trait_type": "Lava Color 3",
-        "value": lavaColorMetadata[parseInt(lava3, 10)],
-      },
-      {
-        "trait_type": "Lava Color 4",
-        "value": lavaColorMetadata[parseInt(lava4, 10)],
-      },
-      {
-        "trait_type": "Overlay",
-        "value": overlayMetadata[parseInt(overlay, 10)],
-      },
-      {
-        "trait_type": "Rarity",
-        "value": rarityMetadata[parseInt(rarity, 10)],
-      },
-      {
-        "trait_type": "Swagger",
-        "value": swag === swagger.active ? swagMetadata[parseInt(base, 10)] : 'none',
-      },
-    ]
+    attributes: traits,
   };
 
   return metadata;

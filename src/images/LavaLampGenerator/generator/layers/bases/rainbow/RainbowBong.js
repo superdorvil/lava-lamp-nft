@@ -110,8 +110,6 @@ function RainbowBong() {
   <path d="M148.577 48.7632H201.441V94.3361C201.441 94.3361 195.517 101.445 175.009 101.445C154.501 101.445 148.577 94.3361 148.577 94.3361V48.7632Z" fill="url(#paint18_radial_1490_90946)"/>
   </mask>
   <g mask="url(#mask2_1490_90946)">
-  <path d="M299.033 152.758C299.033 152.758 272.935 124.861 239.687 128.127C210.186 131.024 189.082 179.224 147.218 179.224C105.354 179.224 69.0109 152.758 69.0109 152.758L69.0109 127.132C69.0109 127.132 102.268 153.155 147.218 153.155C167.699 153.155 211.544 105.214 239.687 102.518C273.312 99.2965 299.033 127.131 299.033 127.131L299.033 152.758Z" fill="url(#paint19_radial_1490_90946)"/>
-  <path d="M299.032 127.131C299.032 127.131 272.934 99.2344 239.686 102.5C210.185 105.398 189.081 153.597 147.217 153.597C105.353 153.597 69.01 127.131 69.01 127.131L69.01 101.505C69.01 101.505 102.267 127.529 147.217 127.529C167.698 127.529 211.543 79.5878 239.686 76.8915C273.311 73.6701 299.032 101.505 299.032 101.505L299.032 127.131Z" fill="url(#paint20_radial_1490_90946)"/>
   <path d="M299.032 101.504C299.032 101.504 272.934 73.607 239.686 76.8728C210.185 79.7706 189.081 127.97 147.217 127.97C105.353 127.97 69.01 101.504 69.01 101.504L69.01 75.8776C69.01 75.8776 102.267 101.902 147.217 101.902C167.698 101.902 211.543 53.9604 239.686 51.2641C273.311 48.0426 299.032 75.8776 299.032 75.8776L299.032 101.504Z" fill="url(#paint21_radial_1490_90946)"/>
   <path d="M299.032 75.8784C299.032 75.8784 272.934 47.9815 239.687 51.2473C210.186 54.1451 189.082 102.344 147.218 102.344C105.354 102.344 69.0104 75.8784 69.0104 75.8784L69.0104 50.2521C69.0104 50.2521 102.267 76.2761 147.218 76.2761C167.699 76.2761 211.544 28.3349 239.687 25.6386C273.311 22.4171 299.032 50.2521 299.032 50.2521L299.032 75.8784Z" fill="url(#paint22_radial_1490_90946)"/>
   <path d="M299.033 50.252C299.033 50.252 272.935 22.355 239.688 25.6208C210.187 28.5186 189.083 76.7178 147.219 76.7178C105.355 76.7178 69.0114 50.252 69.0114 50.252L69.0114 24.6257C69.0114 24.6257 102.268 50.6496 147.219 50.6496C167.7 50.6496 211.544 2.70844 239.688 0.0121245C273.312 -3.20934 299.033 24.6256 299.033 24.6256L299.033 50.252Z" fill="url(#paint23_radial_1490_90946)"/>
@@ -193,7 +191,6 @@ function RainbowBong() {
   <radialGradient id="paint2_radial_1490_90946" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(305.143 295.497) rotate(-140.625) scale(47.5523 59.2949)">
   <stop offset="0.3125" stop-color="#F85449"/>
   <stop offset="1" stop-color="#CF0000"/>
-  <stop offset="1" stop-color="#C53434"/>
   </radialGradient>
   <radialGradient id="paint3_radial_1490_90946" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(310.417 266.393) rotate(-159.755) scale(128.615 73.9749)">
   <stop offset="0.302083" stop-color="#FFB800"/>
@@ -232,7 +229,6 @@ function RainbowBong() {
   <radialGradient id="paint11_radial_1490_90946" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(220.625 349.619) rotate(-140.625) scale(47.5523 59.2949)">
   <stop offset="0.3125" stop-color="#F85449"/>
   <stop offset="1" stop-color="#CF0000"/>
-  <stop offset="1" stop-color="#C53434"/>
   </radialGradient>
   <radialGradient id="paint12_radial_1490_90946" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(226.899 323.515) rotate(-159.755) scale(128.615 73.9749)">
   <stop offset="0.302083" stop-color="#FFB800"/>
@@ -301,7 +297,6 @@ function RainbowBong() {
   <radialGradient id="paint27_radial_1490_90946" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(245.624 65.6186) rotate(-140.625) scale(47.5523 59.2949)">
   <stop offset="0.3125" stop-color="#F85449"/>
   <stop offset="1" stop-color="#CF0000"/>
-  <stop offset="1" stop-color="#C53434"/>
   </radialGradient>
   <radialGradient id="paint28_radial_1490_90946" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250.899 36.5143) rotate(-159.755) scale(128.615 73.9749)">
   <stop offset="0.302083" stop-color="#FFB800"/>
