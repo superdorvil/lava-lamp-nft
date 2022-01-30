@@ -21,9 +21,7 @@ function RainbowStandard() {
   <path d="M125.642 313.071C125.261 312.866 125.097 312.422 125.233 312.011L138.154 272.878C138.205 272.723 138.214 272.558 138.18 272.399L125.374 213.224C125.217 212.5 125.939 211.876 126.634 212.131C131.867 214.052 149.387 219.677 175.13 219.677C200.873 219.677 218.393 214.052 223.626 212.131C224.321 211.876 225.043 212.5 224.886 213.224L212.08 272.399C212.046 272.558 212.055 272.723 212.106 272.878L225.027 312.011C225.163 312.422 224.999 312.866 224.618 313.071C220.785 315.131 200.254 325.497 175.13 325.497C150.006 325.497 129.475 315.131 125.642 313.071Z" fill="url(#paint9_linear_878_100590)"/>
   </mask>
   <g mask="url(#mask1_878_100590)">
-  <g opacity="0.25" filter="url(#filter2_df_878_100590)">
   <path d="M74.3257 273.822C169.438 276.526 231.534 228.538 250.693 204.205H74.3257V273.822Z" fill="url(#paint10_linear_878_100590)" fill-opacity="0.55" shape-rendering="geometricPrecision"/>
-  </g>
   <path opacity="0.25" d="M135.363 267.425C135.363 244.575 108.929 196.56 99.1391 175.334C105.666 173.048 122.049 169.847 135.363 175.334C152.007 182.191 157.629 244.462 161.546 263.076C164.678 277.968 140.585 327.186 135.363 347.76H69.7681C119.699 321.308 135.363 285.06 135.363 267.425Z" fill="url(#paint11_radial_878_100590)"/>
   <path opacity="0.25" d="M149.946 271.527C149.946 248.676 123.512 200.662 113.722 179.435C120.249 177.149 136.632 173.949 149.946 179.435C166.59 186.293 172.212 248.564 176.129 267.178C179.261 282.069 155.168 331.288 149.946 351.862H84.3511C134.282 325.41 149.946 289.161 149.946 271.527Z" fill="url(#paint12_radial_878_100590)"/>
   </g>
@@ -47,17 +45,6 @@ function RainbowStandard() {
   <feFlood flood-opacity="0" result="BackgroundImageFix"/>
   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
   <feGaussianBlur stdDeviation="1.13932" result="effect1_foregroundBlur_878_100590"/>
-  </filter>
-  <filter id="filter2_df_878_100590" x="72.9585" y="203.294" width="179.102" height="72.9167" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-  <feOffset dy="0.911458"/>
-  <feGaussianBlur stdDeviation="0.683594"/>
-
-  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_878_100590"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_878_100590" result="shape"/>
-  <feGaussianBlur stdDeviation="0.455729" result="effect2_foregroundBlur_878_100590"/>
   </filter>
   <linearGradient id="paint0_linear_878_100590" x1="125" y1="210.5" x2="223.834" y2="279.764" gradientUnits="userSpaceOnUse">
   <stop stop-color="#EEEEEE" stop-opacity="0.79"/>

@@ -22,7 +22,7 @@ contract LavaLamp is Ownable, ERC721 {
         // "http://localhost:3000/token/"
         // setBaseURI("http://www.websitename.com/token/");
         // ipfs://{cid}/
-        setBaseURI("ipfs://QmNg7S8UPvkx1TH8U5quNjFaDe9hHR1N6zFhTZmnipC7oJ/");
+        setBaseURI("ipfs://QmWhKHEMJQaaVoa4dYQwi4vZGZNxAgTVMVkJCAX8uUpKyn/");
     }
 
     function setBaseURI(string memory baseURI) public onlyOwner {

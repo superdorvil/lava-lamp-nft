@@ -60,7 +60,8 @@ function OriginalAlien() {
   <stop offset="0.671875" stop-color="#6CB835" stop-opacity="0"/>
   <stop offset="1" stop-color="#6CB835"/>
   </linearGradient>
-  </defs>  `;
+  </defs>
+  `;
 };
 
 module.exports = {OriginalAlien};
