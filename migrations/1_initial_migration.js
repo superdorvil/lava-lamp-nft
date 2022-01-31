@@ -1,5 +1,6 @@
-const Migrations = artifacts.require("Migrations");
+// Add provenance hash
+/*const Migrations = artifacts.require("Migrations");
 
 module.exports = function (deployer) {
   deployer.deploy(Migrations);
-};
+};*/

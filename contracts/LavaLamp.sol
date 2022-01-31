@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 contract LavaLamp is Ownable, ERC721 {
     using Strings for uint256;
     string private currentBaseURI;
-    string public provenance = "72a59313f86c9d8d956fef3fd61da0310de4fef2211c96f17989680f928d5ca0";
+    string public provenance;
 
     uint256 private cost = 0.03 ether;
     uint256 private maxSupply = 7980;
@@ -17,15 +17,16 @@ contract LavaLamp is Ownable, ERC721 {
     uint256 public burnCount = 0;
     uint256 public lampsMinted = 0;
 
-    // used to semi randomize the ids minted
+    // used to semi-randomize the id's that are minted
     uint256 lampCount = 0;
     uint256 currentLampSet = 0;
 
-    constructor() ERC721("LavaLamp", "LAVALAMP") {
+    constructor(string memory _provenance) ERC721("LavaLamp", "LAVALAMP") {
         // "http://localhost:3000/token/"
         // setBaseURI("http://www.websitename.com/token/");
         // ipfs://{cid}/
-        setBaseURI("ipfs://QmTqh6r1bvEZeu8VWLB11SpUSVcEEg1KKxC8XNq1jmcy5g/");
+        provenance = _provenance;
+        setBaseURI("http://www.superdorvil.tech/token/");
     }
 
     function setBaseURI(string memory baseURI) public onlyOwner {
@@ -37,9 +38,9 @@ contract LavaLamp is Ownable, ERC721 {
     }
 
     function mint(uint256 mintAmount) public payable {
-        //require(mintAmount > 0, 'mint amount cannot be 0');
+        require(mintAmount > 0, 'mint amount cannot be 0');
         //require(mintAmount <= maxMintAmount, 'mint amount cannot be greater than 20');
-        //require(lampsMinted + mintAmount <= maxSupply, 'minting will go over total supply of 7980 lamps');
+        require(lampsMinted + mintAmount <= maxSupply, 'minting will go over total supply of 7980 lamps');
         uint256 price = cost * mintAmount;
 
         if (msg.sender != owner())

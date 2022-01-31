@@ -17,7 +17,6 @@ const contractAddress = process.env.CONTRACT_ADDRESS;
 const network = process.env.NETWORK || 'rinkeby'; // rink or main probably
 // This is either ganache or rinkeby
 //const web3 = new Web3(new Web3.providers.HttpProvider(`https://${network}.infura.io/v3/${infuraToken}`));
-// ETH_CLIENT_URL="http://localhost:7545"
 const web3 = new Web3(new Web3.providers.HttpProvider(process.env.ETH_CLIENT_URL));
 const LavaLamp = require("./src/abis/LavaLamp.json");
 const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
