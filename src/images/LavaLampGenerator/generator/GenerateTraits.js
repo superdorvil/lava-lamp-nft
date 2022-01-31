@@ -22,6 +22,7 @@ const backgrounds = {
   sapphire: 8,
   sky: 9,
   star: 10,
+  aurora: 11,
 };
 
 const bases = {
@@ -133,7 +134,8 @@ const backgroundMetadata = [
   'Royal',
   'Sapphire',
   'Sky',
-  'Star'
+  'Star',
+  'Aurora',
 ];
 
 const baseMetadata = [
@@ -243,14 +245,16 @@ function generateBackground() {
       background = backgrounds.peach;
   else if (random <  62)
       background = backgrounds.plum;
-  else if (random <  77)
+  else if (random <  76)
       background = backgrounds.sapphire;
-  else if (random <  85)
+  else if (random <  84)
       background = backgrounds.sky;
-  else if (random <  89)
+  else if (random <  88)
       background = backgrounds.star;
-  else
+  else if (random < 99)
       background = backgrounds.royal;
+  else
+    background = backgrounds.aurora;
 
   return background;
 }

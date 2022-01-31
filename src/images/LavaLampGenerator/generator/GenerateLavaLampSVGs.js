@@ -6,6 +6,7 @@ const {
 const {
   AllGoldEverything,
   Ash,
+  Aurora,
   BubbleGum,
   CottonCandy,
   Magma,
@@ -142,6 +143,9 @@ function generateBackgroundSVG({index}) {
       break;
     case backgrounds.ash:
       background = Ash();
+      break;
+    case backgrounds.aurora:
+      background = Aurora();
       break;
     case backgrounds.bubbleGum:
       background = BubbleGum();
@@ -570,7 +574,7 @@ function generateAssets() {
 
 //  console.log('backgrounds');
   // backgrounds
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 12; i++) {
     assets.push(`
       ${openTag}
       ${generateBackgroundSVG({index: i})}
@@ -637,7 +641,7 @@ function generateAssets() {
 function generateRandomLavaLamp() {
   return generateLavaLamp({
     attribute: generateRandomNumber({n: 4}),
-    background: generateRandomNumber({n: 10}),
+    background: generateRandomNumber({n: 12}),
     base: generateRandomNumber({n: 8}),
     glass: generateRandomNumber({n: 2}),
     glassColor: generateRandomNumber({n: 8}),
@@ -683,7 +687,7 @@ function generate7979LavaLamps() {
     lavaLamps.push(
       generateLavaLamp({
         attribute: generateRandomNumber({n: 4}),
-        background: generateRandomNumber({n: 10}),
+        background: generateRandomNumber({n: 12}),
         base: generateRandomNumber({n: 8}),
         glass: generateRandomNumber({n: 2}),
         glassColor: generateRandomNumber({n: 8}),

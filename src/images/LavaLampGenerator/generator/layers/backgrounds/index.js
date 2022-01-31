@@ -1,5 +1,6 @@
 const {AllGoldEverything} = require('./AllGoldEverything');
 const {Ash} = require('./Ash');
+const {Aurora} = require('./Aurora');
 const {BubbleGum} = require('./BubbleGum');
 const {CottonCandy} = require('./CottonCandy');
 const {Magma} = require('./Magma');
@@ -14,6 +15,7 @@ const {Star} = require('./Star');
 module.exports = {
   AllGoldEverything,
   Ash,
+  Aurora,
   BubbleGum,
   CottonCandy,
   Magma,

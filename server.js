@@ -7,7 +7,7 @@ const {
   generateMetadata,
 } = require('./src/images/LavaLampGenerator/');
 const {LampMetadata} = require('./src/images/LavaLampGenerator/ipfs/LampMetadata');
-const {LavaLampPlaceholder} = require('./src/images/LavaLampPlaceholder');
+const {QuestionMarkLavaLamp} = require('./src/images/QuestionMarkLavaLamp');
 
 const app = express();
 
@@ -24,7 +24,7 @@ const contract = new web3.eth.Contract(LavaLamp.abi, contractAddress);
 
 // use build for development
 // use public for heroku push
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/token/:tokenId', async (req, res) => {
   const tokenId = req.params.tokenId;
@@ -37,7 +37,7 @@ app.get('/token/:tokenId', async (req, res) => {
   } else {
     metadata = {
       "name": "LavaLamp " + tokenId,
-      "decription":"LavaLamp " + tokenId + ' temporary image, refresh in 24 hours',
+      "description": 'Move quickly, the floor is lava.',
       "image": `${baseUri}/token/lavalamp/${tokenId}`,
     }
   }
@@ -54,7 +54,7 @@ app.get('/token/lavalamp/:tokenId', async (req, res) => {
     if (tokenId <= LampMetadata.length) {
       res.send(generateLavaLamp({...LampMetadata[tokenId]}));
     } else {
-      res.send(LavaLampPlaceholder());
+      res.send(QuestionMarkLavaLamp());
     }
   }
   catch {
