@@ -176,10 +176,12 @@ const generateMetadata = ({
     "trait_type": "Base Color",
     "value": rarityMetadata[parseInt(rarity, 10)],
   });
-  traits.push({
-    "trait_type": "Swag",
-    "value": swag === swagger.active ? swagMetadata[parseInt(base, 10)] : 'none',
-  });
+  if (swag === swagger.active) {
+    traits.push({
+      "trait_type": "Swag",
+      "value": swagMetadata[parseInt(base, 10)],
+    });
+  }
   if (tokenId === 420) {
     traits.push({
       "trait_type": "Attribute",
