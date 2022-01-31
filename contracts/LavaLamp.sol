@@ -12,7 +12,7 @@ contract LavaLamp is Ownable, ERC721 {
     uint256 private cost = 0.03 ether;
     uint256 private maxSupply = 7980;
     uint256 private maxMintAmount = 20;
-    address private lavaLampsEth = "0x4024b17b6fD2AC7a83bfE0c71970D23eE335BC40";
+    address private lavaLampsEth = 0x4024b17b6fD2AC7a83bfE0c71970D23eE335BC40;
 
     uint256 public burnCount = 0;
     uint256 public lampsMinted = 0;
@@ -25,7 +25,7 @@ contract LavaLamp is Ownable, ERC721 {
         // "http://localhost:3000/token/"
         // setBaseURI("http://www.websitename.com/token/");
         // ipfs://{cid}/
-        setBaseURI("ipfs://QmWhKHEMJQaaVoa4dYQwi4vZGZNxAgTVMVkJCAX8uUpKyn/");
+        setBaseURI("ipfs://QmTqh6r1bvEZeu8VWLB11SpUSVcEEg1KKxC8XNq1jmcy5g/");
     }
 
     function setBaseURI(string memory baseURI) public onlyOwner {
