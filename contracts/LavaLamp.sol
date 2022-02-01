@@ -25,6 +25,7 @@ contract LavaLamp is Ownable, ERC721 {
     constructor(string memory _provenance) ERC721("LavaLamp", "LAVALAMP") {
         provenance = _provenance;
         setBaseURI("http://www.superdorvil.tech/token/");
+//        setBaseURI("https://www.lavalamps.io/token/");
         fileExtension = '';
     }
 
