@@ -34,6 +34,7 @@ const {
   saveNFiles,
 } = require('./utils');
 //const {RevealedLampMetadata} = require('./ipfs/metadata/RevealedLampMetadata');
+const {idList} = require('./IDList');
 
 const myArgs = process.argv.slice(2);
 const lampsDir = __dirname + '/ipfs/lamps/';
@@ -172,16 +173,25 @@ if (myArgs[0] === 'Update 7979 lavalamps MetaData' && myArgs[1]) {
 
 // should return not defined which will remind me to grab the data from ipfs
 if (myArgs[0] === 'Update Revealed Lamps Metadata' && myArgs[1]) {
-  const revealedLamps = parseInt(myArgs[1]);
+  const numOfRevealedLamps = parseInt(myArgs[1]);
   const traits = [];
+  const revealedLamps = [];
 
-  if (isNaN(revealedLamps)) {
+  if (isNaN(numOfRevealedLamps)) {
     return;
   }
 
-  for (let i = 0; i < revealedLamps; i++) {
-    traits[i] = RevealedLampMetadata[i];
+  for (let i = 0; i < numOfRevealedLamps; i++) {
+    revealedLamps.push(idList[i]);
   }
+
+  for (let i = 0; i < 7980; i++) {
+    traits.push(false);
+  }
+
+  revealedLamps.forEach((rl, i) => {
+    traits[rl] = RevealedLampMetadata[rl];
+  });
 
   saveFile({
     data: JSON.stringify(traits),

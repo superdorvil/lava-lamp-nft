@@ -28,7 +28,8 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('/token/:tokenId', async (req, res) => {
   const tokenId = req.params.tokenId;
   let metadata;
-  if (tokenId <= LampMetadata.length) {
+
+  if (LampMetadata[tokenId]) {
     metadata = generateMetadata({
       ...LampMetadata[tokenId],
       uri: `${baseUri}/token/lavalamp/${tokenId}`
