@@ -33,7 +33,7 @@ const {
   saveFile,
   saveNFiles,
 } = require('./utils');
-const {RevealedLampMetadata} = require('./ipfs/RevealedLampMetadata');
+//const {RevealedLampMetadata} = require('./ipfs/metadata/RevealedLampMetadata');
 
 const myArgs = process.argv.slice(2);
 const lampsDir = __dirname + '/ipfs/lamps/';
@@ -85,7 +85,7 @@ function generateLavaLampsIPFS_7979() {
   saveFile({
     data: JSON.stringify(traits),
     fileSuffix: '.js',
-    dir: ipfsDir,
+    dir: metaDir,
     id: 'RevealedLampMetadata',
     append: 'const RevealedLampMetadata = ',
     prepend: ';\n\nmodule.exports = { RevealedLampMetadata };',
@@ -107,10 +107,10 @@ function generateLavaLampsIPFS_7979() {
 function updateMetadataURLs({cid}) {
   const lavaLampMetadata = [];
   const files = [];
-  fs.readdirSync(metaDir).forEach((file, i) => {
-      const newFile = (i) + '.json';
-      files.push(newFile);
-    });
+  for (let i = 0; i < 7980; i++) {
+    const newFile = (i) + '.json';
+    files.push(newFile);
+  }
 
   files.forEach((file, i) => {
     const data = fs.readFileSync(metaDir + file, 'utf8');
@@ -170,6 +170,7 @@ if (myArgs[0] === 'Update 7979 lavalamps MetaData' && myArgs[1]) {
   updateMetadataURLs({cid: myArgs[1]});
 }
 
+// should return not defined which will remind me to grab the data from ipfs
 if (myArgs[0] === 'Update Revealed Lamps Metadata' && myArgs[1]) {
   const revealedLamps = parseInt(myArgs[1]);
   const traits = [];
@@ -188,7 +189,7 @@ if (myArgs[0] === 'Update Revealed Lamps Metadata' && myArgs[1]) {
     dir: ipfsDir,
     id: 'LampMetadata',
     append: 'const LampMetadata = ',
-    prepend: ';\n\nmodule.exports = { LampMetadata };',
+    prepend: ';\n\nmodule.exports = { LampMetadata };\n',
   })
 }
 
