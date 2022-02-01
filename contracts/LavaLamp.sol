@@ -8,6 +8,7 @@ contract LavaLamp is Ownable, ERC721 {
     using Strings for uint256;
     string private currentBaseURI;
     string public provenance;
+    string private fileExtension;
 
     uint256 private cost = 0.03 ether;
     uint256 private maxSupply = 7980;
@@ -22,19 +23,29 @@ contract LavaLamp is Ownable, ERC721 {
     uint256 currentLampSet = 0;
 
     constructor(string memory _provenance) ERC721("LavaLamp", "LAVALAMP") {
-        // "http://localhost:3000/token/"
-        // setBaseURI("http://www.websitename.com/token/");
-        // ipfs://{cid}/
         provenance = _provenance;
         setBaseURI("http://www.superdorvil.tech/token/");
+        fileExtension = '';
     }
 
     function setBaseURI(string memory baseURI) public onlyOwner {
+        // ipfs://{cid}/
         currentBaseURI = baseURI;
+        fileExtension = '.json';
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
         return currentBaseURI;
+    }
+
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+
+        string memory curBaseURI = _baseURI();
+
+        return bytes(curBaseURI).length > 0
+            ? string(abi.encodePacked(curBaseURI, tokenId.toString(), fileExtension))
+            : "";
     }
 
     function mint(uint256 mintAmount) public payable {
@@ -125,15 +136,6 @@ contract LavaLamp is Ownable, ERC721 {
             randomLampBlock = 16;
 
         return randomLampBlock;
-    }
-
-    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
-        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
-
-        string memory curBaseURI = _baseURI();
-        return bytes(curBaseURI).length > 0
-            ? string(abi.encodePacked(curBaseURI, tokenId.toString(), ".json"))
-            : "";
     }
 
     // allows the user to burn their lamps and there is a count of burned lamps
