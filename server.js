@@ -51,7 +51,7 @@ app.get('/token/lavalamp/:tokenId', async (req, res) => {
   try {
     res.setHeader('Content~Type', 'image/svg+xml');
 
-    if (tokenId <= LampMetadata.length) {
+    if (LampMetadata[tokenId]) {
       res.send(generateLavaLamp({...LampMetadata[tokenId]}));
     } else {
       res.send(QuestionMarkLavaLamp());
