@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import lavaPool from '../../images/LavaPool.svg';
+import lavaPool from '../../images/LavaPool.png';
 
 export const LavaPoolBackground = styled.div`
   background-repeat: no-repeat;

@@ -34,28 +34,28 @@ export const fetchLamps = (account) => {
         .getState()
         .blockchain.smartContract.methods.getTokensOwnedBy(account)
         .call();*/
-      const burnCount = await store
+    /*  const burnCount = await store
         .getState()
         .blockchain.smartContract.methods.burnCount()
-        .call();
+        .call();*/
       const remainingLamps = await store
         .getState()
         .blockchain.smartContract.methods.totalSupply()
         .call();
-      const lampsMinted = await store
+      /*const lampsMinted = await store
         .getState()
         .blockchain.smartContract.methods.lampsMinted()
-        .call();
+        .call();*/
       // need to figure out
-      const ethPerShare = 0;
+      //const ethPerShare = 0;
 
       dispatch(
         fetchLampSuccess({
-          myLamps,
-          burnCount,
+          //myLamps,
+          //burnCount,
           remainingLamps,
-          lampsMinted,
-          ethPerShare,
+          //lampsMinted,
+          //ethPerShare,
         })
       );
     } catch (err) {

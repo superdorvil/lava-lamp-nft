@@ -6,33 +6,31 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract LavaLamp is Ownable, ERC721 {
     using Strings for uint256;
-    string private currentBaseURI;
     string public provenance;
-    string private fileExtension;
+    string private currentBaseURI;
 
     uint256 private cost = 0.03 ether;
     uint256 private maxSupply = 7980;
     uint256 private maxMintAmount = 20;
-    address private lavaLampsEth = 0x4024b17b6fD2AC7a83bfE0c71970D23eE335BC40;
-
-    uint256 public burnCount = 0;
-    uint256 public lampsMinted = 0;
+    address private lavaLampsEth;
 
     // used to semi-randomize the id's that are minted
-    uint256 lampCount = 0;
-    uint256 currentLampSet = 0;
+    uint256 private lampCount = 0;
+    uint256 private currentLampSet = 0;
+    uint256 public totalSupply = 0;
 
-    constructor(string memory _provenance) ERC721("LavaLamp", "LAVALAMP") {
+    constructor(
+      string memory _provenance,
+      string memory _currentBaseURI,
+      address _lavaLampEth
+      ) ERC721("LavaLamp", "LAVALAMP") {
         provenance = _provenance;
-        setBaseURI("http://www.superdorvil.tech/token/");
-//        setBaseURI("https://www.lavalamps.io/token/");
-        fileExtension = '';
+        lavaLampsEth = _lavaLampEth;
+        setBaseURI(_currentBaseURI);
     }
 
     function setBaseURI(string memory baseURI) public onlyOwner {
-        // ipfs://{cid}/
         currentBaseURI = baseURI;
-        fileExtension = '.json';
     }
 
     function _baseURI() internal view virtual override returns (string memory) {
@@ -45,14 +43,14 @@ contract LavaLamp is Ownable, ERC721 {
         string memory curBaseURI = _baseURI();
 
         return bytes(curBaseURI).length > 0
-            ? string(abi.encodePacked(curBaseURI, tokenId.toString(), fileExtension))
+            ? string(abi.encodePacked(curBaseURI, tokenId.toString(), '.json'))
             : "";
     }
 
     function mint(uint256 mintAmount) public payable {
         require(mintAmount > 0, 'mint amount cannot be 0');
-        //require(mintAmount <= maxMintAmount, 'mint amount cannot be greater than 20');
-        require(lampsMinted + mintAmount <= maxSupply, 'minting will go over total supply of 7980 lamps');
+        require(mintAmount <= maxMintAmount, 'mint amount cannot be greater than 20');
+        require(totalSupply + mintAmount <= maxSupply, 'minting will go over total supply of 7980 lamps');
         uint256 price = cost * mintAmount;
 
         if (msg.sender != owner())
@@ -62,7 +60,7 @@ contract LavaLamp is Ownable, ERC721 {
             uint256 tokenId = getId();
             _safeMint(msg.sender, tokenId);
             incrementId();
-            lampsMinted++;
+            totalSupply++;
         }
 
         (bool success, ) = payable(lavaLampsEth).call{value: address(this).balance}("");
@@ -77,6 +75,8 @@ contract LavaLamp is Ownable, ERC721 {
         return id;
     }
 
+    // A hack to semi randomize which lamps people purchase.
+    // If someone buys 20 lamps they won't get them in sequential order
     function incrementId() internal {
         uint256 numOfLampBlocks = 19;
 
@@ -88,10 +88,6 @@ contract LavaLamp is Ownable, ERC721 {
         }
     }
 
-    // Block has nothing to do with blockchain
-    // I just make groups of numbers and shuffle the order of ids minted
-    // If someone mints 20 lamps, they dont get 1-20
-    // Its not technically random, an actual random solution would be expensive
     function randomizeLampBlock(uint256 lampBlock) internal pure returns(uint256) {
         uint256 randomLampBlock = 0;
 
@@ -137,18 +133,6 @@ contract LavaLamp is Ownable, ERC721 {
             randomLampBlock = 16;
 
         return randomLampBlock;
-    }
-
-    // allows the user to burn their lamps and there is a count of burned lamps
-    function burn(uint256 tokenId) public {
-        //solhint-disable-next-line max-line-length
-        require(_isApprovedOrOwner(_msgSender(), tokenId), "ERC721Burnable: caller is not owner nor approved");
-        _burn(tokenId);
-        burnCount++;
-    }
-
-    function totalSupply() external view returns (uint256) {
-        return lampsMinted - burnCount;
     }
 
     // returns a boolean array of all all possible lamps

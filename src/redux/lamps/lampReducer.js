@@ -8,9 +8,9 @@ const initialState = {
   loading: false,
   myLamps: [],
   remainingLamps: 0,
-  lampsBurned: 0,
-  lampsMinted: 0,
-  ethPerShare: 0,
+  //lampsBurned: 0,
+  //lampsMinted: 0,
+  //ethPerShare: 0,
   error: false,
   errorMsg: "",
 };
@@ -28,9 +28,9 @@ const lampReducer = (state = initialState, action) => {
         loading: false,
         myLamps: action.payload.myLamps,
         remainingLamps: action.payload.remainingLamps,
-        lampsBurned: action.payload.lampsBurned,
-        lampsMinted: action.payload.lampsMinted,
-        ethPerShare: action.payload.ethPerShare,
+        //lampsBurned: action.payload.lampsBurned,
+        //lampsMinted: action.payload.lampsMinted,
+        //ethPerShare: action.payload.ethPerShare,
       };
     case CHECK_LAMP_FAILED:
       return {

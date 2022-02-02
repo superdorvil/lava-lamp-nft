@@ -6,41 +6,41 @@ import {
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import LavaLampImages from './LavaLampImages';
-import lamp0 from '../../../src/images/carousel/lavalamp0.svg';
-import lamp1 from '../../../src/images/carousel/lavalamp1.svg';
-import lamp2 from '../../../src/images/carousel/lavalamp2.svg';
-import lamp3 from '../../../src/images/carousel/lavalamp3.svg';
-import lamp4 from '../../../src/images/carousel/lavalamp4.svg';
-import lamp5 from '../../../src/images/carousel/lavalamp5.svg';
-import lamp6 from '../../../src/images/carousel/lavalamp6.svg';
-import lamp7 from '../../../src/images/carousel/lavalamp7.svg';
-import lamp8 from '../../../src/images/carousel/lavalamp8.svg';
-import lamp9 from '../../../src/images/carousel/lavalamp9.svg';
-import lamp10 from '../../../src/images/carousel/lavalamp10.svg';
-import lamp11 from '../../../src/images/carousel/lavalamp11.svg';
-import lamp12 from '../../../src/images/carousel/lavalamp12.svg';
-import lamp13 from '../../../src/images/carousel/lavalamp13.svg';
-import lamp14 from '../../../src/images/carousel/lavalamp14.svg';
-import lamp15 from '../../../src/images/carousel/lavalamp15.svg';
-import lamp16 from '../../../src/images/carousel/lavalamp16.svg';
-import lamp17 from '../../../src/images/carousel/lavalamp17.svg';
-import lamp18 from '../../../src/images/carousel/lavalamp18.svg';
-import lamp19 from '../../../src/images/carousel/lavalamp19.svg';
-import lamp20 from '../../../src/images/carousel/lavalamp20.svg';
-import lamp21 from '../../../src/images/carousel/lavalamp21.svg';
-import lamp22 from '../../../src/images/carousel/lavalamp22.svg';
-import lamp23 from '../../../src/images/carousel/lavalamp23.svg';
-import lamp24 from '../../../src/images/carousel/lavalamp24.svg';
-import lamp25 from '../../../src/images/carousel/lavalamp25.svg';
-import lamp26 from '../../../src/images/carousel/lavalamp26.svg';
-import lamp27 from '../../../src/images/carousel/lavalamp27.svg';
+import lamp0 from '../../../src/images/carousel/LavaLamp0.png';
+import lamp1 from '../../../src/images/carousel/LavaLamp1.png';
+import lamp2 from '../../../src/images/carousel/LavaLamp2.png';
+import lamp3 from '../../../src/images/carousel/LavaLamp3.png';
+import lamp4 from '../../../src/images/carousel/LavaLamp4.png';
+import lamp5 from '../../../src/images/carousel/LavaLamp5.png';
+import lamp6 from '../../../src/images/carousel/LavaLamp6.png';
+import lamp7 from '../../../src/images/carousel/LavaLamp7.png';
+import lamp8 from '../../../src/images/carousel/LavaLamp8.png';
+import lamp9 from '../../../src/images/carousel/LavaLamp9.png';
+import lamp10 from '../../../src/images/carousel/LavaLamp10.png';
+import lamp11 from '../../../src/images/carousel/LavaLamp11.png';
+import lamp12 from '../../../src/images/carousel/LavaLamp12.png';
+import lamp13 from '../../../src/images/carousel/LavaLamp13.png';
+import lamp14 from '../../../src/images/carousel/LavaLamp14.png';
+import lamp15 from '../../../src/images/carousel/LavaLamp15.png';
+import lamp16 from '../../../src/images/carousel/LavaLamp16.png';
+import lamp17 from '../../../src/images/carousel/LavaLamp17.png';
+import lamp18 from '../../../src/images/carousel/LavaLamp18.png';
+import lamp19 from '../../../src/images/carousel/LavaLamp19.png';
+import lamp20 from '../../../src/images/carousel/LavaLamp20.png';
+import lamp21 from '../../../src/images/carousel/LavaLamp21.png';
+import lamp22 from '../../../src/images/carousel/LavaLamp22.png';
+import lamp23 from '../../../src/images/carousel/LavaLamp23.png';
+import lamp24 from '../../../src/images/carousel/LavaLamp24.png';
+import lamp25 from '../../../src/images/carousel/LavaLamp25.png';
+import lamp26 from '../../../src/images/carousel/LavaLamp26.png';
+import lamp27 from '../../../src/images/carousel/LavaLamp27.png';
 
 function LavaLampCarousel() {
   return (
     <CarouselProvider
       isIntrinsicHeight={true}
       totalSlides={4}
-      isPlaying={false}
+      isPlaying={true}
       interval={3000}
       orientation="horizontal"
       visibleSlides={1}

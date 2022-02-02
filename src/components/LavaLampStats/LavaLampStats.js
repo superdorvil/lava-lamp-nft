@@ -8,7 +8,7 @@ import {
 } from './Elements';
 import DataBlock from '../DataBlock';
 import {COLORS} from '../../constants';
-import lavalien from '../../images/Lavalien.svg';
+import lavalien from '../../images/Lavalien.png';
 
 function LavaLampStats() {
   const lamps = useSelector((state) => state.lamps);
@@ -20,14 +20,8 @@ function LavaLampStats() {
         <DataBlock
           lightColor={COLORS.light_blue}
           darkColor={COLORS.dark_blue}
-          data={lamps.remainingLamps || 0}
+          data={lamps.remainingLamps ? 7980 - lamps.remainingLamps : 0}
           units="REMAINING LAMPS"
-        />
-        <DataBlock
-          lightColor={COLORS.light_yellow}
-          darkColor={COLORS.dark_yellow}
-          data={lamps.lampsBurned || 0}
-          units="BURNED LAMPS"
         />
         {/*<DataBlock
           lightColor={COLORS.light_red}

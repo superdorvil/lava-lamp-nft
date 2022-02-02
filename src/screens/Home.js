@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import HeroSection from '../components/HeroSection';
 import LavaPool from '../components/LavaPool';
-import LavaLampTraits from '../components/LavaLampTraits';
+import LavaLampTraitsCarousel from '../components/LavaLampTraitsCarousel';
 import LavaLampFaqs from '../components/LavaLampFaqs';
 import LavaLampStats from '../components/LavaLampStats';
 import SerialNumbers from '../components/SerialNumbers';
@@ -20,7 +20,7 @@ function Home() {
     <>
       <HeroSection toggleModal={toggleModal} />
       <LavaPool toggleModal={toggleModal} />
-      <LavaLampTraits />
+      <LavaLampTraitsCarousel />
       <LavaLampFaqs />
       <SerialNumbers />
       <LavaLampStats />

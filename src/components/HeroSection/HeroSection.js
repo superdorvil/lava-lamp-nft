@@ -19,8 +19,8 @@ import Web3 from 'web3';
 import {STATES} from '../../constants';
 import WhiteList from './WhiteList';
 
-//const releaseDate = new Date(2022, 0, 28, 20, 0, 0, 0);
-//const whitelistDate = new Date(2022, 0, 28, 19, 0, 0, 0);
+//const releaseDate = new Date(2022, 1, 2, 21, 0, 0, 0);
+//const whitelistDate = new Date(2022, 1, 2, 20, 0, 0, 0);
 const releaseDate = new Date(2022, 0, 20, 11, 0, 0, 0);
 const whitelistDate = new Date(2022, 0, 20, 12, 0, 0, 0);
 let saleMode = STATES.drop.dropComingSoon;
