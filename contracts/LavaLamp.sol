@@ -12,20 +12,15 @@ contract LavaLamp is Ownable, ERC721 {
     uint256 private cost = 0.03 ether;
     uint256 private maxSupply = 7980;
     uint256 private maxMintAmount = 20;
-    address private lavaLampsEth;
+    address private lavaLampsEth = 0x4024b17b6fD2AC7a83bfE0c71970D23eE335BC40;
 
     // used to semi-randomize the id's that are minted
     uint256 private lampCount = 0;
     uint256 private currentLampSet = 0;
     uint256 public totalSupply = 0;
 
-    constructor(
-      string memory _provenance,
-      string memory _currentBaseURI,
-      address _lavaLampEth
-      ) ERC721("LavaLamp", "LAVALAMP") {
+    constructor(string memory _provenance, string memory _currentBaseURI) ERC721("LavaLamp", "LAVALAMP") {
         provenance = _provenance;
-        lavaLampsEth = _lavaLampEth;
         setBaseURI(_currentBaseURI);
     }
 
