@@ -8,10 +8,6 @@ const Data = [
     answer: "The Lava Pool is our way of giving back to all community members. Upon selling out, we will use 80% of the proceeds from the sale to purchase Metaheros. These Metaheros will then be staked for $POW. We will then add 60% of our monthly Open Sea fees to the Lava Pool to purchase more NFTs.",
   },
   {
-    question: "THE FLOOR IS LAVA!",
-    answer: "We mean that literally. Each month 60% of our Open Sea fees will be used to buy and burn Lava Lamps! This will reduce supply and means each Lava Lamp gets a bigger share in the Lava Pool over time.",
-  },
-  {
     question: "WHAT HAPPENS NEXT?",
     answer: "We currently have whitelist spots open. You can join our discord to be given a whitelist spot. Our sale will start on February 2nd at 8pm EST and will be priced at .03 eth. It will be open to WL members for 1 hour and then public thereafter. Once live we will have a section on lavalamps.io where you can see real time data on Lava Lamps in circulation and NFTs in the Lava Pool. Move quickly, the floor is Lava!",
   }
