@@ -19,7 +19,7 @@ contract LavaLamp is Ownable, ERC721 {
     uint256 private currentLampSet = 0;
     uint256 public totalSupply = 0;
 
-    constructor(string memory _provenance, string memory _currentBaseURI) ERC721("LavaLamp", "LAVALAMP") {
+    constructor(string memory _provenance, string memory _currentBaseURI) ERC721("LavaLamps", "LAVALAMPS") {
         provenance = _provenance;
         setBaseURI(_currentBaseURI);
     }

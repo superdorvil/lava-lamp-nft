@@ -1,7 +1,7 @@
 // Add provenance hash
 const LavaLamp = artifacts.require("LavaLamp")
-const provenance = "ca3a73ded1617863b39f16cea9a80ff42ce76f87c9cec7ecb6d67447f2b5e2ab";
-const cid = "QmeDPr9rD9CJftSKGr7P2XdZjfzvmoMuhsTPWERfJyRf9A";
+const provenance = "de7ef1ed5fc86f75c6cfb91ac058bd2a2319da98e7548872199f3d80e17e6f08";
+const cid = "QmcYATwnfG4a3byaV7ajrgNBfj9GbTa6EvZmReBWg9WgCB";
 const baseURI = "ipfs://" + cid + "/";
 
 module.exports = function(deployer) {

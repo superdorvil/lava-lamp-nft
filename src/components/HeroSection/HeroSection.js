@@ -122,10 +122,8 @@ function HeroSection({toggleModal}) {
     }
 
     blockchain.smartContract.methods
-//    .mint(lampCount)
-//    .send({ from: blockchain.account, value: Web3.utils.toWei((lampCount * 30).toString(), 'finney') })
-    .mint(1000)
-    .send({ from: blockchain.account })
+    .mint(lampCount)
+    .send({ from: blockchain.account, value: Web3.utils.toWei((lampCount * 30).toString(), 'finney') })
     .once("error", (err) => {
       console.log(err);
       //setLoading(false);
