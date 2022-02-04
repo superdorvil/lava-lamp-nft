@@ -94,3 +94,12 @@ export const PresaleTime = styled.p`
   font-size: 3vw;
   font-family: Bangers;
 `;
+
+export const DataBlockContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex: 1;
+`;

@@ -14,7 +14,6 @@ function NavBar({dropComing, connectWallet, blockchainAccount, openLavaList }) {
       <TopLeftText>LAVA LAMPS</TopLeftText>
       <ButtonContainer>
         <ScrollButton description="FAQS" />
-        <ScrollButton description="STATS" />
         <Button
           description="LAVALIST"
           buttonPressed={openLavaList}

@@ -23,7 +23,6 @@ function Home() {
       <LavaLampTraitsCarousel />
       <LavaLampFaqs />
       <SerialNumbers />
-      <LavaLampStats />
       <Footer />
       <LavaModal state={state} toggleModal={toggleModal} />
     </>

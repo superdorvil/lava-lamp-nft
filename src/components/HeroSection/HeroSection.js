@@ -8,6 +8,7 @@ import {
   SubTitle,
   MintDetails,
   SocialContainer,
+  DataBlockContainer,
 } from './Elements';
 import NavBar from './NavBar';
 import MintButton from '../MintButton';
@@ -18,11 +19,13 @@ import DropTimer from './DropTimer';
 import Web3 from 'web3';
 import {STATES} from '../../constants';
 import WhiteList from './WhiteList';
+import DataBlock from '../DataBlock';
+import {COLORS} from '../../constants';
 
-//const releaseDate = new Date(2022, 1, 2, 21, 0, 0, 0);
-//const whitelistDate = new Date(2022, 1, 2, 20, 0, 0, 0);
-const releaseDate = new Date(2022, 0, 20, 11, 0, 0, 0);
-const whitelistDate = new Date(2022, 0, 20, 12, 0, 0, 0);
+const releaseDate = new Date(2022, 1, 4, 21, 0, 0, 0);
+const whitelistDate = new Date(2022, 1, 4, 20, 0, 0, 0);
+//const releaseDate = new Date(2022, 0, 20, 11, 0, 0, 0);
+//const whitelistDate = new Date(2022, 0, 20, 12, 0, 0, 0);
 let saleMode = STATES.drop.dropComingSoon;
 
 const getTimeDiff = () => {
@@ -225,7 +228,6 @@ function HeroSection({toggleModal}) {
           }
         />
       }
-      <MintDetails>max of 20. minted at .03 ETH</MintDetails>
       <SocialContainer>
         <SocialMediaLinks />
       </SocialContainer>
@@ -238,5 +240,20 @@ function HeroSection({toggleModal}) {
     </LavaBackground>
   );
 }
+
+/*<DataBlockContainer>
+  <DataBlock
+    lightColor={COLORS.light_blue}
+    darkColor={COLORS.dark_blue}
+    data={lamps.remainingLamps ? 7980 - lamps.remainingLamps : 0}
+    units="REMAINING LAMPS"
+  />
+  {/*<DataBlock
+    lightColor={COLORS.light_red}
+    darkColor={COLORS.dark_red}
+    data="0.03"
+    units="ETH PER SHARE"
+  />*///}
+//</DataBlockContainer>
 
 export default HeroSection;
