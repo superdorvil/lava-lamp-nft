@@ -6,7 +6,6 @@ function ConnectWalletButton({connectedWallet, buttonPressed}) {
     <Container
       onClick={(e) => {
         e.preventDefault();
-        console.log('hey');
         connectedWallet ?
           window.open("https://etherscan.io/address/" + connectedWallet, "_blank")
           : buttonPressed();
