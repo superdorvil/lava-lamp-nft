@@ -70,7 +70,7 @@ export const connect = () => {
         if (NetworkData) {
           const SmartContractObj = new web3.eth.Contract(
             LavaLamp.abi,
-            NetworkData.address,
+            "0x8e55C4D8069421e80283B2f7E6BC9471fD535439",
           );
 
           dispatch(

@@ -22,13 +22,13 @@ import WhiteList from './WhiteList';
 import DataBlock from '../DataBlock';
 import {COLORS} from '../../constants';
 
-const releaseDate = new Date(2022, 1, 4, 21, 0, 0, 0);
-const whitelistDate = new Date(2022, 1, 4, 20, 0, 0, 0);
+//const releaseDate = new Date(2022, 1, 4, 21, 0, 0, 0);
+//const whitelistDate = new Date(2022, 1, 4, 20, 0, 0, 0);
 //const releaseDate = new Date(2022, 0, 20, 11, 0, 0, 0);
 //const whitelistDate = new Date(2022, 0, 20, 12, 0, 0, 0);
-let saleMode = STATES.drop.dropComingSoon;
+//let saleMode = STATES.drop.dropComingSoon;
 
-const getTimeDiff = () => {
+/*const getTimeDiff = () => {
   const secondsDiff = (whitelistDate - new Date()) / 1000;
   const publicSaleSecondsDiff = (releaseDate - new Date()) / 1000;
   if (((releaseDate - new Date()) / 1000) < 0) {
@@ -54,7 +54,7 @@ const getTimeDiff = () => {
     publicSaleSeconds,
     publicSaleMinutes,
   };
-};
+};*/
 
 function useInterval(callback, delay) {
   const savedCallback = useRef();
@@ -81,18 +81,18 @@ function decimalMultiply ( val1, val2 ) {
 }
 
 function HeroSection({toggleModal}) {
-  const initialTimeDiff = (whitelistDate - new Date()) / 1000;
+//  const initialTimeDiff = (whitelistDate - new Date()) / 1000;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const lamps = useSelector((state) => state.lamps);
   //const [loading, setLoading] = useState(false);
   //const [status, setStatus] = useState("");
-  const [dropComing, setDropComing] = useState(initialTimeDiff > 0 ? true : false);
-  const [dropTime, setDropTime] = useState(getTimeDiff);
+//  const [dropComing, setDropComing] = useState(initialTimeDiff > 0 ? true : false);
+//  const [dropTime, setDropTime] = useState(getTimeDiff);
   const [lampCount, setLampCount] = useState(1);
   const [lampPrice, setLampPrice] = useState(0.03);
 
-  const updateDropTimer = () => {
+/*  const updateDropTimer = () => {
     const time = getTimeDiff();
 
     if (time.publicSaleSecondsDiff > 0) {
@@ -100,10 +100,10 @@ function HeroSection({toggleModal}) {
     } else {
       setDropComing(false);
    }
-  };
+ };*/
 
   const mint = () => {
-    if (lamps.lampsMinted === 7980) {
+    /*if (lamps.lampsMinted === 7980) {
       window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
       return;
     }
@@ -122,7 +122,7 @@ function HeroSection({toggleModal}) {
         window.alert('Whitelist lavagang members only, public sale opens in less than an hour!!! :D');
         return;
       }
-    }
+    }*/
 
     blockchain.smartContract.methods
     .mint(lampCount)
@@ -154,16 +154,17 @@ function HeroSection({toggleModal}) {
     setLampPrice(decimalMultiply(lc, .03));
   }
 
-  useInterval(() => updateDropTimer(), 1000);
+//  useInterval(() => updateDropTimer(), 1000);
 
   useEffect(() => {
+    console.log(blockchain);
     if (blockchain.account !== "" && blockchain.smartContract !== null) {
       dispatch(fetchLamps(blockchain.account));
     }
   }, [blockchain.smartContract, blockchain.account, dispatch]);
 
   return (
-    <LavaBackground dropComing={dropComing}>
+    <LavaBackground dropComing={false}>
       <NavBar
         blockchainAccount={blockchain.account}
         connectWallet={
@@ -177,16 +178,6 @@ function HeroSection({toggleModal}) {
       />
       <Title>7,979 LAVA LAMPS</Title>
       <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>
-      {dropComing ?
-        <>
-          <MintDetails>DROP COMING SOON!</MintDetails>
-          <DropTimer
-            days={dropTime.days}
-            hours={dropTime.hours}
-            minutes={dropTime.minutes}
-            seconds={dropTime.seconds}
-          />
-        </> :
         <MintButton
           lampCount={lampCount}
           lampPrice={lampPrice}
@@ -227,16 +218,10 @@ function HeroSection({toggleModal}) {
             }
           }
         />
-      }
       <SocialContainer>
         <SocialMediaLinks />
       </SocialContainer>
       <LavaLampCarousel />
-      <Presale
-        visible={saleMode === STATES.drop.whitelistSale}
-        minutes={dropTime.publicSaleMinutes}
-        seconds={dropTime.publicSaleSeconds}
-      />
     </LavaBackground>
   );
 }

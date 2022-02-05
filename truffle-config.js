@@ -47,15 +47,7 @@ module.exports = {
       port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-    rinkeby: {
-      provider: function() {
-        return new HDWalletProvider(mnemonic, clientURL);
-      },
-      network_id: 4,       // Ropsten's id
-      gas: 5500000,        // Ropsten has a lower block limit than mainnet
-      gasPrice : web3.utils.toWei('2', 'gwei'),
-      confirmations: 2,    // # of confs to wait between deployments. (default: 0)
-    },
+
     mainnet: {
       provider: function() {
         return new HDWalletProvider(mainMnemonic, mainClientURL);
