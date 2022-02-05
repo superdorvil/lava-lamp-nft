@@ -15,7 +15,7 @@ function SocialMediaLinks() {
           highlight={true}
         />
       </LinkContainer>
-      <LinkContainer href="https://opensea.io/collection/lava-lamps">
+      <LinkContainer href="https://opensea.io/collection/lavalampnft">
         <Icon
           icon={ICONS.OPENSEA}
           iconColor='#FFFFFF'
