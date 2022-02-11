@@ -22,122 +22,43 @@ import WhiteList from './WhiteList';
 import DataBlock from '../DataBlock';
 import {COLORS} from '../../constants';
 
-//const releaseDate = new Date(2022, 1, 5, 13, 0, 0, 0);
-//const whitelistDate = new Date(2022, 1, 5, 12, 0, 0, 0);
-//const releaseDate = new Date(2022, 0, 20, 11, 0, 0, 0);
-//const whitelistDate = new Date(2022, 0, 20, 12, 0, 0, 0);
-let saleMode = STATES.drop.dropComingSoon;
-
-/*const getTimeDiff = () => {
-  const secondsDiff = (whitelistDate - new Date()) / 1000;
-  const publicSaleSecondsDiff = (releaseDate - new Date()) / 1000;
-  if (((releaseDate - new Date()) / 1000) < 0) {
-    saleMode = STATES.drop.publicSale;
-  } else if (((whitelistDate - new Date()) / 1000) < 0) {
-    saleMode = STATES.drop.whitelistSale;
-  }
-
-  const days = Math.floor(secondsDiff / 86400);
-  const hours = Math.floor((secondsDiff % 86400) / 3600);
-  const minutes = Math.floor((secondsDiff % 3600) / 60);
-  const seconds = Math.floor((secondsDiff % 3600) % 60);
-  const publicSaleMinutes = Math.floor((publicSaleSecondsDiff % 3600) / 60);
-  const publicSaleSeconds = Math.floor((publicSaleSecondsDiff % 3600) % 60);
-
-  return {
-    days,
-    hours,
-    minutes,
-    seconds,
-    secondsDiff,
-    publicSaleSecondsDiff,
-    publicSaleSeconds,
-    publicSaleMinutes,
-  };
-};
-
-function useInterval(callback, delay) {
-  const savedCallback = useRef();
-
-  // Remember the latest callback.
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
-
-  // Set up the interval.
-  useEffect(() => {
-    function tick() {
-      savedCallback.current();
-    }
-    if (delay !== null) {
-      let id = setInterval(tick, delay);
-      return () => clearInterval(id);
-    }
-  }, [delay]);
-}*/
-
 function decimalMultiply ( val1, val2 ) {
   return ((val1 * 10) * (val2 * 10)) / 100;
 }
 
 function HeroSection({toggleModal}) {
-//  const initialTimeDiff = (whitelistDate - new Date()) / 1000;
   const dispatch = useDispatch();
   const blockchain = useSelector((state) => state.blockchain);
   const lamps = useSelector((state) => state.lamps);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
-//  const [dropComing, setDropComing] = useState(initialTimeDiff > 0 ? true : false);
-//  const [dropTime, setDropTime] = useState(getTimeDiff);
   const [lampCount, setLampCount] = useState(1);
   const [lampPrice, setLampPrice] = useState(0.03);
 
-/*  const updateDropTimer = () => {
-    const time = getTimeDiff();
-
-    if (time.publicSaleSecondsDiff > 0) {
-      setDropTime(time);
-    } else {
-      setDropComing(false);
-   }
- };*/
-
   const mint = () => {
+    console.log('mint');
     if (lamps.lampsMinted === 7980) {
       window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
       return;
     }
 
-/*    let whitelisted = false;
-    if (saleMode === STATES.drop.whitelistSale) {
-      WhiteList.forEach((account, i) => {
-        if (account === blockchain.account) {
-          whitelisted = true;
-        }
-      });
-    }
+    console.log(blockchain.smartContract.methods);
 
-    if (saleMode === STATES.drop.whitelistSale) {
-      if (!whitelisted) {
-        window.alert('Whitelist lavagang members only, public sale opens in less than an hour!!! :D');
-        return;
-      }
-    }*/
-
-    blockchain.smartContract.methods
+/*    blockchain.smartContract.methods
     .mint(lampCount)
-    .send({ from: blockchain.account, value: Web3.utils.toWei((lampCount * 30).toString(), 'finney') })
+    .send({
+      from: blockchain.account,
+      value: Web3.utils.toWei((lampCount * 30).toString(), 'finney')
+    })
     .once("error", (err) => {
       console.log(err);
-      //setLoading(false);
-      //setStatus("Error");
     })
     .then((receipt) => {
       console.log(receipt);
       //setLoading(false);
       dispatch(fetchLamps(blockchain.account));
       //setStatus("Successfully minting your NFT");
-    });
+    });*/
   };
 
   const incrementLampCount = () => {
