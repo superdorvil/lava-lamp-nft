@@ -14,8 +14,8 @@ import NavBar from './NavBar';
 import MintButton from '../MintButton';
 import LavaLampCarousel from '../LavaLampCarousel';
 import SocialMediaLinks from '../SocialMediaLinks';
+import OurMetaHero from '../OurMetaHero';
 import Presale from './Presale';
-import DropTimer from './DropTimer';
 import Web3 from 'web3';
 import {STATES} from '../../constants';
 import WhiteList from './WhiteList';
@@ -42,9 +42,7 @@ function HeroSection({toggleModal}) {
       return;
     }
 
-    console.log(blockchain.smartContract.methods);
-
-/*    blockchain.smartContract.methods
+    blockchain.smartContract.methods
     .mint(lampCount)
     .send({
       from: blockchain.account,
@@ -58,7 +56,7 @@ function HeroSection({toggleModal}) {
       //setLoading(false);
       dispatch(fetchLamps(blockchain.account));
       //setStatus("Successfully minting your NFT");
-    });*/
+    });
   };
 
   const incrementLampCount = () => {
@@ -97,85 +95,54 @@ function HeroSection({toggleModal}) {
         }
         openLavaList={() => toggleModal({state: STATES.modal.lavaList})}
       />
-      <Title>7,979 LAVA LAMPS</Title>
-      <SubTitle>BRINGING NOSTALGIA TO THE BLOCKCHAIN!</SubTitle>
-            {/*false ?
-        {<>
-          <MintDetails>DROP COMING SOON!</MintDetails>
-          <DropTimer
-            days={dropTime.days}
-            hours={dropTime.hours}
-            minutes={dropTime.minutes}
-            seconds={dropTime.seconds}
-          />
-        </> :*/}
-        <MintButton
-          lampCount={lampCount}
-          lampPrice={lampPrice}
-          mint={
-            () => {
-              if (lamps.lampsMinted === 7980) {
-                window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
-                return;
-              }
-
-              blockchain.account ?
-                mint() :
-                window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
+      <OurMetaHero />
+      <MintButton
+        lampCount={lampCount}
+        lampPrice={lampPrice}
+        mint={
+          () => {
+            if (lamps.lampsMinted === 7980) {
+              window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
+              return;
             }
-          }
-          incrementLampCount={
-            () => {
-              if (lamps.lampsMinted === 7980) {
-                window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
-                return;
-              }
 
-              blockchain.account ?
-                incrementLampCount() :
-                window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
-            }
+            blockchain.account ?
+              mint() :
+              window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
           }
-          decrementLampCount={
-            () => {
-              if (lamps.lampsMinted === 7980) {
-                window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
-                return;
-              }
+        }
+        incrementLampCount={
+          () => {
+            if (lamps.lampsMinted === 7980) {
+              window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
+              return;
+            }
 
-              blockchain.account ?
-                decrementLampCount() :
-                window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
-            }
+            blockchain.account ?
+              incrementLampCount() :
+              window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
           }
-        />
-      }
+        }
+        decrementLampCount={
+          () => {
+            if (lamps.lampsMinted === 7980) {
+              window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
+              return;
+            }
+
+            blockchain.account ?
+              decrementLampCount() :
+              window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
+          }
+        }
+      />
+      <MintDetails>max of 20. minted at .03 ETH</MintDetails>
       <SocialContainer>
         <SocialMediaLinks />
       </SocialContainer>
       <LavaLampCarousel />
-      {/*<Presale
-        visible={saleMode === STATES.drop.whitelistSale}
-        minutes={dropTime.publicSaleMinutes}
-        seconds={dropTime.publicSaleSeconds}
-      />*/}
     </LavaBackground>
   );
 }
-
-/*<DataBlockContainer>
-  <DataBlock
-    lightColor={COLORS.light_blue}
-    darkColor={COLORS.dark_blue}
-    data={lamps.remainingLamps ? 7980 - lamps.remainingLamps : 0}
-    units="REMAINING LAMPS"
-  />
-  {/*<DataBlock
-    lightColor={COLORS.light_red}
-    darkColor={COLORS.dark_red}
-    data="0.03"
-    units="ETH PER SHARE"
-  />*///}
-//</DataBlockContainer>
 
 export default HeroSection;

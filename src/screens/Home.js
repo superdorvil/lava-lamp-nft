@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HeroSection from '../components/HeroSection';
-import LavaPool from '../components/LavaPool';
+import PowTracker from '../components/PowTracker';
 import LavaLampTraitsCarousel from '../components/LavaLampTraitsCarousel';
 import LavaLampFaqs from '../components/LavaLampFaqs';
 import LavaLampStats from '../components/LavaLampStats';
@@ -19,7 +19,7 @@ function Home() {
   return (
     <>
       <HeroSection toggleModal={toggleModal} />
-      <LavaPool toggleModal={toggleModal} />
+      <PowTracker />
       <LavaLampTraitsCarousel />
       <LavaLampFaqs />
       <SerialNumbers />

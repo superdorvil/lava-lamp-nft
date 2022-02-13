@@ -39,6 +39,23 @@ export const TraitContainer = styled.div`
   border-radius: 1.5625vw;
 `;
 
+export const PowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-width: 0.4vw;
+  border-style: solid;
+  background-color: transparent;
+  padding-top: 1.875vw;
+  padding-bottom: 1.5vw;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  margin-right: 1.15vw;
+  margin-left: 1.15vw;
+  border-radius: 1.5625vw;
+`;
+
 export const Data = styled.p`
   font-family: Montserrat;
   font-size: 3vw;
