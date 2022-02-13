@@ -27,8 +27,7 @@ function useInterval(callback, delay) {
 }
 
 function LavaPool() {
-  const [pow, setPow] = useState(0);
-
+  const [pow, setPow] = useState(Math.trunc((new Date() - new Date(2022, 1, 10, 19, 15, 0, 0)) / 530000));
   const updatePow = () => {
     const now = new Date();
     const initialPow = new Date(2022, 1, 10, 19, 15, 0, 0);
