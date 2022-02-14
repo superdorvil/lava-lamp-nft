@@ -36,7 +36,6 @@ function HeroSection({toggleModal}) {
   const [lampPrice, setLampPrice] = useState(0.03);
 
   const mint = () => {
-    console.log('mint');
     if (lamps.lampsMinted === 7980) {
       window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
       return;
@@ -49,6 +48,7 @@ function HeroSection({toggleModal}) {
       value: Web3.utils.toWei((lampCount * 30).toString(), 'finney')
     })
     .once("error", (err) => {
+      window.alert('Transaction failed: if using a LEDGER\n   1.) Enable blind signing\n   2.) Enable DEBUG DATA to displayed in the settings.\n         NOTE: Both blind signing ANND debug data must be enabled\n\nContact @superdorvil in the lavalamp discord server for any further questions, always happy to help!!!\n\nThank you 😇 🚀');
       console.log(err);
     })
     .then((receipt) => {
@@ -101,11 +101,6 @@ function HeroSection({toggleModal}) {
         lampPrice={lampPrice}
         mint={
           () => {
-            if (lamps.lampsMinted === 7980) {
-              window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
-              return;
-            }
-
             blockchain.account ?
               mint() :
               window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
@@ -113,11 +108,6 @@ function HeroSection({toggleModal}) {
         }
         incrementLampCount={
           () => {
-            if (lamps.lampsMinted === 7980) {
-              window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
-              return;
-            }
-
             blockchain.account ?
               incrementLampCount() :
               window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
@@ -125,11 +115,6 @@ function HeroSection({toggleModal}) {
         }
         decrementLampCount={
           () => {
-            if (lamps.lampsMinted === 7980) {
-              window.alert('All LavaLamps have been minted, join our discord to learn about future projects');
-              return;
-            }
-
             blockchain.account ?
               decrementLampCount() :
               window.alert('Please connect wallet to blockchain and join the lavagang!!!! :D')
