@@ -27,15 +27,14 @@ function useInterval(callback, delay) {
 }
 
 function LavaPool() {
-  const powRate = 450000;
-  const [pow, setPow] = useState(Math.trunc((new Date() - new Date(2022, 1, 10, 19, 15, 0, 0)) / powRate));
-  const updatePow = () => {
-    const now = new Date();
-    const initialPow = new Date(2022, 1, 10, 19, 15, 0, 0);
-    const powUpdateRate = powRate;
-    const pow = (now - initialPow) / powUpdateRate;
+  const initialPow = 17085;
+  const powRate = 360;
+  const initialDate = new Date(2022, 3, 14, 7);
+  const dayInMilli = 1000*60*60*24;
+  const [pow, setPow] = useState((Math.floor((new Date() - initialDate) / dayInMilli) * powRate) + initialPow);
 
-    setPow(Math.trunc(pow));
+  const updatePow = () => {
+    setPow((Math.floor((new Date() - initialDate) / dayInMilli ) * powRate) + initialPow);
   }
 
   useInterval(() => updatePow(), 300000);
