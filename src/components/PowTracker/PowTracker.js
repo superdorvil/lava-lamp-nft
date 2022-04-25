@@ -28,7 +28,7 @@ function useInterval(callback, delay) {
 
 function LavaPool() {
   const initialPow = 17085;
-  const powRate = 360;
+  const powRate = 155;
   const initialDate = new Date(2022, 3, 14, 7);
   const dayInMilli = 1000*60*60*24;
   const [pow, setPow] = useState((Math.floor((new Date() - initialDate) / dayInMilli) * powRate) + initialPow);
