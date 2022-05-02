@@ -96,7 +96,7 @@ function HeroSection({toggleModal}) {
         openLavaList={() => toggleModal({state: STATES.modal.lavaList})}
       />
       <OurMetaHero />
-      <MintButton
+      {/*<MintButton
         lampCount={lampCount}
         lampPrice={lampPrice}
         mint={
@@ -121,7 +121,7 @@ function HeroSection({toggleModal}) {
           }
         }
       />
-      <MintDetails>max of 20. minted at .03 ETH</MintDetails>
+      <MintDetails>max of 20. minted at .03 ETH</MintDetails>*/}
       <SocialContainer>
         <SocialMediaLinks />
       </SocialContainer>

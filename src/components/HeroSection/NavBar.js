@@ -18,13 +18,13 @@ function NavBar({dropComing, connectWallet, blockchainAccount, openLavaList }) {
           description="LAVALIST"
           buttonPressed={openLavaList}
         />
-        {dropComing ?
+        {/*dropComing ?
            <></> :
            <ConnectWalletButton
              connectedWallet={blockchainAccount}
              buttonPressed={connectWallet}
            />
-        }
+        */}
       </ButtonContainer>
     </NavBarContainer>
   );
