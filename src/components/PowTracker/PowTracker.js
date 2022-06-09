@@ -37,7 +37,7 @@ function LavaPool() {
     setPow((Math.floor((new Date() - initialDate) / dayInMilli ) * powRate) + initialPow);
   }
 
-  useInterval(() => updatePow(), 300000);
+  //useInterval(() => updatePow(), 300000);
 
   return(
     <LavaPoolBackground>
@@ -46,7 +46,7 @@ function LavaPool() {
         <DataBlock
           lightColor="#000000"
           darkColor="#000000"
-          data={pow}
+          data={24106}
           units="POW"
           pow={true}
         />
